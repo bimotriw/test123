@@ -83,6 +83,7 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
                 BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
                 bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
             }
+            buttonSetLang.setVisibility(showButton?View.VISIBLE:View.INVISIBLE);
         }
     }
 
@@ -134,14 +135,18 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
                                 String[] langCode = languageCode.split("_");
                                 if (langCode.length > 0) {
                                     languageClass.setLanguagePerfix(langCode[0]);
+
                                     if (langCode.length > 1) {
+                                        Log.d("test lang","set contry code to IN code "+langCode[1]+" "+displayName);
                                         languageClass.setCountryCode(langCode[1]);
                                     } else {
-                                        languageClass.setCountryCode("GB");
+                                        Log.d("test lang","set contry code to IN code "+langCode[0]+" "+displayName);
+                                        languageClass.setCountryCode("IN");
                                     }
                                 }
+                                languageClasses.add(languageClass);
                             }
-                            languageClasses.add(languageClass);
+
                         }
                         adapter = new LanguageAdapter(languageClasses, LanguageBottomSheet.this);
                         rvLanguage.setLayoutManager(new LinearLayoutManager(getContext()));

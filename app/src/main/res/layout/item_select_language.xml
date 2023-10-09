@@ -25,12 +25,11 @@
         android:textSize="14sp"
         android:fontFamily="@font/avenir_book"
         android:textStyle="bold" />
-    <ImageView
+    <RadioButton
         android:id="@+id/cbLanguage"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/check_arrow"
         />
 </RelativeLayout>

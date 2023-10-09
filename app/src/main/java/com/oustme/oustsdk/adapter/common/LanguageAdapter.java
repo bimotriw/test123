@@ -57,6 +57,7 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
             lastSelectedPosition = position;  // update the last selected position
             notifyDataSetChanged();  // refresh the adapter
         });
+        holder.cbLanguage.setChecked( lastSelectedPosition == position);
         if(lastSelectedPosition==position){
             holder.cbLanguage.setVisibility(View.VISIBLE);
         }else{
@@ -80,7 +81,7 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
     class LanguageViewHolder extends RecyclerView.ViewHolder {
         TextView tvCountryName;
         CircleImageView imgCountryFlag;
-        ImageView cbLanguage;
+        RadioButton cbLanguage;
 
         RelativeLayout itemLangWrapper;
 
