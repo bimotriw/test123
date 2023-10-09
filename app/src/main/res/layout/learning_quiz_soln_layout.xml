@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/learningquiz_solutionlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:minHeight="@dimen/oustlayout_dimen130"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_pressed">
+
+            <ImageButton
+                android:id="@+id/solution_closebtn"
+                android:layout_width="@dimen/oustlayout_dimen40"
+                android:layout_height="@dimen/oustlayout_dimen40"
+                android:layout_alignParentRight="true"
+                android:background="@color/fulltransparent"
+                android:src="@drawable/ic_close_img"
+                android:tint="@color/Black" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/solution_closebtn"
+                android:background="@color/white_pressed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                            android:id="@+id/solution_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:paddingBottom="@dimen/oustlayout_dimen4"
+                            android:paddingLeft="@dimen/oustlayout_dimen8"
+                            android:paddingTop="@dimen/oustlayout_dimen4"
+                            android:text=""
+                            android:textColor="@color/Gray"
+                            android:textSize="@dimen/ousttext_dimen20" />
+                        <ImageView
+                            android:id="@+id/imageViewSolution"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/logo"/>
+
+                        <com.oustme.oustsdk.tools.htmlrender.HtmlTextView
+                            android:id="@+id/solution_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen4"
+                            android:layout_marginRight="@dimen/oustlayout_dimen5"
+                            android:gravity="center_vertical|left"
+                            android:lineSpacingExtra="@dimen/oustlayout_dimen7"
+                            android:minHeight="@dimen/oustlayout_dimen40"
+                            android:padding="@dimen/oustlayout_dimen5"
+                            android:text=""
+                            android:textColor="@color/Gray"
+                            android:textSize="@dimen/ousttext_dimen18"
+                            android:visibility="visible" />
+                        <com.oustme.katexview.KatexView
+                            android:id="@+id/solution_descMaths2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen4"
+                            android:layout_marginRight="@dimen/oustlayout_dimen5"
+                            android:gravity="center_vertical|left"
+                            android:lineSpacingExtra="@dimen/oustlayout_dimen7"
+                            android:minHeight="@dimen/oustlayout_dimen40"
+                            android:padding="@dimen/oustlayout_dimen5"
+                            android:text=""
+                            android:textColor="@color/Gray"
+                            android:textSize="@dimen/ousttext_dimen18"
+                            android:visibility="visible" />
+
+                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                            android:id="@+id/myresponse_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/oustlayout_dimen8"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/oustlayout_dimen8"
+                            android:text=""
+                            android:textColor="@color/Gray"
+                            android:textSize="@dimen/ousttext_dimen20"
+                            android:visibility="gone" />
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/myresponse_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen4"
+                            android:layout_marginRight="@dimen/oustlayout_dimen5"
+                            android:gravity="center_vertical|left"
+                            android:lineSpacingExtra="@dimen/oustlayout_dimen7"
+                            android:minHeight="@dimen/oustlayout_dimen40"
+                            android:padding="@dimen/oustlayout_dimen5"
+                            android:text=""
+                            android:textColor="@color/Gray"
+                            android:textSize="@dimen/ousttext_dimen18"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/solution_readmore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/oustlayout_dimen5"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                            android:layout_marginRight="@dimen/oustlayout_dimen5"
+                            android:layout_marginTop="@dimen/oustlayout_dimen5"
+                            android:visibility="gone">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/CardViewReadmore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@color/new_gray"
+                                card_view:cardCornerRadius="@dimen/oustlayout_dimen8">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <com.oustme.oustsdk.customviews.CustomTextView
+                                        android:id="@+id/solution_readmore_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:lineSpacingExtra="@dimen/oustlayout_dimen7"
+                                        android:padding="@dimen/oustlayout_dimen5"
+                                        android:text=""
+                                        android:textColor="@color/whitea"
+                                        android:textSize="@dimen/ousttext_dimen18" />
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/oustlayout_dimen18">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/CardViewNextCard"
+                                android:layout_width="@dimen/oustlayout_dimen200"
+                                android:layout_height="@dimen/oustlayout_dimen50"
+                                android:layout_centerHorizontal="true"
+                                app:cardBackgroundColor="@color/Orange"
+                                android:layout_marginBottom="@dimen/oustlayout_dimen20"
+                                card_view:cardCornerRadius="@dimen/oustlayout_dimen8">
+
+                                <RelativeLayout
+                                    android:id="@+id/gotonextscreen_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true">
+
+                                    <ImageView
+                                        android:id="@+id/result_finishbtn_icon"
+                                        android:layout_width="@dimen/oustlayout_dimen30"
+                                        android:layout_height="@dimen/oustlayout_dimen30"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_arrow_forward_white" />
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/oustlayout_dimen25"
+    android:layout_height="@dimen/oustlayout_dimen25"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/oustlayout_dimen5"
+    android:layout_gravity="center"
+    android:id="@+id/cardview_survey_points"
+    android:layout_marginLeft="@dimen/oustlayout_dimen2.5"
+    android:layout_marginRight="@dimen/oustlayout_dimen2.5">
+    <TextView
+        android:id="@+id/txt_points"
+        android:textSize="@dimen/oustlayout_dimen12"
+        android:gravity="center"
+        android:layout_gravity="center"
+        tools:text="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</androidx.cardview.widget.CardView>

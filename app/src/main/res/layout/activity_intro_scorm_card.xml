@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".course_ui.IntroScormCardActivity">
+
+    <include
+        android:id="@+id/intro_scorm_toolbar_lay"
+        layout="@layout/common_toolbar" />
+
+    <WebView
+        android:id="@+id/scorm_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro_scorm_toolbar_lay" />
+
+    <TextView
+        android:id="@+id/error_info_text"
+        style="@style/body_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/no_internet_connection"
+        android:textColor="@color/secondary_text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro_scorm_toolbar_lay" />
+
+    <RelativeLayout
+        android:id="@+id/scorm_layout_loader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro_scorm_toolbar_lay">
+
+        <ProgressBar
+            android:id="@+id/scorm_view_loader"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/loading_text_scorm_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scorm_view_loader"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ousttext_dimen17" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

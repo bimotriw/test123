@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/oustlayout_dimen35"
+    android:background="@color/fulltransparent">
+    <com.oustme.oustsdk.customviews.CustomTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fill_text"
+        android:singleLine="true"
+        android:background="@android:color/transparent"
+        android:textColor="@color/whitea"
+        android:text=""
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/oustlayout_dimen35"
+        android:textSize="@dimen/ousttext_dimen20" />
+</RelativeLayout>
+

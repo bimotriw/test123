@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen20"
+        android:visibility="gone"
+        android:id="@+id/topSpace"></RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topSpace">
+        <RelativeLayout
+            android:layout_width="@dimen/oustlayout_dimen60"
+            android:layout_marginLeft="@dimen/oustlayout_dimen5"
+            android:layout_below="@+id/lessonrow_mainlayout"
+            android:id="@+id/bottom_line"
+            android:layout_height="@dimen/oustlayout_dimen55">
+            <RelativeLayout
+                android:layout_width="@dimen/oustlayout_dimen4"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomline"
+                android:layout_centerInParent="true"
+                android:background="@color/DarkGray"></RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/oustlayout_dimen15"
+            android:layout_marginLeft="@dimen/oustlayout_dimen65"
+            android:layout_below="@+id/lessonrow_mainlayout"
+            android:layout_height="@dimen/oustlayout_dimen55">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerInParent="true"
+                android:background="@color/DarkGray"></RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/lessonrow_mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen65"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="@dimen/oustlayout_dimen60"
+                android:layout_height="@dimen/oustlayout_dimen60"
+                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                android:id="@+id/mainlessonrow_imgview_layout"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/MoreLiteGray">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:id="@+id/lessonrow_imgview_layout"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/greenlite_round_textview">
+                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/assessmnet_text"
+                        android:textSize="@dimen/ousttext_dimen20"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="A"
+                        android:textColor="@color/whitea"/>
+                    <ImageView
+                        android:id="@+id/lessonrow_imgview"
+                        android:layout_width="@dimen/oustlayout_dimen23"
+                        android:layout_height="@dimen/oustlayout_dimen23"
+                        android:visibility="visible"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_lock_img"
+                        android:tint="@color/white_pressed" />
+                </RelativeLayout>
+                <ProgressBar
+                    android:layout_width="@dimen/oustlayout_dimen130"
+                    android:layout_height="@dimen/oustlayout_dimen130"
+                    android:progress="0"
+                    android:layout_centerInParent="true"
+                    android:max="100"
+                    android:visibility="visible"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/level_progress"
+                    android:id="@+id/course_progress"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/lessonrow_icon_layout"
+                android:layout_width="@dimen/oustlayout_dimen120"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/lessonrow_lock"
+                    android:layout_width="@dimen/oustlayout_dimen20"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/oustlayout_dimen5"
+                    android:src="@drawable/ic_lock_img"
+                    android:tint="@color/yellow" />
+                <ImageView
+                    android:id="@+id/lessonrow_star"
+                    android:layout_width="@dimen/oustlayout_dimen25"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/oustlayout_dimen3"
+                    android:layout_toRightOf="@id/lessonrow_lock"
+                    android:src="@drawable/star_vector" />
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/lessonrow_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/oustlayout_dimen10"
+                    android:layout_toRightOf="@id/lessonrow_star"
+                    android:text=""
+                    android:textColor="@color/Green" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/downloadcourse_gifimg"
+                    android:layout_marginTop="@dimen/oustlayout_dimen4"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                    android:layout_toRightOf="@+id/downloadcourse_img">
+                    <ImageView
+                        android:layout_width="@dimen/oustlayout_dimen20"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible"
+                        android:src="@drawable/newlp_downloaded"
+                        />
+                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                        android:layout_width="@dimen/oustlayout_dimen20"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/ousttext_dimen7"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/downloadcourse_text"
+                        android:gravity="center"
+                        android:textColor="@color/Gray"
+                        android:text=""
+                        android:tint="@color/whitea" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/oustlayout_dimen20"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="@dimen/oustlayout_dimen6"
+                    android:visibility="visible"
+                    android:id="@+id/downloadcourse_img"
+                    android:src="@drawable/newlp_notdownload"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/lessonrow_rating"
+                    android:layout_toEndOf="@+id/lessonrow_rating" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/lessonrow_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/reference_line"
+                android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                android:layout_marginRight="@dimen/oustlayout_dimen8"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/mainlessonrow_imgview_layout">
+
+                <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                    android:id="@+id/lessonrow_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/Green"
+                    android:textSize="@dimen/ousttext_dimen14"
+                    android:textStyle="bold" />
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/lessonrow_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lessonrow_name"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:text=""
+                    android:textSize="@dimen/ousttext_dimen14"
+                    android:textColor="@color/Green" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="@dimen/oustlayout_dimen1"
+                android:layout_height="@dimen/oustlayout_dimen50"
+                android:id="@+id/reference_line"
+                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                android:layout_marginTop="@dimen/oustlayout_dimen12"
+                android:layout_toLeftOf="@+id/lessonrow_icon_layout"
+                android:background="@color/LiteGrayz"></RelativeLayout>
+
+            <ImageView
+                android:id="@+id/lessonrow_info"
+                android:layout_width="@dimen/oustlayout_dimen20"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_info_icon"
+                android:visibility="gone"
+                android:tint="@color/Green"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/learinglevel_mainlayout"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:background="@android:color/transparent">
+    <RelativeLayout
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/slider_thumb">
+    </RelativeLayout>
+</RelativeLayout>

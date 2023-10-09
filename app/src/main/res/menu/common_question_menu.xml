@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:id="@+id/action_audio"
+        android:icon="@drawable/ic_audio_on"
+        android:title="@string/alerts"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_socialmedia"
+        android:iconTint="@color/primary_text"
+        android:title="@string/alerts"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

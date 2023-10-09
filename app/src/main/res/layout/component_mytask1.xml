@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_greeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="36dp"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="0sp"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:translationY="-0.97sp"
+                    tools:targetApi="lollipop" />
+
+                <TextView
+                    android:id="@+id/pending_task_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="36dp"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="0sp"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:translationY="-0.97sp"
+                    tools:targetApi="lollipop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/course_detail_border"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp">
+
+                        <ProgressBar
+                            android:id="@+id/user_task_progressbar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@drawable/circle_shape"
+                            android:indeterminate="false"
+                            android:layoutDirection="rtl"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/user_completed_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="6dp"
+                            android:gravity="center"
+                            android:lineSpacingExtra="2sp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="#908F8F"
+                            android:textSize="17sp"
+                            android:translationY="-0.97sp"
+                            tools:targetApi="lollipop" />
+
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/progress_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="0sp"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp"
+                            android:translationY="-0.97sp"
+                            tools:targetApi="lollipop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/task_overall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingExtra="0sp"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:translationY="-0.97sp"
+                                tools:targetApi="lollipop" />
+
+                            <TextView
+                                android:id="@+id/tasks_done"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:lineSpacingExtra="0sp"
+                                android:text="@string/tasks_done_text"
+                                android:textColor="#908F8F"
+                                android:textSize="15sp"
+                                android:translationY="-0.97sp"
+                                tools:targetApi="lollipop" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/task_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@android:color/transparent"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/LiteGreen"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@android:color/black"
+                    app:tabTextAppearance="@style/customTabLayout"
+                    app:tabTextColor="#908F8F" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/task_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.viewpager.widget.ViewPager>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

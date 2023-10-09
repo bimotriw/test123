@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/favourite_appbar">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tabanim_toolbar"
+            android:layout_gravity="top|right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppToolBarTheme">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title"
+                    android:textColor="@color/White"
+                    android:gravity="left|top"
+                    android:text=""
+                    android:maxLines="1"
+                    android:textSize="@dimen/ousttext_dimen15"
+                    android:paddingRight="@dimen/oustlayout_dimen10"
+                    android:background="@android:color/transparent"
+                    android:paddingTop="@dimen/oustlayout_dimen2" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/favourite_loader_progressbar"
+                android:indeterminate="@bool/default_underline_indicator_fades"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminateDuration="1000"
+                android:indeterminateBehavior="repeat"
+                android:interpolator="@android:anim/linear_interpolator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen3"
+                android:indeterminateDrawable="@drawable/progressbar_test"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/favourite_appbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_pressed"
+            android:visibility="visible">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@color/LiteGray">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </RelativeLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:background="@color/LiteGrayNew"
+                android:layout_height="match_parent"
+                android:id="@+id/favcard_recyclerview">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/oustlayout_dimen12"
+                android:paddingBottom="@dimen/oustlayout_dimen10"
+                android:textColor="@color/Gray"
+                android:visibility="gone"
+                android:id="@+id/nocard_text"
+                android:gravity="center"
+                android:text=" "
+                android:textSize="@dimen/ousttext_dimen16"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/downloadpdf_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/popupBackGroundb">
+            <ProgressBar
+                android:id="@+id/pdfdownload_progressbar"
+                android:layout_width="@dimen/oustlayout_dimen70"
+                android:layout_height="@dimen/oustlayout_dimen70"
+                android:layout_margin="@dimen/oustlayout_dimen4"
+                android:layout_centerInParent="true"
+                android:progress="0"
+                android:progressDrawable="@drawable/loaderback"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

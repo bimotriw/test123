@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="@dimen/oustlayout_dimen24"
+        android:top="@dimen/oustlayout_dimen12.5"
+        android:left="@dimen/oustlayout_dimen14.5"
+        android:right="@dimen/oustlayout_dimen14.5">
+        <shape android:shape="rectangle">
+
+            <solid android:color="@color/contestDateColor"/>
+        </shape>
+    </item>
+    <item android:top="@dimen/oustlayout_dimen75"
+        android:left="@dimen/oustlayout_dimen50"
+        android:right="@dimen/oustlayout_dimen50">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/contestDateColor"/>
+        </shape>
+    </item>
+</layer-list>

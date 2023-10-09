@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/row_selector"
+    android:id="@+id/assessment_analytics_mainrow"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen45"
+        android:orientation="horizontal">
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/assessmentstartdate_text"
+            android:layout_toLeftOf="@+id/assessmentenddate_text"
+            android:gravity="center_vertical"
+            android:text=""
+            android:singleLine="true"
+            android:textColor="@color/DarkGray"
+            android:paddingLeft="@dimen/oustlayout_dimen5"
+            android:paddingRight="@dimen/oustlayout_dimen10"
+            android:textSize="@dimen/ousttext_dimen15"
+            />
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/assessmentenddate_text"
+            android:layout_alignParentRight="true"
+            android:gravity="left|center_vertical"
+            android:text=""
+            android:textColor="@color/Orange"
+            android:paddingLeft="@dimen/oustlayout_dimen5"
+            android:paddingRight="@dimen/oustlayout_dimen5"
+            android:textSize="@dimen/ousttext_dimen15"
+            />
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/assessmentname_text"
+            android:layout_toLeftOf="@+id/assessmentstartdate_text"
+            android:gravity="left|center_vertical"
+            android:text="first assessment"
+            android:singleLine="true"
+            android:textColor="@color/DarkGray"
+            android:paddingLeft="@dimen/oustlayout_dimen5"
+            android:paddingRight="@dimen/oustlayout_dimen5"
+            android:textSize="@dimen/ousttext_dimen18"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LiteGreen"
+        ></RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/learinglevel_mainlayout"
+    android:layout_width="@dimen/oustlayout_dimen60"
+    android:layout_height="@dimen/oustlayout_dimen60"
+    android:background="@android:color/transparent">
+    <RelativeLayout
+        android:layout_width="@dimen/oustlayout_dimen80"
+        android:layout_height="@dimen/oustlayout_dimen60"
+        android:id="@+id/ffc_rightanscountlayout">
+        <ImageView
+            android:layout_width="@dimen/oustlayout_dimen30"
+            android:layout_height="@dimen/oustlayout_dimen30"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/click"
+            android:id="@+id/thumbImage"/>
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/thumbImage"
+            android:gravity="center_horizontal"
+            android:id="@+id/ffc_rightcounttext"
+            android:textColor="@color/whitelight"
+            android:text="1200"/>
+    </RelativeLayout>
+</RelativeLayout>

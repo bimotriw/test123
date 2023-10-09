@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popupBackGround"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/oustlayout_dimen30"
+            android:layout_marginRight="@dimen/oustlayout_dimen30">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/info_mainLayout"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/desclaimer_popup_rounded_corner"
+                android:layout_alignParentStart="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/desclaimer_popup_inside_roundedcornerlayout"
+                    android:layout_margin="@dimen/oustlayout_dimen10"
+                    android:padding="@dimen/oustlayout_dimen5"
+                    android:background="@drawable/desclaimer_popup_inside_roundedcorner">
+                    <RelativeLayout
+                        android:id="@+id/text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/heading_layout"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                        android:layout_marginRight="@dimen/oustlayout_dimen10"
+                        android:layout_marginTop="@dimen/oustlayout_dimen30">
+
+                        <com.oustme.oustsdk.tools.htmlrender.HtmlTextView
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:lineSpacingExtra="@dimen/oustlayout_dimen5"
+                            android:maxLines="12"
+                            android:gravity="left"
+                            android:text="hgfdsnbfd shgdsabdfs fhdsgfd sfhdagfa fhgasjfd sfjdsf"
+                            android:textSize="@dimen/ousttext_dimen18" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/ok_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/oustlayout_dimen20"
+                        android:layout_marginTop="@dimen/oustlayout_dimen20"
+                        android:background="@drawable/rounded_backa">
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/okbutton_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/oustlayout_dimen7"
+                            android:paddingLeft="@dimen/oustlayout_dimen45"
+                            android:paddingRight="@dimen/oustlayout_dimen45"
+                            android:paddingTop="@dimen/oustlayout_dimen7"
+                            android:text="OK"
+                            android:textColor="@color/white_pressed"
+                            android:textSize="@dimen/ousttext_dimen23" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

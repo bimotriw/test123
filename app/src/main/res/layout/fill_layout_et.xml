@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:id="@+id/fill_edit_text"
+        style="@style/subtitle_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/unselected_text"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:imeOptions="actionGo"
+        android:includeFontPadding="true"
+        android:maxLines="1"
+        android:overScrollMode="always"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp"
+        android:singleLine="true"
+        android:textColor="@color/primary_text" />
+
+</LinearLayout>

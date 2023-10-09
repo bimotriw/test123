@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/course_detail_lay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".course_ui.CourseDetailScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_lay"
+            layout="@layout/common_toolbar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_lay"
+            android:layout_margin="8dp"
+            android:visibility="visible"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:id="@+id/layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/detail_screen_border"
+                android:orientation="vertical">
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/course_detail_lay_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/course_action_button"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/course_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@color/feed_bg"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/no_image"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="horizontal"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <TextView
+                                android:id="@+id/course_feed_date"
+                                style="@style/caption_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:textAllCaps="true"
+                                android:textColor="@color/secondary_text" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+
+                                <RelativeLayout
+                                    android:id="@+id/download_video_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="gone">
+
+                                    <pl.droidsonroids.gif.GifImageView
+                                        android:id="@+id/download_video_icon"
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/download_video_text"
+                                        style="@style/body_2_bold"
+                                        android:layout_width="@dimen/oustlayout_dimen30"
+                                        android:layout_height="@dimen/oustlayout_dimen30"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:textColor="@color/Black"
+                                        android:textSize="11sp"
+                                        android:visibility="visible" />
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:id="@+id/course_download"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/download_animation"
+                                    app:tint="@color/unselected_text"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageView
+                                    android:id="@+id/course_delete"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_marginStart="10dp"
+                                    android:src="@drawable/ic_delete"
+                                    android:visibility="gone"
+                                    tools:ignore="ContentDescription" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/course_title_full"
+                            style="@style/header_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="top"
+                            android:textColor="@color/primary_text"
+                            android:transitionName="module_title"
+                            tools:targetApi="lollipop" />
+
+                        <TextView
+                            android:id="@+id/course_feed_dead_line"
+                            style="@style/caption_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/primary_text" />
+
+                        <LinearLayout
+                            android:id="@+id/course_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:baselineAligned="false"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/course_duration_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_clock_info"
+                                    android:transitionName="duration_iv"
+                                    app:tint="@color/unselected_text"
+                                    tools:ignore="ContentDescription"
+                                    tools:targetApi="lollipop" />
+
+                                <TextView
+                                    android:id="@+id/course_duration_text"
+                                    style="@style/header_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/primary_text"
+                                    android:transitionName="duration_tv"
+                                    tools:targetApi="lollipop" />
+
+                                <TextView
+                                    style="@style/caption_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:text="@string/to_complete"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/secondary_text" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/course_level_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_course_level"
+                                    app:tint="@color/unselected_text"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:id="@+id/course_level_text"
+                                    style="@style/header_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/primary_text" />
+
+                                <TextView
+                                    style="@style/caption_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:text="@string/to_complete"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/secondary_text" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/course_coins_micro_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:id="@+id/img_coin_micro"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_coins_golden"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:id="@+id/course_coins_micro_text"
+                                    style="@style/header_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/primary_text" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/course_coins_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:id="@+id/img_coin"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_coins_golden"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/course_coins_text"
+                                style="@style/header_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:textColor="@color/primary_text" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/course_description"
+                            style="@style/body_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="top"
+                            android:textColor="@color/primary_text" />
+
+                        <WebView
+                            android:id="@+id/course_description_webView"
+                            style="@style/body_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="top"
+                            android:textColor="@color/primary_text"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/course_attach_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/bg_highlighted_separator" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center|start">
+
+                                <ImageView
+                                    android:id="@+id/file_attach_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_attach_fill"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:id="@+id/course_attach_text"
+                                    style="@style/body_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_toEndOf="@+id/file_attach_image"
+                                    android:gravity="center"
+                                    android:textAlignment="textStart"
+                                    tools:ignore="RtlCompat" />
+
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/bg_highlighted_separator" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/multilingual_course"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:background="@drawable/grey_rectangular_box"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                style="@style/body_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="center_vertical"
+                                android:text="@string/select_course_language"
+                                android:textAllCaps="true"
+                                android:textColor="@color/secondary_text"
+                                tools:targetApi="lollipop" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/course_language"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/course_action_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/course_button_bg">
+
+                    <TextView
+                        android:id="@+id/course_status_button"
+                        style="@style/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        app:drawableStartCompat="@drawable/ic_button_arrow"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/branding_main_layout"
+        layout="@layout/branding_loader"
+        android:visibility="gone" />
+
+</FrameLayout>

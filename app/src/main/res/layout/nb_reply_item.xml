@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/oustlayout_dimen10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nb_reply_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/oustlayout_dimen5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/oustlayout_dimen20"
+                android:layout_height="@dimen/oustlayout_dimen20"
+                android:layout_gravity="end"
+                android:id="@+id/deleteBtn"
+                android:padding="@dimen/oustlayout_dimen2"
+                android:src="@drawable/ic_delete" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal">
+
+                <com.oustme.oustsdk.customviews.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/oustlayout_dimen30"
+                    android:layout_height="@dimen/oustlayout_dimen30" />
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/replied_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen15"
+                    android:textColor="@color/common_grey"
+                    />
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/relied_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen15"
+                    android:textColor="@color/common_grey"
+                     />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            android:id="@+id/reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:textColor="@color/common_grey"
+            android:textSize="@dimen/ousttext_dimen15"
+            />
+    </LinearLayout>
+</LinearLayout>

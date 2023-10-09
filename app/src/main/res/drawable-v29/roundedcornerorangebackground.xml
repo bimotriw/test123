@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@android:color/white" />
+
+    <stroke
+        android:width="@dimen/oustlayout_dimen1"
+        android:color="@color/Orange"/>
+
+
+    <corners
+        android:bottomLeftRadius="@dimen/avatar_radius"
+        android:bottomRightRadius="@dimen/avatar_radius"
+        android:topLeftRadius="@dimen/avatar_radius"
+        android:topRightRadius="@dimen/avatar_radius" />
+
+</shape>

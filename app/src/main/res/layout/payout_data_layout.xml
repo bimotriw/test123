@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_marginLeft="@dimen/oustlayout_dimen10"
+        android:visibility="visible"
+        android:layout_width="@dimen/oustlayout_dimen10"
+        android:layout_marginTop="@dimen/oustlayout_dimen1"
+        android:layout_height="@dimen/oustlayout_dimen10"
+        android:background="@drawable/circle_common_grey_bg"/>
+
+    <com.oustme.oustsdk.customviews.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_Data"
+        android:text="1 Re / min"
+        android:paddingLeft="@dimen/oustlayout_dimen5"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/ousttext_dimen16"
+        />
+
+</LinearLayout>

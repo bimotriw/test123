@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Graya"
+            android:orientation="vertical">
+
+            <com.oustme.oustsdk.customviews.ProCustomTextView
+                android:id="@+id/ffcinstruction_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/oustlayout_dimen20"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                android:text="Instructions"
+                android:textColor="@color/yellowv"
+                android:textColorHint="@color/DarkGray"
+                android:textSize="@dimen/ousttext_dimen23"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/oustlayout_dimen20">
+
+                <RelativeLayout
+                    android:id="@+id/ffcinstruction_gametimelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen100"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="visible">
+
+                    <com.oustme.oustsdk.customviews.ProCustomTextView
+                        android:id="@+id/ffcinstructionspopup_gamestartlabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen30"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top"
+                        android:text="Contest starts in"
+                        android:textColor="@color/yellowv"
+                        android:textSize="@dimen/ousttext_dimen20" />
+
+                    <com.oustme.oustsdk.customviews.ProCustomTextView
+                        android:id="@+id/ffcinstructionspopup_gamestarttime"
+                        android:layout_width="@dimen/oustlayout_dimen60"
+                        android:layout_height="@dimen/oustlayout_dimen60"
+                        android:layout_below="@+id/ffcinstructionspopup_gamestartlabel"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/circle_blackcorner"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/yellowv"
+                        android:textSize="@dimen/ousttext_dimen25"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/ffcinstruction_gametimelayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.oustme.oustsdk.tools.htmlrender.HtmlTextView
+                            android:id="@+id/ffcinstructionspopup_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="@dimen/oustlayout_dimen5"
+                            android:padding="@dimen/oustlayout_dimen5"
+                            android:gravity="left"
+                            android:text=""
+                            android:textColor="@color/white_pressed"
+                            android:textSize="@dimen/ousttext_dimen20" />
+                    </RelativeLayout>
+                </ScrollView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ffcresisterpopup_btnClose"
+            android:layout_width="@dimen/oustlayout_dimen40"
+            android:layout_height="@dimen/oustlayout_dimen40"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/oustlayout_dimen4"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_close_img"
+            android:tint="@color/white_pressed" />
+    </RelativeLayout>
+
+
+</LinearLayout>

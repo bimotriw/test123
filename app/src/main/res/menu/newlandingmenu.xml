@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/notification_alert"
+        android:icon="@drawable/ic_landing_notification"
+        android:title="@string/alerts"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_alert"
+        android:icon="@drawable/ic_landing_notification"
+        android:title="@string/alerts"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_leaderBoard"
+        android:icon="@drawable/ic_landing_leader_board"
+        android:title="@string/leader_board_title"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_calendar"
+        android:icon="@drawable/ic_landing_calendar"
+        android:title="@string/calendar_text"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_landing_search"
+        android:title="@string/search_menu_text"
+        android:visible="false"
+        app:actionViewClass="com.oustme.oustsdk.customviews.CustomSearchView"
+        app:showAsAction="always|collapseActionView" />
+
+    <item
+        android:id="@+id/action_gotohostapp"
+        android:title=""
+        android:visible="false"
+        app:showAsAction="always" />
+</menu>

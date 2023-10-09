@@ -1,0 +1,25 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/customPlayerProgressBg">
+        <shape>
+            <gradient
+                android:startColor="@color/white_pressed"
+                android:endColor="@color/LiteGray"
+                android:centerY="0.5"
+                android:angle="270"
+            />
+        </shape>
+    </item>
+
+    <item android:id="@+id/customPlayerProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="@color/LiteGreen"
+                    android:endColor="@color/LiteGreen"
+                    android:centerY="0.5"
+                    android:angle="270" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

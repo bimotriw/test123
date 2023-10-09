@@ -1,0 +1,14 @@
+<com.oustme.oustsdk.customviews.CustomTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="@style/customDropDownStyle"
+    android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
+    android:singleLine="true"
+    android:gravity="left|center_vertical"
+    android:textColor="@color/DarkGray"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/oustlayout_dimen45"
+    android:textSize="@dimen/ousttext_dimen18"
+    android:background="@drawable/square_gray_corners"
+    android:text=""
+    />

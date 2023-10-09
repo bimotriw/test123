@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/live_class_background"
+    tools:context=".LiveClasses.CallEndActivity">
+
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_margin="@dimen/oustlayout_dimen25"
+        android:src="@drawable/ic_back_cd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/hand_image"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/call_end_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/you_left_the_event"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/call_end_rejoin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/oustlayout_dimen20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="@string/left_by_mistake"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:id="@+id/call_end_event_rejoin"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/oustlayout_dimen30"
+                android:layout_marginTop="@dimen/oustlayout_dimen10"
+                android:background="@drawable/course_button_bg"
+                android:gravity="center"
+                android:paddingStart="@dimen/ousttext_dimen20"
+                android:paddingTop="@dimen/ousttext_dimen6"
+                android:paddingEnd="@dimen/ousttext_dimen20"
+                android:paddingBottom="@dimen/ousttext_dimen6">
+
+                <ImageView
+                    android:layout_width="@dimen/oustlayout_dimen10"
+                    android:layout_height="@dimen/oustlayout_dimen10"
+                    android:layout_marginEnd="@dimen/oustlayout_dimen3"
+                    android:src="@drawable/rejoin_icon"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/rejoin"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/oustlayout_dimen10"
+                android:gravity="center_horizontal"
+                android:text="@string/or_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/oustlayout_dimen15"
+                android:layout_height="@dimen/oustlayout_dimen15"
+                android:layout_marginEnd="@dimen/oustlayout_dimen3"
+                android:src="@drawable/ic_clock_fill"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/call_end_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black_60"
+                android:textSize="@dimen/font_12sp"
+                android:textStyle="normal"
+                tools:text="59Sec" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/back_to_oust_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:gravity="center_horizontal"
+            android:text="@string/back_to_oust"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

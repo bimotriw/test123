@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/answer_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/answer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_bg_rounded_ten"
+        android:orientation="horizontal"
+        android:padding="0.5dp">
+
+        <LinearLayout
+            android:id="@+id/option_layout"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/answer_option_lay">
+
+            <TextView
+                android:id="@+id/option"
+                style="@style/body_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/answer_option"
+            style="@style/body_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:textColor="@color/primary_text"
+            tools:ignore="RtlCompat" />
+
+        <LinearLayout
+            android:id="@+id/webview_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <com.oustme.oustsdk.util.WebViewClass
+                android:id="@+id/answer_option_math"
+                style="@style/body_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/primary_text"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/katex_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <com.oustme.katexview.KatexView
+                android:id="@+id/answer_option_katex"
+                style="@style/body_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/primary_text"
+                tools:ignore="RtlCompat" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/check_question"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|center"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/answer_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/card_bg_rounded_ten"
+        android:orientation="vertical"
+        android:padding="0.5dp"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                tools:targetApi="lollipop">
+
+                <ImageView
+                    android:id="@+id/answer_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/check_image_question"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/answer_option_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/option_image"
+                style="@style/body_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_grey_bg"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/expand_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_expand_image"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/fulltransparent"
+    android:layout_margin="@dimen/oustlayout_dimen7"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        card_view:cardBackgroundColor="@color/white_pressed"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="2dp"
+        card_view:cardCornerRadius="2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/oustlayout_dimen4"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/usermanual_mainrow"
+                android:layout_height="@dimen/oustlayout_dimen45">
+
+                <TextView
+                    android:id="@+id/reviewmoderow_indextext"
+                    android:layout_width="@dimen/oustlayout_dimen35"
+                    android:layout_height="@dimen/oustlayout_dimen35"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen7"
+                    android:background="@drawable/greenlite_round_textview"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/whitelight"
+                    android:textSize="@dimen/ousttext_dimen18"
+                    android:visibility="visible" />
+                <RelativeLayout
+                    android:layout_width="@dimen/oustlayout_dimen25"
+                    android:layout_height="@dimen/oustlayout_dimen25"
+                    android:layout_marginRight="@dimen/oustlayout_dimen10"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                    android:id="@+id/show_cardlayout"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/show_cardupbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/downarrow_roundback"
+                        android:src="@drawable/ic_uparrow"
+                        android:tint="@color/DarkGray"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:id="@+id/show_carddownbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/oustlayout_dimen3"
+                        android:background="@drawable/downarrow_roundback"
+                        android:src="@drawable/ic_downarrow"
+                        android:tint="@color/DarkGray"
+                        android:visibility="gone" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="@dimen/oustlayout_dimen25"
+                    android:layout_height="@dimen/oustlayout_dimen25"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                    android:layout_toLeftOf="@+id/show_cardlayout"
+                    android:id="@+id/downloadlevel_iconlayout"
+                    android:layout_centerVertical="true">
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/downloading_icon"
+                        android:layout_width="@dimen/oustlayout_dimen25"
+                        android:layout_height="@dimen/oustlayout_dimen25"
+                        android:padding="@dimen/oustlayout_dimen4"
+                        android:background="@drawable/downarrow_roundback"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/download_icon"
+                        android:background="@drawable/downarrow_roundback"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:src="@drawable/newlp_notdownload"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/downloaded_icon"
+                        android:background="@drawable/downarrow_roundback"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:src="@drawable/newlp_downloaded"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:layout_toLeftOf="@+id/downloadlevel_iconlayout"
+                    android:layout_toRightOf="@+id/reviewmoderow_indextext"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen7"
+                    android:singleLine="true"
+                    android:textColor="@color/common_grey"
+                    android:gravity="center_vertical"
+                    android:id="@+id/usermanual_heading"
+                    android:textSize="@dimen/ousttext_dimen16"/>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horizantalSearcRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/usermanual_mainrow"
+                android:layout_height="@dimen/oustlayout_dimen130"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

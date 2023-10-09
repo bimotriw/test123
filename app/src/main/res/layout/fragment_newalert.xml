@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/newalert_framelayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/whitelight"
+        android:foreground="?android:windowContentOverlay">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/newfeed_toplayout">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tabanim_toolbar"
+                android:layout_gravity="top|right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/LiteGreen"
+                app:popupTheme="@style/AppToolBarTheme">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/title"
+                        android:textColor="@color/White"
+                        android:gravity="left|top"
+                        android:text=""
+                        android:maxLines="1"
+                        android:textSize="@dimen/ousttext_dimen18"
+                        android:paddingRight="@dimen/oustlayout_dimen10"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="@dimen/oustlayout_dimen2" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <ProgressBar
+                android:id="@+id/newsalert_loader"
+                android:indeterminate="@bool/default_underline_indicator_fades"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminateDuration="1000"
+                android:indeterminateBehavior="repeat"
+                android:interpolator="@android:anim/linear_interpolator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen3"
+                android:indeterminateDrawable="@drawable/custom_progressbar"
+                android:visibility="gone"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/newfeed_listlayout"
+            android:layout_below="@+id/newfeed_toplayout">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/eventlist_layout"
+                    android:visibility="visible">
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:background="@color/LiteGrayNew">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </RelativeLayout>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/newsfeed_recyclerview"
+                        android:visibility="visible">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen50"
+                        android:id="@+id/nofeedstext"
+                        android:textColor="@color/LiteGray"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:textSize="@dimen/ousttext_dimen16"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/event_webview_layout"
+                    android:visibility="gone">
+                    <ProgressBar
+                        android:elevation="5dp"
+                        android:visibility="gone"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:foregroundGravity="center_vertical"
+                        android:id="@+id/progressbar_web"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <WebView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/webView"
+                        android:visibility="visible"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:padding="@dimen/oustlayout_dimen10"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/feed_card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/feedcard_toplayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen40"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/closecard_layout"
+                android:layout_width="@dimen/oustlayout_dimen40"
+                android:layout_height="@dimen/oustlayout_dimen40"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/close_card"
+                    android:layout_width="@dimen/oustlayout_dimen30"
+                    android:layout_height="@dimen/oustlayout_dimen30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                    android:padding="@dimen/oustlayout_dimen5"
+                    android:src="@drawable/ic_close_img" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/downloadscreen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent_dark"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

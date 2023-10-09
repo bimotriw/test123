@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_margin="@dimen/oustlayout_dimen15"
+    android:padding="@dimen/oustlayout_dimen10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitea"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="@dimen/oustlayout_dimen30"
+            android:layout_height="@dimen/oustlayout_dimen30"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_close_img"
+            android:tint="@color/Black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/oustlayout_dimen10"
+            android:background="@drawable/red_circle_bg">
+            <ImageView
+                android:layout_width="@dimen/oustlayout_dimen30"
+                android:layout_height="@dimen/oustlayout_dimen30"
+                android:src="@drawable/ic_delete"
+                android:padding="@dimen/oustlayout_dimen1"
+                android:tint="@color/light_red"/>
+        </LinearLayout>
+
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:textSize="@dimen/ousttext_dimen20"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Confirmation" />
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:id="@+id/textViewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="@dimen/ousttext_dimen17"
+            android:text="Are you sure you want to delete" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_whitefill"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRetry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="1px"
+                android:layout_marginRight="1px"
+                android:layout_weight="1"
+                android:background="@color/Orange"
+                android:gravity="center_horizontal"
+                android:visibility="visible">
+
+                <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                    android:id="@+id/retryTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/oustlayout_dimen8"
+                    android:text="No"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white_presseda"
+                    android:textSize="@dimen/ousttext_dimen16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutOK"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:background="@color/lgreen"
+                android:gravity="center_horizontal">
+
+                <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/oustlayout_dimen8"
+                    android:text="Yes"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white_presseda"
+                    android:textSize="@dimen/ousttext_dimen16" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

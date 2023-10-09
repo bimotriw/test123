@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/oustlayout_dimen10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/oustlayout_dimen5">
+
+        <LinearLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/oustlayout_dimen10"
+            android:paddingBottom="@dimen/oustlayout_dimen5"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/deleteBtn"
+                android:layout_width="@dimen/oustlayout_dimen20"
+                android:layout_height="@dimen/oustlayout_dimen20"
+                android:layout_gravity="end"
+                android:padding="@dimen/oustlayout_dimen2"
+                android:src="@drawable/ic_delete" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr">
+
+                <com.oustme.oustsdk.customviews.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="top"
+                    android:src="@drawable/ic_person_profile_image_nb" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/replied_by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/textBlack"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/designation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textBlack"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/relied_on"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_grey_new"
+                            android:textSize="10sp"
+                            tools:text="" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/userRole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dark_grey_new"
+                        android:textSize="10sp" />
+
+                    <!--            commented_on-->
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/authorDesignationTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                        android:layout_marginTop="@dimen/oustlayout_dimen3"
+                        android:maxWidth="@dimen/oustlayout_dimen100"
+                        android:singleLine="true"
+                        android:textColor="@color/dark_grey_new"
+                        android:textSize="@dimen/ousttext_dimen14"
+                        android:visibility="gone"
+                        tools:text="" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/deleteBtn1"
+                android:layout_width="@dimen/oustlayout_dimen20"
+                android:layout_height="@dimen/oustlayout_dimen20"
+                android:layout_gravity="end"
+                android:padding="@dimen/oustlayout_dimen2"
+                android:src="@drawable/ic_delete" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal">
+
+                <com.oustme.oustsdk.customviews.CircleImageView
+                    android:id="@+id/avatar1"
+                    android:layout_width="@dimen/oustlayout_dimen30"
+                    android:layout_height="@dimen/oustlayout_dimen30" />
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/replied_by1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen15"
+                    android:textColor="@color/common_grey" />
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/relied_on1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen15"
+                    android:textColor="@color/common_grey" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            android:id="@+id/reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/common_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

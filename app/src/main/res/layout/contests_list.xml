@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <include
+        android:id="@+id/toolbar_lay_ffc"
+        layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18.4"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:id="@+id/bannerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/event_top_image_transparency"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="@drawable/event_bottom_image_transparency">
+
+                <ImageView
+                    android:id="@+id/contest_bannerImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY" />
+            </FrameLayout>
+
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:id="@+id/contentonimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/whitea"
+                android:textSize="@dimen/oustlayout_dimen24"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/closeBtnLayout"
+                android:layout_width="@dimen/oustlayout_dimen40"
+                android:layout_height="@dimen/oustlayout_dimen40"
+                android:layout_alignParentRight="true">
+
+                <ImageButton
+                    android:id="@+id/closeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_close_img"
+                    android:tint="@color/whitelight" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <ProgressBar
+                    android:id="@+id/contest_progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen3"
+                    android:indeterminate="@bool/default_underline_indicator_fades"
+                    android:indeterminateBehavior="repeat"
+                    android:indeterminateDrawable="@drawable/custom_progressbar"
+                    android:indeterminateDuration="1000"
+                    android:interpolator="@android:anim/linear_interpolator"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="81.6"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contestList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.oustme.oustsdk.customviews.LightCustomTextView
+            android:id="@+id/noconteststext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen50"
+            android:gravity="center"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/ousttext_dimen16"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

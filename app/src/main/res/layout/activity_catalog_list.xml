@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/leaderboardmainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/baseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        android:orientation="vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:id="@+id/shareLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/tabanim_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:background="@color/LiteGreen"
+                        app:popupTheme="@style/AppToolBarTheme">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:gravity="left|top"
+                                android:maxLines="1"
+                                android:paddingRight="@dimen/oustlayout_dimen10"
+                                android:paddingTop="@dimen/oustlayout_dimen2"
+                                android:text=""
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/ousttext_dimen18" />
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <RelativeLayout
+                    android:id="@+id/no_data_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/nodata_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/oustlayout_dimen15"
+                        android:gravity="center"
+                        android:text="@string/no_data_available"
+                        android:textSize="@dimen/ousttext_dimen16" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </LinearLayout>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <com.oustme.oustsdk.customviews.CurvedRelativeLayout
+                        android:id="@+id/banner_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen50"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/oustlayout_dimen10"
+                        android:layout_marginTop="@dimen/oustlayout_dimen10"
+                        app:curveviewwidth="6dp">
+
+                        <ImageView
+                            android:id="@+id/banner_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.8" />
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/banner_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:padding="@dimen/oustlayout_dimen10"
+                            android:text=""
+                            android:textColor="@android:color/white"
+                            android:visibility="gone" />
+                    </com.oustme.oustsdk.customviews.CurvedRelativeLayout>
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/nodatatext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen60"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="@dimen/oustlayout_dimen15"
+                        android:text=""
+                        android:textSize="@dimen/ousttext_dimen14"
+                        android:visibility="gone" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/oustlayout_dimen5"
+                        android:paddingRight="@dimen/oustlayout_dimen5"
+                        android:layout_marginTop="@dimen/oustlayout_dimen10"
+                        android:orientation="horizontal">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/eventboard_leaderBoardList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:paddingBottom="@dimen/oustlayout_dimen10"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

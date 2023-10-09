@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.oustme.oustsdk.activity.common.feed.FeedPreviewActivity">
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/hr_line"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/oustlayout_dimen5"
+                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                android:layout_marginEnd="@dimen/oustlayout_dimen5"
+                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imageViewFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen120"
+                    android:layout_marginStart="@dimen/oustlayout_dimen5"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:layout_marginEnd="@dimen/oustlayout_dimen5"
+                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+                <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                    android:id="@+id/textViewFeedTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/oustlayout_dimen5"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:layout_marginEnd="@dimen/oustlayout_dimen5"
+                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                    android:textSize="@dimen/ousttext_dimen16"
+                    android:textStyle="bold"
+                    tools:text="Feed Title" />
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/textViewFeedDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/oustlayout_dimen5"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:layout_marginEnd="@dimen/oustlayout_dimen5"
+                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                    android:textSize="@dimen/ousttext_dimen14"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="Description" />
+                <TextView
+                    android:id="@+id/textViewFeedDescription2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginStart="@dimen/oustlayout_dimen5"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:layout_marginEnd="@dimen/oustlayout_dimen5"
+                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                    android:textSize="@dimen/ousttext_dimen14"
+                    tools:text="Description" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/hr_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="0dp"
+        android:background="@color/dark_grey_new"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutBottom" />
+    <LinearLayout
+        android:id="@+id/linearLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="8"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/oustlayout_dimen5"
+            android:paddingLeft="@dimen/oustlayout_dimen10"
+            android:paddingRight="@dimen/oustlayout_dimen10"
+            android:weightSum="8">
+
+            <LinearLayout
+                android:id="@+id/newrow_datelayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="4">
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/newsrow_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:textColor="@color/ReviewbarColor"
+                    android:textSize="@dimen/ousttext_dimen14"
+                    tools:text="20, Dec 2018" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:id="@+id/newrow_likelayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/oustlayout_dimen5"
+                    android:paddingRight="@dimen/oustlayout_dimen5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageViewLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/oustlayout_dimen2"
+                            android:src="@drawable/ic_newlike" />
+
+                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                            android:id="@+id/newsrow_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/oustlayout_dimen3"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen3"
+                            android:gravity="center"
+                            android:textColor="@color/ReviewbarColor"
+                            android:textSize="@dimen/ousttext_dimen14"
+                            tools:text="20" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/newrow_commentlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/oustlayout_dimen5"
+                    android:paddingRight="@dimen/oustlayout_dimen5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageViewComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/oustlayout_dimen2"
+                            android:src="@drawable/ic_comment" />
+
+                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                            android:id="@+id/newsrow_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/oustlayout_dimen3"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen3"
+                            android:textColor="@color/ReviewbarColor"
+                            android:textSize="@dimen/ousttext_dimen14"
+                            tools:text="20" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/newrow_shareLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/oustlayout_dimen5"
+                    android:visibility="gone"
+                    android:paddingRight="@dimen/oustlayout_dimen5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageViewShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/oustlayout_dimen2"
+                            android:src="@drawable/ic_share_new" />
+
+                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                            android:id="@+id/newsrow_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/oustlayout_dimen3"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen3"
+                            android:textColor="@color/ReviewbarColor"
+                            android:textSize="@dimen/ousttext_dimen14"
+                            tools:text="20" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/oustlayout_dimen6"
+    android:layout_marginStart="@dimen/oustlayout_dimen12"
+    android:layout_marginLeft="@dimen/oustlayout_dimen12"
+    android:layout_marginEnd="@dimen/oustlayout_dimen12"
+    android:layout_marginRight="@dimen/oustlayout_dimen12"
+    android:background="@color/whitea"
+    card_view:cardCornerRadius="@dimen/oustlayout_dimen6">
+
+    <LinearLayout
+        android:id="@+id/layout_card_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_plain"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/oustlayout_dimen2.5"
+        android:paddingTop="@dimen/oustlayout_dimen2.5"
+        android:paddingRight="@dimen/oustlayout_dimen3"
+        android:paddingBottom="@dimen/oustlayout_dimen2.5">
+
+        <RelativeLayout
+            android:id="@+id/card_mainrow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/oustlayout_dimen3"
+            android:layout_marginRight="@dimen/oustlayout_dimen4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/oustlayout_dimen60"
+                    android:layout_height="@dimen/oustlayout_dimen50"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.oustme.oustsdk.customviews.CustomRoundedImageView
+                        android:id="@+id/card_questionimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/oustroundedcorner_background"
+                        android:visibility="visible" />
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/card_image_gif"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/oustroundedcorner_background"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible" />
+
+                    <com.oustme.oustsdk.customviews.CustomRoundedImageView
+                        android:id="@+id/card_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/oustroundedcorner_background"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/card_videoicon"
+                        android:layout_width="@dimen/oustlayout_dimen23"
+                        android:layout_height="@dimen/oustlayout_dimen23"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        app:tint="@color/whitea" />
+                </RelativeLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/usermanual_mainrow"
+                    android:layout_weight="8"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:shimmer_auto_start="true"
+                    app:shimmer_direction="left_to_right"
+                    app:shimmer_duration="2000"
+                    app:shimmer_shape="linear">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen6"
+                        android:layout_marginRight="@dimen/oustlayout_dimen6"
+                        android:background="@color/new_grey"
+                        android:maxLines="1"
+                        android:text="" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <TextView
+                    android:id="@+id/card_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/oustlayout_dimen6"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen6"
+                    android:layout_weight="8"
+                    android:maxLines="2"
+                    android:padding="@dimen/oustlayout_dimen2"
+                    android:text=""
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/ousttext_dimen14"
+                    android:visibility="gone"
+                    tools:text="card title!!" />
+
+                <ImageView
+                    android:id="@+id/imageViewLockOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

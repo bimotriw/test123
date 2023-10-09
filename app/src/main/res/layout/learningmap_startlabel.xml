@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/learinglevel_mainlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/starticon_layout"
+        android:layout_width="@dimen/oustlayout_dimen55"
+        android:layout_height="@dimen/oustlayout_dimen25">
+
+    <ImageView
+        android:layout_width="@dimen/oustlayout_dimen25"
+        android:layout_height="@dimen/oustlayout_dimen25"
+        android:gravity="center"
+        android:src="@drawable/arrow"
+        android:id="@+id/start_icon"/>
+    </RelativeLayout>
+
+    <com.oustme.oustsdk.customviews.CustomTextView
+        android:id="@+id/startlabel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_pressed"
+        android:textSize="@dimen/ousttext_dimen14"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/starticon_layout" />
+
+</RelativeLayout>

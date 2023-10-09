@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.oustme.oustsdk">
+
+    <uses-sdk tools:overrideLibrary="io.branch.referral" />
+    <!-- required permission -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK"
+        android:required="false" /> <!-- optional permission - highly recommended -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:required="false" /> <!-- optional permission -->
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.READ_CONTACTS"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.VIBRATE"
+        android:required="false" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.MEDIA_CONTENT_CONTROL"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".tools.OustSdkApplication"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".activity.common.ChooseLanguageActivity"
+            android:exported="false" />
+        <!-- Required: set your sentry.io project identifier (DSN) -->
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://a761088a50684b36bc4241954559b52a@o1276931.ingest.sentry.io/4504472927338496" /> <!-- enable automatic breadcrumbs for user interactions (clicks, swipes, scrolls) -->
+        <meta-data
+            android:name="io.sentry.traces.user-interaction.enable"
+            android:value="true" /> <!-- enable screenshot for crashes -->
+        <meta-data
+            android:name="io.sentry.attach-screenshot"
+            android:value="true" /> <!-- enable view hierarchy for crashes -->
+        <meta-data
+            android:name="io.sentry.attach-view-hierarchy"
+            android:value="true" /> <!-- enable the performance API by setting a sample-rate, adjust in production env -->
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="1.0" /> <!-- enable profiling when starting transactions, adjust in production env -->
+        <meta-data
+            android:name="io.sentry.traces.profiling.sample-rate"
+            android:value="1.0" />
+        <meta-data
+            android:name="io.sentry.anr.enable"
+            android:value="true" />
+        <meta-data
+            android:name="io.sentry.anr.timeout-interval-millis"
+            android:value="5000" />
+        <meta-data
+            android:name="io.sentry.auto-init"
+            android:value="true" />
+
+        <activity
+            android:name=".assessment_ui.assessmentDetail.ConditionalFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LiveClasses.CallEndActivity"
+            android:exported="false" />
+        <activity
+            android:name=".calendar_ui.ui.CalendarDescriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LiveClasses.MeetingActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:theme="@style/AppThemeMaterial" />
+
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="69W-467-Z66Z" />
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="a64-0c6" /> <!-- IMPORTANT: To force use Google AD ID to uniquely identify  users, use the following meta tag. GDPR mandates that if you are using this tag, there is prominent disclousure to your end customer in their application. Read more about GDPR here - https://clevertap.com/blog/in-preparation-of-gdpr-compliance/ -->
+        <meta-data
+            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+            android:value="1" />
+        <meta-data
+            android:name="CLEVERTAP_REGION"
+            android:value="eu1" />
+
+        <activity
+            android:name=".course_ui.IntroScormCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layoutFour.components.directMessages.DirectMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layoutFour.components.directMessages.DirectMessageDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".layoutFour.components.feedList.adapter.WelcomePopUpCardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale" />
+        <activity
+            android:name=".feed_ui.ui.ImageFeedDetailScreen"
+            android:exported="false" />
+        <activity
+            android:name=".course_ui.IntroCardActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale"
+            android:exported="false" />
+        <activity
+            android:name=".assessment_ui.examMode.AssessmentExamModeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".assessment_ui.examMode.ExamModeQuestionListScreen"
+            android:exported="false" />
+        <activity
+            android:name=".profile.ViewCertificate"
+            android:configChanges="locale" />
+        <activity
+            android:name=".notification.NotificationActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".profile.AchievementTabActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".course_ui.CourseLearningMapActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".question_module.course.CourseLearningModuleActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale"
+            android:largeHeap="true" />
+        <activity
+            android:name=".question_module.assessment.AssessmentQuestionBaseActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".layoutFour.components.leaderBoard.CommonLeaderBoardActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".layoutFour.components.search.SearchActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".layoutFour.components.myTask.MyTaskActivity"
+            android:configChanges="locale" />
+        <activity android:name=".signin_signup.OustSignActivity" />
+        <activity android:name="._utils.BaseActivity" />
+        <activity
+            android:name=".layoutFour.BaseLandingActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".layoutFour.LandingActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMaterial" />
+
+        <service
+            android:name=".downloadmanger.newimpl.DownloadFilesIntentService"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".profile.CourseCompletionWithBadgeActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".catalogue_ui.CatalogueModulesActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".catalogue_ui.CatalogueFolderListActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".catalogue_ui.CatalogueModuleListActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".work_diary.WorkDiaryActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".question_module.survey.SurveyQuestionBaseActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".survey_module.SurveyComponentActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".util.CordovaLauncher"
+            android:exported="true">
+
+            <!--
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".skill_ui.ui.SkillWatchActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".skill_ui.ui.IdpTargetActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".my_tasks.MyTasksScreen"
+            android:configChanges="locale" />
+        <activity
+            android:name=".skill_ui.ui.SkillLeaderBoardActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".skill_ui.FullScreenVideoActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".skill_ui.ui.SkillHistoryActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".skill_ui.ui.SkillDetailActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".survey_ui.SurveyDetailActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".survey_ui.SurveyPopUpActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".activity.rough.RapidoTestingActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".activity.courses.newlearnngmap.NewCourseLauncherActivity"
+            android:configChanges="locale"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".activity.courses.newlearnngmap.NewCardLauncherActivity"
+            android:configChanges="locale"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".assessment_ui.assessmentCompletion.AssessmentCompleteScreen"
+            android:configChanges="locale" />
+        <activity
+            android:name=".assessment_ui.assessmentDetail.AssessmentDetailScreen"
+            android:configChanges="locale" />
+        <activity
+            android:name=".feed_ui.ui.PublicVideoFeedCardScreen"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale" />
+        <activity
+            android:name=".calendar_ui.ui.EventDataDetailScreen"
+            android:configChanges="locale" />
+        <activity
+            android:name=".calendar_ui.ui.CalendarScreen"
+            android:configChanges="locale" />
+        <activity
+            android:name=".feed_ui.ui.VideoCardDetailScreen"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale" />
+        <activity
+            android:name=".feed_ui.ui.RedirectWebView"
+            android:configChanges="locale" />
+        <activity
+            android:name=".feed_ui.ui.GeneralFeedDetailScreen"
+            android:configChanges="locale" />
+        <activity
+            android:name=".course_ui.CourseDetailScreen"
+            android:configChanges="locale" />
+        <activity
+            android:name=".util.DialogActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name=".util.OustWebViewActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".util.SingleSessionAlertActivity"
+            android:configChanges="locale"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".activity.common.apptutorial.AppTutorialActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".activity.cordovacall.CordovaCallActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".activity.common.leaderboard.activity.GroupLBDataActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".activity.common.leaderboard.activity.NewLeaderBoardActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.todoactivity.CitySelection"
+            android:configChanges="locale" />
+        <activity
+            android:name=".activity.common.noticeBoard.activity.AudioRecordActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layoutFour.newnoticeBoard.activity.NewAudioRecordActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.learningdiary.LearningDiaryActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".activity.common.feed.FeedPreviewActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".activity.common.noticeBoard.activity.NBPostCreateActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layoutFour.newnoticeBoard.activity.NewNBPostCreateActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.SplashActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.common.NewLandingActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.newcatalogue.NewCatalogActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.NewAlertActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.courses.CourseMultiLingualActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.courses.newlearnngmap.NewLearningMapActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale" />
+        <activity
+            android:name=".activity.courses.newlearnngmap.RegularModeLearningMapActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale"
+            android:theme="@style/AppTheme3" /> <!-- android:theme="@style/AppTheme4" /> -->
+        <activity
+            android:name=".activity.courses.learningmapmodule.LearningMapModuleActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale"
+            android:largeHeap="true" /> <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"/> -->
+        <activity
+            android:name=".activity.courses.learningmapmodule.AdaptiveLearningMapModuleActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale" />
+        <activity
+            android:name=".activity.common.PopupActivity"
+            android:configChanges="locale"
+            android:theme="@style/Theme.Transparent" /> <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"/> -->
+        <activity
+            android:name=".activity.courses.LessonsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.AssessmentPlayActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.QuestionActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.AssessmentResultActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.ResultActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.AssessmentQuestionReviewBaseActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.CheckAnswerActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.UserAnalyticsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.EventLeaderboardActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.EnterpriseLeaderboard"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.UserProfileActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.UserSettingActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.NotificationsSettingActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.AcademicsSettingActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.GeneralSettingActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.ArchiveListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.FormFillingActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".launcher.InvalidSecretKeyPopupActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.AllFavouriteCardsOfCourseActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.FavouriteCardsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FFContest.FFcontestStartActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FFContest.FFContestPlayActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FFContest.FFContestLBActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FFContest.FFContestAnswersActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FFContest.FFContestListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.courses.bulletinboardquestion.BulletinBoardQuestionActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.courses.bulletinboardcomments.BulletinBoardCommentsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.common.ReportProblemListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.AssessmentQuestionsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.PlayActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.assessments.AssessmentAnalyticsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.ZoomBaseActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.CatalogListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.CatalogDetailListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.CatalogInfoActivity"
+            android:configChanges="locale"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".activity.common.NewCatalogInfoActivity"
+            android:configChanges="locale"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".activity.assessments.GameLetActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.CreateConfActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".activity.common.ConfTabActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".activity.assessments.NewAssessmentBaseActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale" />
+        <activity
+            android:name=".activity.common.FeedCardActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".activity.common.AlertCommentsActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|locale"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.common.ShareFeedActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.CplBaseActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".activity.common.CplIntroActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.LogoutMsgActivity"
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.rough.PopUpActivity"
+            android:configChanges="locale"
+            android:exported="true">
+
+            <!--
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activity.common.todoactivity.TodoListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".activity.common.languageSelector.LanguageSelectionActivity"
+            android:configChanges="locale"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.noticeBoard.activity.NBTopicDetailActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.common.noticeBoard.activity.NBPostDetailsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.common.noticeBoard.activity.NBMembersListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.noticeBoard.activity.NBCommentActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layoutFour.InAppAnalyticsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layoutFour.InAppAnalyticsDetails"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layoutFour.newnoticeBoard.activity.NewNBTopicDetailActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".layoutFour.newnoticeBoard.activity.NewNBPostDetailsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".layoutFour.newnoticeBoard.activity.NewNBMembersListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layoutFour.newnoticeBoard.activity.NewNBCreatePostList"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layoutFour.newnoticeBoard.activity.NewNBMembersList"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layoutFour.newnoticeBoard.activity.NewNBCommentActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LeaderBoardSearch"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyActionBarTheme" />
+        <activity
+            android:name=".feed_ui.ui.FeedsAPICallingActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="96960e3a9220c75cb408bf3594864c1579765baa" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_fffE2pqFDU8939SWk3Toolgcvvfav8tS" /> <!-- key_live_ioO3mluUryCFwdn7s9Ufjmdgtya6Un9J -&ndash;&gt; india branch io link -->
+        <meta-data
+            android:name="com.oust.sdk.SecretKey"
+            android:value="test_secret_key" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver
+            android:name=".firebase.UpadetaFirebaseToken"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.AlarmReceiverOnBoot"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.NetworkChangeReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.CourseNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.DownloadImage"
+            android:exported="false" />
+        <service
+            android:name=".service.DownLoadIntentService"
+            android:exported="false" />
+        <service
+            android:name=".service.DownLoadFilesIntentService"
+            android:exported="false" />
+        <service
+            android:name=".service.DownloadCardService"
+            android:exported="false" />
+        <service
+            android:name=".service.SubmitFavouriteCardRequestService"
+            android:exported="false" />
+        <service
+            android:name=".service.FeedBackService"
+            android:exported="false" />
+        <service android:name=".feed_ui.services.FeedUpdatingServices" />
+        <service android:name=".reminderNotification.ReminderNotificationUpdatingService" />
+        <service
+            android:name=".service.SubmitLevelCompleteService"
+            android:exported="false" />
+        <service
+            android:name=".service.SubmitCourseCompleteService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.oustme.oustsdk.SEND_COMPLETE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.SubmitRequestsService"
+            android:exported="false" />
+        <service
+            android:name=".activity.common.noticeBoard.data.handlers.SubmitNBPostService"
+            android:exported="false" />
+        <service
+            android:name=".layoutFour.newnoticeBoard.data.handlers.NewSubmitNBPostService"
+            android:exported="false" />
+        <service
+            android:name=".service.DownloadCourseService"
+            android:exported="false" />
+        <service
+            android:name=".service.DownloadVideoService"
+            android:exported="false" />
+        <service
+            android:name=".service.SendApiServices"
+            android:exported="false" />
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".reminderNotification.ReminderNotificationManager"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver" />
+
+        <service android:name=".reminderNotification.ReminderNotificationService" />
+        <service
+            android:name=".downloadHandler.DownloadForegroundService"
+            android:foregroundServiceType="dataSync" />
+        <service
+            android:name=".ScreenCaptureService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection"
+            android:stopWithTask="true" />
+    </application>
+
+</manifest>

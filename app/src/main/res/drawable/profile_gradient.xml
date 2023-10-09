@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define the background properties like color etc -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/QuizBgGraya"
+                android:endColor="@android:color/transparent"
+                android:centerColor="@android:color/transparent"
+                android:centerY="0.3"
+                android:angle="90"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@android:color/transparent"
+                android:endColor="@color/popupBackGroundb"
+                android:centerColor="@android:color/transparent"
+                android:centerY="0.8"
+                android:angle="90"/>
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/assessment_detail_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".assessment_ui.assessmentDetail.AssessmentDetailScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_lay"
+            layout="@layout/common_toolbar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_lay"
+            android:layout_margin="8dp"
+            android:visibility="visible"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:id="@+id/layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/detail_screen_border"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/assessment_attempt_allowed"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/assessment_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@color/feed_bg"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/no_image"
+                            android:transitionName="bannerImage"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/assessment_distribution_date"
+                            style="@style/caption_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textAllCaps="true"
+                            android:textColor="@color/secondary_text" />
+
+                        <TextView
+                            android:id="@+id/assessment_title_full"
+                            style="@style/header_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="top"
+                            android:textColor="@color/primary_text" />
+
+                        <TextView
+                            android:id="@+id/assessment_dead_line"
+                            style="@style/caption_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/primary_text" />
+
+                        <LinearLayout
+                            android:id="@+id/progress_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/completion_percentage_done"
+                                style="@style/caption_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/primary_text" />
+
+                            <ProgressBar
+                                android:id="@+id/completion_percentage_progress"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/custom_progress" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/assessment_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:baselineAligned="false"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/assessment_duration_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_clock_info"
+                                    app:tint="@color/unselected_text"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:id="@+id/assessment_duration_text"
+                                    style="@style/header_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/primary_text" />
+
+                                <TextView
+                                    style="@style/caption_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:text="@string/to_complete"
+                                    android:textColor="@color/secondary_text" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/assessment_qa_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_question_answer"
+                                    app:tint="@color/unselected_text"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:id="@+id/assessment_qa_text"
+                                    style="@style/header_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/primary_text" />
+
+                                <TextView
+                                    style="@style/caption_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:text="@string/to_answer"
+                                    android:textColor="@color/secondary_text" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/assessment_coins_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_coin"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_coins_golden"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/assessment_coins_text"
+                                style="@style/header_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:textColor="@color/primary_text" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/assessment_description"
+                            style="@style/body_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="top"
+                            android:textColor="@color/primary_text" />
+
+                        <WebView
+                            android:id="@+id/assessment_description_webView"
+                            style="@style/body_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="top"
+                            android:textColor="@color/primary_text"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/assessment_attach_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/bg_highlighted_separator" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center|start">
+
+                                <ImageView
+                                    android:id="@+id/file_attach_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_attach_fill"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:id="@+id/assessment_attach_text"
+                                    style="@style/body_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_toEndOf="@+id/file_attach_image"
+                                    android:gravity="center"
+                                    android:textAlignment="textStart"
+                                    tools:ignore="RtlCompat" />
+
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/bg_highlighted_separator" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/completion_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/show_result_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/user_score_lay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/your_score_text"
+                                        style="@style/caption_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="8dp"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/your_score"
+                                        android:textColor="@color/secondary_text"
+                                        tools:ignore="TooDeepLayout" />
+
+
+                                    <TextView
+                                        android:id="@+id/user_score_text"
+                                        style="@style/subtitle_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:gravity="center_horizontal"
+                                        android:textColor="@color/black" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:id="@+id/view_separator"
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/bg_highlighted_separator" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/your_percentage_text"
+                                        style="@style/caption_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="8dp"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/your_percentage_text"
+                                        android:textColor="@color/secondary_text" />
+
+                                    <TextView
+                                        android:id="@+id/user_percentage_text"
+                                        style="@style/subtitle_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:gravity="center_horizontal"
+                                        android:textColor="@color/primary_text" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="48dp"
+                                android:layout_marginEnd="48dp"
+                                android:background="@color/bg_highlighted_separator" />
+
+
+                            <LinearLayout
+                                android:id="@+id/show_score_progress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/correct_answer_text"
+                                        style="@style/caption_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/correct_text"
+                                        android:textColor="@color/secondary_text" />
+
+                                    <FrameLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <ProgressBar
+                                            android:id="@+id/user_correct_answer_progress"
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/circle_shape"
+                                            android:max="100"
+                                            android:progress="0"
+                                            android:progressDrawable="@drawable/circular_progress_bar"
+                                            android:rotation="-90"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <TextView
+                                            android:id="@+id/user_correct_answer_count"
+                                            style="@style/caption_1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:textColor="@color/unselected_text" />
+
+                                    </FrameLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/wrong_answer_text"
+                                        style="@style/caption_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/wrong"
+                                        android:textColor="@color/secondary_text" />
+
+                                    <FrameLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <ProgressBar
+                                            android:id="@+id/user_wrong_answer_progress"
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/circle_shape"
+                                            android:max="100"
+                                            android:progress="0"
+                                            android:progressDrawable="@drawable/circular_wrong_progress_bar"
+                                            android:rotation="-90" />
+
+                                        <TextView
+                                            android:id="@+id/user_wrong_answer_count"
+                                            style="@style/caption_1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_margin="6dp"
+                                            android:gravity="center"
+                                            android:textColor="@color/unselected_text" />
+                                    </FrameLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <TextView
+                    android:id="@+id/assessment_attempt_allowed"
+                    style="@style/caption_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/bottom_action_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableStart="@drawable/ic_problem_red"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_text"
+                    android:visibility="invisible" />
+
+                <FrameLayout
+                    android:id="@+id/bottom_action_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <FrameLayout
+                        android:id="@+id/assessment_action_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/course_button_bg">
+
+                        <TextView
+                            android:id="@+id/assessment_status_text"
+                            style="@style/button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            tools:ignore="RtlCompat" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/assessment_start_timer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/caption_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/assessment_starts_in"
+                            android:textAllCaps="true"
+                            android:textColor="@color/primary_text" />
+
+                        <TextView
+                            android:id="@+id/assessment_timer_text"
+                            style="@style/header_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/primary_text" />
+                    </LinearLayout>
+                </FrameLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/assessment_data_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/assessment_progress_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:indeterminate="true"
+            android:visibility="visible"
+            app:indicatorSize="50dp"
+            app:trackColor="@color/gray"
+            app:trackThickness="5dp" />
+
+        <TextView
+            style="@style/subtitle_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/fetching_data_msg"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/branding_main_layout"
+        layout="@layout/branding_loader"
+        android:visibility="gone" />
+
+</FrameLayout>

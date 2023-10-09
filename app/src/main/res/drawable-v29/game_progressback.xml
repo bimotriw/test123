@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define the background properties like color etc -->
+    <item>
+        <shape>
+            <corners android:radius="@dimen/oustlayout_dimen8" />
+            <gradient
+                android:startColor="@color/Orange"
+                android:centerColor="@color/Orange"
+                android:centerY="1.0"
+                android:endColor="@color/Orange"
+                android:angle="270"/>
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/oustlayout_dimen1"
+        android:left="@dimen/oustlayout_dimen1"
+        android:right="@dimen/oustlayout_dimen1"
+        android:top="@dimen/oustlayout_dimen1">
+        <shape>
+            <corners android:radius="@dimen/oustlayout_dimen6" />
+            <gradient
+                android:startColor="@color/jumbleyellow_new"
+                android:centerColor="@color/jumbleyellow_new"
+                android:centerY="1.0"
+                android:endColor="@color/jumbleyellow_new"
+                android:angle="270"
+                />
+        </shape>
+    </item>
+
+    <!-- Define the progress properties like start color, end color etc -->
+    <item
+        android:bottom="@dimen/oustlayout_dimen3"
+        android:left="@dimen/oustlayout_dimen3"
+        android:right="@dimen/oustlayout_dimen3"
+        android:top="@dimen/oustlayout_dimen3">
+            <shape>
+                <corners android:radius="@dimen/oustlayout_dimen6" />
+                <gradient
+                    android:startColor="@color/Orange"
+                    android:centerColor="@color/Orange"
+                    android:centerY="1.0"
+                    android:endColor="@color/Orange"
+                    android:angle="270"
+                    />
+            </shape>
+    </item>
+    <item
+        android:bottom="@dimen/oustlayout_dimen4"
+        android:left="@dimen/oustlayout_dimen4"
+        android:right="@dimen/oustlayout_dimen4"
+        android:top="@dimen/oustlayout_dimen4">
+        <shape>
+            <corners android:radius="@dimen/oustlayout_dimen5" />
+            <gradient
+                android:startColor="@color/insidecream"
+                android:centerColor="@color/jumbleyellow_new"
+                android:centerY="1.0"
+                android:endColor="@color/insidecream"
+                android:angle="270"
+                />
+        </shape>
+    </item>
+</layer-list>

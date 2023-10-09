@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:screenOrientation="portrait"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/question_base_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/question_bgImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:id="@+id/quesvideoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Gray"
+                android:minHeight="@dimen/oustlayout_dimen180"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/video_player_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_video_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/video_landscape_zoom"
+                        android:layout_width="@dimen/oustlayout_dimen23"
+                        android:layout_height="@dimen/oustlayout_dimen23"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/oustlayout_dimen3"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:src="@drawable/ic_zoomimg"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/download_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/video_landscape_zoom">
+
+                        <Button
+                            android:id="@+id/show_quality"
+                            android:layout_width="@dimen/oustlayout_dimen25"
+                            android:layout_height="@dimen/oustlayout_dimen25"
+                            android:layout_margin="@dimen/oustlayout_dimen3"
+                            android:layout_toLeftOf="@+id/downloadvideo_icon"
+                            android:background="@drawable/ic_settings"
+                            android:backgroundTint="@color/white_pressed"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:id="@+id/downloadvideo_icon"
+                                android:layout_width="@dimen/oustlayout_dimen25"
+                                android:layout_height="@dimen/oustlayout_dimen25"
+                                android:layout_margin="@dimen/oustlayout_dimen3"
+                                android:visibility="visible" />
+
+                            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                android:id="@+id/downloadvideo_text"
+                                android:layout_width="@dimen/oustlayout_dimen25"
+                                android:layout_height="@dimen/oustlayout_dimen25"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="@dimen/oustlayout_dimen3"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/ousttext_dimen7"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/video_loader"
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/common_question_card" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/framelayout_video_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_overlay"
+            android:clickable="true"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

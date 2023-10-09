@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/LiteGrayNew">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/module_mainrow"
+        android:layout_margin="@dimen/oustlayout_dimen2"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:background="@drawable/mymodule_background">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen70"
+                    android:scaleType="fitXY"
+                    android:id="@+id/newmodulew_imag" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/oustlayout_dimen5"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/oustlayout_dimen10"
+                    android:layout_weight="25">
+                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:id="@+id/topicText"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/ousttext_dimen14"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/oustlayout_dimen10"
+                    android:layout_weight="40">
+
+                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gradeViewButton"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:textColor="#a2a2a2"
+                        android:textSize="@dimen/oustlayout_dimen10"
+                        android:paddingTop="@dimen/oustlayout_dimen1" />
+
+                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/userSubjectButton"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:textColor="#a2a2a2"
+                        android:layout_marginTop="@dimen/oustlayout_dimen3"
+                        android:textSize="@dimen/oustlayout_dimen10" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="42">
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:id="@+id/expertLevel"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/Orange"
+                        android:text=""
+                        android:textSize="@dimen/ousttext_dimen10"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/modulePercent"
+                                android:textColor="@color/LiteGreen"
+                                android:textSize="@dimen/ousttext_dimen16"
+                                android:gravity="center_horizontal" />
+
+                            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:id="@+id/modulePercentSymbol"
+                                android:gravity="top"
+                                android:textColor="@color/LiteGreen"
+                                android:textSize="@dimen/ousttext_dimen8"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen1"
+                                android:layout_marginTop="@dimen/oustlayout_dimen4"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/LiteGreen"
+                            android:textSize="@dimen/ousttext_dimen7"
+                            android:gravity="center_horizontal"
+                            android:textAllCaps="true"
+                            android:id="@+id/modulePercentText"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/oustlayout_dimen_minus4"
+                            android:paddingTop="@dimen/oustlayout_dimen1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

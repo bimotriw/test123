@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popupBackGroundc">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/new_courserate_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/fulltransparent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whitea"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/course_main_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/title_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen50"
+                            android:background="@color/whitea">
+
+                            <TextView
+                                android:id="@+id/rating_heading_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/how_course"
+                                android:textSize="@dimen/oustlayout_dimen20"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rate_main_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title_layout"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/rating_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="@dimen/oustlayout_dimen10"
+                                android:background="@color/whitea"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/oustlayout_dimen50">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerHorizontal="true"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/popupratecourse_imga"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:padding="@dimen/oustlayout_dimen8"
+                                            android:src="@drawable/ic_unrated_star" />
+
+                                        <ImageView
+                                            android:id="@+id/popupratecourse_imgb"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:padding="@dimen/oustlayout_dimen8"
+                                            android:src="@drawable/ic_unrated_star" />
+
+                                        <ImageView
+                                            android:id="@+id/popupratecourse_imgc"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:padding="@dimen/oustlayout_dimen8"
+                                            android:src="@drawable/ic_unrated_star" />
+
+                                        <ImageView
+                                            android:id="@+id/popupratecourse_imgd"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:padding="@dimen/oustlayout_dimen8"
+                                            android:src="@drawable/ic_unrated_star" />
+
+                                        <ImageView
+                                            android:id="@+id/popupratecourse_imge"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:padding="@dimen/oustlayout_dimen8"
+                                            android:src="@drawable/ic_unrated_star" />
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/feedback_edittext"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen100"
+                                android:layout_below="@+id/rating_layout"
+                                android:layout_marginStart="@dimen/oustlayout_dimen20"
+                                android:layout_marginTop="@dimen/oustlayout_dimen10"
+                                android:layout_marginEnd="@dimen/oustlayout_dimen20"
+                                android:layout_marginBottom="@dimen/oustlayout_dimen10"
+                                android:background="@drawable/rounded_10"
+                                android:gravity="top"
+                                android:hint="@string/write_review"
+                                android:padding="@dimen/oustlayout_dimen8"
+                                android:textColor="@color/textBlack"
+                                android:textColorHint="#908F8F"
+                                android:textSize="@dimen/ousttext_dimen18" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rate_main_layout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="@dimen/oustlayout_dimen20"
+                            android:layout_marginTop="@dimen/oustlayout_dimen10"
+                            android:layout_marginEnd="@dimen/oustlayout_dimen20"
+                            android:layout_marginBottom="@dimen/oustlayout_dimen10">
+
+                            <RelativeLayout
+                                android:id="@+id/ok_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                android:background="@drawable/course_button_bg"
+                                android:paddingTop="@dimen/oustlayout_dimen2">
+
+                                <ImageView
+                                    android:id="@+id/btn_nextimage"
+                                    android:layout_width="@dimen/oustlayout_dimen30"
+                                    android:layout_height="@dimen/oustlayout_dimen30"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_arrow_forward_white"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/oustlayout_dimen30"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/rate_it"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/email_main_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/oustlayout_dimen280"
+                        android:background="@color/whitelight"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/new_certificate_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true">
+
+                            <LinearLayout
+                                android:id="@+id/certificate_texts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/whitea"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="@dimen/oustlayout_dimen50"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/certificattitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/certifucate_titletxt"
+                                        android:layout_marginTop="@dimen/oustlayout_dimen5"
+                                        android:gravity="center"
+                                        android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                                        android:text=""
+                                        android:textColor="@color/Gray"
+                                        android:textSize="@dimen/ousttext_dimen18" />
+
+                                    <TextView
+                                        android:id="@+id/certificatemsg"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/certifucate_titletxt"
+                                        android:layout_marginTop="@dimen/oustlayout_dimen10"
+                                        android:gravity="center"
+                                        android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                                        android:text="Enter email-id to receive certificate."
+                                        android:textColor="@color/Gray"
+                                        android:textSize="@dimen/ousttext_dimen16" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/oustlayout_dimen10"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/edittext_email"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/oustlayout_dimen40"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_marginLeft="@dimen/oustlayout_dimen20"
+                                        android:layout_marginTop="@dimen/oustlayout_dimen15"
+                                        android:layout_marginRight="@dimen/oustlayout_dimen20"
+                                        android:layout_marginBottom="@dimen/oustlayout_dimen5"
+                                        android:background="@drawable/greyroundedcorner_graybg"
+                                        android:gravity="left|center_vertical"
+                                        android:hint="Email-Id"
+                                        android:imeOptions="actionGo"
+                                        android:inputType="text|textNoSuggestions"
+                                        android:linksClickable="true"
+                                        android:maxLength="50"
+                                        android:paddingLeft="@dimen/oustlayout_dimen10"
+                                        android:paddingRight="@dimen/oustlayout_dimen10"
+                                        android:selectAllOnFocus="false"
+                                        android:singleLine="true"
+                                        android:textColor="@color/Black"
+                                        android:textColorHint="@color/DarkGray_a"
+                                        android:textCursorDrawable="@null"
+                                        android:textSize="@dimen/ousttext_dimen18" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen80"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen20"
+                                android:layout_marginRight="@dimen/oustlayout_dimen20"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/email_back_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/ousttext_dimen40"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                    android:layout_weight="1"
+                                    android:background="@color/Orange"
+                                    android:text="BACK"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_pressed"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/email_submit_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/ousttext_dimen40"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                    android:layout_weight="1"
+                                    android:background="@color/LiteGreen"
+                                    android:text="SUBMIT"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white_pressed"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/certificateloader_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/popupBackGroundb"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/certificate_loader"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="@dimen/oustlayout_dimen130"
+                                android:layout_height="@dimen/oustlayout_dimen130"
+                                android:layout_centerInParent="true"
+                                android:max="220"
+                                android:progress="150"
+                                android:progressDrawable="@drawable/oustloader_drawable"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/popup_closebtn"
+                            android:layout_width="@dimen/oustlayout_dimen40"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                            android:layout_marginRight="@dimen/oustlayout_dimen5"
+                            android:adjustViewBounds="true"
+                            android:padding="@dimen/oustlayout_dimen6"
+                            android:src="@drawable/ic_close_img"
+                            app:tint="@color/Gray" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tabanim_toolbar"
+    android:layout_gravity="top|right"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/LiteGreen"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:textColor="@color/White"
+            android:gravity="left|top"
+            android:text=""
+            android:maxLines="1"
+            android:textSize="@dimen/ousttext_dimen18"
+            android:paddingRight="@dimen/oustlayout_dimen10"
+            android:background="@android:color/transparent"
+            android:paddingTop="@dimen/oustlayout_dimen2" />
+
+    <!--<ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leaderBoardButton"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/leaderboards"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_toLeftOf="@+id/progressButton"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressButton"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>-->
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color" />
+        <attr name="fab_colorDisabled" format="color" />
+        <attr name="fab_colorNormal" format="color" />
+        <attr name="fab_icon" format="reference" />
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_title" format="string" />
+        <attr name="fab_stroke_visible" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="AddFloatingActionButton">
+        <attr name="fab_plusIconColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr name="fab_addButtonColorPressed" format="color" />
+        <attr name="fab_addButtonColorNormal" format="color" />
+        <attr name="fab_addButtonSize" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_addButtonPlusIconColor" format="color" />
+        <attr name="fab_addButtonStrokeVisible" format="boolean" />
+        <attr name="fab_labelStyle" format="reference" />
+        <attr name="fab_labelsPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="fab_expandDirection" format="enum">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SwipeFlingAdapterView">
+        <attr name="SwipeFlingStyle" format="reference" />
+        <attr name="rotation_degrees" format="float" />
+        <attr name="min_adapter_stack" format="integer" />
+        <attr name="max_visible" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CurveViewData">
+        <attr name="curveviewwidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension" />
+        <attr name="maxWidth" format="dimension" />
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxHeight" format="dimension" />
+        <attr name="indicatorName" format="string" />
+        <attr name="indicatorColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarView">
+        <attr name="headerColor" format="color" />
+        <attr name="headerLabelColor" format="color" />
+        <attr name="previousButtonSrc" format="integer" />
+        <attr name="forwardButtonSrc" format="integer" />
+        <attr name="todayLabelColor" format="color" />
+        <attr name="selectionColor" format="color" />
+        <attr name="selectionLabelColor" format="color" />
+        <attr name="disabledDaysLabelsColor" format="color" />
+        <attr name="highlightedDaysLabelsColor" format="color" />
+        <attr name="pagesColor" format="color" />
+        <attr name="abbreviationsBarColor" format="color" />
+        <attr name="abbreviationsLabelsColor" format="color" />
+        <attr name="daysLabelsColor" format="color" />
+        <attr name="anotherMonthsDaysLabelsColor" format="color" />
+        <attr name="datePicker" format="boolean" />
+        <attr name="eventsEnabled" format="boolean" />
+        <attr name="swipeEnabled" format="boolean" />
+        <attr name="maximumDaysRange" format="integer" />
+        <attr name="type" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ComponentActiveUser">
+        <attr name="name" format="string" localization="suggested" />
+        <attr name="profileUrl" format="string" localization="suggested" />
+        <attr name="profileDrawable" format="integer" localization="suggested" />
+        <attr name="coins" format="string" localization="suggested" />
+        <attr name="itemPending" format="string" localization="suggested" />
+        <attr name="rank" format="string" localization="suggested" />
+        <attr name="themeColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeButton">
+        <attr name="inner_text" format="string"/>
+        <attr name="inner_text_color" format="color"/>
+        <attr name="inner_text_size" format="dimension"/>
+        <attr name="inner_text_left_padding" format="dimension"/>
+        <attr name="inner_text_right_padding" format="dimension"/>
+        <attr name="inner_text_top_padding" format="dimension"/>
+        <attr name="inner_text_bottom_padding" format="dimension"/>
+        <attr name="inner_text_background" format="reference"/>
+        <attr name="button_image_width" format="dimension"/>
+        <attr name="button_image_height" format="dimension"/>
+        <attr name="button_trail_enabled" format="boolean"/>
+        <attr name="button_trail_drawable" format="reference"/>
+        <attr name="button_image_disabled" format="reference"/>
+        <attr name="button_image_enabled" format="reference"/>
+        <attr name="button_left_padding" format="dimension"/>
+        <attr name="button_right_padding" format="dimension"/>
+        <attr name="button_top_padding" format="dimension"/>
+        <attr name="button_bottom_padding" format="dimension"/>
+        <attr name="button_background" format="reference"/>
+        <attr name="has_activate_state" format="boolean"/>
+        <attr name="initial_state" format="enum">
+            <enum name="enabled" value="0"/>
+            <enum name="disabled" value="1"/>
+        </attr>
+
+
+    </declare-styleable>
+    <declare-styleable name="SwipeCardView">
+        <attr name="SwipeFlingStyle2" format="reference"/>
+        <attr name="rotation_degrees2" format="float"/>
+        <attr name="min_adapter_stack2" format="integer"/>
+        <attr name="max_visible2" format="integer"/>
+        <attr name="left_swipe_detect2" format="boolean"/>
+        <attr name="right_swipe_detect2" format="boolean"/>
+        <attr name="top_swipe_detect2" format="boolean"/>
+        <attr name="bottom_swipe_detect2" format="boolean"/>
+    </declare-styleable>
+
+</resources>

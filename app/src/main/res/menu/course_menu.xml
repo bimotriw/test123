@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_badge"
+        android:icon="@drawable/badge_icon"
+        android:title="@string/certificate"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_certificate"
+        android:icon="@drawable/certificate_icon"
+        android:title="@string/certificate"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_leaderBoard"
+        android:icon="@drawable/ic_landing_leader_board"
+        android:title="@string/leader_board_title"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_comment"
+        android:icon="@drawable/ic_chat_comment"
+        android:title="@string/comment_text"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_close"
+        android:icon="@drawable/ic_close_circle"
+        android:title=""
+        android:visible="true"
+        app:showAsAction="always" />
+</menu>

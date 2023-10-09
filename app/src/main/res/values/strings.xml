@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //Non Translate
+    <integer name="duration">4000</integer>
+    <integer name="delay">700</integer>
+    <integer name="counterDelay">1000</integer>
+    <integer name="animDuration">10000</integer>
+    <integer name="fab_text_size">14</integer>
+    <string name="app_name" translatable="false">oustsdk</string>
+    <string name="app_version" translatable="false">0.3.4</string>
+    <string name="oust_sdk_version" translatable="false">v2.11.46</string>
+    <string name="oust_link" translatable="false">www.oustlabs.com</string>
+    <string name="course_share_text" translatable="false">- ready course on Oust App @oustlabs - join me and get placed.</string>
+    <string name="zero_by_zero_text" translatable="false">0/0</string>
+    <string name="timer" translatable="false">00:</string>
+    <string name="zero_zero_colon" translatable="false">00:</string>
+    <string name="counterTimer" translatable="false">000</string>
+    <string name="stream" translatable="false">Stream</string>
+
+    //common strings
+    <string name="org_id">Organization Code</string>
+    <string name="user_name">User ID</string>
+    <string name="start">Start</string>
+    <string name="downloading_resources">Downloading files..</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="loading">Loading Data..</string>
+    <string name="zero_text" translatable="false">0</string>
+    <string name="see_all">See All</string>
+    <string name="zero_percentage" translatable="false">0%</string>
+    <string name="xp" translatable="false">XP</string>
+    <string name="completed">Completed</string>
+    <string name="complete">Complete</string>
+    <string name="no_catalogue_available">No data available</string>
+    <string name="no_module_yet">No modules have been added yet</string>
+    <string name="no_modules_available"> No modules found </string>
+    <string name="no_course_assign">No modules found</string>
+    <string name="assessment_no_longer">Assessment no longer available</string>
+    <string name="fetching_data_msg">Fetching data..</string>
+    <string name="credits">Credits</string>
+    <string name="my_tasks_text">My Tasks</string>
+    <string name="deadline">Deadline</string>
+    <string name="read_more">Read More</string>
+    <string name="enter_reply_text">Please enter reply</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="upload_confirm_msg">Do you want to upload the file?</string>
+    <string name="upload_complete_text">File Upload Complete</string>
+    <string name="media_uploading">Please wait. We are uploading the Attachment.</string>
+    <string name="media_upload_completed">File Upload Complete</string>
+    <string name="attachment">Attachment</string>
+    <string name="add">Add</string>
+    <string name="confirm">Confirm</string>
+    <string name="pause">Paused</string>
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="upload_success">Successfully Uploaded an Attachment</string>
+    <string name="upload_fail_msg">Upload Failed</string>
+    <string name="delete_msg">Are you sure want to Delete?</string>
+    <string name="delete_confirm">Are you sure want to delete?</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="congratulations_text">Congratulations,</string>
+    <string name="sorry">Sorry</string>
+    <string name="cleared_module">You have cleared this module</string>
+    <string name="failed_module">You have failed</string>
+    <string name="rating">Rating</string>
+    <string name="time_taken">Time Taken</string>
+    <string name="well_done_text">Well Done</string>
+    <string name="done_text">Done</string>
+    <string name="module_complete">Module Complete</string>
+    <string name="earn_rewards">Earn Rewards</string>
+    <string name="oust_share_text">Hi there, Join me on Oust, a new way to learn smarter.</string>
+    <string name="no_favourite_card">No favourite Cards</string>
+    <string name="alerts">Alerts</string>
+    <string name="no_alerts_available">No Alerts available</string>
+    <string name="vs_text">VS</string>
+    <string name="level">Level</string>
+    <string name="levels">Levels</string>
+    <string name="card">Card</string>
+    <string name="agree_to_terms">I agree to the terms</string>
+    <string name="you_have_completed_text">You have completed</string>
+    <string name="certificate_email_to">Your certificate has been sent to</string>
+    <string name="no_data_contact_admin">No data available</string>
+    <string name="term_condition_msg">Accept terms and conditions</string>
+    <string name="added_success">Added successfully</string>
+
+    //Toast or Error messages
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="try_again">Try again</string>
+    <string name="no_internet_connection">Please check the Internet connection and try again.</string>
+    <string name="org_id_invalid">Organization ID is Invalid</string>
+    <string name="retry_internet_msg">Please check the Internet connection and try again.</string>
+    <string name="retry">Retry</string>
+    <string name="restart_msg">Please check the Internet connection and try again.</string>
+    <string name="no_data_available">No data available</string>
+    <string name="no_data_in_module">No data available</string>
+    <string name="no_internet_data">Please check the Internet connection and try again.</string>
+    <string name="exit_on_back">Press Back button again to exit</string>
+    <string name="invalid_meeting_id">Invalid meeting Id.</string>
+    <string name="please_wait">Please wait</string>
+    <string name="network_seems_slow">Network seems slow. Please wait..</string>
+    <string name="network_seems_slow_wait">Network seems slow. Thanks for your patience. Please wait..</string>
+    <string name="please_check_your_internet_connection">Please check the Internet connection and try again.</string>
+    <string name="unable_to_fetch_data">Unable to fetch data. Please check your internet connection and try again.</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="upload_failed">Upload Failed</string>
+    <string name="sorry_media_upload_failed">Sorry. Your media upload has failed</string>
+    <string name="no_data_found">No data available</string>
+    <string name="recording_started">Recording started</string>
+    <string name="unable_fetch_connection_error">Unable to fetch data. Please check your internet connection and try again.</string>
+    <string name="file_complete_msg">File Upload Complete</string>
+    <string name="please_enter_response">Please enter your response</string>
+    <string name="invalid_response">Invalid format of response</string>
+    <string name="not_able_load_module">Not able to load the Module data</string>
+    <string name="problem_loading_module">Problem on loading the Module</string>
+    <string name="server_error_no_qstn">Oops! No questions found for this module</string>
+    <string name="downloading_files">Downloading files..</string>
+    <string name="failed_download_language">Failed to download Language file.</string>
+    <string name="type_here">Type here…</string>
+
+    //NewLanding Activity
+    <string name="see_text">See All</string>
+    <string name="new_word_jumble_available">New word jumble available</string>
+    <string name="text_continue">Continue</string>
+    <string name="complete_your_pending_modules">Complete your pending modules</string>
+    <string name="credits_text">(credits)</string>
+    <string name="my_progress">My Progress</string>
+    <string name="pending_text">Pending</string>
+    <string name="pending_modules_text">Pending Modules</string>
+    <string name="completed_modules_text">Completed Modules</string>
+    <string name="refresh">Refresh</string>
+    <string name="my_feeds">My Feeds</string>
+    <string name="courses_text">Courses</string>
+    <string name="challenges_text">Challenges</string>
+    <string name="filter_text">Filter</string>
+    <string name="no_feeds_available">No feeds available</string>
+    <string name="no_feed_found">No feeds found</string>
+    <string name="no_feed_assigned">No feeds found</string>
+    <string name="no_playlist_available">No data available</string>
+    <string name="learning_credit_text">Learning Credits</string>
+    <string name="learn">Learn</string>
+    <string name="play_text">Play</string>
+    <string name="latest_skills">Latest Skills</string>
+    <string name="catalogue_label">Catalogue</string>
+    <string name="view_all_text">View All</string>
+    <string name="grow">Grow</string>
+    <string name="to_do">TO DO</string>
+    <string name="play_list">Play List</string>
+    <string name="my_desk_text">My Desk</string>
+    <string name="latest">Latest</string>
+    <string name="trending">Trending</string>
+    <string name="clear_all">Clear All</string>
+    <string name="apply_filter">Apply filter</string>
+    <string name="search_text">Search…</string>
+    <string name="landing_heading" translatable="false">OUST</string>
+    <string name="leader_board_title">Leaderboard</string>
+    <string name="join_meeting">Join Meeting</string>
+    <string name="module_challenge_friend">Select this module and start challenging friends or mystery opponents.</string>
+    <string name="challenge_mystery">Challenge Mystery</string>
+    <string name="challenge_friend">Challenge Friend</string>
+    <string name="moduleSubjectTxt">Subject : </string>
+    <string name="moduleGradeTxt">Grade : </string>
+    <string name="moduleExamTxt">Exam : </string>
+    <string name="moduleVendorTxt">Vendor : </string>
+    <string name="add_skills_start">Add Skills to get started</string>
+    <string name="notice_board">Noticeboard</string>
+    <string name="no_assessment_assigned">No Assessment are found</string>
+    <string name="no_topics_available">No data available</string>
+    <string name="no_match_found">No Match Found</string>
+
+    //Landing Nav Bar
+    <string name="profile_text">Profile</string>
+    <string name="history">History</string>
+    <string name="my_assessment">My Assessments</string>
+    <string name="favourites">Favourites</string>
+    <string name="my_diary">My Diary</string>
+    <string name="badges">Badges</string>
+    <string name="my_catalogue">My Catalogue</string>
+    <string name="contests">Contests</string>
+    <string name="analytics">Analytics</string>
+    <string name="faq">FAQ</string>
+    <string name="feedback_text">Feedback</string>
+    <string name="help_support">Help/Support</string>
+    <string name="rate_the_appText">Rate The App</string>
+    <string name="settings">Settings</string>
+    <string name="playlist_selection">Playlist Selection</string>
+    <string name="archived_list">Archived list</string>
+    <string name="report_problem">Report a Problem</string>
+    <string name="powered_by_oust" translatable="false">Powered by Oust</string>
+    <string name="home">Home</string>
+    <string name="learning">Learning</string>
+    <string name="catalogue">Catalogue</string>
+    <string name="noticeBoard">Notice Board</string>
+    <string name="teamanalytics">Team Analytics</string>
+    <string name="logout">Logout</string>
+    <string name="contest">Contest</string>
+    <string name="myanalytics">My Analytics</string>
+
+
+    //Survey feed item
+    <string name="survey_text">Survey</string>
+    <string name="surveys_text">Surveys</string>
+    <string name="go_text">Go</string>
+
+    //Assessment And course feed item
+    <string name="course_text">Course</string>
+    <string name="assessment">Assessment</string>
+    <string name="view_assessment">View Assessment</string>
+    <string name="view_course">View Course</string>
+    <string name="view">View</string>
+
+    //Profile
+    <string name="profile_completedTxt">Profile Completed</string>
+    <string name="goal">Goal</string>
+    <string name="choose_language">Choose language</string>
+    <string name="batch">Batch</string>
+    <string name="trade">Trade</string>
+    <string name="zone">Zone</string>
+
+    //Notice Board
+    <string name="members">Members</string>
+    <string name="no_nb_posts">No data available</string>
+    <string name="no_members_data">No data available</string>
+    <string name="reply">Reply</string>
+    <string name="replies">Replies</string>
+    <string name="type_comment_post">Type a comment to post</string>
+    <string name="enter_comment">Enter comment</string>
+    <string name="created_by">Created by :</string>
+    <string name="designation">Designation</string>
+    <string name="comment_text">Comment</string>
+    <string name="comments_text">Comments</string>
+    <string name="no_comments">Be the first to add comments</string>
+    <string name="preparing_media">Preparing Media</string>
+
+    //learning diary
+    <string name="certificates_text">Certificates</string>
+    <string name="rank">Rank</string>
+    <string name="chat">Chat</string>
+    <string name="add_entry">Add Entry</string>
+    <string name="give_kudos">Give Kudos</string>
+    <string name="follow">Follow</string>
+    <string name="activity_topic">Activity/Topic</string>
+    <string name="max_150">Maximum 150 Characters</string>
+    <string name="max_300">Maximum 300 Characters</string>
+
+    //calendar
+    <string name="today_text">Today</string>
+    <string name="calendar_text">Calendar</string>
+    <string name="month_text">Month</string>
+    <string name="m_text" translatable="false">M</string>
+    <string name="t_text" translatable="false">T</string>
+    <string name="w_text" translatable="false">W</string>
+    <string name="f_text" translatable="false">F</string>
+    <string name="s_text" translatable="false">S</string>
+    <string name="event_name_text">Event Name</string>
+    <string name="venue_text">Venue</string>
+    <string name="time_text">Time</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="add_to_calendar_text">Add to Calendar</string>
+
+    //Assessment
+    <string name="assessments_heading">Assessments</string>
+    <string name="assessment_name">Assessment name</string>
+    <string name="right">Right</string>
+    <string name="wrong">Wrong</string>
+    <string name="skipped">Skipped</string>
+    <string name="correct_text">Correct</string>
+    <string name="points_text">Points</string>
+    <string name="answer">Answers</string>
+    <string name="assessment_rules">Assessment Rules</string>
+    <string name="assessment_starts_in">Assessment Starts In</string>
+    <string name="share_text">Share</string>
+    <string name="total_question">Total Questions</string>
+    <string name="participants">Participants</string>
+    <string name="scope">Scope</string>
+    <string name="resume">Resume</string>
+    <string name="submit">Submit</string>
+    <string name="end_now">End Now</string>
+    <string name="submit_form">Submit</string>
+    <string name="reattempt">Reattempt</string>
+    <string name="review_text">Review</string>
+    <string name="assessment_completed">Assessment Completed</string>
+    <string name="assessment_completed_not_submit">Assessment completed, but not submitted. Click on SUBMIT to try again</string>
+    <string name="fetching_question">Fetching questions..</string>
+    <string name="fetching_media">Fetching Media Files..</string>
+    <string name="assessment_no_active_error">This assessment is no longer active. Please contact your administrator in case this is an error.</string>
+    <string name="enter_assessment_code">Enter assessment code</string>
+    <string name="enter_valid_assessment_code">Enter valid assessment code</string>
+    <string name="submitting_response">Submitting Response..</string>
+    <string name="assessment_successfully_completed">You have successfully completed the assessment</string>
+    <string name="watch">Watch</string>
+    <string name="rematch">Rematch</string>
+    <string name="register_text">Register</string>
+    <string name="all_scores">All Scores</string>
+    <string name="waiting">Waiting</string>
+
+    //Module (Course/Assessment/Cpl)
+    <string name="module_unlock_success">Module Unlocked Successfully</string>
+    <string name="module_unlock_fail">Failed to Unlock Module</string>
+    <string name="module_reset_complete">Module Reset Complete</string>
+    <string name="module_reset_failed">Module Reset Failed</string>
+    <string name="course_reset_success">Course Reset Complete</string>
+    <string name="course_reset_failed">Course Reset Failed</string>
+    <string name="module_delete_confirmation">You will not be able to view this module offline if you delete the files. Continue?</string>
+
+    //Result
+    <string name="challenge_notify">We will notify you when your challenge has been completed</string>
+    <string name="it_s_tie">Its a TIE</string>
+    <string name="you_won">You WON</string>
+    <string name="good_try">Good Try</string>
+    <string name="they_won">They Won</string>
+
+    //Course and lessons
+    <string name="undertaking">Undertaking</string>
+    <string name="descriptions">Description</string>
+    <string name="complete_course_unlock">Please complete previous Module</string>
+    <string name="sorry_archive_by_admin">Sorry. This course has been archived by admin</string>
+    <string name="purchase_course">Purchase the course to get started</string>
+    <string name="enroll_course_start">Please enroll into the course to get started</string>
+    <string name="complete_level_unlock">Please complete previous level to unlock this one.</string>
+    <string name="complete_assessment_unlock">Please complete course to unlock this one.</string>
+    <string name="level_locked_by_author">Next Level locked by author. Come back as soon as you receive a notification.</string>
+    <string name="level_download_error">Unable to download contents. Come back as soon as your receive a notification.</string>
+    <string name="tap_start_course">Tap on start to download</string>
+    <string name="download_completed">Download Complete</string>
+    <string name="click_here_start">CLICK HERE TO START</string>
+    <string name="request_language">Request Language</string>
+    <string name="request_notify_by_admin">Admin has been notified about your language request</string>
+    <string name="confirm_language">Confirm Language</string>
+    <string name="you_have_choosen">You have chosen </string>
+    <string name="sure_to_continue">Do you want to continue?</string>
+    <string name="buy">Buy Now</string>
+    <string name="lessons_text">Lessons</string>
+    <string name="try_for_free">TRY FOR FREE</string>
+
+    //Questions
+    <string name="offline_mode">Offline Mode</string>
+    <string name="recording_time">Recording Time</string>
+    <string name="click_open_camera">Click on Camera Icon to Open Camera</string>
+    <string name="capture_image_text">Click to Capture Image</string>
+    <string name="record_video_text">Click to Record Video</string>
+    <string name="question_attempted">Questions Attempted</string>
+    <string name="skip">Skip</string>
+    <string name="question_text">Question</string>
+    <string name="questions_text">Questions</string>
+    <string name="drag_match">Drag boxes of left to match with the boxes on the right</string>
+    <string name="choose_answer">Choose your answers</string>
+    <string name="this_file">This file is of</string>
+    <string name="calculating_score">Calculating Score</string>
+    <string name="no_image_uploaded">No Image Uploaded</string>
+    <string name="no_video_uploaded">No Video Uploaded</string>
+    <string name="no_audio_uploaded">No Audio Uploaded</string>
+    <string name="no_response_provided_by_user">No response provided by user</string>
+
+    //Survey
+    <string name="completed_survey_text">You have already completed this survey.</string>
+    <string name="completing_survey_text">Thanks for completing the survey.</string>
+    <string name="thank_you_for_participation">Thank you for participation</string>
+
+
+    //Game
+    <string name="submitted_time">Submitted Time</string>
+    <string name="your_score">Your Score</string>
+    <string name="success">Success</string>
+    <string name="completed_word_jumble">You have already completed this Word Jumble</string>
+
+    //Popups
+    <string name="enter_user_details">Enter User Details</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_email_id">Enter Email</string>
+    <string name="click_to_resend">Click to resend OTP</string>
+    <string name="invalid_otp">Invalid Verification Code (OTP)</string>
+    <string name="pause_and_resume">You can Pause and Resume later</string>
+    <string name="warning">Warning</string>
+    <string name="your_certificate">Your Certificate</string>
+    <string name="enter_email_receive_certificate">Enter Email ID to receive certificate</string>
+    <string name="certificate_sent_mail">Certificate sent</string>
+    <string name="assessment_paused_msg">Your assessment will be paused and answer for this question will be locked. You can come back later and finish the assessment.</string>
+    <string name="cancel_game_confirmation">Are you sure you want to cancel?</string>
+    <string name="cancel_game">Cancel</string>
+    <string name="installed_speech_engine">"Install recommended speech engine?"</string>
+    <string name="install_speech_engine_confirmation">"Your device isn't using the recommended speech engine. Do you wish to install it?"</string>
+    <string name="invalid_email_address">Invalid email address</string>
+
+    //Leader board
+    <string name="name_text">Name</string>
+    <string name="module">Module</string>
+    <string name="leader_board_fifty">LEADERBOARD</string>
+    <string name="methodology">Methodology</string>
+    <string name="info_text">Points based ranking is calculated using your first attempt score only.</string>
+
+
+    //Setting and notification
+    <string name="qualifications">Qualifications</string>
+    <string name="school_college">School / College</string>
+    <string name="grade_exam">Grade / Exam</string>
+    <string name="enable_gps">Enable GPS to continue…</string>
+    <string name="go_to_setting">GO TO SETTINGS</string>
+    <string name="general">General</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="age">Age</string>
+    <string name="city">City</string>
+    <string name="enter_city">Enter your city</string>
+    <string name="country">Country</string>
+    <string name="mobile_number">Mobile #</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="transgender" translatable="false">Transgender</string>
+    <string name="other" translatable="false">Other</string>
+    <string name="notifications">Notifications</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email <font color="#FD0000">*</font></string>
+    <string name="change_password">Change Password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="select_dob">Select Date of Birth</string>
+    <string name="pwd_length_error">Password length too short</string>
+    <string name="pwd_match_error">Password did not match</string>
+    <string name="sound">Sound</string>
+    <string name="challenge_notification">Challenge Notifications</string>
+    <string name="challenge_email">Challenge email</string>
+    <string name="display_contacts">Display Contacts</string>
+    <string name="add_friend_notification">Add Friend Notifications</string>
+    <string name="daily_notifications">Daily Notifications</string>
+    <string name="group_notifications">Group Notifications</string>
+    <string name="text_to_speech">Text To Speech Output</string>
+    <string name="all_notification">All Notifications</string>
+
+    //Cpl
+    <string name="no_cpl_text">The playlist is empty. Please contact your system administrator.</string>
+    <string name="attempt_over_deactivated">Sorry ! You have exhausted all your attempts. Your user ID is deactivated.</string>
+    <string name="attempt_over_admin_contact">Sorry ! You have exhausted all your attempts. Please contact your admin.</string>
+    <string name="cpl_pass_deactivated" translatable="false">Thanks for your participant in CPL and Your user ID is getting deactivated.</string>
+    <string name="attempt_over_deactivated_g" translatable="false">Sorry ! you have exhausted all attempts.</string>
+    <string name="attempt_over_exit_g" translatable="false">Your ID is deactivated. You can login in 30 days to try again</string>
+    <string name="cpl_pass_deactivate_g" translatable="false">Congrats on completing Genie learning module. You can now login into the Genie App to start taking orders and Your ID will be inactive on Oust now</string>
+
+    //Skills
+    <string name="no_latest_skills">No Skills Available</string>
+    <string name="prepare_text">Prepare</string>
+    <string name="category_text">Category</string>
+    <string name="range_text">Range</string>
+    <string name="score_out_range">Score is out of range!</string>
+    <string name="you_leveled_up">YOU LEVELED UP</string>
+    <string name="keep_try_skill">Keep trying to improve your daily best score.</string>
+    <string name="achieved_score_skill">You have achieved the highest possible score for this skill.</string>
+    <string name="on_text">on</string>
+
+    //Report Screen
+    <string name="your_ques">Your question</string>
+    <string name="explain_briefly">Please explain briefly</string>
+    <string name="attach_screenshot">Attach Screenshot</string>
+    <string name="report_required_message">Screenshot or description required</string>
+    <string name="problem_reported">Problem Reported</string>
+
+    //Analytics Screen
+    <string name="incomplete_text">Incomplete</string>
+    <string name="total_text">Total</string>
+    <string name="completed_assessment">Completed Modules</string>
+    <string name="incomplete_assessment">Incomplete Assessments</string>
+    <string name="completed_course">Completed Modules</string>
+
+
+    //Zoom
+    <string name="download">Download</string>
+    <string name="live_training">Live Training</string>
+    <string name="zoom_error_msg">You need to install the Oust Live add-on app to access this feature.</string>
+
+    //Comment Screen
+    <string name="discussion_board">Discussion Board</string>
+    <string name="start_conversation">Start a conversation..</string>
+    <string name="compose">Compose</string>
+    <string name="add_a_comment">Add a comment</string>
+
+    //valid
+
+
+    //Others
+    <string name="oust_user_avatar_link" translatable="false">http://di5jfel2ggs8k.cloudfront.net/avatar-images/</string>
+    <string name="noassessmentText">No Assessment are found</string>
+    <string name="assessment_resulttext">Result</string>
+    <string name="permission_mesage">Is it OK to store video locally ? </string>
+    <string name="oustlink" translatable="false"><u>www.oustlabs.com</u></string>
+    <string name="result_gotomydesk">Go to My Desk</string>
+    <string name="recorded_time">Recorded Time</string>
+    <string name="fetching_jumbledata">Fetching data..</string>
+    <string name="percentComp">Percentage Complete</string>
+    <string name="questAnswered">Questions Answered : </string>
+    <string name="dev_api_server" translatable="false">http://dev-api.oustme.com:8080/bringup/rest/services/</string>
+    <string name="production_api_server" translatable="false">http://oustmeapis.elasticbeanstalk.com/rest/services/</string>
+    <string name="Oust_User_Share_link" translatable="false">https://s3-us-west-1.amazonaws.com/img.oustme.com/</string>
+    <string name="Oust_User_Share_prefix" translatable="false">share/</string>
+    <string name="noHistoryChallengesTxt">No data available</string>
+    <string name="opponentPointsError">Unable to fetch data. Please check your internet connection and try again.</string>
+    <string name="opponent">Mystery</string>
+    <string name="opponentName">Mystery</string>
+    <string name="userLevel">Level</string>
+    <string name="opponentLevel">Level</string>
+    <string name="versus">vs</string>
+    <string name="serverdown">Unable to reach Oust servers</string>
+
+
+    <string name="noassessment_found">No assessments found</string>
+
+
+    <string name="nocontest_found_stra">No contest have been added yet.</string>
+
+
+    <string name="historyTitle">History</string>
+    <string name="join_conf">Join Conference</string>
+    <string name="start_conf">Start Conference</string>
+    <string name="gradeLabel">Grade </string>
+    <string name="oustCoinsTitleTxt">OC</string>
+    <string name="oustlikepopup_msg">Do you like Oust ?</string>
+
+    <string name="fantastic_resultmsg">FANTASTIC!</string>
+    <string name="greatjob_result">GREAT JOB!</string>
+    <string name="tryharder_resultmsg">WORK HARDER!</string>
+    <string name="startover_resultmsg">START OVER!</string>
+    <string name="learning_coursecompletetext">You have completed this module</string>
+    <string name="dateaddedon_text">Added on: </string>
+    <string name="pay_button">Pay</string>
+    <string name="merchant_id">Merchant Id</string>
+    <string name="currency">Currency</string>
+    <string name="amount">Amount</string>
+    <string name="redirect_url">Redirect Url</string>
+    <string name="cancel_url">Cancel Url</string>
+    <string name="rsa_url">RSA Key Url</string>
+    <string name="deletevideo_msg">Delete downloaded videos?</string>
+    <string name="level_completemsg">You got 1 star! Try again to get more stars.</string>
+    <string name="level_completewithfivestar_msg">Congrats you got 5 stars!</string>
+    <string name="commonsharetext">Hi there, Join me on Oust, a new way to learn smarter.</string>
+    <string name="sharePopupTitle">Share and Earn </string>
+    <string name="sharePopupMsg">Earn Oust Coins for Every Referral</string>
+    <string name="fbText">Facebook</string>
+    <string name="googleText">Google +</string>
+    <string name="moreText">More</string>
+    <string name="confirm_title">Enter Verification Code (OTP)</string>
+    <string name="confirm_subtitle">(Sent to your Email and mobile)</string>
+    <string name="confirm_otp">Enter Verification Code (OTP)</string>
+    <string name="resentotp_txt">Click to resend OTP</string>
+    <string name="retry_inrpt_msg">We are having some interuption during resource download. Please try again. </string>
+    <string name="snakbar_flickyintrnetmsg">Please check internet connection</string>
+    <string name="previousGameSubmit">Submitting previous data</string>
+    <string name="groupGameText">GROUP GAMES</string>
+    <string name="eventText">EVENT</string>
+    <string name="historyTabText">HISTORY</string>
+    <string name="NoDataAnalytics">Play Challenge (non Fun Module) to see your Analytics report</string>
+
+    <string name="subscribe">SUBSCRIBE</string>
+
+    <string name="clueTitleText">CLUE</string>
+    <string name="fillEditTxtHint">Type your Answer here...</string>
+    <string name="assessmentplayCancleSubmitmsg">Are you sure you want to exit? You will get ZERO points for the remaining questions.</string>
+    <string name="questCountTxt"> Question </string>
+
+    <string name="addsolutionhind_text">Enter you answer here …</string>
+    <string name="questionNoAnswerTxt">Question Skipped</string>
+    <string name="grammaticalErrors">Grammatical Errors</string>
+    <string name="inCorrectAnswer">Incorrect Answers</string>
+    <string name="incorrect_txt">INCORRECT</string>
+    <string name="incorrect_sub_txt">Sorry, the correct answer is:</string>
+    <string name="inCorrectQuestion">Incorrect Question</string>
+    <string name="playAgain">PLAY NEXT</string>
+    <string name="nouser_leaderboard_text">No user has completed this module</string>
+    <string name="questionattemptedLabel">Questions Attempted : </string>
+    <string name="updateBtnTxt">Update</string>
+    <!--    <string name="learningpath_messagea">You need to complete the previous module in order to unlock this one.</string>-->
+    <string name="learningpath_messagea">Please complete the previous module</string>
+    <string name="learningpath_messageb">You need to complete all modules in  the previous level and attain required proficiency in order to unlock this level.</string>
+    <string name="learningpath_messagec">You have attempted all questions in this module. If you play this module again, Questions may repeat and your progress will be Reset to ZERO.</string>
+    <string name="learningpath_messaged">Click on START to unlock and play.</string>
+    <string name="videowatch_txt">Videos are recommended to be watched on WiFi networks</string>
+    <string name="archivecourse_header">Archive Course ?</string>
+    <string name="archiveassessment_header">Archive Assessment ?</string>
+    <string name="archivecourse_content">Do you want to archive this module ?</string>
+    <string name="archiveassesssment_content">Do you want to archive this module ?</string>
+    <string name="assessment_video_start_msg">Watch the video and answer the question.</string>
+    <string name="unarchivecourse_header">Unarchive Course ?</string>
+    <string name="unarchiveassessment_header">Unarchive Assessment ?</string>
+
+
+    <!---Rate us popup messages-->
+    //
+    <string name="unarchivecourse_content">Do you want to unarchive this module ?</string>
+    <string name="unarchiveassesssment_content">Do you want to unarchive this module ?</string>
+    <string name="nointernet_message">Please check the Internet connection and try again.</string>
+    <string name="rateus_header">RATE NOW</string>
+    <string name="rateus_content">Can you take a minute to rate Oust on Google Play Store?</string>
+    <string name="rateus_checkbox">Do not ask again</string>
+    <string name="rateus_ok">RATE NOW</string>
+    <string name="rateus_cancle">REMIND ME LATER</string>
+    <string name="oustlike_header">Enjoying Oust?</string>
+    <string name="oustlike_content">Do you like Oust?</string>
+    <string name="comment">Started by </string>
+    <string name="noques_text">No data available </string>
+    <string name="ok_btn">Ask</string>
+    <string name="ratecourse_text">Rate this course!</string>
+    <string name="topTitle">Login and Play More</string>
+    <string name="loginText">Log in</string>
+    <string name="logoutText">LOGOUT</string>
+    <string name="loginFbText">Log in with Facebook</string>
+    <string name="loginGpText">Log in with Google+</string>
+    <string name="visitText">OR VISIT</string>
+    <string name="middleTitle">Rate Oust on Play Store</string>
+    <string name="lastTitle">Share and unlock premium content</string>
+    <string name="bottomContent">Like and share your thoughts on our FaceBook page</string>
+    <string name="referalCodeText">YOUR REFERRAL CODE</string>
+    <string name="certificatemsgforcourse">Congrats, here is your certificate.</string>
+    <string name="linksText">QUESTIONS LINK</string>
+    <string name="contactText">CONTACT</string>
+    <string name="catalog_text">Catalog</string>
+    <string name="course_distribution_success_msg">Module added to your pending list!</string>
+    <string name="course_distribution_error_msg">Could not assign! Please try after some time!</string>
+    <string name="nocourse_completed_str">No modules found</string>
+    <string name="nocourse_pending_str">No modules found</string>
+    <string name="noassessment_completed_str">No assessments have been completed</string>
+    <string name="noassessment_pending_str">No Assessment are found</string>
+    <string name="sales">Sales</string>
+    <string name="firebase_no_data_error">No data available</string>
+    <string name="internal_server_error">Internal server error</string>
+    <string name="session_restart_msg">Your session has been expired. Please signIn again.</string>
+    <string name="courseheading">COURSES :</string>
+
+    <string name="coins_text">Coins</string>
+    <string name="best_result">Best Result</string>
+    <string name="my_result">My Result</string>
+    <string name="no_winner">NO WINNER FOUND</string>
+    <string name="my_rank">MY RANK :</string>
+    <string name="view_answers">View Answers</string>
+    <string name="no_contest">No contests found</string>
+    <string name="ffc_nointernet_msg">Please check the Internet connection and try again.</string>
+    <string name="time_left_camel">Time Left</string>
+    <string name="time_left_msg">Time left for next question</string>
+    <string name="time_for_next_ques">Time for next question</string>
+    <string name="good_job">GOOD JOB!</string>
+    <string name="warmup_ques"> WARM UP QUESTION</string>
+    <string name="loading_contestant">Loading contestants..</string>
+    <string name="contest_started">CONTEST STARTED</string>
+    <string name="terms_condition_title">Terms and Conditions</string>
+    <string name="contest_about_to_start">Contest is about to start in</string>
+    <string name="contest_starts">Contest starts…</string>
+
+
+    <string name="instruction_camel">Instructions</string>
+    <string name="contest_over">CONTEST OVER</string>
+    <string name="overall_leaderboard">Overall Leaderboard</string>
+    <string name="calculating_winner">Calculating winners..</string>
+    <string name="not_attempted">Not Attempted</string>
+    <string name="loading_module">Fetching modules..</string>
+    <string name="select_purpose">Select purpose:</string>
+    <string name="description_title">Description :</string>
+    <string name="user_mobile_number">User Mobile No:</string>
+    <string name="location">Location</string>
+    <string name="location_not_found">Location not found</string>
+    <string name="character_remaining">characters remaining</string>
+    <string name="enter_mobile_no">Enter Mobile Number</string>
+    <string name="some_character_remaining">500 characters remaining</string>
+    <string name="course_not_available_text">This module is not available for you. Please contact your admin.</string>
+    <string name="assessment_not_available">This module is not available for you. Please contact your admin.</string>
+    <string name="certificate_sent">Certificate sent</string>
+    <string name="due_date">DUE DATE : </string>
+    <string name="solve">SOLVE</string>
+    <string name="jumble_downloading_msg">Downloading files..</string>
+    <string name="update_youtube">Update youtube app to play this video!</string>
+    <string name="install_youtube">Youtube installation required. Do you want to install?</string>
+    <string name="explain_your_rationale">EXPLAIN YOUR RATIONALE</string>
+    <string name="words_left">Words Left : </string>
+    <string name="solution">Solution</string>
+    <string name="my_response">MY RESPONSE</string>
+    <string name="enter_response_hint">Enter your response…</string>
+    <string name="attempt_left_text">Attempts left</string>
+    <string name="no_attempt_left">No attempts left</string>
+    <string name="cards_left">Cards left</string>
+    <string name="card_left">Cards left</string>
+    <string name="category_instruction_msg">Drag card towards left or right</string>
+    <string name="fill_hint_msg">Drag the words to fill the blanks</string>
+    <string name="fill_title">Fill in the blanks</string>
+    <string name="fill_error">Please fill all the blanks</string>
+    <string name="category_one">Category One</string>
+    <string name="category_two">Category Two</string>
+    <string name="exception_text">Exception occured while opening webview.</string>
+    <string name="groupResult">Group challenge started. You will be notified as soon as it is completed.</string>
+
+    <!--setting goal-->
+    <string name="paymentsuccess_msg">Congratulations! Your payment has been received. You can now start the course and earn your certification.</string>
+    <string name="freecourse_enrollsuccess_msg">Congratulations! You can now start the course.</string>
+    <string name="newFeatureType">NEW FEATURE</string>
+    <string name="alertType">ALERT</string>
+    <string name="notificationType">NOTIFICATION</string>
+    <string name="leaderBoardsFilterPopupTitle">Filter</string>
+    <string name="get_assessmentanalytics_url" translatable="false">assessment/user/{userId}</string>
+    <string name="upload_fail_error">"Error while uploading your response, please click on Retry to upload it again"</string>
+    <string name="upload">Upload</string>
+    <string name="media_timeout_heading">Time Out</string>
+    <string name="media_timeout_msg">Do you want to upload the file?</string>
+    <string name="course_complete_heading">Course Download Complete</string>
+    <string name="course_complete_msg">download complete</string>
+    <string name="cpl_lock_msg"> Module will be unlocked </string>
+    <string name="assess_pass_msg">Congratulations! You have passed the assessment.</string>
+    <string name="assess_fail_msg">Sorry! You have failed the assessment</string>
+    <string name="multilingual_popup_title">Choose Language</string>
+    <string name="multilingual_notavailable_text">Request another language</string>
+    <string name="cpl_locked_msg">Module is locked! Please complete previous modules !</string>
+    <string name="rate_feedback_str">Give your feedback</string>
+    <string name="your_certificate_msg">Your Certificate</string>
+    <string name="enter_email_msg">Enter email-id to receive certificate.</string>
+    <string name="enter_email_txt">Enter email</string>
+    <string name="my_answers">My answers</string>
+    <string name="media_camel">Media</string>
+    <string name="select_language">Select Language</string>
+    <string name="confirm_email">Confirm your Email</string>
+    <string name="rate_us_title">Rate Oust on Play Store</string>
+    <string name="rate_us_msg">Are you enjoying Oust App?\nPlease rate your experience and write a review.</string>
+    <string name="unable_update_cpl_data">Unable to submit your progress. Please check network and try again.</string>
+    <string name="groups_tab_text">Groups</string>
+    <string name="users_tab_text">Users</string>
+    <string name="nb_no_posts_msg">No data available</string>
+    <string name="date_format">dd/mm/yyyy</string>
+    <string name="update_ld">update</string>
+
+    <string name="unable_add_now">Unable to add right now!</string>
+    <string name="unable_update_now">Unable to Update right now!</string>
+    <string name="updated_success">Updated Successfully</string>
+    <string name="deleted_success">Deleted Successfully!</string>
+    <string name="not_exceed_150_chars">No of Characters should not exceed 150.</string>
+    <string name="not_exceed_300_chars">No of Characters should not exceed 300.</string>
+    <string name="end_date_error">Please Select End Date</string>
+    <string name="startdate_less_endate">Start Date can\'t be greater than End Date</string>
+    <string name="comment_error_msg">Please enter comment</string>
+    <string name="topic_error_msg">Please enter Topic/Activity</string>
+    <string name="startdate_error">Please Select Start Date</string>
+    <string name="please_wait_uploading">Please wait. We are uploading the Attachment.</string>
+    <string name="delete_attachment">Please remove existing Attachment and try again</string>
+    <string name="unable_to_select_attachment">Unable to select attachment!</string>
+    <string name="status">Status</string>
+    <string name="course_completd">Courses completed:</string>
+    <string name="course_submitted">Courses not submitted:</string>
+    <string name="no_cpl_language_selection_available">No playlist has been assigned.</string>
+    <string name="post">post</string>
+    <string name="title">Title:</string>
+    <string name="video">Video</string>
+    <string name="photo">Photo</string>
+    <string name="file">File</string>
+    <string name="audio">Audio</string>
+    <string name="create_post">Create Post</string>
+    <string name="upload_file">Upload File</string>
+    <string name="original">Original</string>
+    <string name="compress">Compressed</string>
+    <string name="compress_recom_msg">We Recommend you to upload the compressed file</string>
+    <string name="delete">Delete</string>
+    <string name="no_ranks_leader_board">We need a few users to update the leaderboard</string>
+    <string name="no_results">Oops! No results found</string>
+    <string name="no_results_2">Please write the correct spelling or try a different search</string>
+    <string name="no_title_empty">Title Can\'t be empty</string>
+    <string name="save_discard_post">Are you sure you want to discard the post?</string>
+    <string name="delete_video">Would you like to delete the downloaded videos from this course?</string>
+    <string name="discard">Discard</string>
+    <string name="media_upload_confirm_message">Are you sure you want to cancel media upload?</string>
+    <string name="content_not_available">Content is not available at this time</string>
+    <string name="language_change_msg">By changing language, your previous data in old language will be deleted. You will have to complete the entire set of modules again. Do you want to continue ?</string>
+    <string name="city_change_msg">You have previously chosen a different city and language.\nDo you want to continue with previous selection OR choose a different city?</string>
+    <string name="text_start_again">Start again</string>
+    <string-array name="settingsNotifications">
+        <item>Group Notifications</item>
+        <item>Friend Notifications</item>
+        <item>Others Notifications</item>
+        <item>Others Notifications</item>
+    </string-array>
+
+    <string-array name="settinggrade">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>Engineering</item>
+        <item>Management</item>
+        <item>Medical</item>
+        <item>B.Com</item>
+        <item>B.A.</item>
+        <item>B.Sc</item>
+        <item>Diploma</item>
+    </string-array>
+    <string-array name="cities">
+        <item>Agra</item>
+        <item>Ahmedabad</item>
+        <item>Bangalore</item>
+        <item>Belgaum</item>
+        <item>Bellary</item>
+        <item>Chennai</item>
+        <item>Coimbatore</item>
+        <item>Davangere</item>
+        <item>Pune</item>
+        <item>Mysore</item>
+        <item>Belgaum</item>
+        <item>Bangalore</item>
+        <item>Dharwad</item>
+        <item>Hubli</item>
+        <item>Nagpur</item>
+        <item>Tumkur</item>
+        <item>Delhi</item>
+        <item>Hydrabad</item>
+        <item>Indore</item>
+        <item>Kanpur</item>
+        <item>Kolkata</item>
+        <item>Lucknow</item>
+        <item>Mumbai</item>
+        <item>Mysore</item>
+        <item>Nagpur</item>
+        <item>Nashik</item>
+        <item>Pune</item>
+        <item>Surat</item>
+        <item>Udaipur</item>
+        <item>Visakhapatnam</item>
+    </string-array>
+    <string-array name="settinggoals">
+        <item>PLACEMENT</item>
+        <item>ACADEMICS</item>
+        <item>COMPETITIVE EXAM</item>
+    </string-array>
+    <string-array name="settings">
+        <item>General</item>
+        <item>Notifications</item>
+        <item>Sounds</item>
+        <item>Privacy</item>
+    </string-array>
+    <string name="req_training">Training Request</string>
+    <string name="group_leaderboard">Group LeaderBoard</string>
+    <string name="next">next</string>
+    <string name="alerts_menu_text">Alerts</string>
+    <string name="search_menu_text">Search</string>
+    <string name="leader_board_menu_text">LEADERBOARD</string>
+    <string name="take_survey_button">View Survey</string>
+
+    <string name="you_text">You</string>
+
+
+    <string name="select_course_language">Select Course Language</string>
+    <string name="select_city">Select City</string>
+    <string name="select_assessment_language">Select Assessment Language</string>
+    <array name="calendar_months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+    <array name="calendar_day_abbreviations_array">
+        <item>@string/s_text</item>
+        <item>@string/m_text</item>
+        <item>@string/t_text</item>
+        <item>@string/w_text</item>
+        <item>@string/t_text</item>
+        <item>@string/f_text</item>
+        <item>@string/s_text</item>
+    </array>
+    <string name="sinsle_session_msg">You have already logged in from another device. Do you want to continue?</string>
+    <string name="sinsle_session_note">*If you select YES, then the other session will be terminated.</string>
+
+    <string name="instructions">Instructions</string>
+    <string name="read_more_text">Read More</string>
+    <string name="delete_file_text">Delete Downloaded Files</string>
+    <string name="feed_text">Feed</string>
+    <string name="your_rating_excellent_text">Your Rating : </string>
+    <string name="coins_earned_text">Coins Earned</string>
+    <string name="thanks_qstn_text">Thanks for answering all the questions</string>
+    <string name="review_submit_text">Do you want to Review or Submit ?</string>
+    <string name="tasks_done_text">Tasks Done</string>
+    <string name="no_modules_text">No data available</string>
+    <string name="enter_score_text">Enter Score</string>
+    <string name="enter_your_score_text">Enter your score</string>
+    <string name="view_history_text">View History</string>
+    <string name="my_history_text">My History</string>
+    <string name="upload_your_video_text">Upload Your Video</string>
+    <string name="leaderboard_text">LEADERBOARD</string>
+    <string name="event_text">Event</string>
+    <string name="time_calendar_text">Time:</string>
+    <string name="previous">Previous</string>
+    <string name="registration_complete_text">Registration Complete !</string>
+    <string name="confirmation_email_address">Confirm Email</string>
+    <string name="send_text">SEND</string>
+    <string name="registered_text">Registered !</string>
+    <string name="best_score_text">Best Score</string>
+    <string name="my_level_txt">My Level</string>
+    <string name="level_completed_text">Level completed</string>
+    <string name="level_desc_text">Start the next level to learn more skills.</string>
+    <string name="replay_text">Replay</string>
+    <string name="next_text">Next</string>
+    <string name="not_used_text">Not used</string>
+    <string name="timer_text">Timer</string>
+
+    <string name="my_rank_text">My Rank</string>
+    <string name="certificate_text">Certificate</string>
+    <string name="your_percentage_text">Your Percentage *</string>
+    <string name="questions_nattempted_text">Questions \nAttempted</string>
+    <string name="complete_assigned_module">Complete Assigned Module</string>
+    <string name="your_points">Your Points</string>
+    <string name="idp_target_achieved">IDP TARGET ACHIEVED</string>
+    <string name="limit_exceed_text">Limit exceeded</string>
+    <string name="thank_you_text">Thank you</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="class_is_full">Class is Full</string>
+    <string name="join_waitlist">Join Waitlist</string>
+    <string name="confirm_email_sent">Confirmation Email will be sent to</string>
+    <string name="added_calendar">Added in Calendar</string>
+    <string name="unregister_event_message">Are you sure you want to unregister from this event?</string>
+    <string name="unregister_text">Unregister</string>
+    <string name="unregister_the_event">Unregister the event?</string>
+    <string name="waitlist">Waitlist</string>
+    <string name="webinar_text">Webinar</string>
+    <string name="classroom_text">Classroom</string>
+    <string name="join_now">Join Now</string>
+    <string name="end">End</string>
+    <string name="over_text">Over !</string>
+    <string name="passed">Passed</string>
+    <string name="failed_text">Failed</string>
+    <string name="enter_valid_user_name">Enter Valid User Name</string>
+    <string name="enter_valid_mail">Enter Valid Mail</string>
+    <string name="enter_valid_mobile">Enter Valid Mobile No</string>
+    <string name="enter_valid_amount">Enter Valid Amount</string>
+    <string name="incomplete_course">Incomplete Courses</string>
+    <string name="score_text">Score</string>
+
+
+    <array name="diary_filter_type">
+        <item>@string/module</item>
+        <item>@string/all</item>
+        <item>@string/assessment</item>
+        <item>@string/course_text</item>
+        <item>@string/survey_text</item>
+        <item>@string/my_entry</item>
+    </array>
+
+    <string name="year">Year</string>
+    <string name="my_entry">MY ENTRY</string>
+    <string name="all">All</string>
+    <string name="date">Date</string>
+    <string name="filter_by">Filter By</string>
+    <string name="to">to</string>
+    <string name="start_end_between">Start date and End date can\'t be more than  </string>
+    <string name="days_text"> Day(s)</string>
+    <string name="select_from_gallery">Select from Gallery</string>
+    <string name="folder_text">Folder</string>
+    <string name="folders_text">Folders</string>
+    <string name="modules_text">Modules</string>
+    <string name="attempt_allowed">Attempt Allowed</string>
+    <string name="attempts_allowed">Attempts Allowed</string>
+    <string name="passing_score">Passing Percentage - </string>
+    <string name="system_time_error">Your System date and time changed. Please go back and try again. </string>
+
+    <string name="feeds_text">Feeds</string>
+    <string name="card_max">up to</string>
+    <string name="how_course">How was the course ?</string>
+    <string name="write_review">Write a review here…</string>
+    <string name="rate_it">RATE IT !</string>
+    <string name="help_feed_back">Feedback</string>
+    <string name="help_quest">Grievance</string>
+    <string name="help_report_issue">Report an issue</string>
+    <string name="tv_25">25</string>
+    <string name="title_activity_idp_target">IDP TARGET</string>
+    <string name="alert_txt">ALERT</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exit_oust_msg">You are not eligible to proceed further. We thank you for your interest and will get in touch with you later.</string>
+    <string name="tier_1_full_time_pay">Earn between <font color='#f87800'>Rs.18000 to Rs.35000</font> per month</string>
+    <string name="tier_1_part_time">Earn between <font color='#f87800'>Rs.9000 to Rs.16000</font> per month</string>
+    <string name="tier_2_full_time">Earn between <font color='#f87800'>Rs.16000 to Rs.30000</font> per month</string>
+    <string name="tier_2_part_time_pay">Earn between <font color='#f87800'>Rs.8000 to Rs.15000</font> per month</string>
+    <string name="tier_3_full_time_pay">Earn between <font color='#f87800'>Rs.14000 to Rs.24000</font> per month</string>
+    <string name="tier_3_part_time">Earn between <font color='#f87800'>Rs.7000 to Rs.10000</font> per month</string>
+    <string name="tier_1_info_pay">For each order, earn between <font color='#f87800'>Rs.30 and Rs.90</font></string>
+    <string name="daily_incentive_1">Daily incentive upto <font color='#f87800'>Rs.200</font> per day on weekdays (Mon to Thur) and <font color='#f87800'>Rs.250</font> per day on Saturday - Sunday</string>
+    <string name="weekely_incentive_1">Weekly incentive upto <font color='#f87800'>Rs.750</font> per week</string>
+    <string name="monthly_incentive_1">Monthly incentive upto <font color='#f87800'>Rs.3000</font> per month!</string>
+    <string name="daily_incentive_2">Daily incentive upto <font color='#f87800'>Rs.100</font> per day on weekdays (Mon to Thur) and <font color='#f87800'>Rs.200</font> per day on Saturday - Sunday</string>
+    <string name="weekely_incentive_2">Weekly incentive upto <font color='#f87800'>Rs.350</font> per week</string>
+    <string name="monthly_incentive_2">Monthly incentive upto <font color='#f87800'>Rs.1250</font> per month!</string>
+    <string name="purchasecourse_msg">Purchase the course to get started.</string>
+    <string name="buy_text">Buy for Rs 1000/-</string>
+    <string name="sec">sec</string>
+    <string name="reward_msg">Enter email-id to receive reward.</string>
+    <string name="websiteLinkText">WWW.OUSTME.COM</string>
+    <string name="oustsolution_text">Team Oust</string>
+    <string name="rightprecentage_label">Right %</string>
+    <string name="subscriberText">Practice More to excel. Do you want to join the daily Oust challenge on this subject
+        or topic?
+        SUBSCRIBE TODAY
+    </string>
+    <string name="hint">__</string>
+    <string name="shareTitle">Oust App - OustMe.com</string>
+    <string name="whatsAppText">WhatsApp</string>
+    <string name="Favourite">favouritetitle</string>
+    <string name="completeModule">Complete</string>
+    <string name="SoundSetting">Sound</string>
+    <string name="ChallengeNotificationSetting">Challenge Notifications</string>
+    <string name="ChallengEmailSetting">Challenge email</string>
+    <string name="ContactDisplaySetting">Display Contacts</string>
+    <string name="addfrdsetting">Add Friend Notifications</string>
+    <string name="OtherNotificationSetting">Daily Notifications</string>
+    <string name="GroupNotificationSetting">Group Notifications</string>
+    <string name="skill_text">Skill</string>
+    <string name="email_summary">Email Weekly Summary</string>
+    <string name="to_be_reviewed">To be Reviewed</string>
+    <string name="not_approved">Not Approved</string>
+    <string name="approved">Approved</string>
+    <string name="host_app">Host App</string>
+    <string name="team_analytics">TEAM DASHBOARD</string>
+    <string name="results_with_admin">Results are available with admin</string>
+    <string name="module_no_longer">Module no longer available</string>
+    <string name="welcome">Welcome</string>
+    <string name="you_have">You have </string>
+    <string name="pending_tasks">pending tasks</string>
+    <string name="remaining"> remaining</string>
+    <string name="to_complete">to complete</string>
+    <string name="to_answer">to answer</string>
+    <string name="no_feed_content">Content will be visible as soon as they are distributed</string>
+    <string name="no_noticeboard_content">No noticeboard has been assigned</string>
+    <string name="no_pending_content">You have no pending modules</string>
+    <string name="no_pending_content_completed">Hurray! You have no pending tasks</string>
+    <string name="no_catalogue">Catalogues have not been assigned yet</string>
+    <string name="tap_upload_record_video">Tap to upload or record the video</string>
+    <string name="tap_record_video">Tap to record the video</string>
+    <string name="tap_upload_capture_image">Tap to upload or take the picture</string>
+    <string name="tap_capture_image">Tap to take the picture</string>
+    <string name="tap_upload_record_audio">Tap to upload or record the audio</string>
+    <string name="tap_record_audio">Tap to record the audio</string>
+    <string name="camera">Camera</string>
+    <string name="mcq_info">Please choose one best answer</string>
+    <string name="mrq_info">Please choose one or more best answers</string>
+    <string name="file_delete_description">If you delete this file,</string>
+    <string name="pause_text">Pause</string>
+    <string name="playing_text">Playing</string>
+
+
+    <string name="assessment_complete_survey_text">Please complete the assigned survey to complete the module</string>
+
+    <string name="badge_received">You have received this badge for </string>
+    <string name="minute">minute</string>
+    <string name="yay_text">Yay!</string>
+    <string name="have_earned">You have earned</string>
+    <string name="assessment_pending">assessment pending </string>
+    <string name="assessments_pending">assessments pending </string>
+    <string name="course_pending">course pending </string>
+    <string name="courses_pending">courses pending </string>
+    <string name="download_failure">Download Failure Message</string>
+    <string name="download_failed_try_again">Sorry ! Downloading has failed.Please try again !</string>
+    <string name="get_started_assessment">Get started with the assessment now</string>
+    <string name="get_started_survey">Get started with the survey now</string>
+    <string name="completed_on">completed on </string>
+    <string name="new_language">New Language</string>
+
+    <string name="got_new_badge">You got a new badge! </string>
+    <string name="course_completed">Course Completed!</string>
+    <string name="achievements">Achievements</string>
+    <string name="certificate">Certificates</string>
+    <string name="inspect">Inspect</string>
+    <string name="certificate_">Certificate</string>
+    <string name="you_have_achieved">You have earned  </string>
+    <string name="you_have_not_">You have not earned any </string>
+    <string name="hello_">"Hello "</string>
+    <string name="no_leaderboard_assessment_content">We need a few users to update the leaderboard</string>
+    <string name="sort_by">Sort By</string>
+    <string name="badge">Badge</string>
+    <string name="check_cpl_distribute_or_not">The CPL is no longer available.Please contact admin.</string>
+    <string name="check_course_distribute_or_not">The course is no longer available.Please contact admin.</string>
+    <string name="check_Assessment_distribute_or_not">The assessment is no longer available.Please contact admin.</string>
+    <string name="check_noticeBoard_distribute_or_not">The noticeBoard is no longer available.Please contact admin.</string>
+    <string name="check_catalogue_distribute_or_not">The catalogue is no longer available.Please contact admin</string>
+    <string name="check_contest_distribute_or_not">The fffc is no longer available.Please contact admin</string>
+    <string name="no_fffc_found">FFF Contest Not found. please contact your Admin</string>
+    <string name="attach_module_cpl">You cannot attempt this module as it is a part of a Playlist. Please visit the Playlist section of the app.</string>
+    <string name="new_play_list">Play List</string>
+    <string name="new_contest_list">Contest</string>
+    <string name="contest_pending">contest pending </string>
+    <string name="contests_pending">contests pending </string>
+    <string name="cpl_pending">play list pending </string>
+    <string name="cpls_pending">play lists pending </string>
+    <string name="no_notification_found">No notification found</string>
+    <string name="loading_module_please_wait">Loading module. Please wait..</string>
+    <string name="match_following_info">  Match the card from Type A to Type B by dragging them. Click forward arrow when done.</string>
+    <string name="type_a">Type A</string>
+    <string name="type_b">Type B</string>
+
+    <string name="questions_remaining_exam"> questions have not been answered.\nMake sure you answer all question before submitting.\n</string>
+    <string name="question_remaining_exam"> question has not been answered.\nMake sure you answer all question before submitting.\n</string>
+    <string name="submit_confirmation"> Are you sure? No changes are allowed once you submit.</string>
+    <string name="exit_txt">Exit</string>
+    <string name="profile_saved_text">%1$s, your profile is saved\nThank you for adding your information.</string>
+    <string name="no_mobules_pending">no modules pending</string>
+    <string name="no_pending_module_content_completed">Hurray! You have no modules</string>
+    <string name="how_cpl">How was the cpl ?</string>
+    <string name="attending">Attending</string>
+    <string name="justify_popup_hint">Enter your response here..</string>
+    <string name="type">Type</string>
+
+    //General settings
+    <string name="name_text_star">Name *</string>
+    <string name="email_text_star">Email *</string>
+    <string name="mobileNum_text_star">Mobile Number *</string>
+    <string name="enter_date_of_birth">Enter Date of Birth</string>
+    <string name="enter_your_country">Enter your country</string>
+
+    //InApp Analytics
+    <string name="your_engagement_summery">Your Engagement Summary</string>
+    <string name="tap_on_card_to_view_details">Tap on card to view details</string>
+    <string name="in_progress_txt">In progress</string>
+    <string name="not_started_txt">Not started</string>
+    <string name="overall_txt">(Overall)</string>
+    <string name="last_year_txt">(Last 1 Year)</string>
+    <string name="past_six_months">(Past 6 Months)</string>
+    <string name="past_three_months">(Past 3 Months)</string>
+    <string name="past_months">(Past Month)</string>
+    <string name="last_week">(Last Week)</string>
+
+    //Feed Filter
+    <string name="course">Course</string>
+    <string name="word_jumble">Word Jumble</string>
+    <string name="new_offers">New Offers</string>
+    <string name="expired_offers">Expired Offers</string>
+
+    <string name="video_permission_toast">Please click allow to access photos and media on your device to download this video</string>
+
+    <string name="inbox">Inbox</string>
+    <string name="no_search_found">No search Results found!</string>
+    <string name="feed_removed_not_assigned">The module is either completed or no longer assigned</string>
+    <string name="language_confrim">Language once selected cannot be changed. Are you sure you want to continue?</string>
+    <string name="language_sub_text">Your progress in the current language will be saved</string>
+    <!--    <string name="language_switch_desc">By switching the language you will be required to start the playlist from the beginning.</string>-->
+    <string name="language_switch_desc">Switching to new language will restart the Playlist.</string>
+    <string name="please_select_the_language">Please select the language.</string>
+
+    //Zepto
+    <string name="zepto_redirection">Zepto Delivery App</string>
+    <string name="zepto_message">In the next step, please download the Zepto rider app by clicking the button below</string>
+    <string name="on_completing_your_training">On completing your training</string>
+    <string name="zepto_congratulations_text">Congratulations!</string>
+    <string name="ranking">Rank</string>
+    <string name="txt_like">Like</string>
+    <string name="txt_comm">Comment</string>
+    <string name="txt_share">Share</string>
+    <string name="txt_attach">Attach</string>
+    <string name="txt_take_survey">Take this survey</string>
+    <string name="comment_added_msg">Comment added</string>
+
+    <string name="check_data_is_or_not">The Module is no longer available. Please contact admin.</string>
+    //New UI parameters
+    <string name="comment_here">Comment here</string>
+    <string name="like_text">Like</string>
+    <string name="create_post_">Create Post...</string>
+    <string name="image_text">Image</string>
+    <string name="upload_audio">Upload audio</string>
+    <string name="record_audio">Record audio</string>
+    <string name="upload_video">Upload video</string>
+    <string name="capture_video">Capture video</string>
+    <string name="upload_picture">Upload picture</string>
+    <string name="take_picture">Take picture</string>
+    <string name="filter_by_">Filter by -</string>
+    <string name="see_more">" See more."</string>
+    <string name="learning_pending">Pending - </string>
+    <string name="learning_completed">Completed - </string>
+    <string name="apply">Apply</string>
+    <string name="reset">Reset</string>
+    <string name="txt_no_feeds">No feeds yet</string>
+    <string name="lbl_your_feed">Your feed -</string>
+    <string name="today_live_session">Live Session</string>
+    <string name="txt_show_more"><font color='#FF9518'><u>Show more</u></font></string>
+    <string name="show_more_styled"><![CDATA[<u><font color=\'#FF9518\'>Show more</font></u>.]]></string>
+    <string name="my_module">My Module</string>
+    <string name="select_any_filter">Please select any filter option.</string>
+    <string name="take_this_course">Take this course</string>
+    <string name="take_this_assessment">Take this assessment</string>
+
+    <string name="screen_capture_notification_tile">Screen Sharing</string>
+    <string name="screen_capture_notification_text">Your screen is being shared.</string>
+    <string name="screen_sharing_toggle">Toggle screen sharing</string>
+
+    //Live classes
+    <string name="profile_link"><u>Profile link</u></string>
+    <string name="registered_successfully">Registered successfully</string>
+    <string name="email_id">Email-id</string>
+    <string name="close">Close</string>
+    <string name="attachment_link"><u>Attachment link</u></string>
+    <string name="trainer_note">Trainer Note</string>
+    <string name="link_to_the_event"><u>Link to the event</u></string>
+    <string name="mandatory_event">Mandatory Event</string>
+    <string name="attendees">Attendees - </string>
+    <string name="end_call">End Call</string>
+    <string name="are_you_sure_you_want_to_exit_session">Are you sure you want to exit the session?</string>
+    <string name="you_left_the_event">You left the Event</string>
+    <string name="webinar_is_completed">Webinar is completed</string>
+    <string name="left_by_mistake">Left by mistake?</string>
+    <string name="rejoin">Rejoin</string>
+    <string name="or_text">or</string>
+    <string name="back_to_oust"><u><font color='#828792'>back to Oust</font></u></string>
+    <string name="meeting_id">Meeting ID     :</string>
+    <string name="trainer">Trainer            :</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="your_presentation">You are presentation</string>
+    <string name="is_presenting"> is presenting</string>
+    <string name="screen_share_restriction">Can\'t share the screen now, more than 1 participants are already sharing their screen.</string>
+
+    <string name="recurring_assessment">Repetitive Assessment</string>
+    <string name="available_in_different_languages">Available in different languages</string>
+    <string name="level_updation_text">Sequences are updated by Admin, it will start from first card</string>
+    <string name="camera_started_recording">Already started recording video. now we can\'t change camera view.</string>
+    <string name="submitting_data_msg">Submitting data..</string>
+    <string name="level_edited_user_will_re_attempt">This level has been edited, you will have to attempt this level again!</string>
+    <string name="offline_completion_popUp">Thank you for completing the course, the submission will happen once you connect back to the internet</string>
+    <string name="course_data_is_missing">This course data is missing. Please contact your admin.</string>
+</resources>
+

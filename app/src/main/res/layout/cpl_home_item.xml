@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/oustlayout_dimen40"
+    android:layout_height="@dimen/oustlayout_dimen40"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/orangeCircle"
+        android:layout_width="@dimen/oustlayout_dimen30"
+        android:layout_height="@dimen/oustlayout_dimen30"
+        android:src="@drawable/orange_round_textview"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/greenCircle"
+        android:layout_width="@dimen/oustlayout_dimen30"
+        android:layout_height="@dimen/oustlayout_dimen30"
+        android:src="@drawable/darkgreen_round_textview"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cpl_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/oustlayout_dimen2"
+        android:scaleType="fitXY"
+        android:background="@drawable/cpl_home_btn" />
+
+</LinearLayout>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/survey_detail_lay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".survey_ui.SurveyDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_lay"
+            layout="@layout/common_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_lay">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_survey"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/layout_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/detail_screen_border"
+                    android:orientation="vertical">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/survey_action_button"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/survey_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:background="@color/feed_bg"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/no_image"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/survey_feed_date"
+                                style="@style/body_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginEnd="16dp"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:textAllCaps="true"
+                                android:textColor="@color/secondary_text" />
+
+                            <TextView
+                                android:id="@+id/survey_title_full"
+                                style="@style/header_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="16dp"
+                                android:gravity="top"
+                                android:textColor="@color/primary_text" />
+
+
+                            <TextView
+                                android:id="@+id/survey_feed_dead_line"
+                                style="@style/body_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="16dp"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/primary_text" />
+
+                            <LinearLayout
+                                android:id="@+id/progress_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/completion_percentage_done"
+                                    style="@style/caption_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:gravity="center_horizontal"
+                                    android:textColor="@color/primary_text" />
+
+                                <ProgressBar
+                                    android:id="@+id/completion_percentage_progress"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginStart="8dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/custom_progress" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/survey_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="16dp"
+                                android:baselineAligned="false"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/survey_duration_lay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_clock_info"
+                                        app:tint="@color/unselected_text"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:id="@+id/survey_duration_text"
+                                        style="@style/header_4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/primary_text" />
+
+                                    <TextView
+                                        style="@style/caption_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:gravity="center"
+                                        android:text="@string/to_complete"
+                                        android:textColor="@color/secondary_text" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/survey_qa_lay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_question_answer"
+                                        app:tint="@color/unselected_text"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:id="@+id/survey_qa_text"
+                                        style="@style/header_4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/primary_text" />
+
+                                    <TextView
+                                        style="@style/caption_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:gravity="center"
+                                        android:text="@string/to_answer"
+                                        android:textColor="@color/secondary_text" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/survey_coins_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:id="@+id/img_coin"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_coins_golden"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:id="@+id/survey_coins_text"
+                                    style="@style/header_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/primary_text" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/survey_description"
+                                style="@style/body_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="top"
+                                android:textColor="@color/primary_text" />
+
+                            <WebView
+                                android:id="@+id/survey_description_webView"
+                                style="@style/body_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="top"
+                                android:textColor="@color/primary_text"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                    <FrameLayout
+                        android:id="@+id/survey_action_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/course_button_bg"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/survey_status_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:drawableStartCompat="@drawable/ic_button_arrow"
+                            tools:ignore="RtlCompat" />
+
+                    </FrameLayout>
+
+                    <ProgressBar
+                        android:id="@+id/survey_loader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/intro_card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_blackcorner"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/result_card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whitelight"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/feed_card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_swipe" />
+
+            <RelativeLayout
+                android:id="@+id/bottom_swipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/next_question"
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_arrowforward"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/previous_question"
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_arrowback"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/feedcard_toplayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen40"
+                android:background="@color/blue_transparent"
+                android:orientation="vertical"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/survey_download_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/popupBackGround"
+            android:visibility="gone">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/oustlayout_dimen150"
+                android:layout_height="@dimen/oustlayout_dimen150"
+                android:layout_centerInParent="true"
+                android:max="10"
+                android:progress="10"
+                android:progressDrawable="@drawable/splashresourse_loaderback" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/oustlayout_dimen150"
+                android:layout_height="@dimen/oustlayout_dimen150"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/oustlayout_dimen5"
+                android:background="@android:color/transparent"
+                android:indeterminate="@bool/default_underline_indicator_fades"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateDrawable="@drawable/splashresourse_loaderback"
+                android:indeterminateDuration="3000"
+                android:interpolator="@android:anim/linear_interpolator"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/survey_download_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/oustlayout_dimen150"
+                android:layout_height="@dimen/oustlayout_dimen150"
+                android:layout_centerInParent="true"
+                android:max="0"
+                android:progress="0"
+                android:progressDrawable="@drawable/splashresourse_loader" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/branding_main_layout"
+        layout="@layout/branding_loader"
+        android:visibility="gone" />
+
+</FrameLayout>

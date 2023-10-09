@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whitea"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        card_view:cardBackgroundColor="@null"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/oustlayout_dimen6"
+            android:layout_marginLeft="@dimen/oustlayout_dimen6"
+            android:layout_marginEnd="@dimen/oustlayout_dimen6"
+            android:layout_marginRight="@dimen/oustlayout_dimen6"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/oustlayout_dimen15"
+            android:paddingBottom="@dimen/oustlayout_dimen2">
+
+            <RelativeLayout
+                android:id="@+id/usermanual_mainrow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen45"
+                android:layout_marginTop="@dimen/oustlayout_dimen8"
+                android:layout_marginBottom="@dimen/oustlayout_dimen8"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/reviewmoderow_indextext"
+                    android:layout_width="@dimen/oustlayout_dimen35"
+                    android:layout_height="@dimen/oustlayout_dimen35"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen7"
+                    android:background="@drawable/greenlite_round_textview"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/whitelight"
+                    android:textSize="@dimen/ousttext_dimen18"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/show_cardlayout"
+                    android:layout_width="@dimen/oustlayout_dimen25"
+                    android:layout_height="@dimen/oustlayout_dimen25"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                    android:layout_marginRight="@dimen/oustlayout_dimen10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/show_cardupbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/downarrow_roundback"
+                        android:src="@drawable/ic_uparrow"
+                        android:tint="@color/DarkGray"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/show_carddownbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/downarrow_roundback"
+                        android:paddingTop="@dimen/oustlayout_dimen3"
+                        android:src="@drawable/ic_downarrow"
+                        android:tint="@color/DarkGray"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/downloadlevel_iconlayout"
+                    android:layout_width="@dimen/oustlayout_dimen25"
+                    android:layout_height="@dimen/oustlayout_dimen25"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/oustlayout_dimen24"
+                    android:layout_marginRight="@dimen/oustlayout_dimen24"
+                    android:gravity="center|center_vertical"
+                    android:visibility="gone">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/downloading_icon"
+                        android:layout_width="@dimen/oustlayout_dimen25"
+                        android:layout_height="@dimen/oustlayout_dimen25"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/oustlayout_dimen4"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/download_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:src="@drawable/newlp_notdownload"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/downloaded_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:src="@drawable/ic_download_orange"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_lock"
+                    android:layout_width="@dimen/oustlayout_dimen25"
+                    android:layout_height="@dimen/oustlayout_dimen25"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/oustlayout_dimen24"
+                    android:layout_marginRight="@dimen/oustlayout_dimen24"
+                    android:background="@drawable/backtransparent_circle"
+                    android:gravity="center|center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imageview_lock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/oustlayout_dimen5"
+                        android:src="@drawable/lock_normal"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/usermanual_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/oustlayout_dimen12"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen12"
+                    android:layout_marginTop="@dimen/oustlayout_dimen15"
+                    android:layout_toLeftOf="@+id/layout_lock"
+                    android:layout_toRightOf="@+id/reviewmoderow_indextext"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/common_grey"
+                    android:textSize="@dimen/ousttext_dimen16"
+                    tools:text="Level Name" />
+
+                <com.oustme.oustsdk.customviews.NewSimpleLine
+                    android:id="@+id/levelUnderlineView"
+                    android:layout_width="@dimen/oustlayout_dimen30"
+                    android:layout_height="4dp"
+                    android:layout_below="@+id/usermanual_heading"
+                    android:layout_marginStart="@dimen/oustlayout_dimen12"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen12"
+                    android:layout_marginTop="@dimen/oustlayout_dimen8"
+                    android:layout_marginBottom="@dimen/oustlayout_dimen8"
+                    android:background="@color/Orange" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horizantalSearcRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usermanual_mainrow"
+                android:layout_marginStart="@dimen/oustlayout_dimen8"
+                android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                android:layout_marginTop="@dimen/oustlayout_dimen8"
+                android:layout_marginEnd="@dimen/oustlayout_dimen8"
+                android:layout_marginRight="@dimen/oustlayout_dimen8"
+                android:visibility="visible"
+                tools:listitem="@layout/regularmode_horizontalrowlayout" />
+
+            <!--<com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerContainer"
+                android:orientation="vertical"
+                android:layout_below="@+id/usermanual_mainrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:shimmer_auto_start="true"
+                app:shimmer_direction="left_to_right"
+                app:shimmer_duration="1000"
+                app:shimmer_shape="linear"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/regularmode_horizontal_shimmerlayout"/>
+                    <include layout="@layout/regularmode_horizontal_shimmerlayout"/>
+                    <include layout="@layout/regularmode_horizontal_shimmerlayout"/>
+                    <include layout="@layout/regularmode_horizontal_shimmerlayout"/>
+                    <include layout="@layout/regularmode_horizontal_shimmerlayout"/>
+                    </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

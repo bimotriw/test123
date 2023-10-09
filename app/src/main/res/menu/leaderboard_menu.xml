@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:id="@+id/action_filter"
+        android:enabled="true"
+        android:icon="@drawable/ic_filter"
+        android:iconTint="@color/white"
+        android:title=""
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction,UnusedAttribute" />
+
+    <item
+        android:id="@+id/action_sort"
+        android:enabled="true"
+        android:icon="@drawable/ic_sort"
+        android:iconTint="@color/white"
+        android:title=""
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction,UnusedAttribute" />
+
+    <item
+        android:id="@+id/action_search"
+        android:enabled="true"
+        android:icon="@drawable/search_oust"
+        android:iconTint="@color/white"
+        android:title="@string/search_menu_text"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        tools:ignore="UnusedAttribute" />
+
+</menu>

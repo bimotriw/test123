@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/oustlayout_dimen140"
+    android:layout_marginLeft="@dimen/oustlayout_dimen8"
+    android:layout_marginStart="@dimen/oustlayout_dimen8"
+    android:layout_marginEnd="@dimen/oustlayout_dimen10"
+    android:layout_marginRight="@dimen/oustlayout_dimen10"
+    android:layout_marginBottom="@dimen/oustlayout_dimen10"
+    android:id="@+id/main_layout"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.oustme.oustsdk.customviews.CurveLayout
+        android:id="@+id/curveLayout"
+        android:layout_marginTop="@dimen/oustlayout_dimen2"
+        app:curveviewwidth="@dimen/oustlayout_dimen5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/whitea">
+        <ImageView
+            android:id="@+id/CatalogueUpdateIndicator"
+            android:layout_width="@dimen/oustlayout_dimen15"
+            android:layout_height="@dimen/oustlayout_dimen15"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/oustlayout_dimen1"
+            android:elevation="@dimen/oustlayout_dimen10"
+            android:src="@drawable/circle_red_bg" />
+        <ImageView
+            android:id="@+id/imageViewBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen140"
+            android:foregroundGravity="top"
+            />
+        <ImageView
+            android:id="@+id/rowicon_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen140"
+            android:scaleType="fitXY"
+            android:visibility="visible"/>
+        <include
+            android:id="@+id/percentageView"
+            layout="@layout/rotated_feedview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="@color/black_transparent">
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:id="@+id/textViewTitle"
+                tools:text="@string/date_format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="start"
+                android:singleLine="true"
+                android:textColor="@color/whitea"
+                android:textSize="@dimen/ousttext_dimen12"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/linearLayoutHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/whitea"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:id="@+id/linearLayoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:focusableInTouchMode="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewPeopleCount"
+                        android:layout_width="@dimen/oustlayout_dimen23"
+                        android:layout_height="@dimen/oustlayout_dimen12"
+                        android:src="@drawable/ic_group" />
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/textViewPeopleCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/whitea"
+                        android:textSize="@dimen/ousttext_dimen10"
+                        android:paddingLeft="@dimen/oustlayout_dimen4"
+                        android:paddingStart="@dimen/oustlayout_dimen4"
+                        tools:text="234" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/coins_layout"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/oustlayout_dimen1"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_grey_coin"
+                        android:layout_width="@dimen/oustlayout_dimen12"
+                        android:layout_height="@dimen/oustlayout_dimen12"
+                        android:src="@drawable/ic_coin" />
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/textViewCoinsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/ousttext_dimen10"
+                        android:paddingLeft="@dimen/oustlayout_dimen4"
+                        android:paddingStart="@dimen/oustlayout_dimen4"
+                        android:textColor="@color/whitea"
+                        tools:text="234" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <include
+            android:id="@+id/linearLayoutBottomView"
+            layout="@layout/new_catalog_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true" />
+    </com.oustme.oustsdk.customviews.CurveLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/oustlayout_dimen2"
+        app:cardCornerRadius="10dp"
+        android:visibility="gone"
+        android:id="@+id/category_layout"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/catalogue_border"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/folder_view"
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:background="#A4A4A4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:id="@+id/folder_image"
+                        android:layout_width="90dp"
+                        android:layout_height="83dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_folder"
+                        />
+
+                    <ImageView
+                        android:id="@+id/category_banner"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/category_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    tools:ignore="RtlCompat" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/learinglevel_mainlayout"
+    android:layout_width="@dimen/oustlayout_dimen70"
+    android:layout_height="@dimen/oustlayout_dimen70"
+    android:background="@android:color/transparent">
+    <RelativeLayout
+        android:layout_width="@dimen/oustlayout_dimen70"
+        android:layout_height="@dimen/oustlayout_dimen70"
+        android:id="@+id/levelback">
+        <TextView
+            android:layout_width="@dimen/oustlayout_dimen70"
+            android:layout_height="match_parent"
+            android:text="10"
+            android:id="@+id/learninglevel_text"
+            android:textColor="@color/whitea"
+            android:gravity="center"
+            android:textSize="@dimen/ousttext_dimen23"
+            android:paddingBottom="@dimen/oustlayout_dimen10"
+            android:background="@drawable/currentlevel_back"/>
+        <RelativeLayout
+            android:layout_width="@dimen/oustlayout_dimen70"
+            android:layout_height="@dimen/oustlayout_dimen35"
+            android:layout_alignParentBottom="true">
+            <RelativeLayout
+                android:layout_width="@dimen/oustlayout_dimen70"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:id="@+id/unlocklayout">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/oustlayout_dimen12"
+                        android:layout_height="@dimen/oustlayout_dimen12"
+                        android:layout_marginTop="@dimen/oustlayout_dimen8"
+                        android:paddingLeft="@dimen/oustlayout_dimen2"
+                        android:src="@drawable/star_emptya"
+                        android:id="@+id/levelstar_a"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:layout_width="@dimen/oustlayout_dimen12"
+                        android:layout_height="@dimen/oustlayout_dimen12"
+                        android:layout_marginTop="@dimen/oustlayout_dimen17"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:src="@drawable/star_emptya"
+                        android:id="@+id/levelstar_b"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:layout_width="@dimen/oustlayout_dimen12"
+                        android:layout_height="@dimen/oustlayout_dimen12"
+                        android:layout_marginTop="@dimen/oustlayout_dimen20"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:src="@drawable/star_emptya"
+                        android:id="@+id/levelstar_c"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:layout_width="@dimen/oustlayout_dimen12"
+                        android:layout_height="@dimen/oustlayout_dimen12"
+                        android:layout_marginTop="@dimen/oustlayout_dimen17"
+                        android:padding="@dimen/oustlayout_dimen1"
+                        android:src="@drawable/star_emptya"
+                        android:id="@+id/levelstar_d"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:layout_width="@dimen/oustlayout_dimen12"
+                        android:layout_height="@dimen/oustlayout_dimen12"
+                        android:layout_marginTop="@dimen/oustlayout_dimen8"
+                        android:paddingRight="@dimen/oustlayout_dimen2"
+                        android:src="@drawable/star_emptya"
+                        android:id="@+id/levelstar_e"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

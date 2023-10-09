@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".assessment_ui.assessmentDetail.ConditionalFormActivity">
+    <include
+        android:id="@+id/toolbar_notification_layout"
+        layout="@layout/common_toolbar"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <WebView
+        android:id="@+id/form_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="parent"/>
+
+    <RelativeLayout
+        android:background="@color/overlay_container"
+        android:visibility="visible"
+        android:id="@+id/scorm_layout_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/scorm_view_loader"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:visibility="visible" />
+
+        <TextView
+            android:text="@string/loading_module_please_wait"
+            android:id="@+id/loading_text_scorm_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scorm_view_loader"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ousttext_dimen17" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

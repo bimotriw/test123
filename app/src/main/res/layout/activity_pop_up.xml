@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingTop="@dimen/oustlayout_dimen30"
+    tools:context="com.oustme.oustsdk.activity.rough.PopUpActivity">
+
+    <ProgressBar
+        android:id="@+id/mprogressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/black_overlay"
+        android:indeterminate="true"
+        android:progressDrawable="@color/lgreen"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/openCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oustlayout_dimen30"
+        android:text="Open"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/get_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/openCourse"
+        android:text="get status"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/getStatusBuId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/get_status"
+        android:text="Get Status By Id"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/mEtxtEventId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getStatusBuId"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:layout_marginRight="@dimen/oustlayout_dimen30"
+        android:hint="Event ID"
+        android:inputType="number"
+        android:text=""
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/mEtxtOrgId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mEtxtEventId"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:layout_marginRight="@dimen/oustlayout_dimen30"
+        android:hint="Org ID"
+        android:text="oustdev"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/mEtxtUserId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mEtxtOrgId"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="@dimen/oustlayout_dimen30"
+        android:hint="User ID"
+        android:text="durai2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/edit_pic_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/oval_shape"
+        android:elevation="@dimen/oustlayout_dimen4"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/edit_pic"
+            android:layout_width="@dimen/oustlayout_dimen30"
+            android:layout_height="@dimen/oustlayout_dimen30"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/oustlayout_dimen40"
+            android:padding="@dimen/oustlayout_dimen5"
+            android:scaleType="fitXY"
+            android:src="@drawable/edit" />
+
+        <ImageButton
+            android:id="@+id/delete_pic"
+            android:layout_width="@dimen/oustlayout_dimen30"
+            android:layout_height="@dimen/oustlayout_dimen30"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/oustlayout_dimen40"
+            android:padding="@dimen/oustlayout_dimen5"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/mEtxtlanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mEtxtUserId"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:layout_marginRight="@dimen/oustlayout_dimen30"
+        android:hint="Language"
+        android:text=""
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/mEtxtFname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mEtxtlanguage"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:layout_marginRight="@dimen/oustlayout_dimen30"
+        android:hint="First Name"
+        android:text=""
+        android:visibility="gone" />
+
+
+    <EditText
+        android:id="@+id/mEtxtLname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mEtxtFname"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:layout_marginRight="@dimen/oustlayout_dimen30"
+        android:hint="Last Name"
+        android:text=""
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/mEtxtGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mEtxtLname"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:layout_marginRight="@dimen/oustlayout_dimen30"
+        android:hint="Group"
+        android:text=""
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnEventStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mEtxtGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/oustlayout_dimen10"
+        android:text="Event Status"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnLaunchModule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnEventStatus"
+        android:layout_centerHorizontal="true"
+        android:text="Launch Module"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/mBtnInitResources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnLaunchModule"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:text="Init Resources" />
+
+    <Button
+        android:id="@+id/mBtnRemoveResources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnInitResources"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/mBtnInitResources"
+        android:text="Remove Resources" />
+
+    <Button
+        android:id="@+id/mBtnOustLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnInitResources"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:text="Oust Login"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/mBtnOustLoginWithContext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnOustLogin"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:text="Login WithoutListener"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnOustLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnOustLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/oustlayout_dimen10"
+        android:layout_toRightOf="@+id/mBtnOustLogin"
+        android:text="Oust Logout"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/mBtnUserUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnOustLogout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/oustlayout_dimen10"
+        android:layout_toRightOf="@+id/mBtnOustLogout"
+        android:text="Name Update"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnOustLogoutWithContext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnOustLoginWithContext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/oustlayout_dimen10"
+        android:layout_toRightOf="@+id/mBtnOustLoginWithContext"
+        android:text="Oust Logout2"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnOustRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnOustLoginWithContext"
+        android:layout_centerHorizontal="true"
+        android:text="Register and Launch"
+        android:visibility="gone" />
+
+    <!--<Button
+        android:visibility="visible"
+        android:layout_below="@+id/mBtnOustRegister"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mBtnOustLaunchCPL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch CPL"/>-->
+
+    <!--<Button
+        android:visibility="visible"
+        android:layout_below="@+id/mBtnOustLaunchCPL"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mBtnUpdateLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Language"/>-->
+
+    <Button
+        android:id="@+id/mBtnInitWithoutCallback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnOustRegister"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:text="Init_without_callback"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnRemoveResourcesWithContext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnInitWithoutCallback"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/mBtnInitWithoutCallback"
+        android:text="Remove Res2"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnLaunchCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnInitWithoutCallback"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Launch Course"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnOustLaunchCatalogue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnInitWithoutCallback"
+        android:layout_centerHorizontal="true"
+        android:text="Launch Catalogue"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnOustUpdateLang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnOustLaunchCatalogue"
+        android:layout_marginLeft="@dimen/oustlayout_dimen30"
+        android:text="Update Language"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/mBtnOustGetLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnOustUpdateLang"
+        android:layout_toRightOf="@+id/mBtnOustUpdateLang"
+        android:text="Get Language"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/mBtnlaunchOust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnOustLaunchCatalogue"
+        android:layout_centerHorizontal="true"
+        android:text="Launch Oust"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mBtnlaunchOust"
+        android:layout_centerHorizontal="true"
+        android:text="Start"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStart"
+        android:layout_centerHorizontal="true"
+        android:text="Show Participants"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnStartShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnParticipants"
+        android:layout_centerHorizontal="true"
+        android:text="Start Share"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnStopShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnParticipants"
+        android:layout_centerHorizontal="true"
+        android:text="Stop Share"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartShare"
+        android:layout_centerHorizontal="true"
+        android:text="Stop"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStop"
+        android:layout_centerHorizontal="true"
+        android:text="Mute"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnUnMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStop"
+        android:layout_centerHorizontal="true"
+        android:text="Un-Mute"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnMute"
+        android:layout_centerHorizontal="true"
+        android:text="VoiceCall"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnSpeaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnMute"
+        android:layout_centerHorizontal="true"
+        android:text="Speaker"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSpeaker"
+        android:layout_centerHorizontal="true"
+        android:text="Live Class"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/mBtnOustLaunchCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_open"
+        android:layout_centerHorizontal="true"
+        android:text="Launch Card"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/webviewText"
+        style="@style/body_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mtxtShowStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="top"
+        android:textColor="@color/primary_text"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/mtxtShowStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen100"
+        android:background="@color/black_overlay"
+        android:elevation="@dimen/oustlayout_dimen4"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Likely"
+                android:textColor="@color/white_presseda"
+                tools:text="Likely" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very Likely"
+                android:textColor="@color/white_presseda"
+                tools:text="Very Likely" />
+
+        </RelativeLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/layout_survey_10points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <!--<include layout="@layout/survey_points"/>-->
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </LinearLayout>
+
+</RelativeLayout>

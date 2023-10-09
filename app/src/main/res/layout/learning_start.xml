@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/learinglevel_mainlayout"
+    android:layout_width="@dimen/oustlayout_dimen70"
+    android:layout_height="@dimen/oustlayout_dimen90"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:layout_width="@dimen/oustlayout_dimen70"
+        android:layout_height="@dimen/oustlayout_dimen90"
+        android:gravity="center"
+        android:src="@drawable/start_icon"
+        android:id="@+id/start_icon"/>
+
+</RelativeLayout>

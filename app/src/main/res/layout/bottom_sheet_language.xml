@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical"
+    android:layout_weight="15"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/select_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentTop="true"
+        android:text="@string/select_language"
+        android:textSize="18sp"
+        android:fontFamily="@font/avenir_book"
+        android:textStyle="bold"
+        android:lineSpacingExtra="-1sp"
+        android:layout_weight="1.5"
+        android:gravity="top"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14"
+        android:layout_marginHorizontal="16dp"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginTop="8dp">
+        <Button
+            android:id="@+id/buttonSetLang"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/disclaimer_button_rounded_corer"
+            android:text="Set Language"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fulltransparent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ques_popup_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/oustlayout_dimen5"
+        android:layout_marginTop="@dimen/oustlayout_dimen15"
+        android:layout_marginRight="@dimen/oustlayout_dimen5"
+        android:background="@drawable/bulletin_ques_background">
+
+        <RelativeLayout
+            android:id="@+id/ll_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/close_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/oustlayout_dimen10"
+                android:src="@drawable/ic_close_img"
+                app:tint="@color/Black" />
+
+            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                android:id="@+id/ques_popup_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Ask a Question"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/oustlayout_dimen18"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/user_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_close"
+            android:layout_marginLeft="@dimen/oustlayout_dimen10"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.oustme.oustsdk.customviews.CircleImageView
+                android:id="@+id/q_userImage"
+                android:layout_width="@dimen/oustlayout_dimen30"
+                android:layout_height="@dimen/oustlayout_dimen30"
+                android:layout_margin="@dimen/oustlayout_dimen5"
+                android:layout_toRightOf="@+id/indexText"
+                android:background="@drawable/roundedcornergreenbackground"
+                android:contentDescription="@string/app_name"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/DarkGray"
+                android:textSize="@dimen/ousttext_dimen16" />
+
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:id="@+id/q_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                android:text=""
+                android:textColor="@color/DarkGray"
+                android:textSize="@dimen/oustlayout_dimen12" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button_layout"
+            android:layout_below="@+id/user_profile"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/et_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:layout_marginTop="@dimen/oustlayout_dimen5"
+                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                    android:layout_marginBottom="@dimen/oustlayout_dimen50"
+                    android:orientation="vertical"
+                    android:padding="@dimen/oustlayout_dimen10">
+
+                    <EditText
+                        android:id="@+id/ques_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="left|top"
+                        android:hint="+ Add your comment here"
+                        android:lineSpacingExtra="@dimen/oustlayout_dimen3"
+                        android:maxLength="1000"
+                        android:minHeight="200dp"
+                        android:textColor="@color/textBlack"
+                        android:textColorHint="@color/DarkGray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/oustlayout_dimen18" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen50"
+            android:layout_alignParentBottom="true"
+            android:gravity="end|center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ok_layout_iv"
+                android:layout_width="@dimen/oustlayout_dimen25"
+                android:layout_height="@dimen/oustlayout_dimen25"
+                android:layout_marginRight="@dimen/oustlayout_dimen10" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

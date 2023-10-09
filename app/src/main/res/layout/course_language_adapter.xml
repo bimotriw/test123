@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/course_language_lay"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/grey_rectangular_box"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:textAllCaps="true"
+        android:lineSpacingExtra="2sp"
+        android:id="@+id/course_language"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:translationY="-0.97sp"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end|center"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        android:id="@+id/check_course"
+        android:src="@drawable/ic_check_course"/>
+
+</LinearLayout>

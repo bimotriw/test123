@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Flurry Test Key -->
+    <!--<string name="Flurry_APIKey">ZXB554553CC8ZK5RGDK5</string>-->
+
+    <!--Amplitude Test Key-->
+    <!--<string name="Amplitude_APIKey">0c1ac23a65a75c2796c439bde2d40d19</string>-->
+
+    <!-- Flurry Production Key -->
+    <string name="Flurry_APIKey">KTK3P3DPKXQJ4R79PJJV</string>
+    <!--Amplitude Production Key-->
+    <string name="Amplitude_APIKey">f04fd46ec4c36b4084115163229a56e5</string>
+
+    <string name="ga_trackingId">UA-59205982-2</string>
+
+    <!--<string name="Firebase_AppURL">"https://blinding-fire-600.firebaseio.com/"</string>-->
+    <!--<string name="gcm_defaultSenderId">141805036246</string>-->
+
+    <string name="whatsapp_Package">com.whatsapp</string>
+
+    <string name="facebook_app_id">574785955957258</string>
+
+</resources>

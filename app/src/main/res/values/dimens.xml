@@ -1,0 +1,213 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="avatar_radius">40dp</dimen>
+    <dimen name="oustlayout_dimen375">375dp</dimen>
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="recycle_dots_height">0dp</dimen>
+    <dimen name="radius">3dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="text_header_1">48sp</dimen>
+    <dimen name="text_header_2">36sp</dimen>
+    <dimen name="text_header_3">24sp</dimen>
+    <dimen name="text_header_4">20sp</dimen>
+    <dimen name="text_subtitle_1">20sp</dimen>
+    <dimen name="text_subtitle_2">18sp</dimen>
+    <dimen name="text_subtitle_3">16sp</dimen>
+    <dimen name="text_body_1">16sp</dimen>
+    <dimen name="text_button">15sp</dimen>
+    <dimen name="text_body_2">14sp</dimen>
+    <dimen name="text_footnote">13sp</dimen>
+    <dimen name="text_caption_1">12sp</dimen>
+    <dimen name="text_caption_2">11sp</dimen>
+    <dimen name="text_caption_3">10sp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+
+    <dimen name="toolbar_height">50dp</dimen>
+    <dimen name="font_14sp">14sp</dimen>
+    <dimen name="font_17sp">17sp</dimen>
+    <dimen name="oustlayout_dimen240">240dp</dimen>
+    <dimen name="oustlayout_dimen30">30dp</dimen>
+    <dimen name="oustlayout_dime15">15dp</dimen>
+    <dimen name="oustlayout_dimen7">7dp</dimen>
+    <dimen name="oustlayout_dimen6">6dp</dimen>
+    <dimen name="oustlayout_dimen8">8dp</dimen>
+    <dimen name="oustlayout_dimen1">1dp</dimen>
+    <dimen name="oustlayout_dimen20">20dp</dimen>
+    <dimen name="oustlayout_dimen4">4dp</dimen>
+    <dimen name="oustlayout_dimen150">150dp</dimen>
+    <dimen name="font_16sp">16sp</dimen>
+    <dimen name="font_12sp">12sp</dimen>
+    <dimen name="toolbar_achievement_height">50dp</dimen>
+
+    <dimen name="fab_size_normal">50dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+
+    <dimen name="fab_icon_size">15dp</dimen>
+
+    <dimen name="fab_plus_icon_size">15dp</dimen>
+    <dimen name="fab_plus_icon_stroke">2dp</dimen>
+
+    <dimen name="fab_shadow_offset">0dp</dimen>
+    <dimen name="fab_shadow_radius">0dp</dimen>
+
+    <dimen name="fab_stroke_width">1dp</dimen>
+
+    <dimen name="fab_actions_spacing">16dp</dimen>
+    <dimen name="fab_labels_margin">0dp</dimen>
+
+    <dimen name="result_progressBar_radius">8.5dp</dimen>
+
+    <!-- Layout generic dimensions -->
+    <dimen name="oustlayout_dimen77">77dp</dimen>
+    <dimen name="oustlayout_dimen400">400dp</dimen>
+    <dimen name="oustlayout_dimen350">350dp</dimen>
+    <dimen name="oustlayout_dimen300">300dp</dimen>
+    <dimen name="oustlayout_dimen280">280dp</dimen>
+    <dimen name="oustlayout_dimen275">275dp</dimen>
+    <dimen name="oustlayout_dimen220">220dp</dimen>
+    <dimen name="oustlayout_dimen270">270dp</dimen>
+    <dimen name="oustlayout_dimen260">260dp</dimen>
+    <dimen name="oustlayout_dimen250">250dp</dimen>
+    <dimen name="oustlayout_dimen230">230dp</dimen>
+    <dimen name="oustlayout_dimen215">215dp</dimen>
+    <dimen name="oustlayout_dimen200">200dp</dimen>
+    <dimen name="oustlayout_dimen180">180dp</dimen>
+    <dimen name="oustlayout_dimen170">170dp</dimen>
+    <dimen name="oustlayout_dimen155">155dp</dimen>
+    <dimen name="oustlayout_dimen140">140dp</dimen>
+    <dimen name="oustlayout_dimen135">135dp</dimen>
+    <dimen name="oustlayout_dimen136">136dp</dimen>
+    <dimen name="oustlayout_dimen137">137dp</dimen>
+    <dimen name="oustlayout_dimen138">138dp</dimen>
+    <dimen name="oustlayout_dimen139">139dp</dimen>
+    <dimen name="oustlayout_dimen130">130dp</dimen>
+    <dimen name="oustlayout_dimen125">125dp</dimen>
+    <dimen name="oustlayout_dimen120">120dp</dimen>
+    <dimen name="oustlayout_dimen122">122dp</dimen>
+    <dimen name="oustlayout_dimen123">123dp</dimen>
+    <dimen name="oustlayout_dimen124">124dp</dimen>
+
+    <dimen name="oustlayout_dimen115">116dp</dimen>
+    <dimen name="oustlayout_dimen106">105dp</dimen>
+    <dimen name="oustlayout_dimen105">105dp</dimen>
+    <dimen name="oustlayout_dimen110">110dp</dimen>
+    <dimen name="oustlayout_dimen100">100dp</dimen>
+    <dimen name="oustlayout_dimen95">95dp</dimen>
+    <dimen name="oustlayout_dimen91">91dp</dimen>
+    <dimen name="oustlayout_dimen90">90dp</dimen>
+    <dimen name="oustlayout_dimen85">85dp</dimen>
+    <dimen name="oustlayout_dimen80">80dp</dimen>
+    <dimen name="oustlayout_dimen73">73dp</dimen>
+    <dimen name="oustlayout_dimen70">70dp</dimen>
+    <dimen name="oustlayout_dimen67">67dp</dimen>
+    <dimen name="oustlayout_dimen65">65dp</dimen>
+    <dimen name="oustlayout_dimen60">60dp</dimen>
+    <dimen name="oustlayout_dimen58">58dp</dimen>
+    <dimen name="oustlayout_dimen55">55dp</dimen>
+    <dimen name="oustlayout_dimen54">54dp</dimen>
+    <dimen name="oustlayout_dimen50">50dp</dimen>
+    <dimen name="oustlayout_dimen45">45dp</dimen>
+    <dimen name="oustlayout_dimen40">40dp</dimen>
+    <dimen name="oustlayout_dimen42">42dp</dimen>
+    <dimen name="oustlayout_dimen35">35dp</dimen>
+    <dimen name="oustlayout_dimen34">34dp</dimen>
+    <dimen name="oustlayout_dimen32">32dp</dimen>
+    <dimen name="oustlayout_dimen28">28dp</dimen>
+    <dimen name="oustlayout_dimen25">25dp</dimen>
+    <dimen name="oustlayout_dimen24">24dp</dimen>
+    <dimen name="oustlayout_dimen22">22dp</dimen>
+    <dimen name="oustlayout_dimen18">18dp</dimen>
+    <dimen name="oustlayout_dimen17">17dp</dimen>
+    <dimen name="oustlayout_dimen16">16dp</dimen>
+    <dimen name="oustlayout_dimen15">15dp</dimen>
+    <dimen name="oustlayout_dimen14">14dp</dimen>
+    <dimen name="oustlayout_dimen13">13dp</dimen>
+    <dimen name="oustlayout_dimen12">12dp</dimen>
+    <dimen name="oustlayout_dimen11">11dp</dimen>
+    <dimen name="oustlayout_dimen10">10dp</dimen>
+    <dimen name="oustlayout_dimen9">9dp</dimen>
+    <dimen name="oustlayout_dimen5">5dp</dimen>
+    <dimen name="oustlayout_dimen3.5">3.5dp</dimen>
+    <dimen name="oustlayout_dimen3">3dp</dimen>
+    <dimen name="oustlayout_dimen2.5">2.5dp</dimen>
+    <dimen name="oustlayout_dimen2">2dp</dimen>
+    <dimen name="oustlayout_dimen0.8">0.8dp</dimen>
+    <dimen name="oustlayout_dimen0.5">0.5dp</dimen>
+    <dimen name="oustlayout_dimen0.4">0.4dp</dimen>
+    <dimen name="oustlayout_dimen0.1">0.1dp</dimen>
+    <dimen name="oustlayout_dimen_minus4">-4dp</dimen>
+    <dimen name="oustlayout_dimen_minus8">-8dp</dimen>
+    <dimen name="oustlayout_dimen_minus7">-7dp</dimen>
+    <dimen name="oustlayout_dimen_minus10">-10dp</dimen>
+    <dimen name="oustlayout_dimen_minus15">-15dp</dimen>
+    <dimen name="oustlayout_dimen_minus20">-20dp</dimen>
+    <dimen name="oustlayout_dimen_minus30">-30dp</dimen>
+
+    <!-- TextSize generic dimensions -->
+    <dimen name="ousttext_dimen50">50sp</dimen>
+    <dimen name="ousttext_dimen35">35sp</dimen>
+    <dimen name="ousttext_dimen30">30sp</dimen>
+    <dimen name="ousttext_dimen25">25sp</dimen>
+    <dimen name="ousttext_dimen20">20sp</dimen>
+    <dimen name="ousttext_dimen18">18sp</dimen>
+    <dimen name="ousttext_dimen17">17sp</dimen>
+    <dimen name="ousttext_dimen16">16sp</dimen>
+    <dimen name="ousttext_dimen15">15sp</dimen>
+    <dimen name="ousttext_dimen14">14sp</dimen>
+    <dimen name="ousttext_dimen13">13sp</dimen>
+    <dimen name="ousttext_dimen12">12sp</dimen>
+    <dimen name="ousttext_dimen11">11sp</dimen>
+    <dimen name="ousttext_dimen10">10sp</dimen>
+    <dimen name="ousttext_dimen9">9sp</dimen>
+    <dimen name="ousttext_dimen8">8sp</dimen>
+    <dimen name="ousttext_dimen7">7sp</dimen>
+    <dimen name="ousttext_dimen6">6sp</dimen>
+    <dimen name="ousttext_dimen5">5sp</dimen>
+    <dimen name="oustlayout_dimen145">145dp</dimen>
+    <dimen name="oustlayout_dimen_minus5">-5dp</dimen>
+    <dimen name="oustlayout_dimen75">75dp</dimen>
+    <dimen name="oustlayout_dimen12.5">12.5dp</dimen>
+    <dimen name="oustlayout_dimen14.5">14.5dp</dimen>
+    <dimen name="oustlayout_dimen7px">7px</dimen>
+    <dimen name="oustlayout_dimen5px">5px</dimen>
+    <dimen name="oustlayout_dimen1.5">1.5dp</dimen>
+    <dimen name="oustlayout_dimen298">298dp</dimen>
+    <dimen name="oustlayout_dimen160">160dp</dimen>
+    <dimen name="ousttext_dimen24">24sp</dimen>
+    <dimen name="ousttext_dimen23">23sp</dimen>
+    <dimen name="oustlayout_dimen36">36dp</dimen>
+    <dimen name="ousttext_dimen40">40sp</dimen>
+    <dimen name="oustlayout_dimen23">23dp</dimen>
+    <dimen name="oustlayout_dimen102">102dp</dimen>
+    <dimen name="oustlayout_dimen210">210dp</dimen>
+    <dimen name="oustlayout_dimen190">190dp</dimen>
+
+    <dimen name="seekbarthump_size">20dp</dimen>
+    <dimen name="seekbarthump_margin">38dp</dimen>
+    <dimen name="seekbarthump_margin1">2dp</dimen>
+
+    <!-- normal -->
+    <dimen name="oustlayout_dimen60_cpl">60dp</dimen>
+    <dimen name="oustlayout_dimen90_cpl">90dp</dimen>
+    <dimen name="oustlayout_dimen100_cpl">100dp</dimen>
+    <dimen name="oustlayout_dimen45_cpl">45dp</dimen>
+    <dimen name="oustlayout_dimen80_cpl">80dp</dimen>
+    <dimen name="oustlayout_dimen20_cpl">20dp</dimen>
+    <dimen name="oustlayout_dimen50_cpl">50dp</dimen>
+    <dimen name="oustlayout_dimen10_cpl">10dp</dimen>
+    <dimen name="oustlayout_dimen17_cpl">17dp</dimen>
+    <dimen name="oustlayout_dimen25_cpl">25dp</dimen>
+    <dimen name="oustlayout_dimen35_cpl">35dp</dimen>
+    <dimen name="oustlayout_dimen5_cpl">5dp</dimen>
+    <dimen name="oustlayout_dimen52">77dp</dimen>
+    <dimen name="oustlayout_dimen154">77dp</dimen>
+    <dimen name="font_10sp">10sp</dimen>
+    <dimen name="font_20sp">20sp</dimen>
+
+</resources>

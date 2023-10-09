@@ -1,0 +1,16 @@
+<com.oustme.oustsdk.customviews.CustomTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:singleLine="true"
+    android:gravity="left|center_vertical"
+    android:textColor="@color/Gray"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/oustlayout_dimen40"
+    android:textSize="@dimen/ousttext_dimen16"
+    android:paddingLeft="@dimen/oustlayout_dimen20"
+    android:text=""
+    android:background="@color/white_pressed"
+    android:ellipsize="marquee"
+    android:paddingTop="@dimen/oustlayout_dimen1"
+    android:paddingRight="@dimen/oustlayout_dimen1"
+    android:paddingBottom="@dimen/oustlayout_dimen1" />

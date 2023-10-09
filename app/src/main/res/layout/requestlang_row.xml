@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/requestlang_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/oustlayout_dimen5"
+        android:layout_marginBottom="@dimen/oustlayout_dimen5"
+        android:gravity="center_vertical">
+        <RadioButton
+            android:id="@+id/select_lang"
+            android:layout_width="@dimen/oustlayout_dimen35"
+            android:layout_height="@dimen/ousttext_dimen35"
+            android:buttonTint="@color/LiteGreen"/>
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:id="@+id/lang_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ousttext_dimen16"
+            android:textColor="@color/textBlack"
+            android:layout_margin="@dimen/ousttext_dimen5"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

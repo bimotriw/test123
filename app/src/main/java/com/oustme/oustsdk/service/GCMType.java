@@ -1,0 +1,43 @@
+package com.oustme.oustsdk.service;
+
+/**
+ * Created by shilpysamaddar on 11/04/17.
+ */
+
+public enum GCMType {
+    FRIEND_CHALLENGE(0),
+    FRIEND_CHALLENGE_COMPLETE(1),
+    ADD_FRIEND(2),
+    PUBLIC_NOTIFICATION(3),
+    ADD_GROUP_MEMBER(4),
+    GROUP_CHALLENGE(5),
+    GROUP_CHALLENGE_COMPLETE(6),
+    EVENT_NOTIFICATION(7),
+    ASSESSMENT_NOTIFICATION(8),
+    ASSESSMENT_DISTRIBUTE(9),
+    COURSE_DISTRIBUTE(10),
+    LOGOUT_ACTION(11),
+    COLLECTION_DISTRIBUTE(12),
+    FEED_DISTRIBUTE(13),
+    NOTICEBOARD_POST(14),
+    NOTICEBOARD_COMMENT(15),
+    NOTICEBOARD_REPLY(16),
+    COURSE_REMINDER(17),
+    ASSESSMENT_REMINDER(18),
+    NOTICE_BOARD_DISTRIBUTION(19),
+    CATALOGUE_DISTRIBUTED(20),
+    CPL_DISTRIBUTE(21),
+    ML_CPL_DISTRIBUTE(22),
+    MEETING_DISTRIBUTED(23);
+
+    private final int GCMTypeCode;
+
+
+    GCMType(int GCMTypeCode) {
+        this.GCMTypeCode = GCMTypeCode;
+    }
+
+    public int getGCMTypeCode() {
+        return GCMTypeCode;
+    }
+}

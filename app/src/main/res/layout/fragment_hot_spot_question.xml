@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/question_base_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/question_bgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/hotspot_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/question_card_hotspot"
+                layout="@layout/common_question_card" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/hot_spot_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen300" />
+
+                <com.oustme.oustsdk.customviews.CustomTouchIndicatorClass
+                    android:id="@+id/hot_spot_touch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen300"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/hotspot_label_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen300" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/thumps_layout"
+        layout="@layout/common_question_thumps_coins"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/justify_popup_constraint_layout"
+        layout="@layout/dialog_show_justify_answer"
+        android:visibility="gone" />
+</FrameLayout>

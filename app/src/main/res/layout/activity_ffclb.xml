@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Graya">
+        <ImageView
+            android:id="@+id/ffcstart_backimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ffc_lb_viewanswerlayouta"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen40"
+                android:id="@+id/ranklayout"
+                android:background="@color/popupBackGround"
+                android:visibility="visible">
+                <com.oustme.oustsdk.customviews.ProCustomTextView
+                    android:id="@+id/myrank_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white_pressed"
+                    android:textSize="@dimen/ousttext_dimen15"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/ffclb_btnClose"
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/oustlayout_dimen6"
+                    android:src="@drawable/ic_close_img" />
+                <ImageView
+                    android:id="@+id/ffclb_btnwinner"
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:visibility="gone"
+                    android:background="@android:color/transparent"
+                    android:layout_toLeftOf="@+id/ffclb_btnClose"
+                    android:padding="@dimen/oustlayout_dimen7" />
+                <ImageView
+                    android:id="@+id/ffclb_btnluckywinner"
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_toLeftOf="@+id/ffclb_btnwinner"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"
+                    android:padding="@dimen/oustlayout_dimen6" />
+                <ImageView
+                    android:id="@+id/ffclb_btnrewardwinner"
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_toLeftOf="@+id/ffclb_btnluckywinner"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"
+                    android:padding="@dimen/oustlayout_dimen3" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen45"
+                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                android:layout_marginRight="@dimen/oustlayout_dimen5">
+                <com.oustme.oustsdk.customviews.ProCustomTextView
+                    android:id="@+id/ffc_regitertext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/leader_board_title"
+                    android:textColor="@color/whitelight"
+                    android:textSize="@dimen/ousttext_dimen20"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/info_btn"
+                    android:layout_width="@dimen/oustlayout_dimen23"
+                    android:layout_height="@dimen/oustlayout_dimen23"
+                    android:layout_toRightOf="@+id/ffc_regitertext"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/whitelight"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_info_icon"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen2" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.oustme.oustsdk.customviews.LightCustomTextView
+                    android:id="@+id/questionLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/oustlayout_dimen5"
+                    android:layout_weight="1"
+                    android:text="@string/question_text"
+                    android:textColor="@color/white_pressed"
+                    android:textSize="@dimen/ousttext_dimen12"
+                    android:textStyle="bold" />
+
+                <com.oustme.oustsdk.customviews.LightCustomTextView
+                    android:id="@+id/bestresult_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/oustlayout_dimen5"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/best_result"
+                    android:textColor="@color/white_pressed"
+                    android:textSize="@dimen/ousttext_dimen12"
+                    android:textStyle="bold" />
+
+                <com.oustme.oustsdk.customviews.LightCustomTextView
+                    android:id="@+id/myresult_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/oustlayout_dimen5"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/my_result"
+                    android:textColor="@color/white_pressed"
+                    android:textSize="@dimen/ousttext_dimen12"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ffc_lbrecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+                <com.oustme.oustsdk.customviews.ProCustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/oustlayout_dimen10"
+                    android:id="@+id/ffc_lbnodatatext"
+                    android:text="@string/no_data_found"
+                    android:visibility="gone"
+                    android:textSize="@dimen/ousttext_dimen18"
+                    android:gravity="center"
+                    android:textColor="@color/whitelight"/>
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/ffc_lbswiperefreshlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></RelativeLayout>
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen55"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ffc_lb_viewanswerlayouta"
+            android:visibility="visible">
+            <RelativeLayout
+                android:id="@+id/ffc_lb_viewanswerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen40"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.oustme.oustsdk.customviews.ProCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ffc_button_backa"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/oustlayout_dimen35"
+                    android:paddingRight="@dimen/oustlayout_dimen35"
+                    android:id="@+id/ffclb_viewanstexta"
+                    android:text="@string/view_answers"
+                    android:textColor="@color/fulltransparent"
+                    android:textSize="@dimen/ousttext_dimen20"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/oustlayout_dimen3"
+                    android:orientation="vertical">
+
+                    <com.oustme.oustsdk.customviews.ProCustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/oustlayout_dimen35"
+                        android:paddingRight="@dimen/oustlayout_dimen35"
+                        android:text="@string/view_answers"
+                        android:textColor="@color/fulltransparent"
+                        android:textSize="@dimen/ousttext_dimen20"
+                        android:textStyle="bold" />
+
+                    <com.oustme.oustsdk.customviews.ProCustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/ffc_button_backb"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/oustlayout_dimen35"
+                        android:id="@+id/ffclb_viewanstextb"
+                        android:paddingRight="@dimen/oustlayout_dimen35"
+                        android:text="View Answers"
+                        android:textColor="@color/fulltransparent"
+                        android:textSize="@dimen/ousttext_dimen20"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.oustme.oustsdk.customviews.ProCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ffclb_viewanstext"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/oustlayout_dimen5"
+                    android:paddingLeft="@dimen/oustlayout_dimen35"
+                    android:paddingRight="@dimen/oustlayout_dimen35"
+                    android:paddingTop="@dimen/oustlayout_dimen5"
+                    android:text="@string/view_answers"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/ousttext_dimen20"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/ffc_lbqlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.oustme.oustsdk.customviews.ProCustomTextView
+                        android:id="@+id/ffc_qlbtexta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/ffc_button_backa"
+                        android:paddingLeft="@dimen/oustlayout_dimen35"
+                        android:paddingRight="@dimen/oustlayout_dimen35"
+                        android:text="@string/leader_board_title"
+                        android:textColor="@color/fulltransparent"
+                        android:textSize="@dimen/ousttext_dimen20"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/oustlayout_dimen3"
+                        android:orientation="vertical">
+                        <com.oustme.oustsdk.customviews.ProCustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:id="@+id/ffc_qlbtexttemp"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/oustlayout_dimen35"
+                            android:paddingRight="@dimen/oustlayout_dimen35"
+                            android:text="@string/leader_board_title"
+                            android:textColor="@color/fulltransparent"
+                            android:textSize="@dimen/ousttext_dimen20"
+                            android:textStyle="bold" />
+                        <com.oustme.oustsdk.customviews.ProCustomTextView
+                            android:id="@+id/ffc_qlbtextb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/oustlayout_dimen35"
+                            android:paddingRight="@dimen/oustlayout_dimen35"
+                            android:background="@drawable/ffc_button_backb"
+                            android:text="@string/leader_board_title"
+                            android:textColor="@color/fulltransparent"
+                            android:textSize="@dimen/ousttext_dimen20"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <com.oustme.oustsdk.customviews.ProCustomTextView
+                        android:id="@+id/ffc_qlbtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/oustlayout_dimen35"
+                        android:paddingRight="@dimen/oustlayout_dimen35"
+                        android:text="@string/leader_board_title"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/ousttext_dimen20"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

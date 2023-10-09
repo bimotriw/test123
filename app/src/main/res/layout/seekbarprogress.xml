@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/learinglevel_mainlayout"
+    android:layout_width="24dp"
+    android:layout_height="30dp"
+    android:background="@android:color/transparent">
+    <RelativeLayout
+        android:layout_width="24dp"
+        android:layout_height="30dp">
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            android:layout_width="24dp"
+            android:layout_height="30dp"
+            android:text="1"
+            android:id="@+id/progresstext"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/whitelight"
+            android:textSize="@dimen/ousttext_dimen15" />
+    </RelativeLayout>
+</RelativeLayout>

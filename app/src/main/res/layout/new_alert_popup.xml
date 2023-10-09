@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutUserLogoutPopup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:visibility="visible">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:background="@drawable/rounded_whitefill"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            android:id="@+id/alertTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_exclamation_button"
+            android:drawablePadding="@dimen/oustlayout_dimen10"
+            android:gravity="center"
+            android:padding="@dimen/oustlayout_dimen5"
+            android:text="LogOut"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ousttext_dimen18"
+            android:visibility="gone" />
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:id="@+id/alertMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:padding="@dimen/oustlayout_dimen15"
+            android:textColor="@color/common_grey"
+            android:lineSpacingMultiplier="1.2"
+            tools:text="Message jfjbsdvbsa ;ksd vas v s;d vasv ;s v sdv skv kv k  idv vkkv k; vk v kv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:id="@+id/buttonNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/oustlayout_dimen5"
+                android:background="@drawable/roundcorner_red"
+                android:paddingLeft="@dimen/oustlayout_dimen25"
+                android:paddingTop="@dimen/oustlayout_dimen5"
+                android:paddingRight="@dimen/oustlayout_dimen25"
+                android:paddingBottom="@dimen/oustlayout_dimen5"
+                android:text="@string/no"
+                android:textColor="@color/whitea" />
+
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:id="@+id/buttonYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/oustlayout_dimen5"
+                android:background="@drawable/roundcorner_green"
+                android:paddingLeft="@dimen/oustlayout_dimen25"
+                android:paddingTop="@dimen/oustlayout_dimen5"
+                android:paddingRight="@dimen/oustlayout_dimen25"
+                android:paddingBottom="@dimen/oustlayout_dimen5"
+                android:text="@string/yes"
+                android:textColor="@color/whitea" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

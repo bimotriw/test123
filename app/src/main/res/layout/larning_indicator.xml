@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/oustlayout_dimen80"
+    android:layout_height="@dimen/oustlayout_dimen80"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:layout_width="@dimen/oustlayout_dimen80"
+        android:layout_height="@dimen/oustlayout_dimen80"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/learningindicator"
+        android:background="@android:color/transparent"
+            android:id="@+id/learning_indicator"/>
+</RelativeLayout>

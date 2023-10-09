@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_retry_cpl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_up_corner_white"
+    android:orientation="vertical"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/oustlayout_dimen20"
+        android:layout_marginTop="@dimen/oustlayout_dimen20"
+        android:background="@drawable/ic_no_internet_connection"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/oustlayout_dimen15"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/oustlayout_dimen15"
+                    android:id="@+id/txtview_1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center"
+                    android:text="@string/no_internet_connection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textSize="@dimen/oustlayout_dimen14"
+                    android:layout_marginTop="@dimen/oustlayout_dimen10"
+                    android:layout_marginRight="@dimen/oustlayout_dimen35"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen35"
+                    android:layout_below="@+id/txtview_1"
+                    android:id="@+id/txtview_2"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="@string/retry_internet_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:paddingRight="@dimen/oustlayout_dimen5"
+                    android:paddingLeft="@dimen/oustlayout_dimen5"
+                    android:textSize="@dimen/oustlayout_dimen20"
+                    android:id="@+id/btn_retry"
+                    android:gravity="center"
+                    android:background="@drawable/oustroundedcorner_background"
+                    android:text="@string/retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

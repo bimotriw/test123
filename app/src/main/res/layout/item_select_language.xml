@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLangWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="14dp">
+    <com.oustme.oustsdk.customviews.CircleImageView
+        android:id="@+id/countryFlag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="1dp"/>
+
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/countryFlag"
+        android:text="country"
+        android:textSize="14sp"
+        android:fontFamily="@font/avenir_book"
+        android:textStyle="bold" />
+    <RadioButton
+        android:id="@+id/cbLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        />
+</RelativeLayout>

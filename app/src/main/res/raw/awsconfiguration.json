@@ -1,0 +1,33 @@
+{
+  "UserAgent": "MobileHub/1.0",
+  "Version": "1.0",
+  "CredentialsProvider": {
+    "CognitoIdentity": {
+      "Default": {
+        "PoolId": "us-west-2:50d49d88-830f-4c8c-bf9e-a6787a32070b",
+        "Region": "us-west-2"
+      }
+    }
+  },
+  "IdentityManager": {
+    "Default": {}
+  },
+  "ContentManager": {
+    "Default": {
+      "Bucket": "img.oustme.com",
+      "Region": "us-west-1",
+      "CloudFrontURL": "https://di99dr7t1ytrn.cloudfront.net"
+    }
+  },
+  "PinpointAnalytics": {
+    "Default": {
+      "AppId": "994591741d674262af83d50b4041f974",
+      "Region": "us-east-1"
+    }
+  },
+  "PinpointTargeting": {
+    "Default": {
+      "Region": "us-east-1"
+    }
+  }
+}

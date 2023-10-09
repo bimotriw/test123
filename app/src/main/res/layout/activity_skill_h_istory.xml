@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/skill_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F2F2F7"
+    android:orientation="vertical"
+    tools:context=".skill_ui.ui.SkillHistoryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <FrameLayout
+                android:id="@+id/toolbar_close_icon"
+                android:layout_width="40dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back_cd"
+                    android:tint="@android:color/white"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="0sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:text="@string/my_history_text"
+
+                android:textSize="15sp"
+                android:translationY="-0.97sp"
+                tools:targetApi="lollipop" />
+
+            <FrameLayout
+                android:id="@+id/leadboard_lay"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:visibility="invisible"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp">
+
+                <ImageView
+                    android:id="@+id/leadboard_trophy_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_trophy"
+                    android:tint="@color/textBlack"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/skill_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="0sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#212121"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:translationY="-0.97sp"
+        tools:targetApi="lollipop" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:padding="1dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen40"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|end"
+                                android:layout_marginEnd="8dp"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:textColor="@color/textBlack"
+                                android:textSize="16sp"
+                                tools:targetApi="lollipop" />
+
+                            <TextView
+                                android:id="@+id/level"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|end"
+                                android:layout_marginEnd="8dp"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:textColor="@color/textBlack"
+                                android:textSize="16sp"
+                                tools:targetApi="lollipop" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/submitted_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|end"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            android:textColor="@color/textBlack"
+                            android:textSize="12sp"
+                            tools:targetApi="lollipop" />
+                    </LinearLayout>
+
+                    <com.oustme.oustsdk.chart.charts.CombinedChart
+                        android:id="@+id/skill_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="1dp"
+                        android:paddingTop="1dp"
+                        android:paddingEnd="1dp"
+                        android:paddingBottom="1dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/history_list_rv"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

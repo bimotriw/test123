@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#13161B"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:padding="@dimen/oustlayout_dimen10">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/member_image"
+                android:layout_width="@dimen/oustlayout_dimen50"
+                android:layout_height="@dimen/oustlayout_dimen50"
+                android:background="@drawable/live_class_name_circle"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/members_text_view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/oustlayout_dimen2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="KN" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/live_class_members_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:paddingTop="@dimen/oustlayout_dimen10"
+                android:paddingStart="@dimen/oustlayout_dimen10"
+                android:paddingEnd="@dimen/oustlayout_dimen10"
+                android:paddingBottom="@dimen/oustlayout_dimen5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_17sp"
+                android:textStyle="normal"
+                tools:text="Manideep A" />
+
+            <TextView
+                android:id="@+id/live_class_screen_presenting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:paddingStart="@dimen/oustlayout_dimen10"
+                android:paddingEnd="@dimen/oustlayout_dimen10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12sp"
+                android:textStyle="normal"
+                tools:text="@string/your_presentation" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/live_class_members_mic"
+            android:layout_width="@dimen/oustlayout_dimen20"
+            android:layout_height="@dimen/oustlayout_dimen20"
+            android:layout_marginLeft="@dimen/oustlayout_dimen10"
+            android:layout_marginEnd="@dimen/oustlayout_dimen10"
+            android:layout_marginRight="@dimen/oustlayout_dimen10"
+            android:background="@drawable/ic_mic_off"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/audio"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/live_class_members_camera"
+            android:layout_width="@dimen/oustlayout_dimen20"
+            android:layout_height="@dimen/oustlayout_dimen20"
+            android:background="@drawable/videocam_off"
+            android:contentDescription="@string/audio"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen1"
+        android:background="#1B1F26" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/learinglevel_mainlayout"
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:background="@android:color/transparent">
+    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text=""
+        android:gravity="center"
+        android:id="@+id/survey_pointtext"
+        android:textSize="@dimen/ousttext_dimen13"
+        android:textColor="@color/Gray"
+        android:background="@drawable/slider_back"/>
+</RelativeLayout>

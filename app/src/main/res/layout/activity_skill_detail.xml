@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/skill_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F2F2F7"
+    tools:context=".skill_ui.ui.SkillDetailActivity">
+
+    <ImageView
+        android:id="@+id/skill_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen40"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <FrameLayout
+                android:id="@+id/toolbar_close_icon"
+                android:layout_width="@dimen/oustlayout_dimen40"
+                android:layout_height="match_parent">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back_cd"
+                    app:tint="@android:color/white"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/skill_title"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/ousttext_dimen24"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="0sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:translationY="-0.97sp"
+                tools:targetApi="lollipop" />
+
+            <FrameLayout
+                android:id="@+id/leadboard_lay"
+                android:layout_width="@dimen/oustlayout_dimen28"
+                android:layout_height="@dimen/oustlayout_dimen28"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/leadboard_trophy_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_trophy"
+                    app:tint="@android:color/white"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit_button"
+        android:layout_below="@+id/toolbar_lay"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/user_score_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_avatar"
+                    android:layout_width="@dimen/oustlayout_dimen50"
+                    android:layout_height="@dimen/oustlayout_dimen50"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user_avatar"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:id="@+id/idp_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen60"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/idp_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/idp_target_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="0sp"
+                        android:text="IDP Target"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/idp_target"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="0sp"
+                        android:text="0"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/idp_target_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="0sp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        tools:targetApi="lollipop" />
+
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/level_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen60"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/level_bg_box"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/image_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:background="@drawable/side_corner"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:visibility="gone"
+                            tools:targetApi="lollipop">
+
+                            <ImageView
+                                android:id="@+id/badge_icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/skill_leader_bg" />
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/current_level_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center_horizontal"
+                                android:lineSpacingExtra="0sp"
+                                android:text="@string/my_level_txt"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                tools:targetApi="lollipop" />
+
+                            <TextView
+                                android:id="@+id/current_level"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center_horizontal"
+                                android:lineSpacingExtra="0sp"
+                                android:text="@string/zero_text"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:targetApi="lollipop" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:id="@+id/bs_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen60"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/score_bg_box"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/best_score_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="0sp"
+                        android:text="@string/best_score_text"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/best_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="0sp"
+                        android:text="@string/zero_text"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:targetApi="lollipop" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/user_score_lay"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/skill_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_10"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="1dp"
+                            android:paddingTop="1dp"
+                            android:paddingEnd="1dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="0dp"
+                                app:cardPreventCornerOverlap="true"
+                                tools:targetApi="lollipop">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <FrameLayout
+                                        android:id="@+id/media_container"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+                                        <ImageView
+                                            android:id="@+id/skill_video_thumbnail"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:scaleType="fitXY"
+                                            android:src="@drawable/skill_thumbnail"
+                                            tools:ignore="ContentDescription" />
+
+                                        <ImageView
+                                            android:id="@+id/play_button"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/video_play_feed"
+                                            android:visibility="invisible"
+                                            app:tint="@android:color/white"
+                                            tools:ignore="ContentDescription" />
+
+
+                                    </FrameLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/image_bottom_lay"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="10dp"
+                                        android:layout_gravity="bottom"
+                                        android:background="@android:color/white"
+                                        android:baselineAligned="false"
+                                        android:orientation="horizontal" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <LinearLayout
+                                android:id="@+id/skill_clickable_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/skill_category"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="top"
+                                    android:lineSpacingExtra="2sp"
+                                    android:maxLines="1"
+                                    android:text="Category : "
+                                    android:textColor="@color/textBlack"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <!-- <TextView
+                                     android:id="@+id/skills_name"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:layout_marginStart="10dp"
+                                     android:layout_marginTop="10dp"
+                                     android:layout_marginEnd="10dp"
+                                     android:ellipsize="end"
+                                     android:fontFamily="sans-serif"
+                                     android:gravity="top"
+                                     android:lineSpacingExtra="2sp"
+                                     android:maxLines="1"
+                                     android:text="Skill : "
+                                     android:textColor="@color/textBlack"
+                                     android:textSize="12sp"
+                                     android:textStyle="bold" />-->
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <com.oustme.oustsdk.feed_ui.custom.EllipseTextView
+                                        android:id="@+id/skill_description"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_weight="1"
+                                        android:ellipsize="end"
+                                        android:gravity="top"
+                                        android:lineSpacingExtra="2sp"
+                                        android:maxLines="4"
+                                        android:textColor="@color/textBlack"
+                                        android:textSize="12sp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/image_container"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="2"
+                                        android:visibility="gone"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="0dp"
+                                        app:cardPreventCornerOverlap="true"
+                                        tools:targetApi="lollipop">
+
+                                        <FrameLayout
+                                            android:id="@+id/image_container_frame"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="75dp"
+                                            android:clickable="true"
+                                            android:focusable="true">
+
+                                            <ImageView
+                                                android:id="@+id/skill_image_thumbnail"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:scaleType="fitXY"
+                                                android:src="@drawable/skill_thumbnail"
+                                                tools:ignore="ContentDescription" />
+
+                                            <ImageView
+                                                android:id="@+id/play_thumbnail"
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+                                                android:layout_gravity="center"
+                                                android:src="@drawable/video_play_feed"
+                                                android:visibility="invisible"
+                                                app:tint="@android:color/white"
+                                                tools:ignore="ContentDescription" />
+
+
+                                        </FrameLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:id="@+id/score_submit_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/history_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:minHeight="@dimen/oustlayout_dimen220"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:minHeight="@dimen/oustlayout_dimen220"
+                            android:padding="1dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="@dimen/oustlayout_dimen220"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/oustlayout_dimen40"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="4dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/score"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center|end"
+                                            android:layout_marginEnd="8dp"
+                                            android:gravity="start"
+                                            android:maxLines="1"
+                                            android:textColor="@color/textBlack"
+                                            android:textSize="16sp"
+                                            tools:targetApi="lollipop" />
+
+                                        <TextView
+                                            android:id="@+id/level"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center|end"
+                                            android:layout_marginEnd="8dp"
+                                            android:gravity="start"
+                                            android:maxLines="1"
+                                            android:textColor="@color/textBlack"
+                                            android:textSize="16sp"
+                                            tools:targetApi="lollipop" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/submitted_time"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|end"
+                                        android:layout_margin="4dp"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:maxLines="1"
+                                        android:textColor="@color/textBlack"
+                                        android:textSize="12sp"
+                                        tools:targetApi="lollipop" />
+                                </LinearLayout>
+
+                                <com.oustme.oustsdk.chart.charts.CombinedChart
+                                    android:id="@+id/skill_chart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="@dimen/oustlayout_dimen180"
+                                    android:paddingStart="1dp"
+                                    android:paddingTop="1dp"
+                                    android:paddingEnd="1dp"
+                                    android:paddingBottom="1dp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <TextView
+                            android:id="@+id/view_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="end"
+                            android:text="@string/view_history_text"
+                            android:textColor="@color/textBlack"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            tools:targetApi="lollipop" />
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/score_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/skill_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen50"
+                            android:layout_above="@+id/upload_lay"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="40dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/skill_watch_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/ic_skill_watch_bg">
+
+
+                                <ImageView
+                                    android:id="@+id/skill_watch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_skill_watch"
+                                    tools:ignore="ContentDescription" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/score_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/score_bg"
+                                android:gravity="center">
+
+
+                                <TextView
+                                    android:id="@+id/user_entered_score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:focusable="true"
+                                    android:fontFamily="@font/digital"
+                                    android:text="@string/enter_score_text"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/upload_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen50"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/rounded_10"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/preview_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen50"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="0dp"
+                                app:cardPreventCornerOverlap="true"
+                                tools:targetApi="lollipop">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/oustlayout_dimen50">
+
+                                    <ImageView
+                                        android:id="@+id/preview_image_thumbnail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/black_transparent"
+                                        android:scaleType="fitXY"
+                                        tools:ignore="ContentDescription" />
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/video_play_feed"
+                                        app:tint="@android:color/white"
+                                        tools:ignore="ContentDescription" />
+
+
+                                </FrameLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <TextView
+                                android:id="@+id/upload_video_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen50"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center|end"
+                                android:text="@string/upload_your_video_text"
+                                android:textAlignment="textEnd"
+                                android:textColor="#908F8F"
+                                android:textSize="12sp"
+                                android:translationY="-1.04sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/select_video"
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@drawable/bg_left_corner"
+                                    android:padding="5dp"
+                                    android:src="@drawable/gallery_media"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageView
+                                    android:id="@+id/upload_video"
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@drawable/bg_right_corner"
+                                    android:padding="5dp"
+                                    android:src="@drawable/upload_media"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageView
+                                    android:id="@+id/cancel_video"
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_media_cancel"
+                                    android:visibility="gone"
+                                    tools:ignore="ContentDescription" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--    <com.oustme.oustsdk.swipe_button.SwipeButton
+                    android:id="@+id/submit_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen50"
+                    android:clickable="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    app:button_trail_enabled="true"
+                    app:button_image_disabled="@drawable/ic_button_arrow"
+                    app:button_image_enabled="@drawable/ic_button_arrow"
+                    app:button_background="@drawable/shape_button_squared"
+                    app:button_bottom_padding="18dp"
+                    app:button_left_padding="18dp"
+                    app:button_right_padding="18dp"
+                    app:button_top_padding="18dp"
+                    app:initial_state="disabled"
+                    app:inner_text="SWIPE TO SUBMIT"
+                    app:inner_text_background="@drawable/shape_squared"
+                    app:inner_text_color="@android:color/white"
+                    app:inner_text_size="15sp"
+                    app:inner_text_top_padding="10dp"
+                    app:inner_text_bottom_padding="14dp"
+                    app:has_activate_state="true"/>-->
+
+
+            <LinearLayout
+                android:id="@+id/snackbar_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/course_button_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            tools:ignore="RtlCompat" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/branding_main_layout"
+        layout="@layout/branding_loader"
+        android:visibility="gone" />
+
+</RelativeLayout>

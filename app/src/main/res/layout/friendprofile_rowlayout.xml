@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_presseda"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_presseda"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.2">
+
+            <LinearLayout
+                android:id="@+id/indicator_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="@dimen/oustlayout_dimen15"
+                    android:layout_height="@dimen/oustlayout_dimen15"
+                    android:background="@drawable/circle_gray_corner"></View>
+
+                <View
+                    android:layout_width="@dimen/oustlayout_dimen1"
+                    android:layout_height="match_parent"
+                    android:background="@color/circle_gray"></View>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/indicator_ll"
+                android:gravity="end">
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/coursecompletetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:paddingLeft="@dimen/oustlayout_dimen5"
+                    android:paddingRight="@dimen/oustlayout_dimen5"
+                    android:textColor="@color/new_gray"
+                    android:textSize="@dimen/ousttext_dimen13"
+                    tools:text="26 Dec 2018" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/oustlayout_dimen10"
+            android:layout_weight="7"
+            android:background="@drawable/square_grey_no_padding">
+
+            <LinearLayout
+                android:id="@+id/cource_mainrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/oustlayout_dimen1">
+
+                <FrameLayout
+                    android:id="@+id/coursemain_framelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/coureseimagelayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/coureseimage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/oustlayout_dimen65"
+
+                                    android:scaleType="centerCrop" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen1"
+                                android:background="@color/dark_grey_new" />
+
+                            <RelativeLayout
+                                android:id="@+id/coursenamelayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:id="@+id/contentPart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingTop="@dimen/oustlayout_dimen3"
+                                    android:paddingRight="@dimen/oustlayout_dimen2">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                        android:layout_marginBottom="@dimen/oustlayout_dimen5"
+                                        android:orientation="vertical">
+
+                                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                            android:id="@+id/coursenametext"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:textColor="@color/new_gray"
+                                            android:textSize="@dimen/ousttext_dimen15"
+                                            tools:text="Course Name" />
+
+                                        <LinearLayout
+                                            android:id="@+id/complete_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/oustlayout_dimen6"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:id="@+id/completed_img"
+                                                android:layout_width="@dimen/oustlayout_dimen15"
+                                                android:layout_height="@dimen/oustlayout_dimen15"
+                                                android:layout_gravity="center_vertical"
+                                                android:src="@drawable/ic_check"
+                                                android:tint="@color/Black" />
+                                            <ImageView
+                                                android:visibility="gone"
+                                                android:id="@+id/img_failed"
+                                                android:layout_width="@dimen/oustlayout_dimen10"
+                                                android:layout_height="@dimen/oustlayout_dimen10"
+                                                android:layout_gravity="center_vertical"
+                                                android:src="@drawable/wrong"
+                                                android:tint="@color/Black" />
+
+                                            <com.oustme.oustsdk.customviews.CustomTextView
+                                                android:id="@+id/completed_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center_vertical"
+                                                android:paddingLeft="@dimen/oustlayout_dimen5"
+                                                android:singleLine="true"
+                                                android:textColor="@color/new_gray"
+                                                android:textSize="@dimen/ousttext_dimen10"
+                                                tools:text="Completed" />
+
+                                            <View
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="1"/>
+
+                                            <com.oustme.oustsdk.customviews.CustomTextView
+                                                android:id="@+id/tv_xp_earned"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical|right"
+                                                android:paddingLeft="@dimen/oustlayout_dimen5"
+                                                android:paddingTop="@dimen/oustlayout_dimen6"
+                                                android:paddingBottom="@dimen/oustlayout_dimen6"
+                                                android:paddingRight="@dimen/oustlayout_dimen6"
+                                                android:singleLine="true"
+                                                android:textColor="@color/new_gray"
+                                                android:textSize="@dimen/ousttext_dimen10"
+                                                tools:text="XP 400"
+                                                android:textStyle="bold"
+                                                android:visibility="gone"/>
+
+                                            <LinearLayout
+                                                android:visibility="visible"
+                                                android:id="@+id/mLayout_coins"
+                                                android:paddingLeft="@dimen/oustlayout_dimen5"
+                                                android:gravity="center_vertical|right"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <ImageView
+                                                    android:visibility="gone"
+                                                    android:id="@+id/lpocimage"
+                                                    android:layout_width="@dimen/oustlayout_dimen25"
+                                                    android:layout_height="@dimen/oustlayout_dimen23"
+                                                    android:layout_centerVertical="true"
+                                                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                                    android:adjustViewBounds="true"
+                                                    android:padding="@dimen/oustlayout_dimen1"
+                                                    android:text="0%"
+                                                    android:textColor="@color/whitea" />
+
+                                                <com.oustme.oustsdk.customviews.CustomTextView
+                                                    android:id="@+id/tv_oc_earned"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:paddingTop="@dimen/oustlayout_dimen6"
+                                                    android:paddingRight="@dimen/oustlayout_dimen6"
+                                                    android:paddingBottom="@dimen/oustlayout_dimen6"
+                                                    android:singleLine="true"
+                                                    android:textColor="@color/new_gray"
+                                                    android:textSize="@dimen/ousttext_dimen10"
+                                                    tools:text="100"
+                                                    android:textStyle="bold"
+                                                    android:visibility="visible"/>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end"
+                                                android:orientation="horizontal">
+
+                                                <LinearLayout
+                                                    android:id="@+id/linearLayoutEdit"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:paddingStart="@dimen/oustlayout_dimen16"
+                                                    android:paddingLeft="@dimen/oustlayout_dimen16"
+                                                    android:paddingTop="@dimen/oustlayout_dimen3"
+                                                    android:paddingEnd="@dimen/oustlayout_dimen6"
+                                                    android:paddingRight="@dimen/oustlayout_dimen6"
+                                                    android:paddingBottom="@dimen/oustlayout_dimen3"
+                                                    android:visibility="gone">
+
+                                                    <ImageView
+                                                        android:id="@+id/editImage"
+                                                        android:layout_width="@dimen/oustlayout_dimen15"
+                                                        android:layout_height="@dimen/oustlayout_dimen15"
+                                                        android:src="@drawable/edit"
+                                                        android:tint="@color/Black" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/linearLayoutDelete"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/oustlayout_dimen4"
+                                                    android:paddingTop="@dimen/oustlayout_dimen6"
+                                                    android:paddingRight="@dimen/oustlayout_dimen6"
+                                                    android:paddingBottom="@dimen/oustlayout_dimen6"
+                                                    android:visibility="gone">
+
+                                                    <ImageView
+                                                        android:id="@+id/deleteImage"
+                                                        android:layout_width="@dimen/oustlayout_dimen15"
+                                                        android:layout_height="@dimen/oustlayout_dimen15"
+                                                        android:layout_marginStart="@dimen/oustlayout_dimen6"
+                                                        android:layout_marginLeft="@dimen/oustlayout_dimen6"
+                                                        android:src="@drawable/ic_delete"
+                                                        android:tint="@color/reda" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:id="@+id/certificate_img"
+                                                android:layout_width="@dimen/oustlayout_dimen15"
+                                                android:layout_height="@dimen/oustlayout_dimen15"
+                                                android:src="@drawable/paper"
+                                                android:tint="@color/LiteGray" />
+
+                                            <com.oustme.oustsdk.customviews.CustomTextView
+                                                android:id="@+id/certificate_sent_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:paddingLeft="@dimen/oustlayout_dimen5"
+                                                android:singleLine="true"
+                                                android:text=""
+                                                android:textColor="@color/new_gray"
+                                                android:textSize="@dimen/ousttext_dimen10" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:id="@+id/coins_img"
+                                                android:layout_width="@dimen/oustlayout_dimen15"
+                                                android:layout_height="@dimen/oustlayout_dimen15"
+                                                android:src="@drawable/coins_icon"
+                                                android:tint="@color/new_gray" />
+
+                                            <com.oustme.oustsdk.customviews.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:paddingLeft="@dimen/oustlayout_dimen5"
+                                                android:singleLine="true"
+                                                android:text=""
+                                                android:textColor="@color/new_gray"
+                                                android:textSize="@dimen/ousttext_dimen10" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"></RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

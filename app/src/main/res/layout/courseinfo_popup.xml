@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popupBackGroundb">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/oustlayout_dimen20"
+            android:layout_marginRight="@dimen/oustlayout_dimen20">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/courseinfo_mainlayout"
+                android:background="@color/fulltransparent"  >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/whitea">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            android:layout_width="@dimen/oustlayout_dimen40"
+                            android:layout_height="@dimen/oustlayout_dimen40"
+                            android:id="@+id/popup_closebtn"
+                            android:background="@android:color/transparent"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_close_img"
+                            android:tint="@color/Black"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/oustlayout_dimen10"
+                            android:layout_marginTop="@dimen/oustlayout_dimen20"
+                            android:layout_marginBottom="@dimen/oustlayout_dimen20"
+                            android:orientation="vertical">
+                            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/oustlayout_dimen2"
+                                android:textSize="@dimen/ousttext_dimen18"
+                                android:textColor="@color/Gray"
+                                android:id="@+id/coursename_text"
+                                android:gravity="center"
+                                android:text="Course name : lkcjshad csandkasd"/>
+                            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/oustlayout_dimen15"
+                                android:padding="@dimen/oustlayout_dimen2"
+                                android:textSize="@dimen/ousttext_dimen14"
+                                android:gravity="center"
+                                android:textColor="@color/Gray"
+                                android:id="@+id/levelno_text"
+                                android:text="Level 1 of 3"/>
+                            <ProgressBar
+                                android:id="@+id/levelprogress_bar"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_below="@+id/avatar"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen25"
+                                android:layout_marginRight="@dimen/oustlayout_dimen25"
+                                android:layout_marginTop="@dimen/oustlayout_dimen5"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen4"
+                                android:max="100"
+                                android:progressDrawable="@drawable/modulecomplete_progress" />
+                            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/oustlayout_dimen2"
+                                android:textSize="@dimen/ousttext_dimen14"
+                                android:visibility="visible"
+                                android:layout_marginTop="@dimen/oustlayout_dimen14"
+                                android:textColor="@color/Gray"
+                                android:gravity="center"
+                                android:id="@+id/cardno_text"
+                                android:text="Card 1 of 7"/>
+                            <ProgressBar
+                                android:id="@+id/cardprogress_bar"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_below="@+id/avatar"
+                                android:visibility="visible"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen25"
+                                android:layout_marginRight="@dimen/oustlayout_dimen25"
+                                android:layout_marginTop="@dimen/oustlayout_dimen5"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen4"
+                                android:max="100"
+                                android:progressDrawable="@drawable/modulecomplete_progress" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

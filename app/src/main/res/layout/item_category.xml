@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|top"
+    android:gravity="center|top"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="148dp"
+        android:layout_height="174dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_cateogry">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/options_imglayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/options_textlayout"
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/oustlayout_dimen22"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/round_cateogry"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/ousttext_dimen16" />
+
+        <com.oustme.katexview.KatexView
+            android:id="@+id/options_textlayoutMaths"
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/oustlayout_dimen22"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/round_cateogry"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/ousttext_dimen16"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

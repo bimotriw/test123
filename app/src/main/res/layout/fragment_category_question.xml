@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/question_base_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/question_bgImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/common_question_card" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/answer_recyclerview"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/layout_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/oustlayout_dimen250"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/category_leftlayout"
+                            android:layout_width="148dp"
+                            android:layout_height="174dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/round_cateogry">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/category_lefttext_layout"
+                                android:layout_width="@dimen/oustlayout_dimen18"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAllCaps="true"
+                                android:textColor="@color/white_pressed"
+                                android:textSize="@dimen/ousttext_dimen18"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/category_leftimage_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/oustlayout_dimen2"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/category_rightlayout"
+                            android:layout_width="148dp"
+                            android:layout_height="174dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/round_cateogry">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/category_righttext_layout"
+                                android:layout_width="@dimen/oustlayout_dimen18"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAllCaps="true"
+                                android:textColor="@color/white_pressed"
+                                android:textSize="@dimen/ousttext_dimen18"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/category_rightimage_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/oustlayout_dimen2"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/card_text_instruction"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/oustlayout_dimen20"
+                    android:gravity="center|top">
+
+                    <TextView
+                        android:id="@+id/all_sorted"
+                        android:layout_width="148dp"
+                        android:layout_height="174dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/round_cateogry"
+                        android:gravity="center"
+                        android:text="DONE!\nAll tiles sorted"
+                        android:visibility="gone" />
+
+                    <com.oustme.oustsdk.categorySwipe.SwipeFlingAdapterViewNew
+                        android:id="@+id/swipeCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:id="@+id/category_optionsleft"
+                        style="@style/caption_1"
+                        android:layout_width="148dp"
+                        android:layout_height="174dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen15"
+                        android:layout_marginTop="@dimen/oustlayout_dimen15"
+                        android:gravity="top|left"
+                        android:paddingLeft="@dimen/oustlayout_dimen12"
+                        android:paddingTop="@dimen/oustlayout_dimen22"
+                        android:text=""
+                        android:textColor="#838383"
+                        android:textSize="@dimen/ousttext_dimen16" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_text_instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen75"
+                    android:layout_below="@+id/layout_cards"
+                    android:layout_marginTop="@dimen/oustlayout_dimen24"
+                    app:cardBackgroundColor="#F2F2F7"
+                    app:cardCornerRadius="@dimen/oustlayout_dimen10">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                            android:src="@drawable/ic_question" />
+
+                        <TextView
+                            android:id="@+id/category_instruction"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                            android:layout_marginRight="@dimen/oustlayout_dimen5"
+                            android:layout_toRightOf="@+id/info"
+                            android:gravity="center|left"
+                            android:maxLines="3"
+                            android:text="INSTRUCTIONS - Sort each card by dragging into the correct pile. Click forward arrow when done."
+                            android:textColor="@color/grey_a"
+                            android:textSize="@dimen/ousttext_dimen12" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/category_thumps_layout"
+            layout="@layout/common_question_thumps_coins"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/justify_popup_constraint_layout"
+            layout="@layout/dialog_show_justify_answer"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+</androidx.core.widget.NestedScrollView>

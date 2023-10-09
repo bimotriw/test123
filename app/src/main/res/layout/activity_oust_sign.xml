@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.oustme.oustsdk.signin_signup.AuthViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/QuizBgGraya"
+        tools:context=".signin_signup.OustSignActivity">
+
+        <LinearLayout
+            android:id="@+id/username_passlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/oustlayout_dimen40"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/orgtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Org Id"
+                android:text="@={viewmodel.email}"
+                android:textColor="@color/whitelight" />
+
+            <EditText
+                android:id="@+id/usernametext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="User name"
+                android:text="@={viewmodel.password}"
+                android:textColor="@color/whitelight" />
+
+            <TextView
+                android:id="@+id/startbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/oustlayout_dimen20"
+                android:background="@color/LiteGreen"
+                android:gravity="center"
+                android:padding="@dimen/oustlayout_dimen10"
+                android:text="START"
+                android:onClick="@{viewmodel::onLoginButtonClicked}"
+                android:textColor="@color/whitelight" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

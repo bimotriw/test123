@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/question_card_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="10dp"
+            android:layout_gravity="center"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/question_num_layout">
+
+               <TextView
+                   android:id="@+id/question_num"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   style="@style/body_1_bold"
+                   android:textColor="@color/white"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:text="1"
+                   android:lines="2"/>
+
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/question_text"
+            style="@style/body_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/primary_text" />
+
+        <LinearLayout
+            android:id="@+id/katex_question_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.oustme.katexview.KatexView
+                android:id="@+id/katex_question"
+                style="@style/body_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:maxLines="2"
+                android:textColor="@color/primary_text" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/question_status"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_lock_img" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

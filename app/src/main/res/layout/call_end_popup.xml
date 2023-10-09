@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/oustlayout_dimen5"
+    android:layout_marginEnd="@dimen/oustlayout_dimen5"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/ousttext_dimen15">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal|start"
+            android:text="@string/end_call"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center|start"
+            android:text="@string/are_you_sure_you_want_to_exit_session"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/oustlayout_dimen25"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/call_event_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_border"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/unselected_text"
+                    android:textSize="@dimen/font_17sp"
+                    tools:ignore="RtlCompat" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/call_event_exit"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/course_button_bg"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+                    android:text="@string/exit_txt"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_17sp"
+                    tools:ignore="RtlCompat" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

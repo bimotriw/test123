@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/oustlayout_dimen45">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <com.oustme.oustsdk.customviews.CustomTextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/tabText"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:textAllCaps="true"
+                android:textSize="@dimen/ousttext_dimen12"
+                android:gravity="center"
+                android:textColor="@color/DarkGray"
+                android:text=""> 
+            </com.oustme.oustsdk.customviews.CustomTextView>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

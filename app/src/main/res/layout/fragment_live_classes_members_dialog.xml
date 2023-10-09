@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LiveClasses.dialogFragment.LiveClassesMembersDialogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/oustlayout_dimen14">
+
+        <TextView
+            android:id="@+id/meeting_attendees_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:lines="1"
+            android:text="@string/attendees"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/meeting_attendees_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_close_img"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen1"
+        android:layout_marginStart="@dimen/oustlayout_dimen14"
+        android:layout_marginTop="@dimen/oustlayout_dimen5"
+        android:layout_marginEnd="@dimen/oustlayout_dimen14"
+        android:layout_marginBottom="@dimen/oustlayout_dimen14"
+        android:background="#1B1F26" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/members_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/oustlayout_dimen10"
+        android:layout_marginTop="@dimen/oustlayout_dimen5"
+        android:layout_marginEnd="@dimen/oustlayout_dimen14"
+        android:layout_marginBottom="@dimen/oustlayout_dimen10"
+        android:background="#13161B"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/live_classes_members_list_item" />
+</LinearLayout>

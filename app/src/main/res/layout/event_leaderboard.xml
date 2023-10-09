@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/leaderboardmainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_lay"
+        android:layout_alignParentTop="true"
+        layout="@layout/common_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/shareLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar_lay"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/eventresult_shareLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/mainappbarlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whitelight">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:id="@+id/eventboard_bannerImgLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/event_top_image_transparency"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/eventboard_bannerImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="fitXY" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/coursenametext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:text=""
+                                android:textColor="@color/white_pressed"
+                                android:textSize="@dimen/ousttext_dimen20"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/oustlayout_dimen40"
+                            android:layout_height="@dimen/oustlayout_dimen40"
+                            android:layout_alignParentRight="true">
+
+                            <ImageButton
+                                android:id="@+id/close_eventboardpage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_close_img" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/mainappbarlayout"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen50"
+                    android:background="@color/LiteGreen">
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/leaderboardtoptxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/LiteGreen"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/oustlayout_dimen2"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/whitea"
+                        android:textSize="@dimen/ousttext_dimen16" />
+
+                    <ImageView
+                        android:id="@+id/info_btn"
+                        android:layout_width="@dimen/oustlayout_dimen20"
+                        android:layout_height="@dimen/oustlayout_dimen20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/oustlayout_dimen10" />
+
+                    <ProgressBar
+                        android:id="@+id/eventboard_loader_progressbar_LB"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen3"
+                        android:indeterminate="@bool/default_underline_indicator_fades"
+                        android:indeterminateBehavior="repeat"
+                        android:indeterminateDrawable="@drawable/custom_progressbar"
+                        android:indeterminateDuration="1000"
+                        android:interpolator="@android:anim/linear_interpolator"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/nodatatext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen60"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/oustlayout_dimen15"
+                    android:text=""
+                    android:textSize="@dimen/ousttext_dimen14"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/labellayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/whitelight"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen40"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/rank_text"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                android:layout_weight="1.2"
+                                android:gravity="start|center_vertical"
+                                android:textColor="@color/Gray"
+                                android:textSize="@dimen/ousttext_dimen14"
+                                tools:text="Rank" />
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/name_text"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.8"
+                                android:gravity="start|center_vertical"
+                                android:paddingLeft="@dimen/oustlayout_dimen5"
+                                android:textColor="@color/Gray"
+                                android:textSize="@dimen/ousttext_dimen14"
+                                tools:text="Name" />
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/ponts_text"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/oustlayout_dimen12"
+                                android:layout_weight="1"
+                                android:gravity="center|end"
+                                android:paddingLeft="@dimen/oustlayout_dimen10"
+                                android:textColor="@color/Gray"
+                                android:textSize="@dimen/ousttext_dimen14"
+                                tools:text="Points" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/white_pressed"></RelativeLayout>
+                    </LinearLayout>
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/labellayout"
+                        android:visibility="visible">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/eventboard_leaderBoardList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:visibility="visible" />
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabanim_tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen45"
+                        android:background="@color/whitea"
+                        android:visibility="gone"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/LiteGreen"
+                        app:tabIndicatorHeight="@dimen/oustlayout_dimen3"
+                        app:tabMaxWidth="2000dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.4dp"
+                        android:background="@color/white_pressed"
+                        android:visibility="visible"></RelativeLayout>
+
+                    <com.oustme.oustsdk.customviews.CustomViewPager
+                        android:id="@+id/tabanim_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tabanim_tabs"
+                        android:visibility="gone"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/eventresult_shareLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen60"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen60"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/oustlayout_dimen8">
+
+            <com.oustme.oustsdk.customviews.TryRippleView
+                android:id="@+id/whatsapBtn_rippleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rv_color="#fff"
+                app:rv_rippleDuration="300">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/LiteGreen"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/oustlayout_dimen25"
+                        android:layout_height="@dimen/oustlayout_dimen25"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center|end"
+                        android:layout_marginLeft="@dimen/ousttext_dimen10"
+                        android:src="@drawable/ic_share"
+                        android:tint="@color/White" />
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/eventboard_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/oustlayout_dimen8"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/ousttext_dimen18"
+                        tools:text="Share" />
+                </LinearLayout>
+            </com.oustme.oustsdk.customviews.TryRippleView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/no_data_layout"
+        layout="@layout/common_no_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

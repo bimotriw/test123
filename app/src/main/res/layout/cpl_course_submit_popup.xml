@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="@dimen/oustlayout_dimen6"
+        android:id="@+id/imageViewTickMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_round_tick"
+        android:tint="@color/LiteGreen" />
+
+    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+        android:layout_marginTop="@dimen/oustlayout_dimen8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/course_completd" />
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:id="@+id/textViewCoursesCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="23" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/course_submitted" />
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:id="@+id/textViewCoursesSubmitted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="23" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/oustlayout_dimen10"
+        android:id="@+id/linearLayoutCPLCourseSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/LiteGreen"
+        android:gravity="center"
+        android:padding="@dimen/oustlayout_dimen8"
+        android:orientation="horizontal">
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whitea"
+            android:textStyle="bold"
+            android:text="@string/submit" />
+    </LinearLayout>
+</LinearLayout>

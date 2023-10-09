@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22dp"
+    android:height="22dp"
+    android:alpha="0.99"
+    android:viewportWidth="16"
+    android:viewportHeight="17">
+    <group>
+        <clip-path android:pathData="M0,0h16v16.375h-16z" />
+        <path
+            android:fillColor="#C7C7CC"
+            android:pathData="M8.0016,16.3783C12.4208,16.3783 16.0033,12.7119 16.0033,8.1892C16.0033,3.6664 12.4208,0 8.0016,0C3.5824,0 0,3.6664 0,8.1892C0,12.7119 3.5824,16.3783 8.0016,16.3783Z" />
+        <path
+            android:fillColor="#908F8F"
+            android:pathData="M12.5854,3.838V6.1435L12.0612,5.6071L10.1406,7.5728L8.9329,6.3401L10.8535,4.3711L10.3327,3.838H12.5854Z" />
+        <path
+            android:fillColor="#908F8F"
+            android:pathData="M3.4182,3.838V6.1435L3.9391,5.6071L5.8597,7.5728L7.0675,6.3401L5.1468,4.3711L5.6677,3.838H3.4182Z" />
+        <path
+            android:fillColor="#908F8F"
+            android:pathData="M12.5854,12.8801V10.5746L12.0612,11.1076L10.1406,9.142L8.9329,10.378L10.8535,12.3437L10.3327,12.8801H12.5854Z" />
+        <path
+            android:fillColor="#908F8F"
+            android:pathData="M3.4182,12.8801V10.5746L3.9391,11.1076L5.8597,9.142L7.0675,10.378L5.1468,12.3437L5.6677,12.8801H3.4182Z" />
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M12.5854,3.4982V5.8004L12.0612,5.2673L10.1406,7.233L8.9329,5.997L10.8535,4.0313L10.3327,3.4982H12.5854Z" />
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M3.4182,3.4982V5.8004L3.9391,5.2673L5.8597,7.233L7.0675,5.997L5.1468,4.0313L5.6677,3.4982H3.4182Z" />
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M12.5854,12.537V10.2348L12.0612,10.7679L10.1406,8.8022L8.9329,10.0382L10.8535,12.0039L10.3327,12.537H12.5854Z" />
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M3.4182,12.537V10.2348L3.9391,10.7679L5.8597,8.8022L7.0675,10.0382L5.1468,12.0039L5.6677,12.537H3.4182Z" />
+    </group>
+</vector>

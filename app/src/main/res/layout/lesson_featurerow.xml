@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <RelativeLayout
+            android:layout_width="@dimen/oustlayout_dimen50"
+            android:layout_height="@dimen/oustlayout_dimen50"
+            android:layout_marginTop="@dimen/oustlayout_dimen15"
+            android:layout_marginBottom="@dimen/oustlayout_dimen5"
+            android:layout_centerInParent="true"
+            android:id="@+id/feature_iconlayout"
+            android:background="@drawable/greenlite_round_textview">
+            <ImageView
+                android:layout_width="@dimen/oustlayout_dimen23"
+                android:layout_height="@dimen/oustlayout_dimen23"
+                android:layout_centerInParent="true"
+                android:id="@+id/feature_icon"
+                android:src="@drawable/leaderboard_icon"
+                android:tint="@color/white_pressed" />
+        </RelativeLayout>
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/feature_nametext"
+            android:layout_marginRight="@dimen/oustlayout_dimen5"
+            android:layout_marginLeft="@dimen/oustlayout_dimen5"
+            android:textSize="@dimen/ousttext_dimen12"
+            android:textColor="@color/DarkGray"
+            android:text=""/>
+    </LinearLayout>
+
+</LinearLayout>

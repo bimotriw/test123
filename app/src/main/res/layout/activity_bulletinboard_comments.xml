@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/bulletin_comments_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tabanim_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                app:popupTheme="@style/AppToolBarTheme">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="left|top"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/oustlayout_dimen2"
+                        android:paddingRight="@dimen/oustlayout_dimen10"
+                        android:text=""
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/ousttext_dimen15" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/bulletin_loader_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen3"
+                    android:indeterminate="@bool/default_underline_indicator_fades"
+                    android:indeterminateBehavior="repeat"
+                    android:indeterminateDrawable="@drawable/progressbar_test"
+                    android:indeterminateDuration="1000"
+                    android:interpolator="@android:anim/linear_interpolator"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/add_comment_mainlayout"
+            android:layout_below="@+id/bulletin_comments_appbar"
+            android:layout_marginTop="@dimen/oustlayout_dimen5"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/bulletin_comments_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_comment_mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/add_comments_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bulletin_comment_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/add_comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/enter_comment"
+                        android:inputType="textMultiLine"
+                        android:lineSpacingExtra="@dimen/oustlayout_dimen3"
+                        android:maxHeight="@dimen/oustlayout_dimen200"
+                        android:maxLength="1000"
+                        android:padding="@dimen/oustlayout_dimen15"
+                        android:textColor="@color/Black"
+                        android:textColorHint="@color/LiteGray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/oustlayout_dimen18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/submit_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom">
+
+                    <ImageView
+                        android:id="@+id/send_imgview"
+                        android:layout_width="@dimen/oustlayout_dimen25"
+                        android:layout_height="@dimen/oustlayout_dimen25"
+                        android:layout_marginBottom="@dimen/oustlayout_dimen5" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/nocomment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/add_comment_mainlayout"
+            android:layout_below="@+id/bulletin_comments_appbar"
+            android:layout_marginLeft="@dimen/oustlayout_dimen10"
+            android:layout_marginTop="@dimen/oustlayout_dimen10"
+            android:layout_marginRight="@dimen/oustlayout_dimen10"
+            android:layout_marginBottom="@dimen/oustlayout_dimen10"
+            android:fillViewport="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ques_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/veryLiteGray"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.oustme.oustsdk.customviews.CircleImageView
+                            android:id="@+id/user_image"
+                            android:layout_width="@dimen/oustlayout_dimen30"
+                            android:layout_height="@dimen/oustlayout_dimen30"
+                            android:layout_margin="@dimen/oustlayout_dimen5"
+                            android:background="@drawable/roundedcornergreenbackground"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="@dimen/ousttext_dimen16" />
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/user_display_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                            android:text=" "
+                            android:textColor="@color/DarkGray"
+                            android:textSize="@dimen/oustlayout_dimen12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/oustlayout_dimen10">
+
+                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                            android:id="@+id/question"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/oustlayout_dimen5"
+                            android:text=" "
+                            android:textColor="@color/Black"
+                            android:textSize="@dimen/oustlayout_dimen18"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/nocomments_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/oustlayout_dimen12"
+                    android:paddingBottom="@dimen/oustlayout_dimen10"
+                    android:text=" "
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/ousttext_dimen16"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

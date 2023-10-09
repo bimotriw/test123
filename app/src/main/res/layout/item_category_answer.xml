@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="15dp"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/left_parent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center|top">
+
+        <RelativeLayout
+            android:id="@+id/category_left_layout"
+            android:layout_width="148dp"
+            android:layout_height="174dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_cateogry">
+
+            <TextView
+                android:id="@+id/category_left_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/ousttext_dimen17"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/category_left_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/oustlayout_dimen2"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/left_count"
+                android:text=""
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/grey_b"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_parent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center|top">
+
+        <RelativeLayout
+            android:id="@+id/category_right_layout"
+            android:layout_width="148dp"
+            android:layout_height="174dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_cateogry">
+
+            <TextView
+                android:id="@+id/category_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/ousttext_dimen17"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/category_right_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/oustlayout_dimen2"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/right_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="1/4"
+                android:visibility="gone"
+                android:textColor="@color/grey_b"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

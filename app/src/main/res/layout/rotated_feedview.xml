@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="@dimen/oustlayout_dimen50"
+    android:layout_height="@dimen/oustlayout_dimen50">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen50"
+        android:padding="@dimen/oustlayout_dimen2"
+        android:id="@+id/module_progress_ll">
+        <ImageView
+            android:id="@+id/imageViewPercentageBg"
+            android:padding="@dimen/oustlayout_dimen2.5"
+            android:layout_width="@dimen/oustlayout_dimen30"
+            android:layout_height="@dimen/oustlayout_dimen30"
+            android:src="@drawable/ic_completion"/>
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="@dimen/oustlayout_dimen30"
+            android:layout_height="@dimen/oustlayout_dimen30"
+            android:textSize="@dimen/ousttext_dimen7"
+            android:id="@+id/moduleprogress"
+            android:gravity="center"
+            android:textColor="@color/whitea"
+            tools:text="80%"/>
+    </RelativeLayout>
+</LinearLayout>

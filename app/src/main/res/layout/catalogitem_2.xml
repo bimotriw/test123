@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    android:layout_marginTop="@dimen/oustlayout_dimen5"
+    android:layout_marginBottom="@dimen/oustlayout_dimen5"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/oustlayout_dimen115">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen1"
+        android:id="@+id/topSpace"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/oustlayout_dimen125"
+        android:layout_height="@dimen/oustlayout_dimen115"
+        android:id="@+id/cource_mainrow"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/oustlayout_dimen5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_card_ll"
+            android:padding="@dimen/oustlayout_dimen5"
+            android:background="@drawable/roundedcorner_litegrey"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/CatalogueUpdateIndicator"
+                android:layout_width="@dimen/oustlayout_dimen15"
+                android:layout_height="@dimen/oustlayout_dimen15"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/oustlayout_dimen1"
+                android:elevation="@dimen/oustlayout_dimen10"
+                android:src="@drawable/circle_red_bg" />
+            <com.oustme.oustsdk.customviews.CurveLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:curveviewwidth="@dimen/oustlayout_dimen5">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/banner_overlay">
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/banner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/whitelight">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="70">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:adjustViewBounds="true"
+                            android:id="@+id/rowbanner_image" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="30"
+                        android:background="@color/white_presseda">
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/oustlayout_dimen5"
+                            android:textColor="@color/textBlack"
+                            android:gravity="left"
+                            android:id="@+id/coursenametext"
+                            android:maxLines="1"
+                            android:textSize="@dimen/ousttext_dimen11"
+                            android:text=""/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:background="@color/whitelight"
+                    android:id="@+id/icon_fullimage"/>
+            </com.oustme.oustsdk.customviews.CurveLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

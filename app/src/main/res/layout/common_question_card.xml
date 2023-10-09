@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/question_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/timer_layout"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/container_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/question_count_num"
+            style="@style/body_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textAlignment="textStart"
+            android:textColor="@color/unselected_text"
+            android:visibility="gone"
+            tools:ignore="RtlCompat" />
+
+        <RelativeLayout
+            android:id="@+id/video_lay"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/media_question_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/question"
+            style="@style/subtitle_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textAlignment="textStart"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+
+        <WebView
+            android:id="@+id/description_webView"
+            style="@style/body_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="top"
+            android:textColor="@color/primary_text"
+            android:visibility="gone" />
+
+        <com.oustme.katexview.KatexView
+            android:id="@+id/question_katex"
+            style="@style/subtitle_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textAlignment="textStart"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/option_text"
+            style="@style/subtitle_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textAlignment="textStart"
+            android:textColor="@color/primary_text"
+            android:textStyle="italic"
+            android:visibility="gone"
+            tools:ignore="RtlCompat" />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/question_image_lay"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                tools:targetApi="lollipop">
+
+                <ImageView
+                    android:id="@+id/question_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/info_type"
+                style="@style/caption_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:visibility="invisible"
+                app:drawableStartCompat="@drawable/ic_info_icon"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/expand_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_expand_image"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

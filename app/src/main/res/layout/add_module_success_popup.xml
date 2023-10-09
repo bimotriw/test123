@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popupBackGround">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relativeLayout8"
+        android:layout_marginLeft="@dimen/oustlayout_dimen20"
+        android:layout_marginRight="@dimen/oustlayout_dimen20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/successBlock"
+            android:padding="@dimen/oustlayout_dimen10"
+            android:background="@color/White"
+            android:layout_centerInParent="true">
+
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoTxt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/oustlayout_dimen30"
+                android:text=""
+                android:layout_marginBottom="@dimen/oustlayout_dimen20"
+                android:textColor="@color/DarkGray"
+                android:textSize="@dimen/ousttext_dimen16"
+                android:gravity="center|center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/infoTxt"
+                android:weightSum="2">
+
+                <com.oustme.oustsdk.customviews.CustomOustButton
+                    android:id="@+id/mystpryChallengebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_margin="@dimen/oustlayout_dimen5"
+                    android:background="@color/LiteGreen"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="@dimen/ousttext_dimen14"
+                    android:textColor="@color/White"
+                    android:textStyle="bold" />
+
+                <com.oustme.oustsdk.customviews.CustomOustButton
+                    android:id="@+id/friendChallengeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:background="@color/Orange"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/oustlayout_dimen5"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/ousttext_dimen10"
+                    android:textColor="@color/White"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="@dimen/oustlayout_dimen40"
+                android:layout_height="@dimen/oustlayout_dimen30"
+                android:id="@+id/closeaddModuleSuccessPopupButton"
+                android:src="@drawable/ic_close_img"
+                android:tint="@color/Black"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/app_name"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

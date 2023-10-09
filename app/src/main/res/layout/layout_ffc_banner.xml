@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+    android:id="@+id/ffcbanner_imglayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/oustlayout_dimen100"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="@dimen/oustlayout_dimen4"
+    android:layout_marginStart="@dimen/oustlayout_dimen8"
+    android:layout_marginLeft="@dimen/oustlayout_dimen8"
+    android:layout_marginEnd="@dimen/oustlayout_dimen8"
+    android:layout_marginRight="@dimen/oustlayout_dimen8"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:visibility="visible">
+    <ImageView
+        android:id="@+id/ffcbanner_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+    <ImageView
+        android:id="@+id/bannerclose_btn"
+        android:layout_width="@dimen/oustlayout_dimen30"
+        android:layout_height="@dimen/oustlayout_dimen30"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_close_img"
+        android:visibility="gone" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/oustlayout_dimen4">
+
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            android:id="@+id/ffcbanner_statusimg"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/oustlayout_dimen10"
+            android:background="@drawable/rounded_whiteborder"
+            android:gravity="center"
+            android:paddingLeft="@dimen/oustlayout_dimen20"
+            android:paddingRight="@dimen/oustlayout_dimen20"
+            android:text=""
+            android:textColor="@color/whitelight" />
+    </RelativeLayout>
+</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oustlayout_dimen8"
+        android:layout_marginBottom="@dimen/oustlayout_dimen8"
+        android:layout_marginEnd="@dimen/oustlayout_dimen8"
+        android:layout_marginRight="@dimen/oustlayout_dimen8"
+        android:layout_marginStart="@dimen/oustlayout_dimen8"
+        android:layout_marginLeft="@dimen/oustlayout_dimen8"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcbanner_imglayout">
+
+        <ImageView
+            android:id="@+id/imageViewEnrolled"
+            android:layout_width="@dimen/oustlayout_dimen15"
+            android:layout_height="@dimen/oustlayout_dimen15"
+            android:layout_marginStart="@dimen/oustlayout_dimen4"
+            android:layout_marginLeft="@dimen/oustlayout_dimen4"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_enrolled_user" />
+
+        <TextView
+            android:id="@+id/textViewFFCEnrollCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/oustlayout_dimen8"
+            android:layout_marginStart="@dimen/oustlayout_dimen8"
+            tools:text="837" />
+
+        <ImageView
+            android:id="@+id/imageViewTime"
+            android:layout_width="@dimen/oustlayout_dimen15"
+            android:layout_height="@dimen/oustlayout_dimen15"
+            android:layout_marginLeft="@dimen/oustlayout_dimen8"
+            android:layout_marginStart="@dimen/oustlayout_dimen8"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_clock_fill" />
+
+        <TextView
+            android:id="@+id/textViewFFCTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/oustlayout_dimen8"
+            android:layout_marginStart="@dimen/oustlayout_dimen8"
+            android:text="837" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

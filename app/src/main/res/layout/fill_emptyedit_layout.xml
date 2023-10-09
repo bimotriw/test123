@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/oustlayout_dimen8"
+    android:background="@color/fulltransparent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/oustlayout_dimen35"
+        android:id="@+id/fill_mainlayout">
+        <LinearLayout
+            android:id="@+id/background_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/oustlayout_dimen2"
+            android:background="@drawable/fill_shadow_darkgrey">
+            <EditText
+                android:id="@+id/fill_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_pressed"
+                android:background="@color/fulltransparent"
+                android:textSize="@dimen/ousttext_dimen18"
+                android:padding="@dimen/oustlayout_dimen2"
+                android:maxLines="1"
+                tools:text = "ss vm"
+                android:focusable="false"
+                android:singleLine="true"
+                android:imeOptions="actionGo"
+                android:gravity="center_vertical" />
+
+            <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="@dimen/oustlayout_dimen25"
+            android:layout_height="@dimen/oustlayout_dimen25"
+            android:layout_marginLeft="@dimen/oustlayout_dimen2">
+            <ImageView
+                android:id="@+id/close_imageview"
+                android:layout_width="@dimen/oustlayout_dimen23"
+                android:layout_height="@dimen/oustlayout_dimen23"
+                android:visibility="gone"
+                android:src="@drawable/ic_close_img"/>
+        </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent_dark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/main_readmore_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/oustlayout_dimen10"
+                android:background="@color/fulltransparent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/roundcorner_tab_bg"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/readmore_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen35">
+
+                            <RelativeLayout
+                                android:id="@+id/readmore_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/oustlayout_dimen7">
+
+                                <ImageView
+                                    android:id="@+id/close_image"
+                                    android:layout_width="@dimen/oustlayout_dimen23"
+                                    android:layout_height="@dimen/oustlayout_dimen23"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen7"
+                                    android:src="@drawable/ic_close_img"
+                                    app:tint="@color/Black" />
+
+                                <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                    android:id="@+id/learningquiz_timertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen8"
+                                    android:layout_toLeftOf="@+id/close_image"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/Black"
+                                    android:textSize="@dimen/ousttext_dimen15"
+                                    android:visibility="visible" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/rm_main_layout"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen2"
+                            android:layout_marginRight="@dimen/oustlayout_dimen2"
+                            android:visibility="visible">
+
+                            <ProgressBar
+                                android:id="@+id/rm_url_loader"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen3"
+                                android:indeterminate="@bool/default_underline_indicator_fades"
+                                android:indeterminateBehavior="repeat"
+                                android:indeterminateDrawable="@drawable/custom_progressbar"
+                                android:indeterminateDuration="1000"
+                                android:interpolator="@android:anim/linear_interpolator"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rm_main_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/readmore_bottom_layout"
+                            android:layout_below="@+id/readmore_header"
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:id="@+id/readmore_webView_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen2"
+                                android:layout_marginRight="@dimen/oustlayout_dimen2"
+                                android:visibility="gone">
+
+                                <WebView
+                                    android:id="@+id/readmore_webView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rm_card_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen2"
+                                android:layout_marginRight="@dimen/oustlayout_dimen2">
+
+                                <RelativeLayout
+                                    android:id="@+id/learningmodule_mainlayoiyout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/moduleoverview_animviewa"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/whitea"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:id="@+id/gyan_backgroundimage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:scaleType="fitXY"
+                                            android:visibility="visible" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/popupBackGrounde"
+                                            android:visibility="visible"></RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:id="@+id/moduleoverview_toplayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                android:visibility="gone">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="@dimen/oustlayout_dimen40">
+
+                                                    <RelativeLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent">
+
+                                                        <RelativeLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_centerVertical="true">
+
+                                                            <ImageView
+                                                                android:id="@+id/questionmore_btn"
+                                                                android:layout_width="@dimen/oustlayout_dimen25"
+                                                                android:layout_height="@dimen/oustlayout_dimen25"
+                                                                android:layout_alignParentRight="true"
+                                                                android:layout_centerVertical="true"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                                                android:padding="@dimen/oustlayout_dimen1"
+                                                                android:src="@drawable/ic_moredata_img"
+                                                                android:tint="@color/whitea"
+                                                                android:visibility="gone" />
+
+                                                            <ImageView
+                                                                android:id="@+id/optionmain_speaker"
+                                                                android:layout_width="@dimen/oustlayout_dimen25"
+                                                                android:layout_height="@dimen/oustlayout_dimen25"
+                                                                android:layout_centerVertical="true"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                                                android:layout_toLeftOf="@+id/questionmore_btn"
+                                                                android:padding="@dimen/oustlayout_dimen1"
+                                                                android:src="@drawable/ic_audio_on"
+                                                                android:tint="@color/whitea"
+                                                                android:visibility="gone" />
+
+                                                            <TextView
+                                                                android:id="@+id/learningcard_coursename"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                                                android:layout_toLeftOf="@+id/optionmain_speaker"
+                                                                android:gravity="left|center_vertical"
+                                                                android:singleLine="true"
+                                                                android:text=""
+                                                                android:textColor="@color/whitea"
+                                                                android:textSize="@dimen/ousttext_dimen13"
+                                                                android:textStyle="bold" />
+                                                        </RelativeLayout>
+                                                    </RelativeLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent">
+
+                                                    <ScrollView
+                                                        android:id="@+id/learningcard_tutscrollview"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_alignParentStart="true"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_alignParentTop="true"
+                                                        android:scrollbars="none"
+                                                        android:visibility="visible">
+
+                                                        <LinearLayout
+                                                            android:id="@+id/mainanim_layout"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:orientation="vertical"
+                                                            android:paddingBottom="@dimen/oustlayout_dimen20">
+
+                                                            <com.oustme.oustsdk.tools.htmlrender.HtmlTextView
+                                                                android:id="@+id/learningtop_title"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                                                android:layout_marginTop="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                                                android:lineSpacingExtra="@dimen/oustlayout_dimen6"
+                                                                android:paddingBottom="@dimen/oustlayout_dimen10"
+                                                                android:text=""
+                                                                android:textColor="@color/whitea"
+                                                                android:textSize="@dimen/ousttext_dimen23"
+                                                                android:textStyle="bold"
+                                                                android:visibility="gone" />
+
+                                                            <com.oustme.oustsdk.tools.htmlrender.HtmlTextView
+                                                                android:id="@+id/learningtop_desc"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                                                android:lineSpacingExtra="@dimen/oustlayout_dimen6"
+                                                                android:paddingBottom="@dimen/oustlayout_dimen8"
+                                                                android:text=""
+                                                                android:textColor="@color/whitea"
+                                                                android:textSize="@dimen/ousttext_dimen18"
+                                                                android:visibility="gone" />
+
+                                                            <RelativeLayout
+                                                                android:id="@+id/learningtut_videolayout"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:minHeight="@dimen/oustlayout_dimen180"
+                                                                android:visibility="gone">
+
+                                                                <RelativeLayout
+                                                                    android:id="@+id/learnngtut_mainimagelayout"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:visibility="visible">
+
+                                                                    <ImageView
+                                                                        android:id="@+id/youtubemainImage"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:adjustViewBounds="true"
+                                                                        android:maxHeight="@dimen/oustlayout_dimen230"
+                                                                        android:scaleType="fitXY" />
+
+                                                                    <ImageView
+                                                                        android:id="@+id/video_icon"
+                                                                        android:layout_width="wrap_content"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_centerInParent="true" />
+                                                                </RelativeLayout>
+
+                                                                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                                                                    android:id="@+id/learningtut_videoframelayout"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:minHeight="@dimen/oustlayout_dimen230"
+                                                                    android:visibility="gone"
+                                                                    app:autoPlay="false"
+                                                                    app:enableAutomaticInitialization="false"
+                                                                    card_view:autoPlay="false"
+                                                                    card_view:enableAutomaticInitialization="false"></com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+                                                            </RelativeLayout>
+
+                                                            <RelativeLayout
+                                                                android:id="@+id/quesvideoLayout"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_alignParentStart="true"
+                                                                android:layout_alignParentLeft="true"
+                                                                android:layout_alignParentBottom="true"
+                                                                android:background="@color/Gray"
+                                                                android:minHeight="@dimen/oustlayout_dimen180"
+                                                                android:visibility="gone">
+
+                                                                <com.google.android.exoplayer2.ui.StyledPlayerView
+                                                                    android:id="@+id/video_player_view"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="@dimen/oustlayout_dimen300"
+                                                                    android:layout_centerHorizontal="true"
+                                                                    android:background="@android:color/transparent"
+                                                                    android:visibility="gone" />
+
+                                                                <RelativeLayout
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_alignParentRight="true">
+
+                                                                    <ImageView
+                                                                        android:id="@+id/video_landscape_zoom"
+                                                                        android:layout_width="@dimen/oustlayout_dimen23"
+                                                                        android:layout_height="@dimen/oustlayout_dimen23"
+                                                                        android:layout_alignParentRight="true"
+                                                                        android:layout_margin="@dimen/oustlayout_dimen3"
+                                                                        android:padding="@dimen/oustlayout_dimen1"
+                                                                        android:src="@drawable/ic_zoomimg"
+                                                                        android:visibility="gone" />
+
+                                                                    <RelativeLayout
+                                                                        android:id="@+id/download_layout"
+                                                                        android:layout_width="wrap_content"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_toLeftOf="@+id/video_landscape_zoom">
+
+                                                                        <pl.droidsonroids.gif.GifImageView
+                                                                            android:id="@+id/downloadvideo_icon"
+                                                                            android:layout_width="@dimen/oustlayout_dimen25"
+                                                                            android:layout_height="@dimen/oustlayout_dimen25"
+                                                                            android:layout_margin="@dimen/oustlayout_dimen3"
+                                                                            android:visibility="visible" />
+
+                                                                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                                                            android:id="@+id/downloadvideo_text"
+                                                                            android:layout_width="@dimen/oustlayout_dimen25"
+                                                                            android:layout_height="@dimen/oustlayout_dimen25"
+                                                                            android:layout_centerInParent="true"
+                                                                            android:layout_margin="@dimen/oustlayout_dimen3"
+                                                                            android:gravity="center"
+                                                                            android:text=""
+                                                                            android:textColor="@color/Black"
+                                                                            android:textSize="@dimen/ousttext_dimen7"
+                                                                            android:visibility="visible" />
+                                                                    </RelativeLayout>
+                                                                </RelativeLayout>
+
+                                                                <ImageView
+                                                                    android:id="@+id/videothumbnail_image"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="@dimen/oustlayout_dimen300"
+                                                                    android:layout_centerInParent="true"
+                                                                    android:scaleType="fitXY" />
+
+                                                                <ProgressBar
+                                                                    android:id="@+id/learningcard_videoloader"
+                                                                    style="?android:attr/progressBarStyleHorizontal"
+                                                                    android:layout_width="@dimen/oustlayout_dimen55"
+                                                                    android:layout_height="@dimen/oustlayout_dimen55"
+                                                                    android:layout_centerInParent="true"
+                                                                    android:max="400"
+                                                                    android:progress="300"
+                                                                    android:progressDrawable="@drawable/learning_audioprogrss"
+                                                                    android:visibility="gone" />
+
+                                                                <ImageView
+                                                                    android:id="@+id/start_videobutton"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_centerInParent="true" />
+
+                                                                <RelativeLayout
+                                                                    android:id="@+id/video_progressbar_layout"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="@dimen/oustlayout_dimen25"
+                                                                    android:layout_alignParentBottom="true"
+                                                                    android:visibility="gone">
+
+                                                                    <ImageView
+                                                                        android:id="@+id/video_expandbtn"
+                                                                        android:layout_width="@dimen/oustlayout_dimen23"
+                                                                        android:layout_height="@dimen/oustlayout_dimen23"
+                                                                        android:layout_alignParentRight="true"
+                                                                        android:layout_centerVertical="true"
+                                                                        android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                                                        android:padding="@dimen/oustlayout_dimen1"
+                                                                        android:src="@drawable/ic_zoomimg"
+                                                                        android:visibility="visible" />
+
+                                                                    <ImageView
+                                                                        android:id="@+id/video_stopbtn"
+                                                                        android:layout_width="@dimen/oustlayout_dimen25"
+                                                                        android:layout_height="@dimen/oustlayout_dimen25"
+                                                                        android:layout_centerVertical="true"
+                                                                        android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                                                        android:padding="@dimen/oustlayout_dimen1"
+                                                                        android:src="@drawable/ic_pause_white"
+                                                                        android:visibility="visible" />
+
+                                                                    <ProgressBar
+                                                                        android:id="@+id/video_progressbar"
+                                                                        style="?android:attr/progressBarStyleHorizontal"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="@dimen/oustlayout_dimen25"
+                                                                        android:layout_centerVertical="true"
+                                                                        android:layout_margin="@dimen/oustlayout_dimen4"
+                                                                        android:layout_toRightOf="@+id/video_stopbtn"
+                                                                        android:progress="0"
+                                                                        android:progressDrawable="@drawable/video_progress" />
+                                                                </RelativeLayout>
+                                                            </RelativeLayout>
+
+                                                            <LinearLayout
+                                                                android:id="@+id/learningcard_tuta"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginTop="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen8"
+                                                                android:orientation="vertical"
+                                                                android:visibility="gone">
+
+                                                                <RelativeLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content">
+
+                                                                    <pl.droidsonroids.gif.GifImageView
+                                                                        android:id="@+id/solutionMain_imagea"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:adjustViewBounds="true"
+                                                                        android:maxHeight="@dimen/oustlayout_dimen350"
+                                                                        android:visibility="visible" />
+                                                                </RelativeLayout>
+                                                            </LinearLayout>
+
+                                                            <LinearLayout
+                                                                android:id="@+id/learningcard_tutb"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginTop="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen8"
+                                                                android:orientation="vertical"
+                                                                android:visibility="gone">
+
+                                                                <RelativeLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content">
+
+                                                                    <pl.droidsonroids.gif.GifImageView
+                                                                        android:id="@+id/solutionMain_imageb"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:adjustViewBounds="true"
+                                                                        android:maxHeight="@dimen/oustlayout_dimen350"
+                                                                        android:visibility="visible" />
+                                                                </RelativeLayout>
+                                                            </LinearLayout>
+
+                                                            <RelativeLayout
+                                                                android:id="@+id/halfimage_layout"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginTop="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen8"
+                                                                android:orientation="vertical"
+                                                                android:visibility="gone">
+
+                                                                <pl.droidsonroids.gif.GifImageView
+                                                                    android:id="@+id/learning_halfimgage"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="450dp"
+                                                                    android:scaleType="fitXY"
+                                                                    android:visibility="visible" />
+                                                            </RelativeLayout>
+
+                                                            <RelativeLayout
+                                                                android:id="@+id/fullimage_layout"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginTop="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen8"
+                                                                android:orientation="vertical"
+                                                                android:visibility="gone">
+
+                                                                <pl.droidsonroids.gif.GifImageView
+                                                                    android:id="@+id/learning_fullimgage"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="600dp"
+                                                                    android:scaleType="fitXY"
+                                                                    android:visibility="visible" />
+                                                            </RelativeLayout>
+
+                                                            <com.oustme.oustsdk.tools.htmlrender.HtmlTextView
+                                                                android:id="@+id/solution_headertext"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                                                android:layout_marginTop="@dimen/oustlayout_dimen8"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                                                android:lineSpacingExtra="@dimen/oustlayout_dimen5"
+                                                                android:padding="@dimen/oustlayout_dimen6"
+                                                                android:text=""
+                                                                android:textColor="@color/whitea"
+                                                                android:textSize="@dimen/ousttext_dimen23"
+                                                                android:textStyle="bold"
+                                                                android:visibility="gone" />
+
+                                                            <com.oustme.oustsdk.tools.htmlrender.HtmlTextView
+                                                                android:id="@+id/solution_desc"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                                                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                                                android:gravity="bottom"
+                                                                android:lineSpacingExtra="@dimen/oustlayout_dimen6"
+                                                                android:padding="@dimen/oustlayout_dimen5"
+                                                                android:text=""
+                                                                android:textColor="@color/whitea"
+                                                                android:textSize="@dimen/ousttext_dimen18"
+                                                                android:visibility="gone" />
+                                                        </LinearLayout>
+                                                    </ScrollView>
+                                                </RelativeLayout>
+                                            </RelativeLayout>
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rm_image_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/rm_image_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/readmore_bottom_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen40"
+                            android:layout_alignParentBottom="true">
+
+                            <LinearLayout
+                                android:id="@+id/bottomswipe_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen40"
+                                android:layout_alignParentBottom="true"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen2"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen2"
+                                    android:background="@color/LiteGray"></RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/oustlayout_dimen40"
+                                        android:layout_alignParentBottom="true">
+
+                                        <RelativeLayout
+                                            android:id="@+id/rm_share_layout"
+                                            android:layout_width="@dimen/oustlayout_dimen25"
+                                            android:layout_height="@dimen/oustlayout_dimen25"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/oustlayout_dimen20">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:src="@drawable/ic_share"
+                                                android:tint="@color/DarkGray" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:id="@+id/readmore_favourite_layout"
+                                            android:layout_width="@dimen/oustlayout_dimen30"
+                                            android:layout_height="@dimen/oustlayout_dimen30"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                            android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                            android:layout_toLeftOf="@id/rm_share_layout">
+
+                                            <ImageView
+                                                android:id="@+id/unfavourite"
+                                                android:layout_width="@dimen/oustlayout_dimen25"
+                                                android:layout_height="@dimen/oustlayout_dimen25"
+                                                android:layout_centerVertical="true"
+                                                android:scaleType="fitXY"
+                                                android:src="@drawable/unfavourite"
+                                                android:tint="@color/DarkGray"
+                                                android:visibility="visible" />
+                                        </RelativeLayout>
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

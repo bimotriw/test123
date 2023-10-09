@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/drawer_item_layout"
+        android:layout_alignParentBottom="false"
+        android:background="@drawable/row_selector"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:padding="@dimen/oustlayout_dimen1"
+        android:gravity="bottom">
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_text"
+            android:textAllCaps="true"
+            tools:text="item name"
+            android:layout_marginRight="@dimen/oustlayout_dimen15"
+            android:layout_marginLeft="@dimen/oustlayout_dimen15"
+            android:gravity="left|center_vertical"
+            android:textColor="@drawable/drawer_menu_item_clcik"
+            android:textSize="@dimen/ousttext_dimen14"
+            android:layout_marginTop="@dimen/oustlayout_dimen8"
+            android:layout_marginBottom="@dimen/oustlayout_dimen4"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/LiteGray"
+            android:layout_marginRight="@dimen/oustlayout_dimen15"
+            android:layout_marginLeft="@dimen/oustlayout_dimen15"></View>
+    </RelativeLayout>
+</LinearLayout>

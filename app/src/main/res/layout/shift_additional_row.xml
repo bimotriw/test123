@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/oustlayout_dimen3"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_height="@dimen/oustlayout_dimen20">
+        <View
+            android:layout_width="@dimen/oustlayout_dimen10"
+            android:layout_height="@dimen/oustlayout_dimen2"
+            android:background="@color/common_grey"></View>
+    </LinearLayout>
+
+    <com.oustme.oustsdk.customviews.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/common_grey"
+        android:id="@+id/info_text"
+        android:paddingLeft="@dimen/oustlayout_dimen5"
+        android:text=" "
+        android:textSize="@dimen/ousttext_dimen14"
+        />
+</LinearLayout>

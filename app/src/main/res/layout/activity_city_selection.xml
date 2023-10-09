@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.common.todoactivity.CitySelection"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/ProgressBarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:alpha="0.7"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:elevation="@dimen/oustlayout_dimen2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ProgressBar
+            android:id="@+id/mProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="5dp"/>
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Loading data.."
+            android:textColor="@color/whitea"
+            android:elevation="5dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/search_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen70"
+        android:background="@color/darkorange"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen50"
+            android:layout_marginLeft="@dimen/oustlayout_dimen10"
+            android:layout_marginRight="@dimen/oustlayout_dimen10"
+            android:background="@drawable/white_corner_rounded_rectangle"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="@dimen/oustlayout_dimen22"
+                android:layout_height="@dimen/oustlayout_dimen22"
+                android:src="@drawable/search_oust"
+                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                android:layout_centerVertical="true"
+                >
+            </ImageView>
+
+            <EditText
+                android:id="@+id/enter_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Search your city"
+                android:textColor="@color/whitea"
+                android:textColorHint="@color/lightwhite"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/oustlayout_dimen18"
+                android:paddingLeft="@dimen/oustlayout_dimen10"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/search_icon"
+                android:layout_toLeftOf="@id/close_image_city_selection"
+                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                android:textCursorDrawable="@null"
+                ></EditText>
+
+            <ImageView
+                android:id="@+id/close_image_city_selection"
+                android:layout_width="@dimen/oustlayout_dimen30"
+                android:layout_height="@dimen/oustlayout_dimen30"
+                android:src="@drawable/ic_close_img"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                >
+            </ImageView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        app:shimmer_auto_start="true"
+        app:shimmer_direction="left_to_right"
+        app:shimmer_duration="1500"
+        app:shimmer_shape="linear"
+        android:visibility="gone"
+        android:id="@+id/shimmerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/search_main_layout"
+        android:layout_above="@+id/linearLayoutNext">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+            <include layout="@layout/shimmer_placeholder_layout"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ListView
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/listViewLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/oustlayout_dimen8"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1px"
+        android:listSelector="@color/Black"
+        android:layout_below="@+id/search_main_layout"
+        android:layout_above="@+id/linearLayoutNext"
+        tools:listitem="@layout/language_list_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:paddingTop="@dimen/oustlayout_dimen6"
+        android:isScrollContainer="true"
+        android:id="@+id/recyclerView_city"
+        android:background="@color/light_grey"
+        android:orientation="vertical"
+        tools:listitem="@layout/city_list_item"
+        android:layout_below="@+id/search_main_layout"
+        android:layout_above="@+id/linearLayoutNext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayoutNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkorange"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/oustlayout_dimen10"
+        android:paddingBottom="@dimen/oustlayout_dimen10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/next_arrow"
+            android:layout_width="@dimen/oustlayout_dimen25"
+            android:layout_height="@dimen/oustlayout_dimen25"
+            android:src="@drawable/ic_right_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_no_data"
+        android:background="@color/light_grey"
+        android:layout_below="@+id/search_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="@dimen/oustlayout_dimen30"
+            android:gravity="top|center_horizontal"
+            android:textSize="@dimen/oustlayout_dimen22"
+            android:text="No data found"
+            android:textColor="@color/black_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_no_network"
+        android:visibility="gone">
+        <include layout="@layout/no_network_with_retry_button"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

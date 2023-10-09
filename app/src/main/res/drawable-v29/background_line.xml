@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Define the background properties like color etc -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/fulltransparent"
+                android:centerColor="@color/whitea"
+                android:centerY="0.8"
+                android:endColor="@color/fulltransparent"
+                android:angle="0"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/fulltransparent"
+                android:centerColor="@color/whitea"
+                android:centerY="0.2"
+                android:endColor="@color/fulltransparent"
+                android:angle="0"/>
+        </shape>
+    </item>
+</layer-list>

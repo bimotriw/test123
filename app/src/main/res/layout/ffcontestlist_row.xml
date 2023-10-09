@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/whitelight"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contenstrow_mainlayout"
+        android:baselineAligned="false">
+        <RelativeLayout
+            android:layout_width="@dimen/oustlayout_dimen100"
+            android:layout_height="@dimen/oustlayout_dimen100"
+            android:background="@drawable/contest_date_bgd"
+            android:id="@+id/contest_dateLayout">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contest_month_date"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/ousttext_dimen14"
+                    android:textAllCaps="true" />
+
+                <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contest_dates"
+                    android:layout_below="@+id/contest_month_date"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/White"
+                    android:text=""
+                    android:textSize="@dimen/ousttext_dimen14" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/contest_dateLayout"
+            android:layout_height="@dimen/oustlayout_dimen100">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen65"
+                android:id="@+id/eventbannerlayout"
+                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                android:layout_marginTop="@dimen/oustlayout_dimen10">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/contest_eventBannerImg"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/eventbannerlayout"
+                android:layout_height="wrap_content"
+                android:id="@+id/conteststatus_text"
+                android:paddingRight="@dimen/oustlayout_dimen12"
+                android:text=""
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

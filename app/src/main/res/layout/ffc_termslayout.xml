@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popupBackGround">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/oustlayout_dimen30"
+            android:layout_marginTop="@dimen/oustlayout_dimen30"
+            android:layout_marginLeft="@dimen/oustlayout_dimen20"
+            android:layout_marginRight="@dimen/oustlayout_dimen20"
+            android:layout_centerInParent="true"
+            android:background="@drawable/desclaimer_popup_rounded_corner"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ffcinstruction_sublayout"
+                android:background="@drawable/desclaimer_popup_inside_roundedcorner"
+                android:layout_margin="@dimen/oustlayout_dimen10">
+                <com.oustme.oustsdk.customviews.ProCustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Undertaking"
+                    android:id="@+id/ffcinstruction_title"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:textColorHint="@color/Gray"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/oustlayout_dimen20"
+                    android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/ousttext_dimen20"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/oustlayout_dimen5"
+                    android:layout_below="@+id/ffcinstruction_title">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.oustme.oustsdk.tools.htmlrender.HtmlTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="15"
+                            android:text=""
+                            android:lineSpacingExtra="@dimen/oustlayout_dimen5"
+                            android:id="@+id/ffcinstructionspopup_text"
+                            android:padding="@dimen/oustlayout_dimen5"
+                            android:layout_marginBottom="@dimen/oustlayout_dimen10"
+                            android:textSize="@dimen/ousttext_dimen20"
+                            android:textColor="@color/Gray"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <ImageButton
+                    android:layout_width="@dimen/oustlayout_dimen40"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:id="@+id/ffcresisterpopup_btnClose"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_close_img"
+                    android:scaleType="fitXY"
+                    android:padding="@dimen/oustlayout_dimen8"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/Black"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

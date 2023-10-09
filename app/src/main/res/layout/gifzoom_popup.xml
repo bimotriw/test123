@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fulltransparent">
+
+        <RelativeLayout
+            android:id="@+id/mainzoomimg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/LiteGreen"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/oustlayout_dimen1"
+                android:background="@color/white_pressed">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/mainzooming_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/zooming_imgclose_btn"
+                    android:layout_width="@dimen/oustlayout_dimen50"
+                    android:layout_height="@dimen/oustlayout_dimen50"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/fulltransparent"
+                    android:src="@drawable/ic_close_img"
+                    android:tint="@color/Black" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/oustlayout_dimen35"
+    android:paddingLeft="@dimen/oustlayout_dimen8">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fill_answerback"
+        android:background="@drawable/fill_answerback">
+        <com.oustme.oustsdk.customviews.CustomTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fill_text"
+            android:singleLine="true"
+            android:textColor="@color/Black"
+            android:padding="@dimen/oustlayout_dimen2"
+            android:text=""
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/oustlayout_dimen35"
+            android:visibility="visible"
+            android:textSize="@dimen/ousttext_dimen20" />
+        <com.oustme.oustsdk.customviews.CustomTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:singleLine="true"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/transparent"
+            android:text=""
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/oustlayout_dimen35"
+            android:textSize="@dimen/ousttext_dimen20"
+            android:id="@+id/dummytext"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/index_text"
+        android:text="1"
+        android:textColor="@color/fulltransparent"/>
+</RelativeLayout>

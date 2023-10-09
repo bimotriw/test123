@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.rough.VideoOverlay"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blackoverlay_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_overlay"
+        >
+
+        <RelativeLayout
+            android:id="@+id/backArrow_menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/oustlayout_dimen20"
+            android:layout_marginLeft="@dimen/oustlayout_dimen20"
+            android:layout_marginRight="@dimen/oustlayout_dimen20"
+            >
+            <ImageView
+                android:id="@+id/back_video"
+                android:layout_width="@dimen/oustlayout_dimen25"
+                android:layout_height="@dimen/oustlayout_dimen25"
+                android:src="@drawable/ic_back"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="@dimen/oustlayout_dimen25"
+                android:layout_height="@dimen/oustlayout_dimen25"
+                android:src="@drawable/menu"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                >
+            </ImageView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/video_control_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/oustlayout_dimen35"
+            android:layout_marginRight="@dimen/oustlayout_dimen35"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@id/backArrow_menu_layout"
+            android:layout_marginTop="@dimen/oustlayout_dimen200"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="visible"
+            >
+
+            <ImageView
+                android:id="@+id/backward_image"
+                android:layout_width="@dimen/oustlayout_dimen50"
+                android:layout_height="@dimen/oustlayout_dimen50"
+                android:layout_weight="1"
+                android:src="@drawable/ic_back">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/pause_image"
+                android:layout_width="@dimen/oustlayout_dimen50"
+                android:layout_height="@dimen/oustlayout_dimen50"
+                android:layout_weight="1"
+                android:src="@drawable/ic_pause">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/forward_image"
+                android:layout_width="@dimen/oustlayout_dimen50"
+                android:layout_height="@dimen/oustlayout_dimen50"
+                android:src="@drawable/ic_arrow_forward_white"
+                android:layout_weight="1"
+                >
+            </ImageView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/progress_barr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/oustlayout_dimen30"
+            android:visibility="visible"
+            >
+            <android.support.v7.widget.AppCompatSeekBar
+                android:id="@+id/progress_bar_video"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen5"
+                android:background="@color/grayout"
+                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                >
+            </android.support.v7.widget.AppCompatSeekBar>
+
+
+            <RelativeLayout
+                android:id="@+id/video_timer_share_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/oustlayout_dimen10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/oustlayout_dimen14"
+                android:layout_marginRight="@dimen/oustlayout_dimen14"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar_video"
+                android:visibility="visible"
+                >
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/video_played_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/ousttext_dimen18"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/whitea"
+                    >
+                </com.oustme.oustsdk.customviews.CustomTextView>
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/video_left_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/ousttext_dimen18"
+                    android:layout_toEndOf="@+id/video_played_time"
+                    android:layout_toRightOf="@+id/video_played_time"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/whitea"
+                    >
+                </com.oustme.oustsdk.customviews.CustomTextView>
+
+
+                <ImageView
+                    android:id="@+id/share_icon"
+                    android:layout_width="@dimen/oustlayout_dimen30"
+                    android:layout_height="@dimen/oustlayout_dimen30"
+                    android:src="@drawable/ic_share"
+                    android:layout_toStartOf="@+id/sound_icon"
+                    android:layout_toLeftOf="@id/sound_icon"
+                    android:layout_marginRight="@dimen/oustlayout_dimen25"
+                    android:layout_marginEnd="@dimen/oustlayout_dimen25"
+                    >
+                </ImageView>
+
+
+                <ImageView
+                    android:id="@+id/sound_icon"
+                    android:layout_width="@dimen/oustlayout_dimen32"
+                    android:layout_height="@dimen/oustlayout_dimen32"
+                    android:src="@drawable/ic_share"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    >
+                </ImageView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!--        <ImageView-->
+        <!--            android:id="@+id/red_circle"-->
+        <!--            android:layout_width="@dimen/oustlayout_dimen36"android.support.constraint.ConstraintLayout@dimen/oustlayout_dimen36"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_alignParentLeft="true"-->
+        <!--            android:layout_marginStart="80dp"-->
+        <!--            android:layout_marginLeft="80dp"-->
+        <!--            android:src="@drawable/ic_redcircle"></ImageView>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/dotted_line_layout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:weightSum="3"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:layout_below="@id/progress_bar_video"-->
+        <!--            android:layout_marginTop="@dimen/oustlayout_dimen5"-->
+        <!--            >-->
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="1"-->
+        <!--                >-->
+        <!--            <ImageView-->
+        <!--                android:id="@+id/first_dotted_line"-->
+        <!--                android:layout_width="@dimen/oustlayout_dimen1"-->
+        <!--                android:layout_height="@dimen/oustlayout_dimen6"-->
+        <!--                android:src="@drawable/dot_line"-->
+        <!--                >-->
+        <!--            </ImageView>-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="@dimen/oustlayout_dimen5"-->
+        <!--                    android:layout_height="@dimen/oustlayout_dimen5"-->
+        <!--                    android:src="@drawable/ic_smallwhitecircle"-->
+        <!--                    >-->
+
+        <!--                </ImageView>-->
+
+        <!--            </LinearLayout>-->
+        <!--        </LinearLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/question_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black_overlay"
+        >
+
+        <ImageView
+            android:id="@+id/questionMark_image"
+            android:layout_width="@dimen/oustlayout_dimen150"
+            android:layout_height="@dimen/oustlayout_dimen150"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+        </ImageView>
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:id="@+id/question_type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingLeft="@dimen/oustlayout_dimen30"
+            android:paddingRight="@dimen/oustlayout_dimen30"
+            android:layout_marginTop="@dimen/oustlayout_dimen90"
+            android:text=""
+            android:textColor="@color/whitea"
+            android:textSize="@dimen/ousttext_dimen24"
+            android:visibility="invisible"
+            >
+
+        </com.oustme.oustsdk.customviews.CustomTextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+package com.oustme.oustsdk.response.common;
+
+import androidx.annotation.Keep;
+
+import com.oustme.oustsdk.response.course.CommonResponse;
+
+import java.util.List;
+
+/**
+ * Created by shilpysamaddar on 21/03/17.
+ */
+
+@Keep
+public class CourseLeaderBoardResponse  extends CommonResponse {
+    private List< LeaderBoardDataRow> leaderBoardDataList;
+
+    public List< LeaderBoardDataRow> getLeaderBoardDataList() {
+        return leaderBoardDataList;
+    }
+
+    public void setLeaderBoardDataList(List< LeaderBoardDataRow> leaderBoardDataList) {
+        this.leaderBoardDataList = leaderBoardDataList;
+    }
+}

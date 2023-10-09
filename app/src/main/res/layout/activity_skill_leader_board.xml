@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".skill_ui.ui.SkillLeaderBoardActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oustlayout_dimen40"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <FrameLayout
+                android:id="@+id/toolbar_close_icon"
+                android:layout_width="@dimen/oustlayout_dimen40"
+                android:layout_height="match_parent">
+
+                <ImageView
+
+                    android:id="@+id/toolbar_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back_cd"
+                    android:tint="@android:color/white"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/ousttext_dimen24"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="0sp"
+                android:text="@string/leaderboard_text"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:translationY="-0.97sp"
+                tools:targetApi="lollipop" />
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/skill_bg_lay"
+                android:layout_width="match_parent"
+                android:layout_height="187dp"
+                android:layout_gravity="center"
+                android:background="@android:color/black"
+                android:baselineAligned="false">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.4"
+                    android:src="@drawable/skill_leader_bg" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/golden_spring" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rank_2_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="115dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="102dp"
+                        android:layout_height="102dp"
+                        android:background="@drawable/leaderboard_rank_2"
+                        android:scaleType="centerCrop"
+                        app:civ_border_width="0dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/rank_2_user"
+                        android:layout_width="99dp"
+                        android:layout_height="99dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/leaderboard_rank_2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user_avatar"
+                        app:civ_border_color="@color/LiteGreen"
+                        app:civ_border_width="0dp" />
+
+                    <TextView
+                        android:id="@+id/rank_2_text"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/leaderboard_rank_2"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/textBlack"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        tools:targetApi="lollipop" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rank_1_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="137dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="122dp"
+                            android:layout_height="122dp"
+                            android:background="@drawable/leaderboard_user_bg"
+                            android:scaleType="centerCrop"
+                            app:civ_border_width="0dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/rank_1_user"
+                            android:layout_width="119dp"
+                            android:layout_height="119dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:background="@drawable/leaderboard_user_bg"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_user_avatar"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/rank_1_text"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/leaderboard_user_bg"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/textBlack"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            tools:targetApi="lollipop" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rank_3_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="115dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="end">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="102dp"
+                        android:layout_height="102dp"
+                        android:background="@drawable/leaderboard_rank_3"
+                        android:scaleType="centerCrop"
+                        app:civ_border_width="0dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/rank_3_user"
+                        android:layout_width="99dp"
+                        android:layout_height="99dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/leaderboard_rank_3"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user_avatar"
+                        app:civ_border_width="0dp" />
+
+                    <TextView
+                        android:id="@+id/rank_3_text"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/leaderboard_rank_3"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/textBlack"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        tools:targetApi="lollipop" />
+
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/user_data_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen70"
+                android:layout_gravity="center"
+                android:background="#D32F2F"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/self_user_rank"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:targetApi="lollipop" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/self_user"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/leaderboard_user_bg"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user_avatar"
+                    app:civ_border_color="@color/LiteGreen"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/self_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    tools:targetApi="lollipop" />
+
+                <TextView
+                    android:id="@+id/self_user_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:targetApi="lollipop" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:text="@string/score_text"
+                    tools:targetApi="lollipop" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/leaderboard_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popupBackGround"
+    android:orientation="vertical"
+    android:gravity="center_vertical|center_horizontal">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="@dimen/oustlayout_dimen230"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+<RelativeLayout
+    android:layout_width="@dimen/oustlayout_dimen230"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@color/White">
+        <RelativeLayout
+            android:id="@+id/subjectBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/oustlayout_dimen30"
+            android:padding="@dimen/oustlayout_dimen20"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen35"
+                android:orientation="vertical"
+                android:id="@+id/titleLayout"
+                android:layout_marginTop="@dimen/oustlayout_dimen_minus4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|center_horizontal">
+
+                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                        android:id="@+id/feedBackTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen20"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/feedback_text"
+                        android:gravity="center|center_vertical"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/ousttext_dimen16" />
+
+                    <TextView
+                        android:id="@+id/bottomLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen1"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/LiteGray"
+                        android:gravity="center|top|center_vertical"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/ousttext_dimen16"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleLayout">
+            <com.oustme.oustsdk.customviews.CustomOustButton
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen40"
+                android:background="@color/LiteGreen"
+                android:text="@string/submit"
+                android:textColor="@color/White"
+                android:textStyle="bold"
+                android:textSize="@dimen/ousttext_dimen12"
+                android:layout_below="@+id/incorrectQuestionCBox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/oustlayout_dimen20" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grammaticalErrors"
+                android:id="@+id/grammaticalErrorCBox"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:checked="false"
+                android:textColor="@color/DarkGray"
+                android:textSize="@dimen/ousttext_dimen14"
+                android:layout_marginTop="@dimen/oustlayout_dimen10" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inCorrectAnswer"
+                android:id="@+id/incorrectAnswersCBox"
+                android:layout_below="@+id/grammaticalErrorCBox"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:checked="false"
+                android:textColor="@color/DarkGray"
+                android:textSize="@dimen/ousttext_dimen14" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inCorrectQuestion"
+                android:id="@+id/incorrectQuestionCBox"
+                android:layout_below="@+id/incorrectAnswersCBox"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:checked="false"
+                android:textColor="@color/DarkGray"
+                android:textSize="@dimen/ousttext_dimen14" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="@dimen/oustlayout_dimen40"
+            android:layout_height="@dimen/oustlayout_dimen40"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_close_img"
+            android:tint="@color/Black"
+            android:contentDescription="@string/app_name" />
+</RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

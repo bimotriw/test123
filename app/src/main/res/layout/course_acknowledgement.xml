@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/course_acknowledgment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_transparent_darka">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="2dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/oustlayout_dimen10">
+
+
+            <TextView
+                android:id="@+id/ack_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/oustlayout_dimen20"
+                android:text=""
+                android:textSize="@dimen/ousttext_dimen25"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/ack_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ack_heading"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                android:layout_marginTop="@dimen/oustlayout_dimen30"
+                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                android:lineSpacingExtra="@dimen/oustlayout_dimen2"
+                android:text=""
+                android:textSize="@dimen/ousttext_dimen18" />
+
+            <RelativeLayout
+                android:id="@+id/ack_agree_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ack_content"
+                android:layout_marginTop="@dimen/oustlayout_dimen25"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ack_agree_checkbox"
+                    android:layout_width="@dimen/oustlayout_dimen25"
+                    android:layout_height="@dimen/oustlayout_dimen25"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:src="@drawable/ic_check_box_black"
+                    app:tint="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/ack_agree_checkbox_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:layout_toRightOf="@+id/ack_agree_checkbox"
+                    android:text=""
+                    android:textSize="@dimen/ousttext_dimen16" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ack_ok_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ack_agree_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/oustlayout_dimen20"
+                android:layout_marginBottom="@dimen/oustlayout_dimen20"
+                android:background="@drawable/disclaimer_button_roundedcorner_disabled">
+
+                <TextView
+                    android:id="@+id/ack_ok_button_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/oustlayout_dimen45"
+                    android:paddingTop="@dimen/oustlayout_dimen7"
+                    android:paddingRight="@dimen/oustlayout_dimen45"
+                    android:paddingBottom="@dimen/oustlayout_dimen7"
+                    android:text=""
+                    android:textColor="@color/white_pressed"
+                    android:textSize="@dimen/ousttext_dimen23" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

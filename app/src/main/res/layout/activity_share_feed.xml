@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_layout">
+        <RelativeLayout
+            android:layout_width="@dimen/oustlayout_dimen50"
+            android:layout_height="@dimen/oustlayout_dimen50"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ll_close">
+            <ImageView
+                android:layout_width="@dimen/oustlayout_dimen30"
+                android:layout_height="@dimen/oustlayout_dimen30"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_close_img"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/feed_image_ll"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/feed_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:minHeight="@dimen/oustlayout_dimen100" />
+            <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feed_image"
+                android:id="@+id/feed_title"
+                android:text=""
+                android:gravity="center"
+                android:layout_marginTop="@dimen/oustlayout_dimen5"
+                android:textSize="@dimen/ousttext_dimen16"
+                android:textColor="@android:color/white"
+                android:singleLine="true"/>
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/oustlayout_dimen5"
+                android:layout_below="@+id/feed_title"
+                android:textSize="@dimen/ousttext_dimen14"
+                android:textColor="@android:color/white"
+                android:id="@+id/feed_description" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/share_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/oustlayout_dimen20"
+            android:background="@drawable/circle_white_border"
+            android:padding="@dimen/oustlayout_dimen10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                android:tint="@android:color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

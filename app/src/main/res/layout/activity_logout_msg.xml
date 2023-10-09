@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_transparent_dark"
+    tools:context="com.oustme.oustsdk.activity.common.LogoutMsgActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/oustlayout_dimen35"
+        android:background="@drawable/rounded_whitefill"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/oustlayout_dimen20"
+            android:gravity="center"
+            android:textColor="@color/Black"
+            android:text="EXITING APP!"
+            android:textSize="@dimen/ousttext_dimen20" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_green"
+            android:padding="@dimen/oustlayout_dimen15">
+
+            <ImageView
+                android:layout_width="@dimen/oustlayout_dimen35"
+                android:layout_height="@dimen/oustlayout_dimen35"
+                android:src="@drawable/logout"
+                android:tint="@color/secondry_litegreen" />
+        </LinearLayout>
+
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/QuizBgGray"
+            android:layout_margin="@dimen/oustlayout_dimen20"
+            android:text="@string/exit_oust_msg"
+            android:textSize="@dimen/ousttext_dimen16" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/okbtn"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_bottom_green"
+            android:paddingBottom="@dimen/oustlayout_dimen5"
+            android:paddingLeft="@dimen/oustlayout_dimen35"
+            android:paddingRight="@dimen/oustlayout_dimen35"
+            android:paddingTop="@dimen/oustlayout_dimen5">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/oustlayout_dimen2"
+                android:src="@drawable/ic_arrow_forward_white"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

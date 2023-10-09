@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popupBackGround">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relativeLayout8"
+        android:layout_marginLeft="@dimen/oustlayout_dimen5"
+        android:layout_marginRight="@dimen/oustlayout_dimen5">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/stringprogressLayout"
+            android:layout_marginLeft="@dimen/oustlayout_dimen5"
+            android:layout_marginRight="@dimen/oustlayout_dimen5"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/oustlayout_dimen50">
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="@bool/default_underline_indicator_fades"
+                android:indeterminateDuration="2000"
+                android:indeterminateBehavior="repeat"
+                android:interpolator="@android:anim/linear_interpolator"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_centerInParent="true"
+                android:layout_height="@dimen/oustlayout_dimen15"
+                android:indeterminateDrawable="@drawable/flatprogressbarback"
+                android:layout_margin="@dimen/oustlayout_dimen5"
+                android:visibility="visible"/>
+            <ProgressBar
+                android:id="@+id/stringdownloadprogress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_height="@dimen/oustlayout_dimen15"
+                android:progress="0"
+                android:progressDrawable="@drawable/download_progressbar"
+                android:layout_margin="@dimen/oustlayout_dimen5"
+                android:visibility="visible"/>
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen15"
+                android:id="@+id/stringdownloadprogresstext"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="0%"/>
+            <com.oustme.oustsdk.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/stringdownloadtext"
+                android:layout_marginTop="@dimen/oustlayout_dimen5"
+                android:paddingTop="@dimen/oustlayout_dimen5"
+                android:gravity="center"
+                android:layout_below="@+id/stringdownloadprogresstext"
+                android:textColor="@color/LiteGray"
+                android:textSize="@dimen/ousttext_dimen16"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

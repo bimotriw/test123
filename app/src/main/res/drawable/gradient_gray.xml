@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/MoreLiteGray"
+                android:centerColor="@color/popupBackGroundwhitea"
+                android:endColor="@color/popupBackGroundc"
+                android:angle="270"/>
+            <corners android:topLeftRadius="@dimen/oustlayout_dimen5" android:topRightRadius="@dimen/oustlayout_dimen10"></corners>
+        </shape>
+    </item>
+</selector>

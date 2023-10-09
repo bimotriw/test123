@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <com.oustme.oustsdk.customviews.TryRippleView
+        android:id="@+id/list_mainlayout_rippleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_color="#01b5a2"
+        app:rv_rippleDuration="250">
+
+        <RelativeLayout
+            android:id="@+id/leaderboardlist_mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/oustlayout_dimen5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center">
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/indexText"
+                        android:layout_width="@dimen/oustlayout_dimen40"
+                        android:layout_height="@dimen/oustlayout_dimen40"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/circle_gray_corner"
+                        android:gravity="center|center_vertical"
+                        android:text=""
+                        android:textColor="@color/DarkGray"
+                        android:textSize="@dimen/ousttext_dimen15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.4"
+                    android:gravity="center_vertical">
+
+                    <com.oustme.oustsdk.customviews.CircleImageView
+                        android:id="@+id/leaderBoardImage"
+                        android:layout_width="@dimen/oustlayout_dimen50"
+                        android:layout_height="@dimen/oustlayout_dimen50"
+                        android:background="@drawable/roundedcornergreenbackground"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/DarkGray"
+                        android:textSize="@dimen/ousttext_dimen16" />
+
+                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                        android:id="@+id/leaderBoardImageText"
+                        android:layout_width="@dimen/oustlayout_dimen50"
+                        android:layout_height="@dimen/oustlayout_dimen50"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:text=""
+                        android:textColor="@color/whitea"
+                        android:textSize="@dimen/ousttext_dimen15"
+                        android:visibility="gone" />
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/DarkGray"
+                        android:textSize="@dimen/ousttext_dimen16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/xpValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/oustlayout_dimen50"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center|center_vertical"
+                        android:text=""
+                        android:textColor="@color/DarkGray"
+                        android:textSize="@dimen/ousttext_dimen16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_below="@+id/leaderboardlist_mainlayout"
+            android:layout_marginLeft="@dimen/oustlayout_dimen5"
+            android:layout_marginRight="@dimen/oustlayout_dimen5"
+            android:background="@color/LiteGray"></RelativeLayout>
+    </com.oustme.oustsdk.customviews.TryRippleView>
+</RelativeLayout>

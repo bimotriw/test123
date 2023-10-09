@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/oustlayout_dimen8"
+    android:background="@color/fulltransparent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/oustlayout_dimen35"
+        android:id="@+id/fill_mainlayout">
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:singleLine="true"
+            android:background="@color/fulltransparent"
+            android:textColor="@color/fulltransparent"
+            android:text=""
+            android:id="@+id/dummytext"
+            android:layout_centerVertical="true"
+            android:gravity="bottom|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/oustlayout_dimen35"
+            android:textSize="@dimen/ousttext_dimen18" />
+    </RelativeLayout>
+    <com.oustme.oustsdk.customviews.CustomTextView
+        android:singleLine="true"
+        android:layout_below="@+id/fill_mainlayout"
+        android:id="@+id/fill_mainlayoutb"
+        android:background="@color/LiteGreen"
+        android:textColor="@color/fulltransparent"
+        android:text="__"
+        android:layout_centerVertical="true"
+        android:gravity="bottom|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/oustlayout_dimen1"
+        android:textSize="@dimen/ousttext_dimen20" />
+</RelativeLayout>
+

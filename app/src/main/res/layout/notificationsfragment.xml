@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/alertsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:background="@color/whitea"
+            android:cacheColorHint="@android:color/transparent"
+            android:clickable="true"/>
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oustlayout_dimen20"
+            android:id="@+id/noAlertsBtnText"
+            android:paddingTop="@dimen/oustlayout_dimen2"
+            android:textColor="@color/DarkGray"
+            android:textSize="@dimen/ousttext_dimen16"
+            android:gravity="center|center_vertical"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/oustlayout_dimen25"/>
+    </RelativeLayout>
+
+    <com.oustme.oustsdk.customviews.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/oustlayout_dimen12"
+        android:paddingBottom="@dimen/oustlayout_dimen10"
+        android:textColor="@color/DarkGray"
+        android:visibility="gone"
+        android:id="@+id/nouser_text"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/ousttext_dimen16"/>
+    <!--    <include layout="@layout/fabmenubutton"/>-->
+</RelativeLayout>

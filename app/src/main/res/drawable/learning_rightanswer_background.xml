@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid
+        android:color="@color/popupBackGroundd" >
+    </solid>
+    <stroke android:width="@dimen/oustlayout_dimen2" android:color="@color/LiteGreen"/>
+    <padding
+        android:left="@dimen/oustlayout_dimen2"
+        android:top="@dimen/oustlayout_dimen2"
+        android:right="@dimen/oustlayout_dimen2"
+        android:bottom="@dimen/oustlayout_dimen2"    >
+    </padding>
+</shape>

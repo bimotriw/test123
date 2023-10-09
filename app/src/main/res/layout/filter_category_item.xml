@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter_text_rl"
+        android:paddingTop="@dimen/oustlayout_dimen3"
+        android:paddingBottom="@dimen/oustlayout_dimen3"
+        android:paddingLeft="@dimen/oustlayout_dimen7"
+        android:paddingRight="@dimen/oustlayout_dimen7"
+        android:background="@drawable/roundedcorner_filter_color"
+        android:layout_marginLeft="@dimen/oustlayout_dimen5"
+        android:layout_marginRight="@dimen/oustlayout_dimen5">
+        <com.oustme.oustsdk.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ousttext_dimen11"
+            android:paddingRight="@dimen/oustlayout_dimen5"
+            android:paddingLeft="@dimen/oustlayout_dimen5"
+            android:id="@+id/filter_item_text"
+            tools:text="All"
+            android:textColor="@android:color/white"
+            />
+    </RelativeLayout>
+</LinearLayout>

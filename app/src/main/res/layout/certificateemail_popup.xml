@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popupBackGround">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/oustlayout_dimen20"
+            android:layout_marginRight="@dimen/oustlayout_dimen20">
+
+            <LinearLayout
+                android:id="@+id/certificateanim_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@color/White"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/certificatepopup_btnClose"
+                        android:layout_width="@dimen/oustlayout_dimen40"
+                        android:layout_height="@dimen/oustlayout_dimen40"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_close_img"
+                        app:tint="@color/Black" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/certifucate_titletxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center"
+                            android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                            android:text="Your Certificate"
+                            android:textColor="@color/Gray"
+                            android:textSize="@dimen/ousttext_dimen18" />
+
+                        <TextView
+                            android:id="@+id/certificatemsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/certifucate_titletxt"
+                            android:layout_marginTop="@dimen/oustlayout_dimen5"
+                            android:gravity="center"
+                            android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                            android:text="Enter email-id to receive certificate."
+                            android:textColor="@color/Gray"
+                            android:textSize="@dimen/ousttext_dimen16" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/oustlayout_dimen5"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="false"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <com.oustme.oustsdk.customviews.OustCustomEditText
+                                android:id="@+id/edittext_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen40"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen20"
+                                android:layout_marginTop="@dimen/oustlayout_dimen10"
+                                android:layout_marginRight="@dimen/oustlayout_dimen20"
+                                android:layout_marginBottom="@dimen/oustlayout_dimen5"
+                                android:background="@drawable/greyroundedcorner_graybg"
+                                android:gravity="left|center_vertical"
+                                android:hint="Enter email"
+                                android:imeOptions="actionGo"
+                                android:inputType="text|textNoSuggestions"
+                                android:linksClickable="true"
+                                android:maxLength="50"
+                                android:paddingLeft="@dimen/oustlayout_dimen10"
+                                android:paddingRight="@dimen/oustlayout_dimen10"
+                                android:singleLine="true"
+                                android:textColor="@color/Black"
+                                android:textCursorDrawable="@null"
+                                android:textSize="@dimen/ousttext_dimen18" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/yesOrNoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen20"
+                    android:layout_marginTop="@dimen/oustlayout_dimen10"
+                    android:layout_marginRight="@dimen/oustlayout_dimen20"
+                    android:layout_marginBottom="@dimen/oustlayout_dimen15"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <com.oustme.oustsdk.customviews.CustomOustButton
+                        android:id="@+id/otp_okbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:background="@color/LiteGreen"
+                        android:gravity="center|center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/confirm"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/ousttext_dimen14" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/certificateloader_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popupBackGroundb"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/certificate_loader"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/oustlayout_dimen130"
+            android:layout_height="@dimen/oustlayout_dimen130"
+            android:layout_centerInParent="true"
+            android:max="220"
+            android:progress="150"
+            android:progressDrawable="@drawable/oustloader_drawable"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

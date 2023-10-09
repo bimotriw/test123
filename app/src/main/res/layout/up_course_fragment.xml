@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitea">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/up_course_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whitea"
+        android:paddingTop="@dimen/oustlayout_dimen10"
+        android:visibility="visible"></androidx.recyclerview.widget.RecyclerView>
+
+    <com.oustme.oustsdk.customviews.CustomTextView
+        android:id="@+id/nocourse_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/oustlayout_dimen12"
+        android:paddingBottom="@dimen/oustlayout_dimen10"
+        android:text=""
+        android:textColor="@color/Gray"
+        android:textSize="@dimen/ousttext_dimen16"
+        android:visibility="visible" />
+</RelativeLayout>

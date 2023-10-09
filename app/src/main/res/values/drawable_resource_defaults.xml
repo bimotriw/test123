@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="all_images">
+        <item name="announcement_bg">announcement_bg.png</item>
+        <item name="answerimg">answer.png</item>
+        <item name="app_icon">app_icon.png</item>
+        <item name="arrow_back">arrow_back.png</item>
+        <item name="arrow_circleleft">arrow_circleleft.png</item>
+        <item name="arrow_circleright">a.png</item>
+        <item name="arrowback">arrowback.png</item>
+        <item name="arrowforward">arrowforward.png</item>
+        <item name="b">b.png</item>
+        <item name="background_result">background_result.png</item>
+        <item name="bg_1">bg_1.png</item>
+        <item name="bg_subject">bg_subject.png</item>
+        <item name="bg_topic">bg_topic.png</item>
+        <item name="boy">boy.png</item>
+        <item name="buttonbg">buttonbg.png</item>
+        <item name="c">c.png</item>
+        <item name="certificate_icona">certificate_icona.png</item>
+        <item name="certificateiconmain">certificateiconmain.png</item>
+        <item name="challenge">challenge.png</item>
+        <item name="challenge_and_win">challenge_and_win.png</item>
+        <item name="challenge_cup">challenge_cup.png</item>
+        <item name="check_arrow">check_arrow.png</item>
+        <item name="checkbox">checkbox.png</item>
+        <item name="checked">checked.png</item>
+        <item name="click">click.png</item>
+        <item name="closesolution">closesolution.png</item>
+        <item name="closesymbol">closesymbol.png</item>
+        <item name="coins_all">coins_all.png</item>
+        <item name="coins_icon">coins_icon.png</item>
+        <item name="come_back">come_back.png</item>
+        <item name="course_finish">course_finish.png</item>
+        <item name="courses_bg">courses_bg.png</item>
+        <item name="d">d.png</item>
+        <item name="default_mydesk_1">default_mydesk_1.png</item>
+        <item name="default_mydesk__2">default_mydesk__2.png</item>
+        <item name="e">e.png</item>
+        <item name="event_white_x">event_white_x.png</item>
+        <item name="f">f.png</item>
+        <item name="fab_bg_mini">fab_bg_mini.png</item>
+        <item name="fab_bg_normal">fab_bg_normal.png</item>
+        <item name="failed_test">failed_test.png</item>
+        <item name="favorite">favorite.png</item>
+        <item name="fb">fb.png</item>
+        <item name="fill_heart">fill_heart.png</item>
+        <item name="forward_btn">forward_btn.png</item>
+        <item name="full">full.png</item>
+        <item name="g">g.png</item>
+        <item name="girlredeem">girlredeem.png</item>
+        <item name="good">good.png</item>
+        <item name="google_plus_icon">google_plus_icon.png</item>
+        <item name="gp_btn">gp_btn.png</item>
+        <item name="grey_bg">grey_bg.png</item>
+        <item name="groups_tab_orange">groups_tab_orange.png</item>
+        <item name="icon_facebook">icon_facebook.png</item>
+        <item name="image">image.jpg</item>
+        <item name="incorrect">incorrect.png</item>
+        <item name="info">info.png</item>
+        <item name="information">information.jpg</item>
+        <item name="leaderboard_icon">leaderboard_icon.png</item>
+        <item name="leaderboards">leaderboards.png</item>
+        <item name="learning_expandimage">learning_expandimage.png</item>
+        <item name="learning_leaderboard">learning_leaderboard.png</item>
+        <item name="learningindicator">learningindicator.png</item>
+        <item name="like">like.png</item>
+        <item name="like_green_icon">like_green_icon.png</item>
+        <item name="lock_normal">lock_normal.png</item>
+        <item name="login3">login3.jpg</item>
+        <item name="lose">lose.png</item>
+        <item name="mail">mail.png</item>
+        <item name="maleavatar">maleavatar.png</item>
+        <item name="more">more.png</item>
+        <item name="more_icon">more_icon.png</item>
+        <item name="mydesk">mydesk.png</item>
+        <item name="mydesk_time">mydesk_time.png</item>
+        <item name="new_history">new_history.png</item>
+        <item name="new_ntstartedimg">new_ntstartedimg.png</item>
+        <item name="new_resumeimg">new_resumeimg.png</item>
+        <item name="new_reviewimg">new_reviewimg.png</item>
+        <item name="newlp_notdownload">newlp_notdownload.png</item>
+        <item name="newlp_downloaded">newlp_downloaded.png</item>
+        <item name="newxp_img">newxp_img.png</item>
+        <item name="oc_selector">oc_selector.png</item>
+        <item name="ocbackground">ocbackground.png</item>
+        <item name="orange_bg">orange_bg.png</item>
+        <item name="oust_logo_whiteboy">oust_logo_whiteboy.png</item>
+        <item name="pdf">pdf.png</item>
+        <item name="planexticon">planexticon.png</item>
+        <item name="popup_star">popup_star.png</item>
+        <item name="popup_stara">popup_stara.png</item>
+        <item name="profile_image">profile_image.png</item>
+        <item name="profile_image_loading">profile_image_loading.gif</item>
+        <item name="profilesettingbox">profilesettingbox.png</item>
+        <item name="question_default">question_default.jpg</item>
+        <item name="rm_imagetype">rm_imagetype.png</item>
+        <item name="send">send.png</item>
+        <item name="settings_arrow">settings_arrow.png</item>
+        <item name="share_img">share.png</item>
+        <item name="solutions">solutions.png</item>
+        <item name="soundoff">soundoff.png</item>
+        <item name="soundon">soundon.png</item>
+        <item name="spinner_down_arrow">spinner_down_arrow.png</item>
+        <item name="spinnerarrow">spinnerarrow.png</item>
+        <item name="star_emptya">star_emptya.png</item>
+        <item name="star_filla">star_filla.png</item>
+        <item name="star_halfa">star_halfa.png</item>
+        <item name="start_icon">start_icon.png</item>
+        <item name="text">text.png</item>
+        <item name="thumbsdown">thumbsdown.png</item>
+        <item name="thumbsdownsmall">thumbsdownsmall.png</item>
+        <item name="thumbsup">thumbsup.png</item>
+        <item name="thumbsupsmall">thumbsupsmall.png</item>
+        <item name="tick">tick.png</item>
+        <item name="tie">tie.png</item>
+        <item name="trophyyello">trophyyello.png</item>
+        <item name="unlike_red_icon">unlike_red_icon.png</item>
+        <item name="url">url.png</item>
+        <item name="whatsapp">whatsapp.png</item>
+        <item name="whatsapp_icon">whatsapp_icon.png</item>
+        <item name="whiteboy">whiteboy.png</item>
+        <item name="whitecheck">whitecheck.png</item>
+        <item name="whitegood">whitegood.png</item>
+        <item name="whitequestion_img">whitequestion_img.png</item>
+        <item name="whiteunchecked">whiteunchecked.png</item>
+        <item name="whitewrong">whitewrong.png</item>
+        <item name="win">win.png</item>
+        <item name="wrongimg">wrong.png</item>
+        <item name="white_to_green_new">white_to_green_new.gif</item>
+        <item name="winner_info">winner_infob.png</item>
+        <item name="lucky_winner">lucky_winnerb.png</item>
+        <item name="infoicon">infoicon.png</item>
+        <item name="bulletinboard">bulletinboard.png</item>
+        <item name="oustboy_default">oustboy_default.png</item>
+        <item name="survey_defaulticon">survey_defaulticon.png</item>
+        <item name="reward_icon">reward.png</item>
+        <item name="feed_default">feed_default.jpg</item>
+        <item name="alert">alert.png</item>
+        <item name="splash">splash.jpg</item>
+        <item name="gamelet_bg">gamelet_bg.jpg</item>
+        <item name="demo">demo.png</item>
+        <!--<item name="instruction_bg">instruction_bga.png</item>-->
+        <item name="exit_icon">exit_icon.png</item>
+        <item name="video_bg">video_bg.png</item>
+        <item name="play">play.png</item>
+        <!--<item name="instruction_bg">instruction_bga.png</item>-->
+        <item name="bg_word">bg_word.png</item>
+        <item name="thumbsup_icon">thumbsup_icon.png</item>
+        <item name="share_new_icon">share_new_icon.png</item>
+        <item name="assessment_answer_icon">assessment_answer_icon.png</item>
+        <item name="leaderboard_new_icon">leaderboard_new_icon.png</item>
+        <item name="assessment_resume_icon">assessment_resume_icon.png</item>
+    </string-array>
+
+    <!-- wordjumble_icons -->
+    <string-array name="wordjumble_icons">
+        <item name="coins_word">coins_word.png</item>
+        <item name="background_word">background_word.png</item>
+        <item name="bg_word">bg_word.png</item>
+        <item name="board">board.png</item>
+        <item name="hintback">hintback.png</item>
+        <item name="letter_bg">letter_bg.png</item>
+        <item name="logo">logo.png</item>
+        <item name="question_disable">question_disable.png</item>
+        <item name="question">question.png</item>
+        <item name="refreshback">refreshback.png</item>
+        <item name="time">time.png</item>
+        <item name="tray">tray.png</item>
+        <item name="demo">demo.png</item>
+        <item name="bottom_layer">bottom_layer.png</item>
+        <item name="cross">cross.png</item>
+        <item name="instruction">instruction.png</item>
+        <item name="shuffle">shuffle.png</item>
+        <item name="jumble_tick">jumble_tick.png</item>
+        <item name="popup_bg">popup_bg.png</item>
+        <item name="charcount">charcount.png</item>
+        <item name="board_wj">board_wjb.png</item>
+        <item name="bottom_emptyboxa">bottom_emptyboxa.png</item>
+        <item name="bottom_wj">bottom_wj.png</item>
+    </string-array>
+
+
+    <!-- fonts -->
+    <string-array name="fonts">
+        <item>fonta_heavy.otf</item>
+        <item>fonta_light.otf</item>
+        <item>fontb_heavy.ttf</item>
+        <item>fontb_light.ttf</item>
+        <item>fontc.otf</item>
+    </string-array>
+
+    <!-- sound -->
+    <string-array name="sounds">
+        <item>answer_correct.mp3</item>
+        <item>answer_incorrect.mp3</item>
+        <item>coins.mp3</item>
+        <item>game_comeback_resultcard.mp3</item>
+        <item>game_over.mp3</item>
+        <item>game_tie_resultcard.mp3</item>
+        <item>go_btn.mp3</item>
+        <item>lose_game.mp3</item>
+        <item>new_badge_levelup.mp3</item>
+        <item>quiz_background.mp3</item>
+        <item>win_game.mp3</item>
+        <item>jumble_hint.mp3</item>
+        <item>jumble_shuffle.wav</item>
+        <item>jumble_popup.wav</item>
+        <item>jumble_wrong.mp3</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/landingfrag_mainlayoutc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/mainappbarlayoutc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbarc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="parallax">
+
+                    <RelativeLayout
+                        android:id="@+id/newmainlanding_toplayoutc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="19"
+                        android:background="@color/whitelight"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/normal_user_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen110"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/oustlayout_dimen5">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:id="@+id/completedcourses_layoutc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:paddingBottom="@dimen/oustlayout_dimen15">
+
+                                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                        android:id="@+id/user_coursecompletedtextc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/zero_text"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="20sp" />
+
+                                    <com.oustme.oustsdk.customviews.CustomTextView
+                                        android:id="@+id/user_coursecompletedlabelc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/user_coursecompletedtextc"
+                                        android:gravity="center"
+                                        android:text="@string/completed"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="13sp" />
+
+                                    <com.oustme.oustsdk.customviews.CustomTextView
+                                        android:id="@+id/user_coursecompletedoctextc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/user_coursecompletedlabelc"
+                                        android:gravity="center"
+                                        android:text="@string/credits_text"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="11sp" />
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:paddingTop="@dimen/oustlayout_dimen2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="78"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:paddingBottom="@dimen/oustlayout_dimen1">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="76"
+                                            android:gravity="center_horizontal"
+                                            android:orientation="vertical">
+
+                                            <RelativeLayout
+                                                android:id="@+id/profile_ll_c"
+                                                android:layout_width="@dimen/oustlayout_dimen55"
+                                                android:layout_height="@dimen/oustlayout_dimen55"
+                                                android:layout_centerHorizontal="true">
+
+                                                <com.oustme.oustsdk.customviews.CircleImageView
+                                                    android:id="@+id/usermain_profilec"
+                                                    android:layout_width="@dimen/oustlayout_dimen55"
+                                                    android:layout_height="@dimen/oustlayout_dimen55"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:background="@drawable/friendprofileavatardrawable"
+                                                    android:visibility="visible" />
+
+                                                <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                                    android:id="@+id/userprofileImageTextc"
+                                                    android:layout_width="@dimen/oustlayout_dimen55"
+                                                    android:layout_height="@dimen/oustlayout_dimen55"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:contentDescription="@string/app_name"
+                                                    android:gravity="center"
+                                                    android:maxLength="2"
+                                                    android:text=""
+                                                    android:textColor="@color/whitea"
+                                                    android:textSize="@dimen/ousttext_dimen15"
+                                                    android:visibility="gone" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+
+                                        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                            android:id="@+id/user_mainnametextc"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="0dp"
+                                            android:layout_below="@+id/profile_ll_c"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_weight="24"
+                                            android:paddingBottom="@dimen/oustlayout_dimen1"
+                                            android:singleLine="true"
+                                            android:text=""
+                                            android:textColor="@color/Gray"
+                                            android:textSize="@dimen/ousttext_dimen14" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/bottomprogress_lay_c"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="22"
+                                        android:orientation="vertical"
+                                        android:paddingBottom="@dimen/oustlayout_dimen3">
+
+                                        <ProgressBar
+                                            android:id="@+id/landingnewprogress_barc"
+                                            style="@android:style/Widget.ProgressBar.Horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/oustlayout_dimen5"
+                                            android:max="100"
+                                            android:progress="0"
+                                            android:progressDrawable="@drawable/landing_progressbar" />
+
+                                        <com.oustme.oustsdk.customviews.CustomTextView
+                                            android:id="@+id/my_progress_textc"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_above="@+id/landingnewprogress_barc"
+                                            android:layout_marginTop="@dimen/oustlayout_dimen2"
+                                            android:gravity="center"
+                                            android:textColor="@color/Gray"
+                                            android:textSize="@dimen/ousttext_dimen8"
+                                            tools:text="@string/my_progress" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:id="@+id/layoutUserOverallcredits"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/learning_credit_bg"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/oustlayout_dimen2">
+
+                                    <com.oustme.oustsdk.customviews.CustomTextView
+                                        android:id="@+id/learningcredits_textc"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/whitea"
+                                        android:textSize="@dimen/ousttext_dimen9"
+                                        android:visibility="visible" />
+
+                                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                        android:id="@+id/usercointextc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:ellipsize="marquee"
+                                        android:marqueeRepeatLimit="marquee_forever"
+                                        android:scrollHorizontally="true"
+                                        android:paddingLeft="@dimen/oustlayout_dimen1"
+                                        android:paddingRight="@dimen/oustlayout_dimen1"
+                                        android:paddingEnd="@dimen/oustlayout_dimen1"
+                                        android:paddingStart="@dimen/oustlayout_dimen1"
+                                        android:textColor="@color/whitea"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:freezesText="true"
+                                        android:textSize="@dimen/ousttext_dimen12" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/pendingcourses_layoutc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:paddingBottom="@dimen/oustlayout_dimen15">
+
+                                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                                        android:id="@+id/user_coursependingtextc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/zero_text"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="20sp" />
+
+                                    <com.oustme.oustsdk.customviews.CustomTextView
+                                        android:id="@+id/user_coursependinglabelc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/user_coursependingtextc"
+                                        android:gravity="center"
+                                        tools:text="@string/pending_text"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="13sp" />
+
+                                    <com.oustme.oustsdk.customviews.CustomTextView
+                                        android:id="@+id/user_coursependingoctextc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/user_coursependinglabelc"
+                                        android:gravity="center"
+                                        tools:text="@string/credits_text"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="11sp" />
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <include
+                            android:id="@+id/include_componemt_user"
+                            layout="@layout/landing_user_component"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_margin="4dp"
+                          />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <RelativeLayout
+                android:gravity="right"
+                android:background="@color/light_grey"
+                android:id="@+id/refresh_layoutc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingEnd="@dimen/oustlayout_dimen10"
+                android:paddingStart="@dimen/oustlayout_dimen15"
+                android:paddingTop="@dimen/oustlayout_dimen7"
+                android:visibility="visible">
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/refresh_textc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/refresh"
+                    android:textColor="@color/ReviewbarColor"
+                    android:textSize="@dimen/ousttext_dimen12" />
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/refresh_text_linec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/refresh_textc"
+                    android:background="@color/common_grey"
+                    android:text="@string/refresh"
+                    android:textColor="@color/DarkGray"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:gravity="right"
+                android:background="@color/light_grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/oustlayout_dimen7"
+                android:paddingTop="@dimen/oustlayout_dimen7"
+                android:scrollbars="none"
+                android:id="@+id/hori_scroll_view">
+
+                <LinearLayout
+                    android:id="@+id/tab_layout_c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/tabAspace"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"></RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/myfeed_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="26"
+                        android:background="@drawable/roundedcorner_litegrey"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.oustme.oustsdk.customviews.CornerImageView
+                            android:id="@+id/tabBigImgA"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen45"
+                            android:layout_margin="@dimen/oustlayout_dimen3"
+                            android:scaleType="fitXY"
+                            app:civ_corner="@dimen/oustlayout_dimen5" />
+
+                        <ImageView
+                            android:id="@+id/tab_img_3a"
+                            android:layout_width="@dimen/oustlayout_dimen18"
+                            android:layout_height="@dimen/oustlayout_dimen18"
+                            android:padding="@dimen/oustlayout_dimen1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/notification"
+                            android:visibility="gone" />
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/tab_text_3a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/oustlayout_dimen10"
+                            android:layout_marginTop="@dimen/oustlayout_dimen10"
+                            android:paddingBottom="@dimen/oustlayout_dimen5"
+                            android:paddingStart="@dimen/oustlayout_dimen5"
+                            android:paddingTop="@dimen/oustlayout_dimen5"
+                            android:text="@string/my_feeds"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="@dimen/ousttext_dimen12"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tabBspace"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"></RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/myCourse_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="26"
+                        android:background="@drawable/roundedcorner_litegrey"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.oustme.oustsdk.customviews.CornerImageView
+                            android:id="@+id/tabBigImgB"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen45"
+                            android:layout_margin="@dimen/oustlayout_dimen3"
+                            android:scaleType="fitXY"
+                            app:civ_corner="@dimen/oustlayout_dimen5" />
+
+                        <ImageView
+                            android:id="@+id/tab_img_3b"
+                            android:layout_width="@dimen/oustlayout_dimen18"
+                            android:layout_height="@dimen/oustlayout_dimen18"
+                            android:padding="@dimen/oustlayout_dimen1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/course"
+                            android:visibility="gone" />
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/tab_text_3b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/oustlayout_dimen10"
+                            android:layout_marginTop="@dimen/oustlayout_dimen10"
+                            android:paddingBottom="@dimen/oustlayout_dimen5"
+                            android:paddingLeft="@dimen/oustlayout_dimen5"
+                            android:paddingTop="@dimen/oustlayout_dimen5"
+                            android:text="@string/courses_text"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="@dimen/ousttext_dimen12"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tabCspace"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"></RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mychallenges_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="26"
+                        android:background="@drawable/roundedcorner_litegrey"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.oustme.oustsdk.customviews.CornerImageView
+                            android:id="@+id/tabBigImgC"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen45"
+                            android:layout_margin="@dimen/oustlayout_dimen3"
+                            android:scaleType="fitXY"
+                            app:civ_corner="@dimen/oustlayout_dimen5" />
+
+                        <ImageView
+                            android:id="@+id/tab_img_3c"
+                            android:layout_width="@dimen/oustlayout_dimen18"
+                            android:layout_height="@dimen/oustlayout_dimen18"
+                            android:padding="@dimen/oustlayout_dimen1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/challenge"
+                            android:visibility="gone" />
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/tab_text_3c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/oustlayout_dimen10"
+                            android:layout_marginTop="@dimen/oustlayout_dimen10"
+                            android:paddingBottom="@dimen/oustlayout_dimen5"
+                            android:paddingLeft="@dimen/oustlayout_dimen5"
+                            android:paddingTop="@dimen/oustlayout_dimen5"
+                            android:text="@string/challenges_text"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="@dimen/ousttext_dimen12"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tabDspace"
+                        android:layout_weight="3"></RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/myNoticeBorad_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="26"
+                        android:background="@drawable/roundedcorner_litegrey"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.oustme.oustsdk.customviews.CornerImageView
+                            android:id="@+id/tabBigImgD"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen45"
+                            android:layout_margin="@dimen/oustlayout_dimen3"
+                            android:scaleType="fitXY"
+                            app:civ_corner="@dimen/oustlayout_dimen5" />
+
+                        <ImageView
+                            android:id="@+id/tab_img_3d"
+                            android:layout_width="@dimen/oustlayout_dimen18"
+                            android:layout_height="@dimen/oustlayout_dimen18"
+                            android:padding="@dimen/oustlayout_dimen1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/challenge"
+                            android:visibility="gone" />
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/tab_text_3d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/oustlayout_dimen10"
+                            android:layout_marginTop="@dimen/oustlayout_dimen10"
+                            android:paddingBottom="@dimen/oustlayout_dimen5"
+                            android:paddingLeft="@dimen/oustlayout_dimen5"
+                            android:paddingTop="@dimen/oustlayout_dimen5"
+                            android:text="@string/challenges_text"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="@dimen/ousttext_dimen12"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tabEspace"
+                        android:layout_weight="3"></RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/filter_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:background="@color/light_grey"
+                android:paddingBottom="@dimen/oustlayout_dimen7"
+                android:paddingRight="@dimen/oustlayout_dimen15"
+                android:paddingTop="@dimen/oustlayout_dimen5"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/filter_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                    android:layout_toLeftOf="@+id/filter_text_ll"/>
+
+                <LinearLayout
+                    android:id="@+id/filter_text_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/filter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/oustlayout_dimen5"
+                        android:text="@string/filter_text"
+                        android:textColor="@color/ReviewbarColor" />
+
+                    <ImageView
+                        android:layout_width="@dimen/oustlayout_dimen12"
+                        android:layout_height="@dimen/oustlayout_dimen12"
+                        android:src="@drawable/filter" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:background="@color/light_grey"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+
+                <RelativeLayout
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:id="@+id/main_custom_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hori_scroll_view">
+
+
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/oustlayout_dimen7"
+                        android:id="@+id/sub_tab_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="@dimen/oustlayout_dimen15"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/oustlayout_dimen7"
+                            android:paddingLeft="@dimen/oustlayout_dimen15">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/todo_txt_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/to_do"
+                                android:textColor="@color/common_grey"
+                                android:textSize="@dimen/ousttext_dimen15" />
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/tv_todo_underline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="1dp"
+                                android:background="@color/common_grey"
+                                android:text="@string/to_do"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/see_all_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:paddingBottom="@dimen/oustlayout_dimen7">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/tv_see_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/seeall_imageicon_3"
+                                android:gravity="center"
+                                android:text="@string/see_all"
+                                android:textSize="@dimen/ousttext_dimen14" />
+
+                            <ImageView
+                                android:id="@+id/seeall_imageicon_3"
+                                android:layout_width="@dimen/oustlayout_dimen15"
+                                android:layout_height="@dimen/oustlayout_dimen15"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                android:src="@drawable/see_all"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/main_custom_ll"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/ll_loading3"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/oustlayout_dimen5"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                            android:layout_marginRight="@dimen/oustlayout_dimen10"
+                            android:layout_weight="1">
+
+
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+
+                                <FrameLayout
+                                    android:id="@+id/feed_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/alert_rv"
+                                        android:layout_margin="8dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:visibility="gone"/>
+
+                                </FrameLayout>
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/noticeBoard_rv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_above="@+id/ll_loading3"
+                                    android:visibility="gone"/>
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/course_rv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                    android:layout_above="@+id/ll_loading3"
+                                    android:visibility="gone"/>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/challenges_rv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                    android:layout_above="@+id/ll_loading3"
+                                    android:visibility="gone"/>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/playList_rv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                    android:layout_above="@+id/ll_loading3"
+                                    android:visibility="gone"/>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/play_skill_rv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                    android:layout_above="@+id/ll_loading3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/no_data_text3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/oustlayout_dimen18"
+                                android:layout_marginTop="@dimen/oustlayout_dimen18"
+                                android:gravity="center"
+                                android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                                android:layout_marginRight="@dimen/oustlayout_dimen10"
+                                android:text="@string/no_feeds_available"
+                                android:textColor="@color/dark_grey_new"
+                                android:textSize="@dimen/ousttext_dimen18" />
+
+                        </FrameLayout>
+
+
+
+
+                        <LinearLayout
+                            android:gravity="bottom"
+                            android:id="@+id/catalog_ll3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginTop="@dimen/oustlayout_dimen30"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                            android:layout_marginRight="@dimen/oustlayout_dimen10"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/catalog_label_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/oustlayout_dimen25">
+
+                                <com.oustme.oustsdk.customviews.CustomTextView
+                                    android:id="@+id/catalogue_label3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingLeft="@dimen/oustlayout_dimen5"
+                                    android:textColor="@color/common_grey"
+                                    android:textSize="@dimen/ousttext_dimen15"
+                                    android:visibility="visible" />
+
+                                <com.oustme.oustsdk.customviews.CustomTextView
+                                    android:id="@+id/catalogue_labelline3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/catalogue_label3"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                    android:background="@color/common_grey"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/ousttext_dimen15"
+                                    android:visibility="gone" />
+
+                                <RelativeLayout
+                                    android:id="@+id/see_all_catalaog3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="@dimen/ousttext_dimen15"
+                                    android:visibility="visible">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <com.oustme.oustsdk.customviews.CustomTextView
+                                            android:id="@+id/seeall_cataloguelist3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toLeftOf="@+id/seeallcatalogue_listicon3"
+                                            android:gravity="center"
+                                            android:text=""
+                                            android:textColor="@color/common_grey"
+                                            android:textSize="@dimen/ousttext_dimen15" />
+
+                                        <ImageView
+                                            android:id="@+id/seeallcatalogue_listicon3"
+                                            android:layout_width="@dimen/oustlayout_dimen15"
+                                            android:layout_height="@dimen/oustlayout_dimen15"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                            android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                            android:src="@drawable/see_all"
+                                            android:visibility="gone"/>
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/oustlayout_dimen7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/catalog_label_ll"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/catalogue_lay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/bottomcatalogue_layout3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="@dimen/oustlayout_dimen5">
+
+                                        <RelativeLayout
+                                            android:id="@+id/catelog_layouta3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/fulltransparent"
+                                            android:visibility="visible">
+                                            <ImageView
+                                                android:id="@+id/CatalogueUpdateIndicatora"
+                                                android:layout_width="@dimen/oustlayout_dimen15"
+                                                android:layout_height="@dimen/oustlayout_dimen15"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true"
+                                                android:visibility="gone"
+                                                android:layout_marginTop="@dimen/oustlayout_dimen1"
+                                                android:elevation="@dimen/oustlayout_dimen10"
+                                                android:src="@drawable/circle_red_bg" />
+                                            <com.oustme.oustsdk.customviews.CornerImageView
+                                                android:id="@+id/catelog_iamgea3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                                android:scaleType="fitXY"
+                                                app:civ_corner="@dimen/oustlayout_dimen6" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:id="@+id/catelog_layoutb3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/fulltransparent"
+                                            android:visibility="visible">
+                                            <ImageView
+                                                android:id="@+id/CatalogueUpdateIndicatorb"
+                                                android:layout_width="@dimen/oustlayout_dimen15"
+                                                android:layout_height="@dimen/oustlayout_dimen15"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true"
+                                                android:visibility="gone"
+                                                android:layout_marginTop="@dimen/oustlayout_dimen1"
+                                                android:elevation="@dimen/oustlayout_dimen10"
+                                                android:src="@drawable/circle_red_bg" />
+                                            <com.oustme.oustsdk.customviews.CornerImageView
+                                                android:id="@+id/catelog_iamgeb3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                                android:scaleType="fitXY"
+                                                app:civ_corner="@dimen/oustlayout_dimen6" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/bottomcatalogue_layouta3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="@dimen/oustlayout_dimen10">
+
+                                        <RelativeLayout
+                                            android:id="@+id/catelog_layoutc3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/fulltransparent"
+                                            android:paddingLeft="@dimen/oustlayout_dimen2"
+                                            android:visibility="visible">
+                                            <ImageView
+                                                android:id="@+id/CatalogueUpdateIndicatorc"
+                                                android:layout_width="@dimen/oustlayout_dimen15"
+                                                android:layout_height="@dimen/oustlayout_dimen15"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true"
+                                                android:visibility="gone"
+                                                android:layout_marginTop="@dimen/oustlayout_dimen1"
+                                                android:elevation="@dimen/oustlayout_dimen10"
+                                                android:src="@drawable/circle_red_bg" />
+                                            <com.oustme.oustsdk.customviews.CornerImageView
+                                                android:id="@+id/catelog_iamgec3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                                android:scaleType="fitXY"
+                                                app:civ_corner="@dimen/oustlayout_dimen6" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:id="@+id/catelog_layoutd3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/fulltransparent"
+                                            android:paddingLeft="@dimen/oustlayout_dimen2"
+                                            android:visibility="visible">
+                                            <ImageView
+                                                android:id="@+id/CatalogueUpdateIndicatord"
+                                                android:layout_width="@dimen/oustlayout_dimen15"
+                                                android:layout_height="@dimen/oustlayout_dimen15"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true"
+                                                android:visibility="gone"
+                                                android:layout_marginTop="@dimen/oustlayout_dimen1"
+                                                android:elevation="@dimen/oustlayout_dimen10"
+                                                android:src="@drawable/circle_red_bg" />
+
+                                            <com.oustme.oustsdk.customviews.CornerImageView
+                                                android:id="@+id/catelog_iamged3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                                                android:scaleType="fitXY"
+                                                app:civ_corner="@dimen/oustlayout_dimen6" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/offlinemde_layout3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:padding="@dimen/oustlayout_dimen50"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/offline_catalog"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_loading3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:padding="@dimen/oustlayout_dimen7"
+                        android:layout_marginLeft="@dimen/oustlayout_dimen10"
+                        android:layout_marginRight="@dimen/oustlayout_dimen10"
+                        android:visibility="gone">
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_horizontal"
+                            android:visibility="gone"
+                            android:text="@string/loading" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/filter_category_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/main_custom_ll"
+                    android:layout_marginRight="@dimen/oustlayout_dimen15"
+                    android:background="@drawable/roundedcorner_litegrey"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/oustlayout_dimen10"
+                    android:paddingTop="@dimen/oustlayout_dimen10"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/filter_vertical_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/oustlayout_dimen5"/>
+
+                    <LinearLayout
+                        android:id="@+id/applyfilter_ll"
+                        android:layout_width="@dimen/oustlayout_dimen180"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/oustlayout_dimen5"
+                        android:visibility="gone">
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/applyfilter_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen25"
+                            android:layout_marginRight="@dimen/oustlayout_dimen25"
+                            android:background="@color/LiteGreen"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/oustlayout_dimen3"
+                            android:paddingLeft="@dimen/oustlayout_dimen5"
+                            android:paddingRight="@dimen/oustlayout_dimen5"
+                            android:paddingTop="@dimen/oustlayout_dimen3"
+                            android:text=""
+                            android:textColor="@color/whitea" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/clearFilters_ll"
+                        android:layout_width="@dimen/oustlayout_dimen180"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/oustlayout_dimen5">
+
+                        <com.oustme.oustsdk.customviews.CustomTextView
+                            android:id="@+id/clearFilters_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/oustlayout_dimen25"
+                            android:layout_marginRight="@dimen/oustlayout_dimen25"
+                            android:background="@color/Orange"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/oustlayout_dimen3"
+                            android:paddingLeft="@dimen/oustlayout_dimen5"
+                            android:paddingRight="@dimen/oustlayout_dimen5"
+                            android:paddingTop="@dimen/oustlayout_dimen3"
+                            android:text=""
+                            android:textColor="@color/whitea" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/swiperefreshparent_layoutc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layoutc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/oustlayout_dimen200">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+</RelativeLayout>

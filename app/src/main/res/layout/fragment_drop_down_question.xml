@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dropDown_question_base_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".question_module.fragment.DropDownQuestionFragment">
+
+    <ImageView
+        android:id="@+id/dropDown_question_bgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/dropDown_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/common_question_card" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drop_down_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oustlayout_dimen350"
+                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:cardBackgroundColor="#EAEAEE"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                tools:targetApi="lollipop">
+
+                <LinearLayout
+                    android:id="@+id/drop_down_list_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <EditText
+                            android:id="@+id/dropDown_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/search_background_box"
+                            android:drawableLeft="@drawable/search_icon"
+                            android:drawablePadding="@dimen/oustlayout_dimen10"
+                            android:hint="@string/search_menu_text"
+                            android:minHeight="48dp"
+                            android:padding="@dimen/oustlayout_dimen10"
+                            android:textColor="@color/textBlack"
+                            android:textColorHint="#949499"
+                            android:textSize="@dimen/oustlayout_dimen18" />
+
+                        <ImageView
+                            android:id="@+id/drop_down_clear_search"
+                            android:layout_width="@dimen/oustlayout_dimen25"
+                            android:layout_height="@dimen/oustlayout_dimen25"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/oustlayout_dimen12"
+                            android:layout_marginEnd="@dimen/oustlayout_dimen15"
+                            android:contentDescription="@string/closesymbol"
+                            android:src="@drawable/ic_close_circle"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dropDown_question_answer_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/oustlayout_dimen10"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drop_down_selected_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:cardBackgroundColor="#EAEAEE"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                tools:targetApi="lollipop">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/drop_drop_selected_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/oustlayout_dimen10"
+                        android:textColor="@color/textBlack"
+                        android:textSize="@dimen/oustlayout_dimen18" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/dropDown_question_action_button"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_rounded_ten_bg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_button_arrow"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/thumps_layout"
+        layout="@layout/common_question_thumps_coins"
+        android:visibility="gone" />
+</FrameLayout>

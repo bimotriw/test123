@@ -1,0 +1,178 @@
+<resources>
+    <dimen name="fab_size_normal">50dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+
+    <dimen name="fab_icon_size">15dp</dimen>
+
+    <dimen name="fab_plus_icon_size">15dp</dimen>
+    <dimen name="fab_plus_icon_stroke">2dp</dimen>
+
+    <dimen name="fab_shadow_offset">0dp</dimen>
+    <dimen name="fab_shadow_radius">0dp</dimen>
+
+    <dimen name="fab_stroke_width">1dp</dimen>
+
+    <dimen name="fab_actions_spacing">16dp</dimen>
+    <dimen name="fab_labels_margin">0dp</dimen>
+
+    <dimen name="result_progressBar_radius">24.5dp</dimen>
+
+    <!-- Layout generic dimensions -->
+    <dimen name="oustlayout_dimen154">77dp</dimen>
+    <dimen name="oustlayout_dimen400">800dp</dimen>
+    <dimen name="oustlayout_dimen350">700dp</dimen>
+    <dimen name="oustlayout_dimen300">600dp</dimen>
+    <dimen name="oustlayout_dimen280">560dp</dimen>
+    <dimen name="oustlayout_dimen275">550dp</dimen>
+    <dimen name="oustlayout_dimen250">500dp</dimen>
+    <dimen name="oustlayout_dimen230">460dp</dimen>
+    <dimen name="oustlayout_dimen215">430dp</dimen>
+    <dimen name="oustlayout_dimen200">400dp</dimen>
+    <dimen name="oustlayout_dimen270">540dp</dimen>
+    <dimen name="oustlayout_dimen260">520dp</dimen>
+    <dimen name="oustlayout_dimen220">440dp</dimen>
+    <dimen name="oustlayout_dimen180">360dp</dimen>
+    <dimen name="oustlayout_dimen170">340dp</dimen>
+    <dimen name="oustlayout_dimen150">300dp</dimen>
+    <dimen name="oustlayout_dimen155">310dp</dimen>
+    <dimen name="oustlayout_dimen140">280dp</dimen>
+    <dimen name="oustlayout_dimen135">275dp</dimen>
+    <dimen name="oustlayout_dimen125">270dp</dimen>
+    <dimen name="oustlayout_dimen130">260dp</dimen>
+    <dimen name="oustlayout_dimen136">276dp</dimen>
+    <dimen name="oustlayout_dimen137">277dp</dimen>
+    <dimen name="oustlayout_dimen138">278dp</dimen>
+    <dimen name="oustlayout_dimen139">279dp</dimen>
+    <dimen name="oustlayout_dimen120">240dp</dimen>
+    <dimen name="oustlayout_dimen122">244dp</dimen>
+    <dimen name="oustlayout_dimen123">246dp</dimen>
+    <dimen name="oustlayout_dimen124">248dp</dimen>
+    <dimen name="oustlayout_dimen115">231dp</dimen>
+    <dimen name="oustlayout_dimen110">220dp</dimen>
+    <dimen name="oustlayout_dimen105">210dp</dimen>
+    <dimen name="oustlayout_dimen106">210dp</dimen>
+    <dimen name="oustlayout_dimen100">200dp</dimen>
+    <dimen name="oustlayout_dimen95">190dp</dimen>
+    <dimen name="oustlayout_dimen91">182dp</dimen>
+    <dimen name="oustlayout_dimen90">180dp</dimen>
+    <dimen name="oustlayout_dimen85">170dp</dimen>
+    <dimen name="oustlayout_dimen80">160dp</dimen>
+    <dimen name="oustlayout_dimen73">146dp</dimen>
+    <dimen name="oustlayout_dimen70">140dp</dimen>
+    <dimen name="oustlayout_dimen67">134dp</dimen>
+    <dimen name="oustlayout_dimen65">130dp</dimen>
+    <dimen name="oustlayout_dimen60">120dp</dimen>
+    <dimen name="oustlayout_dimen58">116dp</dimen>
+    <dimen name="oustlayout_dimen55">110dp</dimen>
+    <dimen name="oustlayout_dimen54">108dp</dimen>
+    <dimen name="oustlayout_dimen50">100dp</dimen>
+    <dimen name="oustlayout_dimen45">90dp</dimen>
+    <dimen name="oustlayout_dimen40">80dp</dimen>
+    <dimen name="oustlayout_dimen42">84dp</dimen>
+    <dimen name="oustlayout_dimen35">70dp</dimen>
+    <dimen name="oustlayout_dimen32">64dp</dimen>
+    <dimen name="oustlayout_dimen30">60dp</dimen>
+    <dimen name="oustlayout_dimen28">56dp</dimen>
+    <dimen name="oustlayout_dimen25">50dp</dimen>
+    <dimen name="oustlayout_dimen24">48dp</dimen>
+    <dimen name="oustlayout_dimen22">44dp</dimen>
+    <dimen name="oustlayout_dimen20">40dp</dimen>
+    <dimen name="oustlayout_dimen18">36dp</dimen>
+    <dimen name="oustlayout_dimen17">34dp</dimen>
+    <dimen name="oustlayout_dimen16">32dp</dimen>
+    <dimen name="oustlayout_dimen15">30dp</dimen>
+    <dimen name="oustlayout_dimen14">28dp</dimen>
+    <dimen name="oustlayout_dimen13">26dp</dimen>
+    <dimen name="oustlayout_dimen12">24dp</dimen>
+    <dimen name="oustlayout_dimen11">22dp</dimen>
+    <dimen name="oustlayout_dimen10">20dp</dimen>
+    <dimen name="oustlayout_dimen9">18dp</dimen>
+    <dimen name="oustlayout_dimen8">16dp</dimen>
+    <dimen name="oustlayout_dimen7">14dp</dimen>
+    <dimen name="oustlayout_dimen6">12dp</dimen>
+    <dimen name="oustlayout_dimen5">10dp</dimen>
+    <dimen name="oustlayout_dimen4">8dp</dimen>
+    <dimen name="oustlayout_dimen3.5">7dp</dimen>
+    <dimen name="oustlayout_dimen3">6dp</dimen>
+    <dimen name="oustlayout_dimen2.5">5dp</dimen>
+    <dimen name="oustlayout_dimen2">4dp</dimen>
+    <dimen name="oustlayout_dimen1">2dp</dimen>
+    <dimen name="oustlayout_dimen0.8">1.6dp</dimen>
+    <dimen name="oustlayout_dimen0.5">1dp</dimen>
+    <dimen name="oustlayout_dimen0.4">0.8dp</dimen>
+    <dimen name="oustlayout_dimen0.1">0.05dp</dimen>
+    <dimen name="oustlayout_dimen_minus4">-8dp</dimen>
+    <dimen name="oustlayout_dimen_minus8">-16dp</dimen>
+    <dimen name="oustlayout_dimen_minus7">-14dp</dimen>
+    <dimen name="oustlayout_dimen_minus10">-20dp</dimen>
+    <dimen name="oustlayout_dimen_minus15">-30dp</dimen>
+    <dimen name="oustlayout_dimen_minus20">-40dp</dimen>
+    <dimen name="oustlayout_dimen_minus30">-60dp</dimen>
+    <dimen name="oustlayout_dimen23">46dp</dimen>
+    <dimen name="oustlayout_dimen102">204dp</dimen>
+    <dimen name="oustlayout_dimen210">420dp</dimen>
+    <dimen name="oustlayout_dimen190">380dp</dimen>
+    <dimen name="oustlayout_dimen145">290dp</dimen>
+    <dimen name="oustlayout_dimen_minus5">-10dp</dimen>
+    <dimen name="oustlayout_dimen75">150dp</dimen>
+    <dimen name="oustlayout_dimen12.5">24.5dp</dimen>
+    <dimen name="oustlayout_dimen14.5">28.5dp</dimen>
+    <dimen name="oustlayout_dimen7px">14px</dimen>
+    <dimen name="oustlayout_dimen5px">10px</dimen>
+    <dimen name="oustlayout_dimen1.5">3dp</dimen>
+    <dimen name="oustlayout_dimen298">590dp</dimen>
+    <dimen name="oustlayout_dimen160">320dp</dimen>
+    <dimen name="oustlayout_dimen36">72dp</dimen>
+
+    <!-- TextSize generic dimensions -->
+
+    <dimen name="ousttext_dimen50">75sp</dimen>
+    <dimen name="ousttext_dimen40">60sp</dimen>
+    <dimen name="ousttext_dimen30">45sp</dimen>
+    <dimen name="ousttext_dimen25">38sp</dimen>
+    <dimen name="ousttext_dimen24">36sp</dimen>
+    <dimen name="ousttext_dimen23">34sp</dimen>
+    <dimen name="ousttext_dimen20">30sp</dimen>
+    <dimen name="ousttext_dimen18">27sp</dimen>
+    <dimen name="ousttext_dimen17">25.5sp</dimen>
+    <dimen name="ousttext_dimen16">24sp</dimen>
+    <dimen name="ousttext_dimen15">23sp</dimen>
+    <dimen name="ousttext_dimen14">21sp</dimen>
+    <dimen name="ousttext_dimen13">20sp</dimen>
+    <dimen name="ousttext_dimen12">18sp</dimen>
+    <dimen name="ousttext_dimen11">17sp</dimen>
+    <dimen name="ousttext_dimen10">15sp</dimen>
+    <dimen name="ousttext_dimen9">14sp</dimen>
+    <dimen name="ousttext_dimen8">12sp</dimen>
+    <dimen name="ousttext_dimen7">10sp</dimen>
+    <dimen name="ousttext_dimen6">9sp</dimen>
+    <dimen name="ousttext_dimen5">8sp</dimen>
+
+
+    <!--<dimen name="oustlayout_dimen60_cpl">120dp</dimen>
+    <dimen name="oustlayout_dimen90_cpl">180dp</dimen>
+    <dimen name="oustlayout_dimen100_cpl">200dp</dimen>
+    <dimen name="oustlayout_dimen45_cpl">90dp</dimen>
+    <dimen name="oustlayout_dimen80_cpl">160dp</dimen>
+    <dimen name="oustlayout_dimen20_cpl">40dp</dimen>
+    <dimen name="oustlayout_dimen50_cpl">100dp</dimen>
+    <dimen name="oustlayout_dimen10_cpl">20dp</dimen>
+    <dimen name="oustlayout_dimen17_cpl">34dp</dimen>
+    <dimen name="oustlayout_dimen25_cpl">50dp</dimen>
+    <dimen name="oustlayout_dimen35_cpl">70dp</dimen>
+    <dimen name="oustlayout_dimen5_cpl">10dp</dimen>-->
+
+    <!--<dimen name="oustlayout_dimen60_cpl">150dp</dimen>
+    <dimen name="oustlayout_dimen90_cpl">215dp</dimen>
+    <dimen name="oustlayout_dimen100_cpl">250dp</dimen>
+    <dimen name="oustlayout_dimen45_cpl">113dp</dimen>
+    <dimen name="oustlayout_dimen80_cpl">200dp</dimen>
+    <dimen name="oustlayout_dimen20_cpl">50dp</dimen>
+    <dimen name="oustlayout_dimen50_cpl">125dp</dimen>
+    <dimen name="oustlayout_dimen10_cpl">25dp</dimen>
+    <dimen name="oustlayout_dimen17_cpl">42dp</dimen>
+    <dimen name="oustlayout_dimen25_cpl">63dp</dimen>
+    <dimen name="oustlayout_dimen35_cpl">88dp</dimen>
+    <dimen name="oustlayout_dimen5_cpl">13dp</dimen>-->
+
+</resources>

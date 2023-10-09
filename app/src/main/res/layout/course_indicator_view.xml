@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/course_indicator_icon"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/ping"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

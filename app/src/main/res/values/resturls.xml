@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="archivecourse_url">course/{courseId}/archive?userId={userId}</string>
+    <string name="archiveassessment_url">assessment/{assessmentId}/archive?userId={userId}</string>
+
+    <string name="unarchivecourse_url">course/{courseId}/unarchive?userId={userId}</string>
+    <string name="unarchiveassessment_url">assessment/{assessmentId}/unarchive?userId={userId}</string>
+
+    <string name="sendPingApi">ping</string>
+    <string name="signin">signin</string>
+    <string name="signinV3">signin/signin_v3</string>
+    <string name="signout">signout</string>
+    <string name="checkuserrequest_url">signin/levelOneAuthCheck_v2</string>
+    <string name="register_url">register</string>
+
+    <string name="apiKey">sdk/verify/secretKey</string>
+    <string name="update_firebasetoken_url">firebase/authToken/{userId}</string>
+
+    <string name="getCard_url">card/cardId?courseId={courseId}&amp;levelId={levelId}</string>
+
+    <string name="submitCourseComplete_url">course/{courseId}/complete</string>
+    <string name="submitCollectionCourseComplete_url">course/{courseId}?userId={userId}&amp;timestamp={timestamp}</string>
+    <string name="submitlevelCourseComplete_url">course/complete/{courseId}/level/{levelId}?userId={userId}&amp;courseColnId={courseColnId}&amp;mlCourseId={mlCourseId}</string>
+
+    <string name="submitCourseRating_url">course/rate/</string>
+    <string name="sendform_reques_url">formfill</string>
+    <string name="send_training_request">student/submitUserTrainingRequest</string>
+
+    <string name="get_game_points">results/points/gameid/student/studentid</string>
+    <string name="anyopen_game">game/anyopen</string>
+    <string name="cancleGamereso">game/{gameid}</string>
+    <string name="reopengameurl">game/reopen</string>
+
+    <string name="previous_winner">assessment/{assessmentId}/getPreviousWordJumbleWinnerInfo</string>
+    <string name="createassessment_game">assessment/enrol</string>
+    <string name="create_game">game/create</string>
+    <string name="create_game_v3">game/create/v3</string>
+    <string name="play_game">game/play</string>
+    <string name="play_game_v2">game/v2/play</string>
+    <!--<string name="submit_game_old">game/submit</string>-->
+    <string name="getquestion_url">questions?questionId={qID}</string>
+    <string name="getQuestionUrl_V2">questions/v2?questionId={QId}</string>
+    <string name="getDropDownList">student/getDataSourceDetails/{DataSource}</string>
+
+    <string name="assessmentotp_url">assessment/otp/send</string>
+    <string name="assessmentconfirmotp_url">assessment/otp/verify</string>
+
+    <string name="get_groupresult">game/{gameid}/group/{groupid}/results?studentid={studentid}</string>
+
+    <string name="getStudentID_url">student/{studentid}/key</string>
+    <string name="favourite">questions/favorite</string>
+    <string name="feedback">questions/feedback</string>
+    <string name="comment_url">questions/{qId}/comment</string>
+
+    <string name="getanalytics_url">student/overall/{studentId}</string>
+    <string name="getInAppanalytics_url">student/overall_v2/{studentId}</string>
+
+    <string name="friendprofilefetch_url">student/{studentId}/content</string>
+    <string name="move_cpl_to_multiple_cpl_url">contentPlayList/updateMultipleCPLfirebaseNode/{studentId}/{cplId}</string>
+    <string name="usersetting_url">student/{studentid}</string>
+    <string name="user_certificate_api">student/getUserCertificateDetails/{userId}</string>
+    <string name="remove_fireBase_notification_api">firebase/removePushNotificationFromFirebase</string>
+
+
+    <string name="create_learning_diary">learningDiary/create</string>
+    <string name="update_learning_diary">learningDiary/update/</string>
+    <string name="delete_learning_diary">learningDiary/delete/</string>
+
+    <string name="submitFavCard_url">card/bulk/favorite</string>
+    <string name="submitUnfavouriteCard_url">card/bulk/unfavorite</string>
+
+    <string name="acknowledge_url">course/{courseId}/ack</string>
+    <string name="submitUnFavUrl">card/bulk/unfavorite</string>
+    <string name="send_fav_rm_url">card/readMore/favourite</string>
+    <string name="send_un_fav_rm_url">card/readMore/unfavourite</string>
+    <string name="freecourseenroll_url">courseColn/{courseColnId}/enrol</string>
+    <string name="send_feed_request">feedAnalytics</string>
+    <string name="content_notification_count">content</string>
+
+
+    <string name="ffcregister_url">f3c/{f3cId}/register</string>
+    <string name="sendcontestscore_url">f3c/addUserScore_v2</string>
+    <string name="sendcontest_userrightcount_url">f3c/addUserForLuckyWinner</string>
+    <string name="f3cleaderboard_url">f3c/{f3cId}/leaderboard_v2?userId={userId}&amp;topperCount={topperCount}</string>
+    <string name="getf3cuserrank_url">f3c/{f3cId}/user/{userId}/rank</string>
+    <string name="bgreport_url">reportBug</string>
+    <string name="f3cmyleaderboard_url">f3c/{f3cId}/myPerf?userId={userId}</string>
+    <string name="contentCateogory_url">catalogue/{catalogueId}/category/{ccId}</string>
+    <string name="contentCateogory_url_v2">catalogue/{catalogueId}/category/{ccId}/{userId}</string>
+
+    <string name="catalogue_tabdataurl">catalogue/{id}/modules?mTabId={mTabId}&amp;mSubTabId={mSubTabId}</string>
+    <string name="getcatalogue_list_url">catalogue/{id}/category?mTabId={mTabId}</string>
+    <string name="getcatalogue_list_url_v2">catalogue/{id}/category/v2?mTabId={mTabId}&amp;userId={userid}</string>
+    <string name="catalogue_list_url">catalogue/{catalogueId}</string>
+    <string name="catalog_view_update">catalogue/update/viewStatus</string>
+
+    <string name="distribut_collection_url">courseColn/{courseColnId}/distribute</string>
+    <string name="distribut_soccer_url"> soccer/{soccerSkillId}/distribute</string>
+    <string name="get_category_name"> catalogue/{catalogueId}/category/{categoryId}</string>
+    <string name="enrol_soccer_url"> soccer/{soccerSkillId}/enrol/{userId}</string>
+    <string name="planing_meeting_url"> meeting/{meetingId}/eventPlanning/{userId}/{planningStatus}</string>
+    <string name="mail_meeting_url"> meeting/{meetingId}/calendarMail/{calendarMail}/ATTENDING</string>
+    <string name="skill_submit_url">  soccer/submit/{userId}</string>
+    <string name="skill_analytics_url">  soccer/getUserSoccerSkillAnalytics/{userId}/{soccerSkillId}</string>
+    <string name="skill_idp_analytics_url">  soccer/getUserSoccerIDPSkillAnalytics/{userId}/{soccerSkillId}</string>
+
+    <string name="get_fireBase_token_url">firebase/authToken/{userId}?devicePlatformName=Android</string>
+    <string name="get_cpl_data">register/autoDistributeCPL</string>
+    <string name="verifyOrgId">signin/verifyTenant/{orgId}</string>
+
+    <string name="verifyAndSignInUser">signin/verifyAndSignInUser</string>
+
+    <string name="language_request_url">course/langNotAvailable/{mlCourseId}/{langName}</string>
+    <string name="cpl_rating_url">contentPlayList/rate</string>
+    <string name="cpl_send_certificate">contentPlayList/sendCertificate</string>
+    <string name="delete_user">student/{userId}</string>
+    <string name="ffc_rating_url">f3c/rate</string>
+    <string name="cpl_enroll">contentPlayList/{cplId}/enroll/{userId}?platform=&amp;appVersion=</string>
+    <string name="cpl_sync">contentPlayList/{cplId}/syncCplModule/{userId}</string>
+    <string name="nb_post_like_url">noticeBoard/likeNbPost</string>
+    <string name="nb_post_comment_url_old">noticeBoard/saveCommentNbPost</string>
+    //old post comment
+    <string name="nb_post_comment_url_new">noticeBoard/saveComment</string>
+    //new post comment
+    <string name="nb_post_reply_url"> noticeBoard/saveCommentRepliesNbPost</string>
+    <string name="nb_post_share_url">noticeBoard/shareNbPost</string>
+    <string name="nb_members_url">noticeBoard/getNbDistributedUsers/{nbId}?pageNum=</string>
+    <string name="nb_group_members_url">noticeBoard/getNbDistributedGroupUsers/{nbId}/{groupId}?pageNum=</string>
+    <string name="nb_delete_comment"> noticeBoard/deleteCommentNbPost</string>
+    <string name="nb_delete_reply">noticeBoard/deleteCommentReplyNbPost</string>
+    <string name="news_feed_progress_url">newsfeed/userFeedProgress/{feedId}</string>
+
+    <string name="nb_create_post">noticeBoard/createNBPost/{nbId}</string>
+    <string name="get_adaptive_course_data">course/getAdaptiveCourseData/</string>
+    <string name="logout_api">student/updateLogout/{userId}</string>
+    <string name="new_distibute_cpl_by_city">register/autoDistributeCPLOfCityGroup</string>
+
+    <string name="distribut_catalogue_modules">catalogue/distribute-content</string>
+    <string name="auto_distribute_cpl_for_cpl_group">register/autoDistributeCPLForCplGroup</string>
+    <string name="update_language">signin/updateUserlanguage/{languageName}</string>
+    <string name="distibute_special_course">course/specialCourseDistribution/{userId}</string>
+    <string name="user_preferred_language_update">student/updateLanguage/{language}/{userId}</string>
+    <string name="user_preferred_language_get">student/getLanguage/{userId}</string>
+
+    <string name="post_feed_comment">newsfeed/saveFeedComment</string>
+    <string name="weekly_email_report">student/weeklyReport/</string>
+    <string name="post_feed_remove">newsfeed/removeExpireUserFeedNode</string>
+    <string name="update_display_name">student/updateDisplayName/</string>
+    <string name="survey_base_node">assessment/assessment</string>
+    <string name="send_feed_reward_update">newsfeed/feedCoins</string>
+    <string name="update_group_id">/group/{groupid}/member/{memberid}</string>
+
+    //CPL
+    //CPl rating popup
+    <string name="cpl_rating_popup" translatable="false">contentPlayList/rate</string>
+    //Cpl progress Module
+    <string name="get_cpl_status_url" translatable="false">contentPlayList/{orgid}/{cplid}/{userid}</string>
+    //Cpl language switch and distribution
+    <string name="cpl_language_switch_and_distribution" translatable="false">contentPlayList/switch/{newCPLId}</string>
+    //Cpl child distribution or not
+    <string name="cpl_child_distribution_or_not" translatable="false">contentPlayList/{orgId}/{mlCplId}/validateChildDistribution/{userId}</string>
+    //check parent cpl distributed or not
+    <string name="parent_cpl_distribution_or_not" translatable="false">student/{orgId}/{userId}/ml-cpl</string>
+    //Get Cpl language List
+    <string name="get_language_list" translatable="false">contentPlayList/{cplId}/language_v2</string>
+    //End
+
+    //Instrumentation
+    <string name="instrumentation_api_url" translatable="false">student/instrumentationMailToSupport</string>
+    <string name="course_completion_api_url" translatable="false">card/updateCourseCompletion</string>
+
+    //user
+    <string name="checkUserValidity_url" translatable="false">student/checkUserValidity/</string>
+
+    //Scorm Url
+    <string name="scorm_player_url" translatable="false">{scormPlayerUrl}?courseId={courseId}&amp;userId={userId}&amp;cardId={cardId}&amp;url={base64}&amp;orgId={orgid}</string>
+
+    //Inbox
+    // GetAPi
+    <string name="inBoxGetApi" translatable="false">direct-message/user-message/{userId}</string>
+    //UpdateReadIndex
+    <string name="inBoxUpdateReadApi" translatable="false">direct-message/user-message/{userMessageId}/{userId}</string>
+    //End
+
+    //Notice Board post View
+    <string name="noticeBoard_post_view" translatable="false">noticeBoard/post/view</string>
+
+    //Learning page
+    <string name="get_learning_page_data" translatable="false">student/{orgId}/{userId}/pendingModules/list</string>
+
+    //Assessment
+    //Assessment - Detail -Api
+    <string name="get_Assessment_details" translatable="false">assessment/{org-id}/{assessmentId}/{userId}</string>
+    //Enroll + create Game Api
+    <string name="enrol_create_api" translatable="false">assessment/{org-id}/enroll/v2/{assessmentId}</string>
+    //Get All Questions
+    <string name="get_all_assessment_questions" translatable="false">assessment/{org-id}/v3/questions/{assessmentId}/{gameId}</string>
+    //User Assessment Progress API
+    <string name="get_user_user_assessment_progress" translatable="false">assessment/{org-id}/getUserAssessmentProgress/{assessmentId}/{userId}</string>
+    //Submit Game API
+    <string name="submit_game" translatable="false">game/submit_v2?</string>
+    //save data from user assessment progress node (every question)
+    <string name="update_userAssessment_url" translatable="false">game/updateUserAssessmentProgress/v2/</string>
+    //End
+
+    //Course
+    // Course - Detail API
+    <string name="get_course_details" translatable="false">course/{org-id}/{courseId}/{userId}</string>
+    //course user progress - API (landing Page)
+    <string name="get_course_user_progress_api" translatable="false">course/{org-id}/getUserCourseProgress/{courseId}/{userId}</string>
+    //get each card data by level
+    <string name="getCardUrl_V2" translatable="false">card/v2/cardId?courseId={courseId}&amp;levelId={levelId}</string>
+    //course enroll
+    <string name="enrolllp_url" translatable="false">course/{courseId}/enrol/{userId}?courseColnId={courseColnId}&amp;mlCourseId={mlCourseId}</string>
+    // course new submit card
+    <string name="submitCard_url_v4" translatable="false">card/v4/submitData?</string>
+    //send certificate
+    <string name="sendcertificate_url" translatable="false">certificate/send</string>
+    //End
+
+    //userFeeds
+    //get All Feeds
+    <string name="userFeed_page" translatable="false">newsfeed/{orgId}/feed/{studentId}?announcementFeed=false&amp;pageNum={pageNum}</string>
+    //search All Feeds
+    <string name="search_Feed_page" translatable="false">newsfeed/{orgId}/feed/{studentId}?announcementFeed=false&amp;searchKeyword={query}</string>
+    //get announcement Feeds
+    <string name="announcement_feeds" translatable="false">newsfeed/{orgId}/feed/{studentId}?announcementFeed=true</string>
+    //get specific feed Data
+    <string name="userFeedDetails" translatable="false">newsfeed/{feedId}/feedDetails</string>
+    //get Feed Filters Data
+    <string name="userFeedFilters" translatable="false">newsfeed/filters</string>
+    //End
+
+    //LeaderBoard
+    <string name="getcpl_lb_url_v2" translatable="false">leaderboard/v2/cplLeaderboard/{cplId}/{userid}/{topCount}</string>
+    <string name="get_lb_url" translatable="false">leaderboard/50</string>
+    <string name="get_lb_url_v2" translatable="false">leaderboard/v2/50</string>
+    <string name="get_filter_data" translatable="false">filter</string>
+    <string name="get_filter_sub_data" translatable="false">filter/values</string>
+    <string name="get_selected_filter_sub_data" translatable="false">filter/values?</string>
+    <string name="getcourse_lb_url" translatable="false">course/leaderboard/{courseId}</string>
+    <string name="getcourse_lb_url_v2" translatable="false">course/leaderboard/{courseId}/</string>
+    <string name="getcpl_lb_url" translatable="false">leaderboard/cplLeaderboard</string>
+    <string name="getcourse_lb_url_group" translatable="false">course/groupCourseLeaderboard/{userId}/{courseId}</string>
+    <string name="getoverall_lb_url_group" translatable="false">leaderboard/groupOverAllLeaderboard/{userId}</string>
+    <string name="skill_leaderboard_url" translatable="false">  soccer/getLeaderBoard/{userId}/soccerSkill/{soccerSkillId}/count/{topCount}</string>
+    <string name="get_leaderboard" translatable="false">leaderboard/allData?subject={subject}&amp;gradeStr={grade}&amp;period={period}&amp;classcode={classcode}&amp;groupId={groupid}&amp;moduleId={moduleid}&amp;eventCode={eventcode}&amp;studentid={studentid}&amp;lpId={lpId}&amp;assessmentId={assessmentId}&amp;orgID={orgID}</string>
+
+    //Home Page
+    <string name="user_earned_coins" translatable="false">leaderboard/userScore/{userId}</string>
+
+    //ILT
+    //Join Meeting
+    <string name="join_register_meeting" translatable="false">meeting/registerAttendee</string>
+    //Meeting Event Status
+    <string name="meeting_event_status" translatable="false">meeting/saveMeetingEvents</string>
+    //Unregister user
+    <string name="meeting_status_url" translatable="false"> meeting/{meetingId}/updateMeetingStatus/{userId}/{attendStatus}</string>
+    //Register user
+    <string name="enrol_meeting_url" translatable="false"> meeting/{meetingId}/enrol/{userId}</string>
+    //End
+
+    // Distribution Modules
+    //Course
+    <string name="distribut_course_url" translatable="false">course/distribute/v2/{courseId}</string>
+    //Assessment
+    <string name="distribut_assessment_url" translatable="false">assessment/distribute/v2/{assessmentId}</string>
+    //CPL
+    <string name="cpl_distribution_api" translatable="false">contentPlayList/distribute/v2/{cplId}</string>
+    // check Module DistributedOrNot
+    <string name="check_module_distributedOrNot" translatable="false">student/{orgId}/{userId}/{moduleType}/{moduleId}</string>
+    //End
+
+    //UserDetails
+    <string name="userDetailsApi" translatable="false">student/{orgId}/userDetails/{studentId}</string>
+    <string name="userDetails" translatable="false">student/{studentId}/userDetails</string>
+    //End
+
+    //Catalogue
+    //get catalogue id
+    <string name="get_catalogue_id" translatable="false">student/{orgId}/{userId}/catalogue?pageNum=1</string>
+    //get catalogue list based on catalogue Id
+    <string name="catalogue_list_url_v2" translatable="false">catalogue/{catalogueId}/{userId}</string>
+    //end
+    //Org Settings
+    <string name="get_appConfig" translatable="false">orgParams/appConfig</string>
+    <string name="get_AppTutorials" translatable="false">orgParams/getAppTutorials</string>
+    <string name="get_layoutInfo" translatable="false">orgParams/layoutInfo?layout=LAYOUT_4</string>
+    <string name="get_availableLanguages" translatable="false">orgParams/availableLanguages</string>
+    <string name="get_all_languages" translatable="false">/language/getAllLanguageList</string>
+    <string name="get_appResource" translatable="false">orgParams/appResource</string>
+    <string name="get_student_language" translatable="false">student/arvind/getLanguage</string>
+    <string name="set_student_language" translatable="false">student/arvind/setLanguage</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/white"
+    android:elevation="2dp"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+    tools:targetApi="lollipop">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <FrameLayout
+            android:id="@+id/toolbar_close_icon"
+            android:layout_width="28dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:src="@drawable/ic_back_cd"
+                android:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/body_1_bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:lines="1"
+            android:gravity="center_vertical"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+        <FrameLayout
+            android:id="@+id/audio_lay"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:layout_marginEnd="16dp">
+
+
+            <ImageView
+                android:id="@+id/audio_speaker_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_audio_on"
+                android:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/share_lay"
+            android:layout_width="35dp"
+            android:layout_height="27dp"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp">
+
+
+            <ImageView
+                android:id="@+id/share_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_share_socialmedia"
+                android:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

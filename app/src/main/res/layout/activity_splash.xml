@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/splash_parentscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/QuizBgGraya">
+
+        <RelativeLayout
+            android:id="@+id/splash_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/oustlayout_dimen50">
+
+                <RelativeLayout
+                    android:id="@+id/stringprogressLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen220"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/oustlayout_dimen5"
+                    android:layout_marginRight="@dimen/oustlayout_dimen5"
+                    android:visibility="visible">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen15"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/oustlayout_dimen5"
+                        android:background="@android:color/transparent"
+                        android:indeterminate="@bool/default_underline_indicator_fades"
+                        android:indeterminateBehavior="repeat"
+                        android:indeterminateDrawable="@drawable/flatprogressbarback"
+                        android:indeterminateDuration="3000"
+                        android:interpolator="@android:anim/linear_interpolator"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/oustlayout_dimen15"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/oustlayout_dimen5"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/download_progressbar"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="@dimen/oustlayout_dimen150"
+                        android:layout_height="@dimen/oustlayout_dimen150"
+                        android:layout_centerInParent="true"
+                        android:max="10"
+                        android:progress="10"
+                        android:progressDrawable="@drawable/splashresourse_loaderback" />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="@dimen/oustlayout_dimen150"
+                        android:layout_height="@dimen/oustlayout_dimen150"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/oustlayout_dimen5"
+                        android:background="@android:color/transparent"
+                        android:indeterminate="@bool/default_underline_indicator_fades"
+                        android:indeterminateBehavior="repeat"
+                        android:indeterminateDrawable="@drawable/splashresourse_loaderback"
+                        android:indeterminateDuration="3000"
+                        android:interpolator="@android:anim/linear_interpolator"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/stringdownloadprogress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="@dimen/oustlayout_dimen150"
+                        android:layout_height="@dimen/oustlayout_dimen150"
+                        android:layout_centerInParent="true"
+                        android:max="0"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/splashresourse_loader" />
+
+                    <com.oustme.oustsdk.customviews.HeavyCustomTextView
+                        android:id="@+id/stringdownloadprogresstext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0%"
+                        android:textColor="@color/whitelight"
+                        android:textSize="@dimen/ousttext_dimen18"
+                        android:textStyle="bold" />
+
+                    <com.oustme.oustsdk.customviews.CustomTextView
+                        android:id="@+id/stringdownloadtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/stringdownloadprogress"
+                        android:layout_marginTop="@dimen/oustlayout_dimen8"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/LiteGray"
+                        android:textSize="@dimen/ousttext_dimen16" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/username_passlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/oustlayout_dimen40"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/orgtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Org Id"
+                        android:text=""
+                        android:textColor="@color/whitelight" />
+
+                    <EditText
+                        android:id="@+id/usernametext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="User name"
+                        android:text=""
+                        android:textColor="@color/whitelight" />
+
+                    <TextView
+                        android:id="@+id/startbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/oustlayout_dimen20"
+                        android:background="@color/LiteGreen"
+                        android:gravity="center"
+                        android:padding="@dimen/oustlayout_dimen10"
+                        android:text="START"
+                        android:textColor="@color/whitelight" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/errorButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/oustlayout_dimen32"
+                    android:background="@drawable/white_cornerback"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+                <com.oustme.oustsdk.customviews.CustomTextView
+                    android:id="@+id/oust_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oustlayout_dimen40"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/whitelight"
+                    android:textSize="@dimen/ousttext_dimen14"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/oustlayout_dimen40">
+    <RelativeLayout
+        android:layout_width="@dimen/oustlayout_dimen200"
+        android:layout_height="wrap_content"
+        android:id="@+id/hotspot_labellayout">
+        <com.oustme.oustsdk.customviews.HeavyCustomTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/hotspot_labeltext"
+            android:textColor="@color/White"
+            android:maxLines="2"
+            android:padding="4dp"
+            android:text=""
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ousttext_dimen16" />
+        <com.oustme.katexview.KatexView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/hotspot_labeltextMaths"
+            android:textColor="@color/White"
+            android:maxLines="2"
+            android:padding="4dp"
+            android:text=""
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ousttext_dimen16" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:padding="2dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/ousttext_dimen9"
+            android:src="@drawable/ic_close_img"
+            app:tint="@color/Black" />
+
+        <ImageView
+            android:id="@+id/imageViewRate"
+            android:layout_width="@dimen/oustlayout_dimen180"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_five_star" />
+
+        <TextView
+            android:id="@+id/textViewRateUsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/rate_us_title"
+            android:textAllCaps="true"
+            android:textSize="@dimen/ousttext_dimen20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRateUsMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/rate_us_msg"
+            android:textSize="@dimen/ousttext_dimen16" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ousttext_dimen20"
+            android:background="@color/lgreen"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/oustlayout_dimen10"
+            android:paddingBottom="@dimen/oustlayout_dimen10">
+
+            <ImageView
+                android:layout_width="@dimen/oustlayout_dimen25"
+                android:layout_height="@dimen/oustlayout_dimen25"
+                android:src="@drawable/ic_right_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

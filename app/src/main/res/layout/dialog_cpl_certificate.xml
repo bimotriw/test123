@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popupBackGroundc">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/certificate_popup_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            android:visibility="visible"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:padding="@dimen/oustlayout_dimen5">
+
+                <ImageView
+                    android:id="@+id/closeBtn"
+                    android:layout_width="@dimen/oustlayout_dimen30"
+                    android:layout_height="@dimen/oustlayout_dimen30"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_close_img"
+                    app:tint="@color/Black" />
+
+                <TextView
+                    android:id="@+id/certifucate_titletxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                    android:text="@string/your_certificate_msg"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/ousttext_dimen18" />
+
+                <TextView
+                    android:id="@+id/certificatemsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/certifucate_titletxt"
+                    android:layout_marginTop="@dimen/oustlayout_dimen5"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                    android:text="@string/enter_email_msg"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/ousttext_dimen16" />
+
+                <EditText
+                    android:id="@+id/edittext_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="@dimen/oustlayout_dimen15"
+                    android:layout_marginTop="@dimen/oustlayout_dimen15"
+                    android:background="@drawable/rounded_10"
+                    android:hint="@string/enter_email_txt"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:padding="@dimen/oustlayout_dimen8"
+                    android:textColorHint="@color/new_gray" />
+
+                <FrameLayout
+                    android:id="@+id/submit_certificates"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/oustlayout_dimen16"
+                    android:background="@drawable/course_button_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="@string/submit"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/oustlayout_dimen20"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/confirmpopup_animlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            android:visibility="gone"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/White">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/mobilepopup_closeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen45"
+                            android:background="@color/LiteGreen">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/confirm_popup_heading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text=""
+                                android:textColor="@color/whitea"
+                                android:textSize="@dimen/oustlayout_dimen18" />
+
+                            <ImageButton
+                                android:id="@+id/btnClose"
+                                android:layout_width="@dimen/oustlayout_dimen25"
+                                android:layout_height="@dimen/oustlayout_dimen25"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/oustlayout_dimen5"
+                                android:background="@drawable/white_roundedcorner"
+                                android:contentDescription="@string/app_name"
+                                android:padding="@dimen/oustlayout_dimen5"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_close_img"
+                                android:tint="@color/whitea" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/passwordLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="@dimen/oustlayout_dimen15"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                                android:maxLines="10"
+                                android:scrollbars="vertical"
+                                android:text="@string/confirm_email"
+                                android:textColor="@color/lgray"
+                                android:textSize="@dimen/ousttext_dimen18" />
+
+                            <com.oustme.oustsdk.customviews.CustomTextView
+                                android:id="@+id/confirm_emailtext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:lineSpacingExtra="@dimen/oustlayout_dimen4"
+                                android:maxLines="10"
+                                android:scrollbars="vertical"
+                                android:text=""
+                                android:textColor="@color/lgray"
+                                android:textSize="@dimen/ousttext_dimen18" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ok_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/oustlayout_dimen70"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/oustlayout_dimen15"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/emailpopup_reenterlayout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="@dimen/oustlayout_dimen7"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_orangeback">
+
+                                    <com.oustme.oustsdk.customviews.CustomTextView
+                                        android:id="@+id/emailpopup_reentertext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:text="Re-enter"
+                                        android:textColor="@color/whitea"
+                                        android:textSize="@dimen/ousttext_dimen14" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/emailpopup_confirmlayout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/oustlayout_dimen7"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_greenback">
+
+                                    <com.oustme.oustsdk.customviews.CustomTextView
+                                        android:id="@+id/mobilepopup_confirmtext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:text="Confirm"
+                                        android:textColor="@color/whitea" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

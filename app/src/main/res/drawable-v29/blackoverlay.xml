@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define the background properties like color etc -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/popupBackGround"
+                android:endColor="@color/fulltransparent"
+                android:centerY="0.85"
+                android:angle="270"/>
+        </shape>
+    </item>
+
+</layer-list>
