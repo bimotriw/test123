@@ -1224,5 +1224,7 @@
     <string name="level_edited_user_will_re_attempt">This level has been edited, you will have to attempt this level again!</string>
     <string name="offline_completion_popUp">Thank you for completing the course, the submission will happen once you connect back to the internet</string>
     <string name="course_data_is_missing">This course data is missing. Please contact your admin.</string>
+    <string name="language_settings">Language Settings</string>
+    <string name="language">Language</string>
 </resources>
 

@@ -74,7 +74,7 @@ public class ChooseLanguagePresenter {
         }
 
         Log.d("choose lang ","languages "+languagePrefix);
-        mView.populateLanguage(languages, languagePrefix, languageClasses);
+        mView.populateLanguage(languagePrefix, languageClasses);
     }
 
     /**

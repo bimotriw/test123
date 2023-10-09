@@ -55,7 +55,7 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
         this.showButton = showButton;
     }
 
-    @Nullable
+     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.bottom_sheet_language, container, false);
@@ -88,16 +88,11 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
 
     private void handleButtonClick(){
         buttonSetLang.setOnClickListener(v -> {
-            ArrayList<LanguageClass> langClasses = adapter.getItems();
-            int selectedId=-1;
-            for(int i=0;i<langClasses.size();i++){
-                if(langClasses.get(i).getSelected()){
-                    selectedId=langClasses.get(i).getIndex();
-                    break;
-                }
-            }
+            LanguageClass languageClass = adapter.getItems().get(adapter.getLastSelectedPosition());
+            int selectedId=languageClass.getIndex();
+            String selectedPrefix = languageClass.getLanguagePerfix();
             if(selectedId > 0){
-                setUserLanguage(selectedId);
+                setUserLanguage(selectedId,selectedPrefix);
             }
         });
     }
@@ -132,15 +127,27 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
                             int languageId = languageDataObject.getInt("languageId");
                             String displayName = languageDataObject.isNull("displayName") ? null : languageDataObject.getString("displayName");
                             LanguageClass languageClass = new LanguageClass();
+                            String languageCode = languageDataObject.isNull("languageCode") ? "" : languageDataObject.getString("languageCode");
                             languageClass.setIndex(languageId);
                             languageClass.setName(displayName);
+                            if(!languageCode.isEmpty()){
+                                String[] langCode = languageCode.split("_");
+                                if (langCode.length > 0) {
+                                    languageClass.setLanguagePerfix(langCode[0]);
+                                    if (langCode.length > 1) {
+                                        languageClass.setCountryCode(langCode[1]);
+                                    } else {
+                                        languageClass.setCountryCode("GB");
+                                    }
+                                }
+                            }
                             languageClasses.add(languageClass);
                         }
                         adapter = new LanguageAdapter(languageClasses, LanguageBottomSheet.this);
                         rvLanguage.setLayoutManager(new LinearLayoutManager(getContext()));
                         rvLanguage.setAdapter(adapter);
-                    } catch (JSONException e) {
-                        throw new RuntimeException(e);
+                    } catch (Exception e) {
+                        Log.d("test lang","error happened"+e);
                     }
 
                 }
@@ -160,11 +167,11 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
     @Override
     public void onSelectLanguage(LanguageClass languageClass) {
         if(!showButton){
-            setUserLanguage(languageClass.getIndex());
+            setUserLanguage(languageClass.getIndex(),languageClass.getLanguagePerfix());
         }
     }
 
-    private void setUserLanguage(int langId){
+    private void setUserLanguage(int langId,String langPrefix){
         String getPointsUrl = OustSdkApplication.getContext().getResources().getString(R.string.set_student_language);
         ActiveUser activeUser = OustSdkTools.getActiveUserData(OustPreferences.get("userdata"));
         getPointsUrl = getPointsUrl.replace("{studentId}", "arvind");
@@ -176,10 +183,8 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
             ApiCallUtils.doNetworkCall(Request.Method.PUT, getPointsUrl, OustSdkTools.getRequestObjectforJSONObject(jsonParams), new ApiCallUtils.NetworkCallback() {
                 @Override
                 public void onResponse(JSONObject response) {
-                    Log.d("lang_api","reponse "+response.toString());
-                    //TODO waiting reposponse for
-                    setLocale("EN");
-                    // LanguageBottomSheet.this.dismiss();
+                    Log.d("lang_api","response "+response.toString());
+                    setLocale(langPrefix);
                 }
 
                 @Override

@@ -57,6 +57,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
+import com.blongho.country_data.World;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
@@ -315,6 +316,7 @@ public class LandingActivity extends BaseActivity implements BottomNavigationVie
                 OustSdkApplication.setmContext(LandingActivity.this);
             }
             OustSdkTools.setLocale(LandingActivity.this);
+            World.init(getApplicationContext());
         } catch (Exception e) {
             e.printStackTrace();
             OustSdkTools.sendSentryException(e);

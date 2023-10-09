@@ -3,6 +3,7 @@ package com.oustme.oustsdk.adapter.common;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -52,15 +53,21 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
         }
         holder.itemLangWrapper.setOnClickListener(v -> {
             onItemClickListener.onSelectLanguage(language);
-        });
-        holder.cbLanguage.setChecked(lastSelectedPosition == position);
-        holder.cbLanguage.setOnClickListener(v -> {
             language.setSelected(!language.getSelected());
             lastSelectedPosition = position;  // update the last selected position
             notifyDataSetChanged();  // refresh the adapter
         });
+        if(lastSelectedPosition==position){
+            holder.cbLanguage.setVisibility(View.VISIBLE);
+        }else{
+            holder.cbLanguage.setVisibility(View.INVISIBLE);
+        }
     }
 
+
+    public int getLastSelectedPosition(){
+        return lastSelectedPosition;
+    }
     @Override
     public int getItemCount() {
         return languageList.size();
@@ -73,7 +80,7 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
     class LanguageViewHolder extends RecyclerView.ViewHolder {
         TextView tvCountryName;
         CircleImageView imgCountryFlag;
-        RadioButton cbLanguage;
+        ImageView cbLanguage;
 
         RelativeLayout itemLangWrapper;
 

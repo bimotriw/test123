@@ -16,7 +16,10 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.VolleyError;
 import com.blongho.country_data.World;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.oustme.oustsdk.R;
@@ -27,11 +30,18 @@ import com.oustme.oustsdk.layoutFour.LandingActivity;
 import com.oustme.oustsdk.presenter.common.ChooseLanguagePresenter;
 import com.oustme.oustsdk.response.common.LanguageClass;
 import com.oustme.oustsdk.tools.ActiveUser;
+import com.oustme.oustsdk.tools.HttpManager;
 import com.oustme.oustsdk.tools.LanguagePreferences;
 import com.oustme.oustsdk.tools.OustAppState;
 import com.oustme.oustsdk.tools.OustPreferences;
+import com.oustme.oustsdk.tools.OustSdkApplication;
 import com.oustme.oustsdk.tools.OustSdkTools;
+import com.oustme.oustsdk.util.ApiCallUtils;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -44,7 +54,7 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
     private ActiveUser activeUser;
     private BottomSheetDialog bottomSheetDialog;
     private BottomSheetDialog processingDialog;
-    private List<LanguageClass> languageClasses;
+    private List<LanguageClass> langClasses;
 
     private boolean isFirstTime = true;
 
@@ -80,10 +90,11 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
             activeUser = OustAppState.getInstance().getActiveUser();
             if (activeUser != null) {
                 presenter = new ChooseLanguagePresenter(this);
-                presenter.getLanguageData("", Locale.getDefault().getLanguage());
+//                presenter.getLanguageData("", Locale.getDefault().getLanguage());
             } else {
                 ChooseLanguageActivity.this.finish();
             }
+            getAvailableLanguage();
         } catch (Exception e) {
             e.printStackTrace();
             OustSdkTools.sendSentryException(e);
@@ -95,22 +106,6 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
         bottomSheet.setCancelable(false);
         bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
     }
-
-//    private void showLanguageBottomSheet() {
-//        bottomSheetDialog = new BottomSheetDialog(this,R.style.AppBottomSheetDialogTheme);
-//        View bottomSheetView = getLayoutInflater().inflate(R.layout.bottom_sheet_language, null);
-//        RecyclerView rvLanguages = bottomSheetView.findViewById(R.id.rvLanguage);
-//
-//        // Set up the RecyclerView with the LanguageAdapter
-//        List<LanguageClass> languageList = languageClasses;
-//        // Populate the languageList with data
-//        LanguageAdapter adapter = new LanguageAdapter(languageList,ChooseLanguageActivity.this);
-//        rvLanguages.setLayoutManager(new LinearLayoutManager(this));
-//        rvLanguages.setAdapter(adapter);
-//
-//        bottomSheetDialog.setContentView(bottomSheetView);
-//        bottomSheetDialog.show();
-//    }
 
     private void showProcessingDialog(LanguageClass languageClass){
         processingDialog = new BottomSheetDialog(this,R.style.AppBottomSheetDialogTheme);
@@ -154,9 +149,64 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
 
     }
 
-    public void populateLanguage(List<String> languages, String languagePrefix, List<LanguageClass> languageClasses) {
+    private void getAvailableLanguage(){
+        String getPointsUrl = OustSdkApplication.getContext().getResources().getString(R.string.get_all_languages);
         try {
-            this.languageClasses = languageClasses;
+            getPointsUrl = HttpManager.getAbsoluteUrl(getPointsUrl);
+            ApiCallUtils.doNetworkCall(Request.Method.GET, getPointsUrl, OustSdkTools.getRequestObject(""), new ApiCallUtils.NetworkCallback() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    JSONObject jsonObject = null;
+                    List<LanguageClass> languageClasses = new ArrayList<>();
+                    try {
+                        jsonObject = new JSONObject(response.toString());
+                        JSONArray languageDataArray = jsonObject.getJSONArray("languageDataList");
+                        for (int i = 0; i < languageDataArray.length(); i++) {
+                            JSONObject languageDataObject = languageDataArray.getJSONObject(i);
+
+                            // Now you can extract individual fields from each languageDataObject
+                            int languageId = languageDataObject.getInt("languageId");
+                            String displayName = languageDataObject.isNull("displayName") ? null : languageDataObject.getString("displayName");
+                            LanguageClass languageClass = new LanguageClass();
+                            String languageCode = languageDataObject.isNull("languageCode") ? "" : languageDataObject.getString("languageCode");
+                            languageClass.setIndex(languageId);
+                            languageClass.setName(displayName);
+                            if(!languageCode.isEmpty()){
+                                String[] langCode = languageCode.split("_");
+                                if (langCode.length > 0) {
+                                    languageClass.setLanguagePerfix(langCode[0]);
+                                    if (langCode.length > 1) {
+                                        languageClass.setCountryCode(langCode[1]);
+                                    } else {
+                                        languageClass.setCountryCode("GB");
+                                    }
+                                }
+                            }
+                            languageClasses.add(languageClass);
+                        }
+
+                    } catch (Exception e) {
+                        Log.d("test lang","error happened"+e);
+                    }
+                    String lang = LanguagePreferences.get("appSelectedLanguage");
+                    populateLanguage(lang,languageClasses);
+                }
+
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(ChooseLanguageActivity.this, getResources().getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            OustSdkTools.sendSentryException(e);
+        }
+    }
+
+    public void populateLanguage(String languagePrefix, List<LanguageClass> languageClasses) {
+        try {
+            this.langClasses = languageClasses;
             for(int i=0;i<languageClasses.size();i++){
                 if(languageClasses.get(i).getLanguagePerfix().equals(languagePrefix)){
                     final int flag= World.getFlagOf(languageClasses.get(i).getCountryCode());
@@ -165,7 +215,6 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
                     break;
                 }
             }
-
         } catch (Exception e) {
             e.printStackTrace();
             OustSdkTools.sendSentryException(e);
