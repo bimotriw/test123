@@ -1,23 +1,33 @@
 package com.oustme.oustsdk.dialogs;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.oustme.oustsdk.R;
 import com.oustme.oustsdk.activity.common.NewLandingActivity;
@@ -49,6 +59,8 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
     private Button buttonSetLang;
 
     private LanguageAdapter adapter;
+    private TextView tvSelectLang;
+    private LinearLayoutCompat btnWrapper,divider;
 
     public LanguageBottomSheet(boolean isFullScreen, boolean showButton) {
         this.isFullScreen = isFullScreen;
@@ -61,6 +73,10 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
         View view = inflater.inflate(R.layout.bottom_sheet_language, container, false);
         rvLanguage = view.findViewById(R.id.rvLanguage);
         buttonSetLang = view.findViewById(R.id.buttonSetLang);
+        tvSelectLang = view.findViewById(R.id.select_lang);
+        btnWrapper = view.findViewById(R.id.buttonWrapper);
+        divider = view.findViewById(R.id.divider);
+        initUI();
         return view;
     }
 
@@ -68,8 +84,34 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // Your view initialization code here
+        View bottomSheet = (View) view.getParent();
+        bottomSheet.setBackgroundTintMode(PorterDuff.Mode.CLEAR);
+        bottomSheet.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+        bottomSheet.setBackgroundColor(Color.TRANSPARENT);
         getAvailableLanguage();
         handleButtonClick();
+    }
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        BottomSheetDialog dialog = (BottomSheetDialog) super.onCreateDialog(savedInstanceState);
+        dialog.getBehavior().setDraggable(!showButton);
+        // Do something with your dialog like setContentView() or whatever
+        return dialog;
+    }
+
+    private void initUI(){
+        btnWrapper.setVisibility(showButton?View.VISIBLE:View.GONE);
+        divider.setVisibility(showButton?View.VISIBLE:View.GONE);
+        tvSelectLang.setAllCaps(showButton);
+        tvSelectLang.setTextColor(showButton?getResources().getColor(R.color.linkcolor):getResources().getColor(R.color.black));
+        rvLanguage.setLayoutManager(new LinearLayoutManager(getContext()));
+        rvLanguage.addItemDecoration(new DividerItemDecoration(getContext(),LinearLayoutManager.VERTICAL));
+        if(!showButton){
+            rvLanguage.setPadding(0,0,0,200);
+        }
+
     }
 
     @Override
@@ -89,11 +131,15 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
 
     private void handleButtonClick(){
         buttonSetLang.setOnClickListener(v -> {
-            LanguageClass languageClass = adapter.getItems().get(adapter.getLastSelectedPosition());
-            int selectedId=languageClass.getIndex();
-            String selectedPrefix = languageClass.getLanguagePerfix();
-            if(selectedId > 0){
-                setUserLanguage(selectedId,selectedPrefix);
+            //check adapter selected position
+            int lastSelectedPosition = adapter.getLastSelectedPosition();
+            if(lastSelectedPosition > -1) {
+                LanguageClass languageClass = adapter.getItems().get(adapter.getLastSelectedPosition());
+                int selectedId = languageClass.getIndex();
+                String selectedPrefix = languageClass.getLanguagePerfix();
+                if (selectedId > 0) {
+                    setUserLanguage(selectedId, selectedPrefix);
+                }
             }
         });
     }
@@ -149,7 +195,6 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
 
                         }
                         adapter = new LanguageAdapter(languageClasses, LanguageBottomSheet.this);
-                        rvLanguage.setLayoutManager(new LinearLayoutManager(getContext()));
                         rvLanguage.setAdapter(adapter);
                     } catch (Exception e) {
                         Log.d("test lang","error happened"+e);

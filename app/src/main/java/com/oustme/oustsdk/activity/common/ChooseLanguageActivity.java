@@ -9,6 +9,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -103,7 +104,6 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
 
     private void showLanguageBottomSheet() {
         LanguageBottomSheet bottomSheet = new LanguageBottomSheet(false, false);
-        bottomSheet.setCancelable(false);
         bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
     }
 
@@ -209,9 +209,8 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
             this.langClasses = languageClasses;
             for(int i=0;i<languageClasses.size();i++){
                 if(languageClasses.get(i).getLanguagePerfix().equals(languagePrefix)){
-                    final int flag= World.getFlagOf(languageClasses.get(i).getCountryCode());
-                    countryFlag.setImageResource(flag);
                     selectedLang.setText(languageClasses.get(i).getName());
+                    setCountryFlag(languageClasses.get(i).getCountryCode());
                     break;
                 }
             }
@@ -219,6 +218,25 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
             e.printStackTrace();
             OustSdkTools.sendSentryException(e);
         }
+    }
+
+    private Drawable setCountryFlag(String code){
+        Drawable flag= getResources().getDrawable(R.drawable.english);
+        switch (code) {
+            case "AE":
+                flag =getResources().getDrawable(R.drawable.arab);
+                break;
+            case "IN":
+                flag = getResources().getDrawable(R.drawable.india);
+                break;
+            case "MY":
+                flag = getResources().getDrawable(R.drawable.malaysia);
+                break;
+            case "ID":
+                flag = getResources().getDrawable(R.drawable.indonesia);
+                break;
+        }
+        return flag;
     }
 
     public void checkLanguageAvailability(String selectedLanguage, LanguageClass currentSelectedLanguage) {

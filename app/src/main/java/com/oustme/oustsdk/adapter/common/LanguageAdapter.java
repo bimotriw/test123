@@ -1,5 +1,7 @@
 package com.oustme.oustsdk.adapter.common;
 
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,24 +47,41 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
     public void onBindViewHolder(@NonNull LanguageViewHolder holder, int position) {
         LanguageClass language = languageList.get(position);
         holder.tvCountryName.setText(language.getName());
+        Log.d("test lang","code "+language.getCountryCode());
+
         if(language.getCountryCode()!=null){
-            final int flag= World.getFlagOf(language.getCountryCode());
-            holder.imgCountryFlag.setImageResource(flag);
+            Drawable flag= holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.english);
+            switch (language.getCountryCode()) {
+                case "AE":
+                    flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.arab);
+                    break;
+                case "IN":
+                    flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.india);
+                    break;
+                case "MY":
+                    flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.malaysia);
+                    break;
+                case "ID":
+                    flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.indonesia);
+                    break;
+            }
+            holder.imgCountryFlag.setImageDrawable(flag);
         }else{
             holder.imgCountryFlag.setVisibility(View.GONE);
         }
+        holder.cbLanguage.setChecked(lastSelectedPosition == position);
         holder.itemLangWrapper.setOnClickListener(v -> {
+            Log.d("test lang","wrapper clicked");
             onItemClickListener.onSelectLanguage(language);
             language.setSelected(!language.getSelected());
             lastSelectedPosition = position;  // update the last selected position
             notifyDataSetChanged();  // refresh the adapter
         });
-        holder.cbLanguage.setChecked( lastSelectedPosition == position);
-        if(lastSelectedPosition==position){
-            holder.cbLanguage.setVisibility(View.VISIBLE);
-        }else{
-            holder.cbLanguage.setVisibility(View.INVISIBLE);
-        }
+        holder.cbLanguage.setOnClickListener(v -> {
+            lastSelectedPosition = position;  // update the last selected position
+            notifyDataSetChanged();  // refresh
+            onItemClickListener.onSelectLanguage(language);
+        });
     }
 
 

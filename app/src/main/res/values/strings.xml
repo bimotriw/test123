@@ -1226,5 +1226,6 @@
     <string name="course_data_is_missing">This course data is missing. Please contact your admin.</string>
     <string name="language_settings">Language Settings</string>
     <string name="language">Language</string>
+    <string name="set_language_and_continue"><![CDATA[Select Language & Continue]]></string>
 </resources>
 

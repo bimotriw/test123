@@ -69,28 +69,24 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
                 />
-            <ImageView
+            <com.oustme.oustsdk.customviews.CircleImageView
                 android:id="@+id/ctryFlag"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_toStartOf="@id/selectedLang"
                 android:layout_centerVertical="true"
-                android:src="@drawable/gb"/>
+                android:src="@drawable/gb"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="1dp"/>
 
             <TextView
                 android:id="@+id/selectedLang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginVertical="19dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/avenir_book"
                 android:text="English"
                 android:textStyle="bold" />

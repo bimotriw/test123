@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/custom_roundedcorner">
+        <shape android:shape="rectangle">
+            <!-- solid background -->
+            <solid android:color="#2A1AD6"/>
+            <!-- draw a border around rectangle shape -->
+            <corners android:radius="5dp"/>
+        </shape>
+    </item>
+</layer-list>
