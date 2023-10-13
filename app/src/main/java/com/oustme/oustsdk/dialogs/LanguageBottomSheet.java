@@ -1,19 +1,22 @@
 package com.oustme.oustsdk.dialogs;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
+import android.app.Activity;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +34,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.oustme.oustsdk.R;
 import com.oustme.oustsdk.activity.common.NewLandingActivity;
-import com.oustme.oustsdk.activity.common.UserSettingActivity;
 import com.oustme.oustsdk.adapter.common.LanguageAdapter;
 import com.oustme.oustsdk.interfaces.common.OnLanguageSelected;
 import com.oustme.oustsdk.layoutFour.LandingActivity;
@@ -45,11 +47,11 @@ import com.oustme.oustsdk.tools.OustSdkTools;
 import com.oustme.oustsdk.util.ApiCallUtils;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class LanguageBottomSheet extends BottomSheetDialogFragment implements OnLanguageSelected {
 
@@ -57,15 +59,18 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
     private boolean showButton = true;
     private RecyclerView rvLanguage;
     private Button buttonSetLang;
-
+    private Activity activity;
     private LanguageAdapter adapter;
     private TextView tvSelectLang;
     private LinearLayoutCompat btnWrapper,divider;
 
-    public LanguageBottomSheet(boolean isFullScreen, boolean showButton) {
+    public LanguageBottomSheet(boolean isFullScreen, boolean showButton, Activity activity) {
         this.isFullScreen = isFullScreen;
         this.showButton = showButton;
+        this.activity = activity;
     }
+
+
 
      @Nullable
     @Override
@@ -114,16 +119,68 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
 
     }
 
+    private void showProcessingDialog(LanguageClass languageClass){
+        BottomSheetDialog processingDialog = new BottomSheetDialog(requireContext(),R.style.AppBottomSheetDialogTheme);
+        View bottomSheetView = getLayoutInflater().inflate(R.layout.bottom_sheet_processing_lang, null);
+        ProgressBar progressBar = bottomSheetView.findViewById(R.id.progressBar);
+        TextView tvCounter = bottomSheetView.findViewById(R.id.tvCounter);
+
+
+        // Create a ValueAnimator that animates from 0 to 100 (the max value of the ProgressBar)
+        ValueAnimator animator = ValueAnimator.ofInt(0, 100);
+        animator.setDuration(5000); // Duration of 5 seconds
+        animator.addUpdateListener(animation -> {
+            int progressValue = (int) animation.getAnimatedValue();
+            progressBar.setProgress(progressValue);
+
+            // Calculate countdown value for tvCounter
+            int countdownValue = 5 - (progressValue / 20);
+            tvCounter.setText(countdownValue + "s");
+
+            if (progressValue == 100) {
+                processingDialog.dismiss();
+                int selectedId = languageClass.getIndex();
+                String selectedPrefix = languageClass.getLanguagePerfix();
+                setUserLanguage(selectedId, selectedPrefix);
+            }
+        });
+
+        // When the animation ends, start the new activity
+        animator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                String languagePrefix = LanguagePreferences.get("appSelectedLanguage");
+                if (languagePrefix == null || languagePrefix.isEmpty()) {
+                    languagePrefix = Locale.getDefault().getLanguage();
+                }
+            }
+        });
+
+        animator.start();
+        processingDialog.setContentView(bottomSheetView);
+        processingDialog.show();
+    }
+
     @Override
     public void onStart() {
         super.onStart();
         Dialog dialog = getDialog();
         if (dialog != null) {
             View bottomSheet = dialog.findViewById(com.google.android.material.R.id.design_bottom_sheet);
+            BottomSheetBehavior<View> bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
             if (isFullScreen) {
                 // Set the bottom sheet to full screen
-                BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+
                 bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+            }else{
+                DisplayMetrics displayMetrics = new DisplayMetrics();
+                getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+                int screenHeight = displayMetrics.heightPixels;
+                // Set the minimum height (peek height)
+                bottomSheetBehavior.setPeekHeight((int) (screenHeight*0.30));
+                // Set the maximum height
+                bottomSheet.getLayoutParams().height =  (int) (screenHeight*0.80); // e.g., 800 pixels
+                bottomSheet.requestLayout();
             }
             buttonSetLang.setVisibility(showButton?View.VISIBLE:View.INVISIBLE);
         }
@@ -138,26 +195,30 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
                 int selectedId = languageClass.getIndex();
                 String selectedPrefix = languageClass.getLanguagePerfix();
                 if (selectedId > 0) {
-                    setUserLanguage(selectedId, selectedPrefix);
+                    Log.d("test lang","show second bottom sheet");
+                    dismiss();
+                    showProcessingDialog(languageClass);
+//                    setUserLanguage(selectedId, selectedPrefix);
                 }
             }
         });
     }
 
     private void setLocale(String selectedLanguage) {
+        Log.d("test_lang","set locale");
         LanguagePreferences.save("appSelectedLanguage", selectedLanguage);
-        Intent refreshApp = new Intent(getContext(), NewLandingActivity.class);
+        LanguagePreferences.save("appLanguageUpdateSuccess","true");
+        Intent refreshApp = new Intent(activity, NewLandingActivity.class);
         if (OustPreferences.getAppInstallVariable("isLayout4")) {
-            refreshApp = new Intent(getContext(), LandingActivity.class);
+            refreshApp = new Intent(activity, LandingActivity.class);
         }
-        refreshApp.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(refreshApp);
-        LanguageBottomSheet.this.dismiss();
+        refreshApp.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        activity.startActivity(refreshApp);
     }
 
     private void getAvailableLanguage(){
-        String getPointsUrl = OustSdkApplication.getContext().getResources().getString(R.string.get_all_languages);
         try {
+        String getPointsUrl = OustSdkApplication.getContext().getResources().getString(R.string.get_all_languages);
             getPointsUrl = HttpManager.getAbsoluteUrl(getPointsUrl);
             ApiCallUtils.doNetworkCall(Request.Method.GET, getPointsUrl, OustSdkTools.getRequestObject(""), new ApiCallUtils.NetworkCallback() {
                 @Override
@@ -217,7 +278,9 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
     @Override
     public void onSelectLanguage(LanguageClass languageClass) {
         if(!showButton){
-            setUserLanguage(languageClass.getIndex(),languageClass.getLanguagePerfix());
+            dismiss();
+            showProcessingDialog(languageClass);
+//            setUserLanguage(languageClass.getIndex(),languageClass.getLanguagePerfix());
         }
     }
 
@@ -233,7 +296,7 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
             ApiCallUtils.doNetworkCall(Request.Method.PUT, getPointsUrl, OustSdkTools.getRequestObjectforJSONObject(jsonParams), new ApiCallUtils.NetworkCallback() {
                 @Override
                 public void onResponse(JSONObject response) {
-                    Log.d("lang_api","response "+response.toString());
+                    Log.d("test lang","response set user language"+response.toString());
                     setLocale(langPrefix);
                 }
 

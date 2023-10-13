@@ -18,6 +18,7 @@ import com.oustme.oustsdk.R;
 import com.oustme.oustsdk.customviews.CircleImageView;
 import com.oustme.oustsdk.interfaces.common.OnLanguageSelected;
 import com.oustme.oustsdk.response.common.LanguageClass;
+import com.oustme.oustsdk.tools.LanguagePreferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +31,12 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
     private final OnLanguageSelected onItemClickListener;
     private int lastSelectedPosition = -1;
 
+    private String selectedLang="";
+
     public LanguageAdapter(List<LanguageClass> languageList, OnLanguageSelected onItemClickListener) {
         this.languageList = languageList;
         this.onItemClickListener = onItemClickListener;
+         selectedLang = LanguagePreferences.get("appSelectedLanguage");
     }
 
     @NonNull
@@ -65,13 +69,18 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
                     flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.indonesia);
                     break;
             }
+            if(language.getLanguagePerfix().toLowerCase().equals("en")){
+                flag= holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.english);
+            }
             holder.imgCountryFlag.setImageDrawable(flag);
         }else{
             holder.imgCountryFlag.setVisibility(View.GONE);
         }
         holder.cbLanguage.setChecked(lastSelectedPosition == position);
+        if(!selectedLang.equals("")){
+            holder.cbLanguage.setChecked(selectedLang.equals(language.getLanguagePerfix()));
+        }
         holder.itemLangWrapper.setOnClickListener(v -> {
-            Log.d("test lang","wrapper clicked");
             onItemClickListener.onSelectLanguage(language);
             language.setSelected(!language.getSelected());
             lastSelectedPosition = position;  // update the last selected position

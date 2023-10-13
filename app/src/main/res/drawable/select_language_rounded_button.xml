@@ -1,5 +1,5 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/custom_roundedcorner">
+    <item android:id="@+id/language_roundedcorner">
         <shape android:shape="rectangle">
             <!-- solid background -->
             <solid android:color="#2A1AD6"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bottom_sheet_background"
     android:orientation="vertical"
-    android:layout_weight="15"
+    android:layout_weight="17"
     android:paddingVertical="16dp">
 
     <TextView
@@ -43,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
+        android:visibility="gone"
         android:layout_marginTop="8dp"
         android:layout_marginHorizontal="16dp">
         <Button
@@ -53,6 +54,8 @@
             android:textAllCaps="false"
             android:textStyle="normal"
             android:fontFamily="@font/avenir_book"
+            style="@style/AppTheme"
+            app:backgroundTint="@null"
             android:background="@drawable/select_language_rounded_button"
             android:text="@string/set_language_and_continue"/>
     </androidx.appcompat.widget.LinearLayoutCompat>

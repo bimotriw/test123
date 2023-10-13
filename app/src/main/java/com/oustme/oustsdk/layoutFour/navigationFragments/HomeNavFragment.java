@@ -12,6 +12,7 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.SystemClock;
 import android.text.Html;
 import android.util.Log;
@@ -19,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.NestedScrollView;
@@ -71,17 +74,16 @@ import com.oustme.oustsdk.layoutFour.components.myTask.MyTaskViewModel;
 import com.oustme.oustsdk.layoutFour.components.myTask.Response.UserEarnedCoinsResponse;
 import com.oustme.oustsdk.layoutFour.components.popularFeeds.PopularFeedAdapter;
 import com.oustme.oustsdk.layoutFour.components.popularFeeds.PopularFeedViewModel;
-import com.oustme.oustsdk.layoutFour.components.userOverView.ActiveUserViewModel;
 import com.oustme.oustsdk.layoutFour.data.Navigation;
 import com.oustme.oustsdk.request.ClickedFeedData;
 import com.oustme.oustsdk.request.ViewTracker;
 import com.oustme.oustsdk.request.ViewedFeedData;
-import com.oustme.oustsdk.response.common.LanguageClass;
 import com.oustme.oustsdk.room.dto.DTONewFeed;
 import com.oustme.oustsdk.room.dto.DTOSpecialFeed;
 import com.oustme.oustsdk.room.dto.DTOUserFeeds;
 import com.oustme.oustsdk.tools.ActiveUser;
 import com.oustme.oustsdk.tools.HttpManager;
+import com.oustme.oustsdk.tools.LanguagePreferences;
 import com.oustme.oustsdk.tools.OustAppState;
 import com.oustme.oustsdk.tools.OustDataHandler;
 import com.oustme.oustsdk.tools.OustPreferences;
@@ -96,7 +98,6 @@ import com.oustme.oustsdk.utils.OustResourceUtils;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -431,11 +432,26 @@ public class HomeNavFragment extends Fragment implements ComponentAccess,
         }
     }
 
+    private void checkLangUpdatedStatus(){
+        Log.d("test lang","check lang updated status");
+        String update = LanguagePreferences.get("appLanguageUpdateSuccess");
+        Log.d("test lang"," lang updated status: "+update);
+        if(update.equals("true")){
+            final Handler handler = new Handler(Looper.getMainLooper());
+            handler.postDelayed(() -> {
+                showLanguageChangeSuccessDialog();
+                LanguagePreferences.save("appLanguageUpdateSuccess","false");
+            }, 1500);
+        }
+    }
+
+
     public void initData() {
         try {
             userdata = OustSdkTools.getActiveUserData(OustPreferences.get("userdata"));
             isLanguageScreenEnabled = OustPreferences.getAppInstallVariable("showLanguageScreen");
             isCityScreenEnabled = OustPreferences.getAppInstallVariable("showCityListScreenForCPL");
+            checkLangUpdatedStatus();
         } catch (Exception e) {
             e.printStackTrace();
             OustSdkTools.sendSentryException(e);
@@ -697,9 +713,24 @@ public class HomeNavFragment extends Fragment implements ComponentAccess,
     }
 
     private void showLanguageBottomSheet() {
-        LanguageBottomSheet bottomSheet = new LanguageBottomSheet(true, true);
+        LanguageBottomSheet bottomSheet = new LanguageBottomSheet(true, true,getActivity());
         bottomSheet.setCancelable(false);
         bottomSheet.show(getParentFragmentManager(), bottomSheet.getTag());
+    }
+
+    public void showLanguageChangeSuccessDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.language_success_dialog, null);
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+        Button button = dialogView.findViewById(R.id.dialog_button);
+        button.setOnClickListener(v -> {
+            dialog.dismiss();
+        });
+
+        dialog.show();
     }
 
 

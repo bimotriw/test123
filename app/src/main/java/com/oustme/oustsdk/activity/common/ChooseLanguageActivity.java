@@ -1,14 +1,11 @@
 package com.oustme.oustsdk.activity.common;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,10 +18,8 @@ import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
-import com.blongho.country_data.World;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.oustme.oustsdk.R;
-import com.oustme.oustsdk.adapter.common.LanguageAdapter;
 import com.oustme.oustsdk.dialogs.LanguageBottomSheet;
 import com.oustme.oustsdk.interfaces.common.OnLanguageSelected;
 import com.oustme.oustsdk.layoutFour.LandingActivity;
@@ -103,7 +98,8 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
     }
 
     private void showLanguageBottomSheet() {
-        LanguageBottomSheet bottomSheet = new LanguageBottomSheet(false, false);
+        LanguageBottomSheet bottomSheet = new LanguageBottomSheet(false, false,this);
+
         bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
     }
 
@@ -210,7 +206,11 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
             for(int i=0;i<languageClasses.size();i++){
                 if(languageClasses.get(i).getLanguagePerfix().equals(languagePrefix)){
                     selectedLang.setText(languageClasses.get(i).getName());
-                    setCountryFlag(languageClasses.get(i).getCountryCode());
+                    Drawable flag= getResources().getDrawable(R.drawable.english);
+                    if(!languagePrefix.toLowerCase().equals("en")){
+                        flag = getCountryFlag(languageClasses.get(i).getCountryCode());
+                    }
+                    countryFlag.setImageDrawable(flag);
                     break;
                 }
             }
@@ -220,7 +220,8 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
         }
     }
 
-    private Drawable setCountryFlag(String code){
+    private Drawable getCountryFlag(String code){
+        Log.d("test lang"," flag "+code);
         Drawable flag= getResources().getDrawable(R.drawable.english);
         switch (code) {
             case "AE":
