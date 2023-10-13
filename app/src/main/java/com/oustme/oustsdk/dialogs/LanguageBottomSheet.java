@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -70,8 +72,6 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
         this.activity = activity;
     }
 
-
-
      @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -111,11 +111,13 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
         divider.setVisibility(showButton?View.VISIBLE:View.GONE);
         tvSelectLang.setAllCaps(showButton);
         tvSelectLang.setTextColor(showButton?getResources().getColor(R.color.linkcolor):getResources().getColor(R.color.black));
+        if(!showButton) {
+            ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) rvLanguage.getLayoutParams();
+            params.setMargins(16, 100, 16, 0); //substitute parameters for left, top, right, bottom
+            rvLanguage.setLayoutParams(params);
+        }
         rvLanguage.setLayoutManager(new LinearLayoutManager(getContext()));
         rvLanguage.addItemDecoration(new DividerItemDecoration(getContext(),LinearLayoutManager.VERTICAL));
-        if(!showButton){
-            rvLanguage.setPadding(0,0,0,200);
-        }
 
     }
 
@@ -170,7 +172,6 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
             BottomSheetBehavior<View> bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
             if (isFullScreen) {
                 // Set the bottom sheet to full screen
-
                 bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
             }else{
                 DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -179,10 +180,9 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
                 // Set the minimum height (peek height)
                 bottomSheetBehavior.setPeekHeight((int) (screenHeight*0.30));
                 // Set the maximum height
-                bottomSheet.getLayoutParams().height =  (int) (screenHeight*0.80); // e.g., 800 pixels
+                bottomSheet.getLayoutParams().height =  (int) (screenHeight*0.70); // e.g., 800 pixels
                 bottomSheet.requestLayout();
             }
-            buttonSetLang.setVisibility(showButton?View.VISIBLE:View.INVISIBLE);
         }
     }
 
@@ -195,19 +195,18 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
                 int selectedId = languageClass.getIndex();
                 String selectedPrefix = languageClass.getLanguagePerfix();
                 if (selectedId > 0) {
-                    Log.d("test lang","show second bottom sheet");
                     dismiss();
-                    showProcessingDialog(languageClass);
-//                    setUserLanguage(selectedId, selectedPrefix);
+                    setUserLanguage(selectedId, selectedPrefix);
                 }
             }
         });
     }
 
     private void setLocale(String selectedLanguage) {
-        Log.d("test_lang","set locale");
         LanguagePreferences.save("appSelectedLanguage", selectedLanguage);
-        LanguagePreferences.save("appLanguageUpdateSuccess","true");
+        if(!showButton){
+            LanguagePreferences.save("appLanguageUpdateSuccess","true");
+        }
         Intent refreshApp = new Intent(activity, NewLandingActivity.class);
         if (OustPreferences.getAppInstallVariable("isLayout4")) {
             refreshApp = new Intent(activity, LandingActivity.class);
@@ -280,7 +279,6 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
         if(!showButton){
             dismiss();
             showProcessingDialog(languageClass);
-//            setUserLanguage(languageClass.getIndex(),languageClass.getLanguagePerfix());
         }
     }
 

@@ -433,9 +433,7 @@ public class HomeNavFragment extends Fragment implements ComponentAccess,
     }
 
     private void checkLangUpdatedStatus(){
-        Log.d("test lang","check lang updated status");
         String update = LanguagePreferences.get("appLanguageUpdateSuccess");
-        Log.d("test lang"," lang updated status: "+update);
         if(update.equals("true")){
             final Handler handler = new Handler(Looper.getMainLooper());
             handler.postDelayed(() -> {

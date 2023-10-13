@@ -77,17 +77,20 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
             holder.imgCountryFlag.setVisibility(View.GONE);
         }
         holder.cbLanguage.setChecked(lastSelectedPosition == position);
-        if(!selectedLang.equals("")){
+        if(lastSelectedPosition == -1){
             holder.cbLanguage.setChecked(selectedLang.equals(language.getLanguagePerfix()));
         }
         holder.itemLangWrapper.setOnClickListener(v -> {
+            Log.d("test_lang","clicked "+position);
             onItemClickListener.onSelectLanguage(language);
             language.setSelected(!language.getSelected());
             lastSelectedPosition = position;  // update the last selected position
             notifyDataSetChanged();  // refresh the adapter
         });
         holder.cbLanguage.setOnClickListener(v -> {
-            lastSelectedPosition = position;  // update the last selected position
+            Log.d("test_lang","clicked cb"+position);
+            lastSelectedPosition = position;
+            language.setSelected(!language.getSelected());// update the last selected position
             notifyDataSetChanged();  // refresh
             onItemClickListener.onSelectLanguage(language);
         });
