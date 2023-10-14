@@ -432,13 +432,13 @@ public class HomeNavFragment extends Fragment implements ComponentAccess,
         }
     }
 
-    private void checkLangUpdatedStatus(){
+    private void checkLangUpdatedStatus() {
         String update = LanguagePreferences.get("appLanguageUpdateSuccess");
-        if(update.equals("true")){
+        if (update.equals("true")) {
             final Handler handler = new Handler(Looper.getMainLooper());
             handler.postDelayed(() -> {
                 showLanguageChangeSuccessDialog();
-                LanguagePreferences.save("appLanguageUpdateSuccess","false");
+                LanguagePreferences.save("appLanguageUpdateSuccess", "false");
             }, 1500);
         }
     }
@@ -677,7 +677,7 @@ public class HomeNavFragment extends Fragment implements ComponentAccess,
 
     private void getUserLanguage(String studentId) {
         String getPointsUrl = OustSdkApplication.getContext().getResources().getString(R.string.get_student_language);
-        getPointsUrl = getPointsUrl.replace("{studentId}", "arvind");
+        getPointsUrl = getPointsUrl.replace("{studentid}", studentId);
         try {
             getPointsUrl = HttpManager.getAbsoluteUrl(getPointsUrl);
 
@@ -711,7 +711,7 @@ public class HomeNavFragment extends Fragment implements ComponentAccess,
     }
 
     private void showLanguageBottomSheet() {
-        LanguageBottomSheet bottomSheet = new LanguageBottomSheet(true, true,getActivity());
+        LanguageBottomSheet bottomSheet = new LanguageBottomSheet(true, true, getActivity());
         bottomSheet.setCancelable(false);
         bottomSheet.show(getParentFragmentManager(), bottomSheet.getTag());
     }

@@ -43,7 +43,7 @@ import java.util.Locale;
 
 public class ChooseLanguageActivity extends AppCompatActivity implements OnLanguageSelected {
     private RelativeLayout languageLayout;
-    private ImageView countryFlag,icBack;
+    private ImageView countryFlag, icBack;
     private TextView selectedLang;
     private LanguageClass currentSelectedLanguage;
     private ChooseLanguagePresenter presenter;
@@ -64,14 +64,14 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
         handleAction();
     }
 
-    private void initPage(){
+    private void initPage() {
         languageLayout = findViewById(R.id.languageWrapper);
         countryFlag = findViewById(R.id.ctryFlag);
         selectedLang = findViewById(R.id.selectedLang);
         icBack = findViewById(R.id.icBack);
     }
 
-    private void handleAction(){
+    private void handleAction() {
         icBack.setOnClickListener(v -> {
             finish();
         });
@@ -98,13 +98,13 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
     }
 
     private void showLanguageBottomSheet() {
-        LanguageBottomSheet bottomSheet = new LanguageBottomSheet(false, false,this);
+        LanguageBottomSheet bottomSheet = new LanguageBottomSheet(false, false, this);
 
         bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
     }
 
-    private void showProcessingDialog(LanguageClass languageClass){
-        processingDialog = new BottomSheetDialog(this,R.style.AppBottomSheetDialogTheme);
+    private void showProcessingDialog(LanguageClass languageClass) {
+        processingDialog = new BottomSheetDialog(this, R.style.AppBottomSheetDialogTheme);
         View bottomSheetView = getLayoutInflater().inflate(R.layout.bottom_sheet_processing_lang, null);
         ProgressBar progressBar = bottomSheetView.findViewById(R.id.progressBar);
 
@@ -145,7 +145,7 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
 
     }
 
-    private void getAvailableLanguage(){
+    private void getAvailableLanguage() {
         String getPointsUrl = OustSdkApplication.getContext().getResources().getString(R.string.get_all_languages);
         try {
             getPointsUrl = HttpManager.getAbsoluteUrl(getPointsUrl);
@@ -167,7 +167,7 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
                             String languageCode = languageDataObject.isNull("languageCode") ? "" : languageDataObject.getString("languageCode");
                             languageClass.setIndex(languageId);
                             languageClass.setName(displayName);
-                            if(!languageCode.isEmpty()){
+                            if (!languageCode.isEmpty()) {
                                 String[] langCode = languageCode.split("_");
                                 if (langCode.length > 0) {
                                     languageClass.setLanguagePerfix(langCode[0]);
@@ -182,10 +182,11 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
                         }
 
                     } catch (Exception e) {
-                        Log.d("test lang","error happened"+e);
+                        Log.d("test lang", "error happened" + e);
                     }
+                    Log.d("test lang", "REEEESSSPONNNNNNN = " + languageClasses.size() + " - " + response);
                     String lang = LanguagePreferences.get("appSelectedLanguage");
-                    populateLanguage(lang,languageClasses);
+                    populateLanguage(lang, languageClasses);
                 }
 
                 @Override
@@ -203,11 +204,11 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
     public void populateLanguage(String languagePrefix, List<LanguageClass> languageClasses) {
         try {
             this.langClasses = languageClasses;
-            for(int i=0;i<languageClasses.size();i++){
-                if(languageClasses.get(i).getLanguagePerfix().equals(languagePrefix)){
+            for (int i = 0; i < languageClasses.size(); i++) {
+                if (languageClasses.get(i).getLanguagePerfix() != null && languageClasses.get(i).getLanguagePerfix().equals(languagePrefix)) {
                     selectedLang.setText(languageClasses.get(i).getName());
-                    Drawable flag= getResources().getDrawable(R.drawable.english);
-                    if(!languagePrefix.toLowerCase().equals("en")){
+                    Drawable flag = getResources().getDrawable(R.drawable.english);
+                    if (!languagePrefix.toLowerCase().equals("en")) {
                         flag = getCountryFlag(languageClasses.get(i).getCountryCode());
                     }
                     countryFlag.setImageDrawable(flag);
@@ -220,12 +221,12 @@ public class ChooseLanguageActivity extends AppCompatActivity implements OnLangu
         }
     }
 
-    private Drawable getCountryFlag(String code){
-        Log.d("test lang"," flag "+code);
-        Drawable flag= getResources().getDrawable(R.drawable.english);
+    private Drawable getCountryFlag(String code) {
+        Log.d("test lang", " flag " + code);
+        Drawable flag = getResources().getDrawable(R.drawable.english);
         switch (code) {
             case "AE":
-                flag =getResources().getDrawable(R.drawable.arab);
+                flag = getResources().getDrawable(R.drawable.arab);
                 break;
             case "IN":
                 flag = getResources().getDrawable(R.drawable.india);

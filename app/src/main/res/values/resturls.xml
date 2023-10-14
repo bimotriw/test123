@@ -289,6 +289,6 @@
     <string name="get_availableLanguages" translatable="false">orgParams/availableLanguages</string>
     <string name="get_all_languages" translatable="false">/language/getAllLanguageList</string>
     <string name="get_appResource" translatable="false">orgParams/appResource</string>
-    <string name="get_student_language" translatable="false">student/arvind/getLanguage</string>
-    <string name="set_student_language" translatable="false">student/arvind/setLanguage</string>
+    <string name="get_student_language" translatable="false">student/{studentid}/getLanguage</string>
+    <string name="set_student_language" translatable="false">student/{studentid}/setLanguage</string>
 </resources>

@@ -24,19 +24,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.LanguageViewHolder> {
 
     private final List<LanguageClass> languageList;
     private final OnLanguageSelected onItemClickListener;
     private int lastSelectedPosition = -1;
 
-    private String selectedLang="";
+    private String selectedLang = "";
 
     public LanguageAdapter(List<LanguageClass> languageList, OnLanguageSelected onItemClickListener) {
         this.languageList = languageList;
         this.onItemClickListener = onItemClickListener;
-         selectedLang = LanguagePreferences.get("appSelectedLanguage");
+
+        String lang = LanguagePreferences.get("appSelectedLanguage");
+        selectedLang = lang == null ? "" : lang;
     }
 
     @NonNull
@@ -51,10 +52,10 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
     public void onBindViewHolder(@NonNull LanguageViewHolder holder, int position) {
         LanguageClass language = languageList.get(position);
         holder.tvCountryName.setText(language.getName());
-        Log.d("test lang","code "+language.getCountryCode());
+        Log.d("test lang", "code " + language.getCountryCode());
 
-        if(language.getCountryCode()!=null){
-            Drawable flag= holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.english);
+        if (language.getCountryCode() != null) {
+            Drawable flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.english);
             switch (language.getCountryCode()) {
                 case "AE":
                     flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.arab);
@@ -69,26 +70,26 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
                     flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.indonesia);
                     break;
             }
-            if(language.getLanguagePerfix().toLowerCase().equals("en")){
-                flag= holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.english);
+            if (language.getLanguagePerfix().toLowerCase().equals("en")) {
+                flag = holder.imgCountryFlag.getContext().getResources().getDrawable(R.drawable.english);
             }
             holder.imgCountryFlag.setImageDrawable(flag);
-        }else{
+        } else {
             holder.imgCountryFlag.setVisibility(View.GONE);
         }
         holder.cbLanguage.setChecked(lastSelectedPosition == position);
-        if(lastSelectedPosition == -1){
+        if (lastSelectedPosition == -1) {
             holder.cbLanguage.setChecked(selectedLang.equals(language.getLanguagePerfix()));
         }
         holder.itemLangWrapper.setOnClickListener(v -> {
-            Log.d("test_lang","clicked "+position);
+            Log.d("test_lang", "clicked " + position);
             onItemClickListener.onSelectLanguage(language);
             language.setSelected(!language.getSelected());
             lastSelectedPosition = position;  // update the last selected position
             notifyDataSetChanged();  // refresh the adapter
         });
         holder.cbLanguage.setOnClickListener(v -> {
-            Log.d("test_lang","clicked cb"+position);
+            Log.d("test_lang", "clicked cb" + position);
             lastSelectedPosition = position;
             language.setSelected(!language.getSelected());// update the last selected position
             notifyDataSetChanged();  // refresh
@@ -97,9 +98,10 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
     }
 
 
-    public int getLastSelectedPosition(){
+    public int getLastSelectedPosition() {
         return lastSelectedPosition;
     }
+
     @Override
     public int getItemCount() {
         return languageList.size();

@@ -195,6 +195,7 @@ public class UserSettingActivity extends AppCompatActivity implements View.OnCli
     private void initViews() {
 
         try {
+            Log.d("test lang","INIIIIIIIIITTTT LOOOOLOLOLO");
             OustSdkTools.setLocale(UserSettingActivity.this);
         } catch (Exception e) {
             e.printStackTrace();

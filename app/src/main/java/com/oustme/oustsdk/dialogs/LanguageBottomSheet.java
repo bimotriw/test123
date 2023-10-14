@@ -285,7 +285,7 @@ public class LanguageBottomSheet extends BottomSheetDialogFragment implements On
     private void setUserLanguage(int langId,String langPrefix){
         String getPointsUrl = OustSdkApplication.getContext().getResources().getString(R.string.set_student_language);
         ActiveUser activeUser = OustSdkTools.getActiveUserData(OustPreferences.get("userdata"));
-        getPointsUrl = getPointsUrl.replace("{studentId}", "arvind");
+        getPointsUrl = getPointsUrl.replace("{studentid}", activeUser.getStudentid());
         try {
             getPointsUrl = HttpManager.getAbsoluteUrl(getPointsUrl);
             JSONObject jsonParams = new JSONObject();

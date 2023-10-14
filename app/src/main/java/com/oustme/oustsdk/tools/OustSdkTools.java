@@ -3324,17 +3324,21 @@ public class OustSdkTools {
         try {
             String language = Locale.getDefault().getLanguage();
             String selectedLanguage = LanguagePreferences.get("appSelectedLanguage");
-            Locale locale = new Locale(language);
+            Log.d("test lang","INIII YANG DI SAVE "+ selectedLanguage + " --- " + language);
+            Locale locale = null;
             if (selectedLanguage != null && !selectedLanguage.isEmpty() && !selectedLanguage.equals(language)) {
-
+                Log.d("test lang","INIII YANG DI SAVE 999 "+ selectedLanguage + " --- " + language);
                 if (selectedLanguage.equalsIgnoreCase("zh_TW")) {
                     locale = Locale.TAIWAN;
                 } else {
+                    Log.d("test lang","INIII YANG DI SAVE 0000 "+ selectedLanguage + " --- " + language);
                     locale = new Locale(selectedLanguage);
                 }
 
                 LanguagePreferences.save("appSelectedLanguage", selectedLanguage);
             }
+
+            Log.d("test lang","INIII YANG DI SAVE 999 1203 "+ locale.getLanguage());
 
             Locale.setDefault(locale);
             Configuration config = new Configuration();
